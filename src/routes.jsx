@@ -1,21 +1,23 @@
 import App from "./App";
-import ErrorPage from "./components/ErrorPage";
-import Homepage from "./components/Homepage";
+import ErrorPage from "./components/ErrorPage/ErrorPage";
 import ShipStore from "./components/ShipStore";
+import Contact from "./components/Contact";
 
 const routes = [
 	{
 		path: "/",
 		element: <App />,
 		errorElement: <ErrorPage />,
-	},
-	{
-		path: "homepage",
-		element: <Homepage />,
-	},
-	{
-		path: "ship-store",
-		element: <ShipStore />,
+		children: [
+			{
+				path: "ship-store", 
+				element: <ShipStore />,
+			},
+			{
+				path: "contact",
+				element: <Contact />,
+			},
+		]
 	},
 ];
 
