@@ -2,8 +2,9 @@ import { useState } from 'react';
 import { Link, Outlet, useLocation } from "react-router-dom";
 import Homepage from "./components/Homepage";
 
-function App() {
+export default function StarWarsShipyard() {
   const {pathname} = useLocation();
+  const [cart, setCart] = useState(0);
 
   return (
     <>
@@ -18,6 +19,9 @@ function App() {
           <li>
             <Link to="contact">Contact</Link>
           </li>
+          <li>
+            <Link to="shopping-cart">Cart{`(${cart})`}</Link>
+          </li>
         </ul>
       </nav>
       <Outlet />
@@ -25,6 +29,4 @@ function App() {
       {/* TODO: Footer */}
     </>
   )
-}
-
-export default App;
+};

@@ -1,12 +1,13 @@
-import App from "./App";
+import StarWarsShipyard from "./StarWarsShipyard";
 import ErrorPage from "./components/ErrorPage/ErrorPage";
 import ShipStore from "./components/ShipStore";
 import Contact from "./components/Contact";
+import ShoppingCart from "./components/ShoppingCart";
 
 const routes = [
 	{
 		path: "/",
-		element: <App />,
+		element: <StarWarsShipyard />,
 		errorElement: <ErrorPage />,
 		children: [
 			{
@@ -16,6 +17,10 @@ const routes = [
 			{
 				path: "contact",
 				element: <Contact />,
+			},
+			{
+				path: "shopping-cart",
+				element: <ShoppingCart />,
 			},
 		]
 	},
