@@ -6,9 +6,9 @@ export default function useFetchData(arr) {
 	const [loading, setLoading] = useState(true);
 	// If passed param is a singular url wrap the url in an
 	// array so it can be fetched
-	const urls = Array.isArray(arr) ? arr : [arr];
 
   useEffect(() => {
+		const urls = Array.isArray(arr) ? arr : [arr];
 		const controller = new AbortController();
 
 		const fetchData = async () => {
@@ -26,18 +26,16 @@ export default function useFetchData(arr) {
 				.then((resp) => setData(resp))
 				.catch((error) => {
 					if (error.name === "AbortError") {
-						console.log("Aborted");
+						console.log("Aborted");  
 						return;
 					}
 					setError(error);
 				})
 				.finally(() => setLoading(false));
 		}
-    
 		fetchData();
 
 		return () => controller.abort();
-		
   }, [arr]);
 
   return { data, error, loading };
