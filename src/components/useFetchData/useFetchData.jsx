@@ -1,13 +1,12 @@
 import { useState, useEffect } from "react";
-// Custom hook to fetch API data
+// Custom hook to fetch API data from an array
 export default function useFetchData(arr) {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
 	const [loading, setLoading] = useState(true);
-	// If passed param is a singular url wrap the url in an
-	// array so it can be fetched
 
   useEffect(() => {
+		// Turn param into an array if it isn't already
 		const urls = Array.isArray(arr) ? arr : [arr];
 		const controller = new AbortController();
 
