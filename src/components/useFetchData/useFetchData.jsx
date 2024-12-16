@@ -14,28 +14,33 @@ export default function useFetchData(arr) {
 			// Fetch all urls from the array simultaneously
 			Promise
 				.all(
-					urls.map((url) => fetch(url, { signal: controller.signal }))
-				)
-				.then((resp) => Promise.all(resp.map((r) => {
-					if (!r.ok) {
-						throw new Error(`Status: ${r.status} ${r.statusText}`);
-					}
-					return r.json();
-				})))
-				.then((resp) => setData(resp))
-				.catch((error) => {
-					if (error.name === "AbortError") {
-						console.log("Aborted");  
-						return;
-					}
-					setError(error);
+					urls.map((url) => 
+						fetch(url, { signal: controller.signal })
+							.then((resp) => {
+								if (!resp.ok) {
+									throw new Error(`Status: ${resp.status} ${resp.statusText}`);
+								}
+								return resp.json();
+							})
+							.catch((error) => {
+								if (error.name === "AbortError") {
+									return { error: "Request aborted", url };
+								}
+								return { error:error.message, url };
+							}))
+				).then((resp) => {
+					const successes = resp.filter((r) => !r.error);
+					if (successes.length > 0) setData(successes);
+					const failures = resp.filter((r) => r.error);
+					if (failures.length > 0) setError(failures);
 				})
 				.finally(() => setLoading(false));
 		}
+
 		fetchData();
 
 		return () => controller.abort();
-  }, [arr]);
+  }, [JSON.stringify(arr)]);
 
   return { data, error, loading };
 };
