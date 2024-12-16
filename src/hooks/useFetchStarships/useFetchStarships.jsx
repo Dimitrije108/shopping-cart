@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import useFetchData from "../useFetchData/useFetchData";
-import { featureShips } from "./shipUrls";
+import { featureShips } from "../../shipUrls";
 // TODO: Cache data after cache/memo lesson
 // TODO: Maybe add loading state through this instead of using loading state 
 // as standard state if data is not yet present
