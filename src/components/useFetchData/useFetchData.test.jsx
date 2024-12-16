@@ -23,17 +23,43 @@ describe("useFetchData custom hook", () => {
 		expect(result.current.loading).toBe(true);
 	});
 
-	it("fetches data successfully", async () => {
+	it("fetches single url data successfully", async () => {
 		const mockData = { message: 'Success' };
 		global.fetch.mockResolvedValueOnce({
 			ok: true,
 			json: async () => (mockData)
 		})
 
-		const { result } = renderHook(() => useFetchData('/mock-url'));
+		const { result } = renderHook(() => useFetchData(['/mock-url']));
 
 		await waitFor(() => {
-			expect(result.current.data).toEqual(mockData);
+			expect(result.current.data).toEqual([mockData]);
+			expect(result.current.loading).toBe(false);
+			expect(result.current.error).toBeNull();
+		})
+	});
+
+	it("fetches an array of url's successfully", async () => {
+		const mockData = [{ message: 'Success' }];
+
+		global.fetch
+			.mockResolvedValueOnce({
+				ok: true,
+				json: async () => (mockData)
+			})
+			.mockResolvedValueOnce({
+				ok: true,
+				json: async () => (mockData)
+			})
+			.mockResolvedValueOnce({
+				ok: true,
+				json: async () => (mockData)
+			})
+
+		const { result } = renderHook(() => useFetchData(['/mock-url', '/mock-url', '/mock-url',]));
+
+		await waitFor(() => {
+			expect(result.current.data).toEqual([mockData, mockData, mockData]);
 			expect(result.current.loading).toBe(false);
 			expect(result.current.error).toBeNull();
 		})
@@ -42,14 +68,14 @@ describe("useFetchData custom hook", () => {
 	it("throws an error when fetch fails", async () => {
 		const mockError = new Error("Fetch failed");
 		global.fetch.mockRejectedValueOnce(mockError);
-
-		const { result } = renderHook(() => useFetchData('/mock-url'));
-
+	
+		const { result } = renderHook(() => useFetchData(['/mock-url']));
+	
 		await waitFor(() => {
 			expect(result.current.data).toBeNull();
 			expect(result.current.loading).toBe(false);
-			expect(result.current.error).toEqual(mockError);
-		})
+			expect(result.current.error).toEqual([{ error: "Fetch failed", url: '/mock-url' }]);
+		});
 	});
 
 	it("aborts on unmount", () => {
@@ -66,5 +92,4 @@ describe("useFetchData custom hook", () => {
 		expect(result.current.data).toBeNull();
 		expect(result.current.error).toBeNull();
 	});
-
 })
