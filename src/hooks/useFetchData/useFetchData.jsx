@@ -24,7 +24,7 @@ export default function useFetchData(arr) {
 							})
 							.catch((error) => {
 								if (error.name === "AbortError") {
-									return { error: "Request aborted", url };
+									return console.log("Aborted");
 								}
 								return { error:error.message, url };
 							}))
