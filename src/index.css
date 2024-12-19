@@ -1,3 +1,18 @@
+@font-face {
+  font-family: Trench;
+  src: url(./assets/TrenchThin-aZ1J.ttf);
+}
+
+@font-face {
+  font-family: Imperial;
+  src: url(./assets/ImperialCode2-qZrad.ttf);
+}
+
+@font-face {
+  font-family: Naboo;
+  src: url(./assets/NabooAfAurebeshRegular-OGqyp.otf);
+}
+
 html,
 body {
   min-height: 100%;
@@ -5,12 +20,16 @@ body {
   margin: 0;
   padding: 0;
 
+  font-family: Trench, 'Roboto', 'Open Sans', 'Arial', 'Helvetica', sans-serif;
+  font-size: 1rem;
   color: white;
   background-color: transparent;
 }
 
 :root {
   max-width: 100%;
+  margin: 1rem 2rem 3rem 2rem;
+
   display: flex;
   flex-direction: column;
   align-items: center;
