@@ -3,6 +3,11 @@ import styles from "./ShipCard.module.css"
 export default function ShipCard({ name, img, price }) {
 	return (
 		<div className={styles.shipCard}>
+			<div className={styles.showDetails}>
+				<img className={styles.arrow} src="/src/assets/right-arrow.svg" width={15} height={15} />
+				<img className={styles.arrow} src="/src/assets/right-arrow.svg" width={15} height={15} />
+				<img className={styles.arrow} src="/src/assets/right-arrow.svg" width={15} height={15} />
+			</div>
 			<div
 				className={styles.imgCont}
 				style={{ backgroundImage: `url(${img})` }}
@@ -16,12 +21,12 @@ export default function ShipCard({ name, img, price }) {
 						<p className={styles.naboo}>{name}</p>
 					</div>
 				</div>
-				<div className={styles.priceCont}>
-					<div className={styles.price}>{price}</div>
-					<div className={styles.addCont}>
+				<div className={styles.buyCont}>
+					<div className={styles.priceCont}>
+						<div>{price}</div>
 						<p>credits</p>
-						<button>ADD</button>
 					</div>
+					<button>ADD</button>
 				</div>
 			</div>
 		</div>
