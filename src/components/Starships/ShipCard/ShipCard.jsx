@@ -1,6 +1,9 @@
 import styles from "./ShipCard.module.css"
 // Create a ship card component
 export default function ShipCard({ name, img, price }) {
+	// For instances where price returns "unknown"
+	const truePrice = price === "unknown" ? "Price on Request" : price;
+
 	return (
 		<div className={styles.shipCard}>
 			<div className={styles.showDetails}>
@@ -23,8 +26,8 @@ export default function ShipCard({ name, img, price }) {
 				</div>
 				<div className={styles.buyCont}>
 					<div className={styles.priceCont}>
-						<div>{price}</div>
-						<p>credits</p>
+						<div>{truePrice}</div>
+						{truePrice !== "Price on Request" && <p>credits</p>}
 					</div>
 					<button>ADD</button>
 				</div>
