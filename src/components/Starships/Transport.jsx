@@ -1,7 +1,12 @@
-import { useState } from 'react';
+import { transportShips, transportShipDetails } from '../../shipUrls';
+import DisplayShips from './DisplayShips/DisplayShips';
 
 export default function Transport() {
   return (
-		<div>This is Transport ships store page!</div>
+		<DisplayShips 
+			basicDataArr={transportShips}
+			advDataArr={transportShipDetails}
+			shipType={"Transport"}
+		/>
 	)
 };

@@ -1,7 +1,12 @@
-import { useState } from 'react';
+import { starfighters, starfighterDetails } from '../../shipUrls';
+import DisplayShips from './DisplayShips/DisplayShips';
 
 export default function Starfighter() {
   return (
-		<div>This is Starfighter ships store page!</div>
+		<DisplayShips 
+			basicDataArr={starfighters}
+			advDataArr={starfighterDetails}
+			shipType={"Starfighter"}
+		/>
 	)
 };
