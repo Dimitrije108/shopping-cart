@@ -1,8 +1,10 @@
-import styles from "./ShipCard.module.css"
+import { useCartContext } from "../../../App";
+import styles from "./ShipCard.module.css";
 // Create a ship card component
 export default function ShipCard({ name, img, price }) {
 	// For instances where price returns "unknown"
 	const truePrice = price === "unknown" ? "Price on Request" : price;
+	const { addToCart } = useCartContext();
 
 	return (
 		<div className={styles.shipCard}>
@@ -29,7 +31,7 @@ export default function ShipCard({ name, img, price }) {
 						<div>{truePrice}</div>
 						{truePrice !== "Price on Request" && <p>credits</p>}
 					</div>
-					<button>ADD</button>
+					<button onClick={addToCart}>ADD</button>
 				</div>
 			</div>
 		</div>
