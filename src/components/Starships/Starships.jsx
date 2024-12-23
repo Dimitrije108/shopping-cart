@@ -1,11 +1,13 @@
-import { useState } from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
+import AllShips from './AllShips';
 
 export default function Starships() {
+	const {pathname} = useLocation();
+
   return (
-		<div>
-			<div>This is Starships store page!</div>
+		<>
+			{pathname === "/starships" && <AllShips />}
 			<Outlet />
-		</div>
+		</>
 	)
 };
