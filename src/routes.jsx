@@ -1,4 +1,4 @@
-import StarWarsShipyard from "./components/StarWarsShipyard";
+import { App } from "./App";
 import ErrorPage from "./components/ErrorPage/ErrorPage";
 import Starships from "./components/Starships/Starships";
 import Contact from "./components/Contact";
@@ -6,11 +6,12 @@ import ShoppingCart from "./components/ShoppingCart";
 import Capital from "./components/Starships/Capital";
 import Transport from "./components/Starships/Transport";
 import Starfighter from "./components/Starships/Starfighter";
+import ShipDetails from "./components/Starships/ShipDetails/ShipDetails";
 
 const routes = [
 	{
 		path: "/",
-		element: <StarWarsShipyard />,
+		element: <App />,
 		errorElement: <ErrorPage />,
 		children: [
 			{
@@ -28,6 +29,18 @@ const routes = [
 					{
 						path: "starfighter", 
 						element: <Starfighter />,
+					},
+					{
+						path: "capital/:ship", 
+						element: <ShipDetails />,
+					},
+					{
+						path: "transport/:ship", 
+						element: <ShipDetails />,
+					},
+					{
+						path: "starfighter/:ship", 
+						element: <ShipDetails />,
 					},
 				],
 			},

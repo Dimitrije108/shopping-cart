@@ -35,6 +35,8 @@ export default function Capital({ basicDataArr, advDataArr, shipType }) {
 			return (
 				<ShipCard 
 					key={ship._id}
+					id={ship._id}
+					category={shipType.toLowerCase()}
 					name={ship.name}
 					img={ship.image}
 					price={price}
