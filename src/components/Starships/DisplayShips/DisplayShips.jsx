@@ -51,7 +51,7 @@ export default function Capital({ basicDataArr, advDataArr, shipType }) {
 
   return (
 		<div>
-			<h1>Starships | {shipType} ships</h1>
+			<h1 className={styles.sectionName}>Starships | {shipType} ships</h1>
 			<div className={styles.cardsCont}>{cards}</div>
 		</div>
 	)

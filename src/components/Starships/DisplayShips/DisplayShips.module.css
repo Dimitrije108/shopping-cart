@@ -1,9 +1,15 @@
 .cardsCont {
 	max-width: 1500px;
+  font-family: Trench;
 
 	display: grid;
   grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
   grid-auto-rows: 1fr;
   justify-items: center;
   gap: 3rem;
+}
+
+.sectionName {
+  margin: 2rem 0;
+  font-family: Trench;
 }
