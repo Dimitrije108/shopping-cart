@@ -132,23 +132,10 @@
   right: 0;
 }
 
-button {
+.addBtn {
   width: 120px;
-  padding: 0.4rem 1rem;
-
-  font-size: 1rem;
-  font-family: inherit;
-
-  color: rgb(218, 218, 218);
-  background-color: transparent;
-  border: 1px solid rgb(104, 104, 104);
-  box-sizing: border-box;
-
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
 }
 
-button:hover {
-  color: white;
+.addBtn:hover {
   border: 1px solid rgb(0, 192, 64);
 }

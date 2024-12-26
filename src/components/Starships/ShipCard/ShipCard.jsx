@@ -52,7 +52,12 @@ export default function ShipCard({ id, category, name, img, price }) {
 							<div>{truePrice}</div>
 							{truePrice !== "Price on Request" && <p>credits</p>}
 						</div>
-						<button onClick={addToCart}>ADD</button>
+						<button 
+							className={styles.addBtn}
+							onClick={addToCart}
+						>
+						ADD
+						</button>
 					</div>
 				</div>
 			</div>
