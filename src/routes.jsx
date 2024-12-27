@@ -6,7 +6,7 @@ import ShoppingCart from "./components/ShoppingCart";
 import Capital from "./components/Starships/Capital";
 import Transport from "./components/Starships/Transport";
 import Starfighter from "./components/Starships/Starfighter";
-import ShipDetails from "./components/Starships/ShipDetails/ShipDetails";
+import ShipInfoPage from "./components/Starships/ShipInfoPage/ShipInfoPage";
 
 const routes = [
 	{
@@ -31,16 +31,16 @@ const routes = [
 						element: <Starfighter />,
 					},
 					{
-						path: "capital/:ship", 
-						element: <ShipDetails />,
+						path: "capital/:shipId", 
+						element: <ShipInfoPage />,
 					},
 					{
-						path: "transport/:ship", 
-						element: <ShipDetails />,
+						path: "transport/:shipId", 
+						element: <ShipInfoPage />,
 					},
 					{
-						path: "starfighter/:ship", 
-						element: <ShipDetails />,
+						path: "starfighter/:shipId", 
+						element: <ShipInfoPage />,
 					},
 				],
 			},
