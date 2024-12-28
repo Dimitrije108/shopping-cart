@@ -1,0 +1,66 @@
+.cont {
+	margin-top: 1rem;
+
+	display: flex;
+	justify-content: center;
+}
+
+.leftBtn,
+.rightBtn {
+	padding: 1px 6px;
+	color: rgb(104, 104, 104);
+	border-top: 1px solid rgb(104, 104, 104);
+	border-bottom: 1px solid rgb(104, 104, 104);
+}
+
+.leftBtn {
+  border-right: none;
+  border-left: 1px solid rgb(104, 104, 104);
+	border-top-left-radius: 6px;
+	border-bottom-left-radius: 6px;
+}
+
+.rightBtn {
+  border-right: 1px solid rgb(104, 104, 104);
+  border-left: none;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+
+.leftBtn:hover {
+	border-top: 1px solid rgb(104, 104, 104);
+  border-right: none;
+  border-bottom: 1px solid rgb(104, 104, 104);
+  border-left: 1px solid rgb(104, 104, 104);
+	color: rgb(236, 236, 236);
+}
+
+.rightBtn:hover {
+	border-top: 1px solid rgb(104, 104, 104);
+  border-right: 1px solid rgb(104, 104, 104);
+  border-bottom: 1px solid rgb(104, 104, 104);
+  border-left: none;
+	color: rgb(236, 236, 236);
+}
+
+.quantityInput {
+	all: unset;
+	max-width: 1rem;
+
+	background-color: transparent;
+  border-top: 1px solid rgb(104, 104, 104);
+  border-bottom: 1px solid rgb(104, 104, 104);
+
+	color: rgb(190, 190, 190);
+	text-align: center;
+
+	-moz-appearance: textfield;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.quantityInput::-webkit-inner-spin-button, 
+.quantityInput::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
