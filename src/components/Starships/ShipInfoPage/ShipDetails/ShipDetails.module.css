@@ -1,0 +1,178 @@
+.shipDetailsCont {
+	max-width: 1100px;
+	padding: 0.5rem;
+
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: 
+		"img img"
+		"description price"
+		"table price";
+	gap: 2rem;
+}
+
+.imgCont {
+	grid-area: img;
+	display: flex;
+	justify-content: center;
+}
+
+.imgCont > img {
+	max-height: 600px;
+	max-width: 100%;
+	padding: 0.5rem;
+
+	outline: 1px solid rgb(104, 104, 104);
+	box-sizing: border-box;
+
+	display: block;
+}
+
+.addCol {
+	grid-area: price;
+	display: grid;
+  grid-template-rows: auto;
+  align-content: start;
+}
+
+.addWrapper {
+	padding: 0.5rem;
+
+	background-color: rgb(10, 10, 10);
+	outline: 1px solid rgb(104, 104, 104);
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.priceCont {
+	padding: 0.8rem 0 0.6rem 0;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.priceCont > div {
+  font-size: 2.2rem;
+	text-align: center;
+}
+
+.priceCont > p {
+  margin: 0;
+	margin-left: 0.2rem;
+	margin-top: 0.5rem;
+  padding: 0;
+
+  font-size: 1rem;
+}
+
+.financeCont {
+	width: 85%;
+	padding: 1rem;
+	
+	border-top: 1px solid rgb(104, 104, 104);
+	border-bottom: 1px solid rgb(104, 104, 104);
+	text-align: center;
+}
+
+.offerPrice {
+	font-size: 1.5rem;
+}
+
+.financeCont > button {
+	width: 100%;
+	margin-top: 1rem;
+	padding: 0.6rem 1.2rem;
+}
+
+.addBtn {
+	width: 100%;
+	margin-top: 1rem;
+	padding: 1rem 3rem;
+
+	font-size: 1.1rem;
+	color: rgb(218, 218, 218);
+  background-color: transparent;
+  border: 1px solid rgb(104, 104, 104);
+}
+
+.addBtn:hover {
+	border: 1px solid rgb(184, 184, 184);
+	background-color: rgb(0, 116, 52);
+}
+
+.descriptionCont {
+	grid-area: description;
+}
+
+.descriptionCont > h1,
+.descriptionCont > p {
+	margin: 0;
+	padding: 0.5rem 0;
+}
+
+.descriptionCont > h1 {
+	font-family: Trench;
+	font-size: 2.4rem;
+	color: rgb(233, 233, 233);
+
+	text-decoration: underline rgb(163, 163, 163);
+	text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+
+	transition: all 0.2s ease-in-out;
+}
+
+.descriptionCont > h1:hover {
+	text-decoration-thickness: 1px;
+	text-decoration: underline rgb(221, 221, 221);
+}
+
+.descriptionCont > p {
+	font-family: DINNext;
+	letter-spacing: 0.5px;
+}
+
+.detailsCont > div {
+	display: flex;
+}
+
+.tableCont {
+	grid-area: table;
+
+	display: flex;
+	gap: 1rem;
+}
+
+.tableSection > h2 {
+	margin: 0;
+	padding: 0.5rem 0;
+
+	font-family: Trench;
+	font-size: 2rem;
+	color: rgb(233, 233, 233);
+}
+
+.infoTable {
+	min-width: 300px;
+	max-width: 800px;
+
+	background-color: rgb(20, 20, 20);
+	border-collapse: collapse;
+
+	flex: 1;
+}
+
+th {
+	color: rgb(238, 238, 238);
+}
+
+th,
+td {
+	border: 1px solid rgb(136, 136, 136);
+	padding: 0.5rem;
+	text-align: left;
+	letter-spacing: 0.5px;
+}
