@@ -1,9 +1,11 @@
 import { useState } from "react";
 import styles from "./ShipDetails.module.css";
 import ItemQuantity from "../../../ItemQuantity/ItemQuantity";
+import { useCartContext } from "../../../../App";
 
 export default function ShipDetails({ basic, details }) {
 	const [quantity, setQuantity] = useState(1);
+	const { addToCart } = useCartContext();
 
 	function increaseQuantity() {
 		if (quantity < 20) {
@@ -84,7 +86,10 @@ export default function ShipDetails({ basic, details }) {
 						change={changeQuantity}
 						reset={resetQuantity}
 					/>
-					<button className={styles.addBtn}>ADD</button>
+					<button 
+						className={styles.addBtn}
+						onClick={addToCart}
+					>ADD</button>
 				</div>
 			</div>
 			<div className={styles.descriptionCont}>
