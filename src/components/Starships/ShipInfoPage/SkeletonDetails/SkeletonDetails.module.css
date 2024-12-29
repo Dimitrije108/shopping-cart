@@ -1,0 +1,87 @@
+.skelPage {
+	width: 1100px;
+	padding: 0.5rem;
+
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: 
+		"img img"
+		"description price"
+		"table price";
+	gap: 2rem;
+}
+
+.skelImg {
+	height: 500px;
+  margin-bottom: 1rem;
+	outline: 1px solid rgb(104, 104, 104);
+	
+	grid-area: img;
+}
+
+.descCont {
+	grid-area: description;
+}
+
+.name {
+	width: 40%;
+	height: 35px;
+	margin-bottom: 1rem;
+}
+
+.description {
+	width: 100%;
+	height: 200px;
+	margin: 0.5rem 0;
+}
+
+.price {
+	height: 350px;
+	outline: 1px solid rgb(104, 104, 104);
+
+	grid-area: price;
+}
+
+.tableCont {
+	grid-area: table;
+}
+
+.spec {
+	width: 40%;
+	height: 30px;
+	margin-bottom: 1rem;
+}
+
+.skelTable {
+	width: 100%;
+	height: 250px;
+	display: flex;
+	gap: 1rem;
+}
+
+.table {
+	width: 50%;
+	outline: 1px solid rgb(104, 104, 104);
+}
+
+.skelImg,
+.name,
+.description,
+.price,
+.spec,
+.table {
+  background: linear-gradient(90deg, #141414 25%, #1d1d1d 50%, #131313 75%);
+  background-size: 200% 100%;
+  animation: shimmer 5s infinite;
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 200% 0;
+  }
+
+  to {
+    background-position: -200% 0;
+  }
+}
