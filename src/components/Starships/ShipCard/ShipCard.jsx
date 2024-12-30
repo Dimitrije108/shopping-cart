@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useCartContext } from "../../../App";
+import formatNumber from "../../../formatNumber";
 import styles from "./ShipCard.module.css";
 // Create a ship card component
 export default function ShipCard({ id, category, name, img, price }) {
@@ -49,12 +50,12 @@ export default function ShipCard({ id, category, name, img, price }) {
 					</div>
 					<div className={styles.buyCont}>
 						<div className={styles.priceCont}>
-							<div>{truePrice}</div>
+							<div>{formatNumber(truePrice)}</div>
 							{truePrice !== "Price on Request" && <p>credits</p>}
 						</div>
 						<button 
 							className={styles.addBtn}
-							onClick={addToCart}
+							onClick={() => addToCart(1)}
 						>
 						ADD
 						</button>

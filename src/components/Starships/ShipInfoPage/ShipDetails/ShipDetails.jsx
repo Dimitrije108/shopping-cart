@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "./ShipDetails.module.css";
 import ItemQuantity from "../../../ItemQuantity/ItemQuantity";
+import formatNumber from "../../../../formatNumber";
 import { useCartContext } from "../../../../App";
 
 export default function ShipDetails({ basic, details }) {
@@ -57,6 +58,8 @@ export default function ShipDetails({ basic, details }) {
 		? "Price on Request" 
 		: details.cost_in_credits;
 
+	const finance = Math.trunc(truePrice / 24).toString();
+
   return (
 		<div className={styles.shipDetailsCont}>
 			<div className={styles.imgCont}>
@@ -65,7 +68,7 @@ export default function ShipDetails({ basic, details }) {
 			<div className={styles.addCol}>
 				<div  className={styles.addWrapper}>
 					<div className={styles.priceCont}>
-						<div>{truePrice}</div>
+						<div>{formatNumber(truePrice)}</div>
 						{truePrice !== "Price on Request" && <p>credits</p>}
 					</div>
 					<div className={styles.financeCont}>
@@ -73,7 +76,7 @@ export default function ShipDetails({ basic, details }) {
 							<p>Finance Offer</p>
 							{truePrice !== "Price on Request" && 
 								<p className={styles.offerPrice}>
-									{`${(truePrice / 24).toFixed(2)}/month`}
+									{`${formatNumber(finance)}/month`}
 								</p>
 							}
 						</div>
@@ -88,7 +91,7 @@ export default function ShipDetails({ basic, details }) {
 					/>
 					<button 
 						className={styles.addBtn}
-						onClick={addToCart}
+						onClick={() => addToCart(quantity)}
 					>ADD</button>
 				</div>
 			</div>
