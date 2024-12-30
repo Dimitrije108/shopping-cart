@@ -12,6 +12,12 @@ export default function ShipCard({ id, category, name, img, price }) {
 		? "Price on Request" 
 		: price;
 
+	const handleAdd = (e) => {
+		e.preventDefault();
+		e.stopPropagation();
+		addToCart(1);
+	}
+
 	return (
 		<Link to={linkTo}>
 			<div className={styles.shipCard}>
@@ -55,7 +61,7 @@ export default function ShipCard({ id, category, name, img, price }) {
 						</div>
 						<button 
 							className={styles.addBtn}
-							onClick={() => addToCart(1)}
+							onClick={handleAdd}
 						>
 						ADD
 						</button>
