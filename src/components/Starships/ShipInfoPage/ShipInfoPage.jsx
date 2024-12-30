@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import useFetchData from '../../../hooks/useFetchData/useFetchData';
 import { ships } from '../../../shipUrls';
-import ShipDetails from '../ShipDetails/ShipDetails';
+import ShipDetails from './ShipDetails/ShipDetails';
+import SkeletonDetails from './SkeletonDetails/SkeletonDetails';
 
 export default function ShipInfoPage() {
 	const [basicData, setBasicData] = useState(null);
@@ -43,7 +44,7 @@ export default function ShipInfoPage() {
 				details={advData}
 			/>
 	} else {
-		details = <div>Loading...</div>
+		details = <SkeletonDetails />
 	}
 
   return (
