@@ -1,31 +1,31 @@
 @font-face {
   font-family: DINNext;
-  src: url(./assets/DINNextW1G-Light.otf);
+  src: url(./assets/fonts/DINNextW1G-Light.otf);
 }
 
 @font-face {
   font-family: Trench;
-  src: url(./assets/TrenchThin-aZ1J.ttf);
+  src: url(./assets/fonts/TrenchThin-aZ1J.ttf);
 }
 
 @font-face {
   font-family: Imperial;
-  src: url(./assets/ImperialCode2-qZrad.ttf);
+  src: url(./assets/fonts/ImperialCode2-qZrad.ttf);
 }
 
 @font-face {
   font-family: Naboo;
-  src: url(./assets/NabooAfAurebeshRegular-OGqyp.otf);
+  src: url(./assets/fonts/NabooAfAurebeshRegular-OGqyp.otf);
 }
 
 @font-face {
   font-family: StarWars;
-  src: url(./assets/Starjedi.ttf);
+  src: url(./assets/fonts/Starjedi.ttf);
 }
 
 @font-face {
   font-family: SupremeSpike;
-  src: url(./assets/SupremeSpike-KVO8D.otf);
+  src: url(./assets/fonts/SupremeSpike-KVO8D.otf);
 }
 
 html,
