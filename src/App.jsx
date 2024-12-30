@@ -13,8 +13,8 @@ export function App() {
   const {pathname} = useLocation();
   const [cart, setCart] = useState(0);
 
-  const addToCart = () => {
-    setCart(cart + 1);
+  const addToCart = (amount) => {
+    setCart(cart + amount);
   }
 
   return (
