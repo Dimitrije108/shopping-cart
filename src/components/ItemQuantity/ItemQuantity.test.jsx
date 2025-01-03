@@ -1,11 +1,11 @@
 import { describe, it, expect, vi } from "vitest";
-import { render, rerender, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { MemoryRouter } from "react-router-dom";
 import ItemQuantity from "./ItemQuantity";
 
 describe("Item Quantity component", () => {
-	it("render item quantity component correctly", () => {
+	it("item quantity component snapshot", () => {
 		const itemQuantity = render(
 			<MemoryRouter>
 				<ItemQuantity 

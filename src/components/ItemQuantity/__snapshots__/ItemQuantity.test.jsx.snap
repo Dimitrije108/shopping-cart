@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Item Quantity component > render item quantity component correctly 1`] = `
+exports[`Item Quantity component > item quantity component snapshot 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
