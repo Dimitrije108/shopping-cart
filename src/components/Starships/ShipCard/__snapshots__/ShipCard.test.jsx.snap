@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Ship Card component > render the card correctly 1`] = `
+exports[`Ship Card component > ship card component snapshot 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -11,6 +11,7 @@ exports[`Ship Card component > render the card correctly 1`] = `
       >
         <div
           class="_shipCard_4857ee"
+          data-testid="shipCard"
         >
           <div
             class="_showDetails_4857ee"
@@ -94,6 +95,7 @@ exports[`Ship Card component > render the card correctly 1`] = `
     >
       <div
         class="_shipCard_4857ee"
+        data-testid="shipCard"
       >
         <div
           class="_showDetails_4857ee"

@@ -31,7 +31,7 @@ export default function Capital({ basicDataArr, advDataArr, shipType }) {
 		cards = <h1>Oops! Something went wrong. Server failed to load data.</h1>;
 	} else if (basicData && advData) {
 		cards = basicData.map((ship, index) => {
-			const price = advData[index].result.properties.cost_in_credits;
+			const price = advData[index].result.properties.cost_in_credits || "undefined";
 			return (
 				<ShipCard 
 					key={ship._id}

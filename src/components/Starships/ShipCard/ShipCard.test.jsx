@@ -12,7 +12,7 @@ vi.mock("../../../App", () => ({
 }));
 
 describe("Ship Card component", () => {
-	it("render the card correctly", () => {
+	it("ship card component snapshot", () => {
 		const shipCard = render(
 			<MemoryRouter>
 				<ShipCard 
@@ -103,9 +103,9 @@ describe("Ship Card component", () => {
 		const addBtn = screen.getByRole('button', { name: "ADD" });
 		await user.click(addBtn);
 
-		expect(mockAddToCart).toHaveBeenCalled(1);
+		expect(mockAddToCart).toHaveBeenCalledTimes(1);
 	});
-	
+
 	it("render 'Price on Request' when price unknown", () => {
 		render(
 			<MemoryRouter>

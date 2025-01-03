@@ -20,7 +20,7 @@ export default function ShipCard({ id, category, name, img, price }) {
 
 	return (
 		<Link to={linkTo}>
-			<div className={styles.shipCard}>
+			<div className={styles.shipCard} data-testid="shipCard">
 				<div className={styles.showDetails}>
 					<img 
 						className={styles.arrow} 

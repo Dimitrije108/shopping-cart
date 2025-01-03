@@ -1,12 +1,13 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Skeleton Card component > render the skeleton card component 1`] = `
+exports[`Skeleton Card component > skeleton card component snapshot 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <div
         class="_skelCard_5bb178"
+        data-testid="skelCard"
       >
         <div
           class="_skelImg_5bb178"
@@ -47,6 +48,7 @@ exports[`Skeleton Card component > render the skeleton card component 1`] = `
   "container": <div>
     <div
       class="_skelCard_5bb178"
+      data-testid="skelCard"
     >
       <div
         class="_skelImg_5bb178"
