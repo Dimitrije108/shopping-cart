@@ -31,10 +31,8 @@ export default function ShipDetails({ basic, details }) {
 			setQuantity(Number(value));
 		}
 	}
-
+	// Reset the value back to 1 if input field has been left empty
 	function resetQuantity() {
-		console.log("does it trigger")
-		// Reset the value back to 1 if it was left empty
 		if (quantity === "") {
 			setQuantity(1);
 		}
@@ -61,7 +59,7 @@ export default function ShipDetails({ basic, details }) {
 	const finance = Math.trunc(truePrice / 24).toString();
 
   return (
-		<div className={styles.shipDetailsCont}>
+		<div className={styles.shipDetailsCont} data-testid="shipDetails">
 			<div className={styles.imgCont}>
 				<img src={basic.image} />
 			</div>

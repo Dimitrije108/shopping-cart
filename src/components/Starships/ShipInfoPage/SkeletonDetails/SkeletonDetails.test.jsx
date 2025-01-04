@@ -4,7 +4,7 @@ import { MemoryRouter } from "react-router-dom";
 import SkeletonDetails from "./SkeletonDetails"
 
 describe("Skeleton Details component", () => {
-	it("render the skeleton details component", () => {
+	it("skeleton details component snapshot", () => {
 		const skeletonDetails = render(
 			<MemoryRouter>
 				<SkeletonDetails />

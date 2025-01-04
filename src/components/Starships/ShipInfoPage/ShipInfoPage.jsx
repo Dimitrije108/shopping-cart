@@ -9,7 +9,7 @@ export default function ShipInfoPage() {
 	const [basicData, setBasicData] = useState(null);
 	const [advData, setAdvData] = useState(null);
 	const [error, setError] = useState(null);
-
+	// Dynamic routing, so each ship will have unique url ending
 	const { shipId } = useParams();
 
 	const shipUrl = 
