@@ -1,6 +1,7 @@
 export default function formatNumber(number) {
 	// Check if passed number is a number
 	if (number === "Price on Request") return number;
+	if (/\D/.test(number)) return "Price on Request";
 	// Format the number
 	const reversed = number.split('').reverse();
 	const formatNumber = reversed.map((e, i) => 
