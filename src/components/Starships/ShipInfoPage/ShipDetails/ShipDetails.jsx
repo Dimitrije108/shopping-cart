@@ -61,7 +61,7 @@ export default function ShipDetails({ basic, details }) {
   return (
 		<div className={styles.shipDetailsCont} data-testid="shipDetails">
 			<div className={styles.imgCont}>
-				<img src={basic.image} />
+				<img src={basic.image} alt={`${basic.name} starship`} />
 			</div>
 			<div className={styles.addCol}>
 				<div  className={styles.addWrapper}>
@@ -73,7 +73,7 @@ export default function ShipDetails({ basic, details }) {
 						<div className={styles.financeOffer}>
 							<p>Finance Offer</p>
 							{truePrice !== "Price on Request" && 
-								<p className={styles.offerPrice}>
+								<p className={styles.offerPrice} data-testid="financeOffer">
 									{`${formatNumber(finance)}/month`}
 								</p>
 							}
