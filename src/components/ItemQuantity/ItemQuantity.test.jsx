@@ -26,8 +26,8 @@ describe("Item Quantity component", () => {
 			</MemoryRouter>
 		)
 
-		const increaseBtn = screen.getByRole('button', { name: "+"});
-		const decreaseBtn = screen.getByRole('button', { name: "-"});
+		const increaseBtn = screen.getByRole('button', { name: "+" });
+		const decreaseBtn = screen.getByRole('button', { name: "-" });
 		const input = screen.getByRole('spinbutton');
 
 		expect(increaseBtn).toBeInTheDocument();
@@ -36,28 +36,43 @@ describe("Item Quantity component", () => {
 		expect(input.value).toEqual('1');
 	});
 
-	it("increase and decrease buttons work", async () => {
+	it("increase button works correctly", async () => {
 		const user = userEvent.setup();
 		const mockIncreaseBtn = vi.fn();
-		const mockDecreaseBtn = vi.fn();
 
 		render(
 			<MemoryRouter>
 				<ItemQuantity 
 					quantity={1}
 					increase={mockIncreaseBtn}
+				/>
+			</MemoryRouter>
+		)
+
+		const increaseBtn = screen.getByRole('button', { name: "+" });
+
+		await user.click(increaseBtn);
+
+		expect(mockIncreaseBtn).toHaveBeenCalledTimes(1);
+	});
+
+	it("decrease button works correctly", async () => {
+		const user = userEvent.setup();
+		const mockDecreaseBtn = vi.fn();
+
+		render(
+			<MemoryRouter>
+				<ItemQuantity 
+					quantity={1}
 					decrease={mockDecreaseBtn}
 				/>
 			</MemoryRouter>
 		)
 
-		const increaseBtn = screen.getByRole('button', { name: "+"});
-		const decreaseBtn = screen.getByRole('button', { name: "-"});
+		const decreaseBtn = screen.getByRole('button', { name: "-" });
 
-		await user.click(increaseBtn);
 		await user.click(decreaseBtn);
 
-		expect(mockIncreaseBtn).toHaveBeenCalledTimes(1);
 		expect(mockDecreaseBtn).toHaveBeenCalledTimes(1);
 	});
 
@@ -84,7 +99,7 @@ describe("Item Quantity component", () => {
 
 		await user.clear(input);
 		await user.type(input, '5');
-		// rerenders the component so that changes can be reflected and tested
+		// rerender the component so that changes are reflected and tested
 		rerender(
 			<MemoryRouter>
 				<ItemQuantity 
