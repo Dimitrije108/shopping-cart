@@ -1,12 +1,28 @@
 import { useState } from "react";
-import styles from "./ShipDetails.module.css";
+import { useCartContext } from "../../../../hooks/useShoppingCart/useShoppingCart";
+import formatNumber from "../../../../formatNumber/formatNumber";
 import ItemQuantity from "../../../ItemQuantity/ItemQuantity";
-import formatNumber from "../../../../formatNumber";
-import { useCartContext } from "../../../../App";
+import styles from "./ShipDetails.module.css";
 
 export default function ShipDetails({ basic, details }) {
 	const [quantity, setQuantity] = useState(1);
 	const { addToCart } = useCartContext();
+	// Convert unknown price into "Price on Request" to better suit the
+	// eCommerce nature of the project
+	const truePrice = details.cost_in_credits === "unknown" 
+		? "Price on Request" 
+		: details.cost_in_credits;
+
+	const finance = Math.trunc(truePrice / 24).toString();
+
+	// Ship data for the shopping cart
+	const cartItemInfo = {
+		id: basic._id,
+		img: basic.image,
+		name: basic.name,
+		price: truePrice,
+		quantity,
+	};
 
 	function increaseQuantity() {
 		if (quantity < 20) {
@@ -50,13 +66,6 @@ export default function ShipDetails({ basic, details }) {
 				return [key, val];
 			}
 	}));
-	// Convert unknown price into "Price on Request" to better suit the
-	// eCommerce nature of the project
-	const truePrice = details.cost_in_credits === "unknown" 
-		? "Price on Request" 
-		: details.cost_in_credits;
-
-	const finance = Math.trunc(truePrice / 24).toString();
 
   return (
 		<div className={styles.shipDetailsCont} data-testid="shipDetails">
@@ -89,7 +98,7 @@ export default function ShipDetails({ basic, details }) {
 					/>
 					<button 
 						className={styles.addBtn}
-						onClick={() => addToCart(quantity)}
+						onClick={() => addToCart(cartItemInfo)}
 					>ADD</button>
 				</div>
 			</div>
@@ -174,9 +183,7 @@ export default function ShipDetails({ basic, details }) {
 
 // Free Email Newsletter
 
-
 // Contact me with an Insurance Quote
-
 
 // Contact me with a Shipping Quote
 

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { useCartContext } from "../../../App";
-import formatNumber from "../../../formatNumber";
+import { useCartContext } from "../../../hooks/useShoppingCart/useShoppingCart";
+import formatNumber from "../../../formatNumber/formatNumber";
 import styles from "./ShipCard.module.css";
 // Create a ship card component
 export default function ShipCard({ id, category, name, img, price }) {
@@ -11,12 +11,20 @@ export default function ShipCard({ id, category, name, img, price }) {
 	const truePrice = price === "unknown" 
 		? "Price on Request" 
 		: price;
-
+	// Ship data for the shopping cart
+	const cartItemInfo = {
+		id,
+		img,
+		name,
+		price: truePrice,
+		quantity: 1,
+	};
+	// Handle adding the ship to the shopping cart
 	const handleAdd = (e) => {
 		e.preventDefault();
 		e.stopPropagation();
-		addToCart(1);
-	}
+		addToCart(cartItemInfo);
+	};
 
 	return (
 		<Link to={linkTo}>

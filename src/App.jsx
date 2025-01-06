@@ -1,25 +1,15 @@
-import { useState, createContext, useContext } from 'react';
 import { Outlet, useLocation } from "react-router-dom";
+import CartContext, { useShoppingCart } from "./hooks/useShoppingCart/useShoppingCart";
 import Header from "./components/Header";
 import Homepage from "./components/Homepage";
 import Footer from "./components/Footer";
 
-const CartContext = createContext({
-  cart: null,
-  addToCart: () => {},
-});
-
 export function App() {
   const {pathname} = useLocation();
-  const [cart, setCart] = useState(0);
-
-  const addToCart = (amount) => {
-    setCart(cart + amount);
-  }
+  const cartFunctionality = useShoppingCart();
 
   return (
-    // wrap this up in the cart context
-    <CartContext.Provider value={{ cart, addToCart }}>
+    <CartContext.Provider value={cartFunctionality}>
       <Header />
       {pathname === "/" && <Homepage />}
       <Outlet />
@@ -27,5 +17,3 @@ export function App() {
     </CartContext.Provider>
   )
 };
-
-export const useCartContext = () => useContext(CartContext);
