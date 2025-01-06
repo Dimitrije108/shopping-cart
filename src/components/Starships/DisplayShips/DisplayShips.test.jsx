@@ -1,6 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
 import { MemoryRouter } from "react-router-dom";
 import useFetchData from "../../../hooks/useFetchData/useFetchData";
 import DisplayShips from "./DisplayShips";
@@ -56,7 +55,7 @@ describe("Display Ships component", () => {
 		expect(error).toBeInTheDocument();
 	});
 
-	it("render loading skeleton component while data is being fetched", () => {
+	it("render loading skeleton when fetching data", () => {
 		useFetchData.mockReturnValueOnce({ 
 			data: null,
 			error: null,
