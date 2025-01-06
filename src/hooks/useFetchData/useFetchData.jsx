@@ -24,15 +24,23 @@ export default function useFetchData(arr) {
 							})
 							.catch((error) => {
 								if (error.name === "AbortError") {
-									return console.log("Aborted");
+									console.log("Aborted");
+									return null;
 								}
-								return { error:error.message, url };
+								return { error: error.message, url };
 							}))
 				).then((resp) => {
-					const successes = resp.filter((r) => !r.error);
-					if (successes.length > 0) setData(successes);
-					const failures = resp.filter((r) => r.error);
-					if (failures.length > 0) setError(failures);
+					const filterAbort = resp.filter((r) => r !== null);
+					const successes = filterAbort.filter((r) => !r.error);
+					if (successes.length > 0) {
+						setData(successes);
+						setError(null);
+					}
+					const failures = filterAbort.filter((r) => r.error);
+					if (failures.length > 0) {
+						setError(failures);
+						setData(null);
+					} 
 				})
 				.finally(() => setLoading(false));
 		}
