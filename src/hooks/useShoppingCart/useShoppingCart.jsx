@@ -8,17 +8,21 @@ const CartContext = createContext({
 // via context provider
 export function useShoppingCart() {
 	const [cart, setCart] = useState([]);
-	const exceededQuantity = 
-		"For orders larger than 20 ships per model please contact us directly";
+	const [limitExceeded, setLimitExceeded] = useState(false);
+	// Warning message for exceeding the ship quantity limit
+	const limitExceededMsg = 
+		<p>For orders larger than 20 ships per model please contact us directly</p>;
 	// Add an item or adjust it's quantity
 	const addToCart = (item) => {
+		setLimitExceeded(false);
 		// check if the provided item is already inside the cart
 		const isDuplicate = cart.find((ship) => ship.id === item.id);
 		// handle duplicate items
 		if (isDuplicate) {
 			// handle exceeding item quantity
 			if (isDuplicate.quantity + item.quantity > 20) {
-				return exceededQuantity;
+				setLimitExceeded(true);
+				return;
 			};
 			// adjust quantity accordingly
 			const addQuantity = cart.map((ship) => {
@@ -39,7 +43,13 @@ export function useShoppingCart() {
 		setCart(removed);
 	};
 
-	return { cart, addToCart, removeFromCart }
+	return { 
+		cart, 
+		limitExceeded, 
+		limitExceededMsg, 
+		addToCart, 
+		removeFromCart 
+	};
 };
 
 export const useCartContext = () => useContext(CartContext);
