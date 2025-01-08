@@ -3,6 +3,7 @@ import CartContext, { useShoppingCart } from "./hooks/useShoppingCart/useShoppin
 import Header from "./components/Header";
 import Homepage from "./components/Homepage";
 import Footer from "./components/Footer";
+import styles from "./layout.module.css"
 
 export function App() {
   const {pathname} = useLocation();
@@ -10,10 +11,12 @@ export function App() {
 
   return (
     <CartContext.Provider value={cartFunctionality}>
-      <Header />
-      {pathname === "/" && <Homepage />}
-      <Outlet />
-      <Footer />
+      <div className={styles.layoutWrapper}>
+        <Header />
+        {pathname === "/" && <Homepage />}
+        <Outlet />
+        <Footer />
+      </div>
     </CartContext.Provider>
   )
 };
