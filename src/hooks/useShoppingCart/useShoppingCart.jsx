@@ -38,17 +38,28 @@ export function useShoppingCart() {
 		}
 	};
 	// Remove item instance from the cart
-	const removeFromCart = (item) => {
-		const removed = cart.filter((ship) => ship.id !== item.id);
+	const removeFromCart = (id) => {
+		const removed = cart.filter((ship) => ship.id !== id);
 		setCart(removed);
 	};
+	// adjust quantity accordingly
+	const adjustItemQuantity = (id, quan) => {
+		const adjusteQuan = cart.map((ship) => {
+			if (ship.id === id) {
+				return { ...ship, quantity: quan };
+			}
+			return ship;
+		});
+		setCart(adjusteQuan);
+	}
 
 	return { 
 		cart, 
 		limitExceeded, 
 		limitExceededMsg, 
 		addToCart, 
-		removeFromCart 
+		removeFromCart,
+		adjustItemQuantity,
 	};
 };
 

@@ -3,33 +3,39 @@ import { useState } from 'react';
 export default function useItemQuantity(initQuan = 1, maxQuan = 20) {
 	const [quantity, setQuantity] = useState(initQuan);
 
-	function increaseQuantity() {
+	function increaseQuantity(cartChange) {
 		if (quantity < maxQuan) {
-			setQuantity(quantity + 1);
+			const newQuan = quantity + 1;
+			setQuantity(newQuan);
+			if (typeof cartChange === 'function') cartChange(newQuan);
 		}
 	};
 
-	function decreaseQuantity() {
+	function decreaseQuantity(cartChange) {
 		if (quantity > 1) {
-			setQuantity(quantity - 1);
+			const newQuan = quantity - 1;
+			setQuantity(newQuan);
+			if (typeof cartChange === 'function') cartChange(newQuan);
 		}
 	};
 
-	function changeQuantity(e) {
+	function changeQuantity(e, cartChange) {
 		const value = e.target.value;
 		// Set the input to empty if user inputs the value manually
-		if (value === "") {
-			setQuantity("");
-		}
+		if (value === "") setQuantity("");
 		// Set the input value
 		if (value > 0 && value <= maxQuan) {
-			setQuantity(Number(value));
+			const newQuan = Number(value);
+			setQuantity(newQuan);
+			if (typeof cartChange === 'function') cartChange(newQuan);
 		}
 	};
-	// Reset the value back to 1 if input field has been left empty
-	function resetQuantity() {
+	// Reset the value back to 1 (i.e. input field has been left empty)
+	function resetQuantity(cartChange) {
 		if (quantity === "") {
-			setQuantity(1);
+			const newQuan = 1;
+			setQuantity(newQuan);
+			if (typeof cartChange === 'function') cartChange(newQuan);
 		}
 	};
 
