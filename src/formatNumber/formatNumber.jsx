@@ -3,7 +3,8 @@ export default function formatNumber(number) {
 	if (number === "Price on Request") return number;
 	if (/\D/.test(number)) return "Price on Request";
 	// Format the number
-	const reversed = number.split('').reverse();
+	const stringNumber = number.toString();
+	const reversed = stringNumber.split('').reverse();
 	const formatNumber = reversed.map((e, i) => 
 		(i > 0) && (i % 3 === 0) ? `${e},`: e
 	)
