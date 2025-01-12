@@ -2,9 +2,27 @@ import { Link } from "react-router-dom";
 import HoverArrows from "../HoverArrows/HoverArrows";
 import styles from "./AddToCartPopup.module.css";
 
-export default function AddToCartPopup({ quantity, name }) {
+export default function AddToCartPopup({ 
+	quantity, 
+	name, 
+	timer, 
+	toggleVisibility 
+}) {
+	// Restart the timer after user stops hovering the 
+	// add to cart popup
+	const handleTimerReset = () => {
+		timer.current = setTimeout(() => {
+			toggleVisibility();
+		}, 2000);
+	}
+
 	return (
-		<Link to="/shopping-cart" className={styles.popupCont}>
+		<Link 
+			to="/shopping-cart" 
+			className={styles.popupCont}
+			onMouseEnter={() => clearTimeout(timer.current)}
+			onMouseLeave={handleTimerReset}
+		>
 			<div>
 				<p>
 					{quantity}x <span className={styles.name}>{name}</span>
