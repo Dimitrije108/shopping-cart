@@ -20,6 +20,8 @@ hr {
 .imgCont{
 	height: 125px;
 	width: 250px;
+
+	cursor: pointer;
 }
 
 .imgCont > img{
@@ -32,13 +34,16 @@ hr {
 	margin: 0;
 	padding: 4px 8px 0 8px;
 
+	font-family: DINNext;
+	color: rgb(221, 221, 221);
 	font-size: 1.3rem;
 
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .name:hover {
   text-decoration: underline rgb(221, 221, 221);
+	text-decoration-thickness: 1px;
 	cursor: pointer;
 }
 
@@ -64,6 +69,15 @@ hr {
   letter-spacing: 1.5px;
 
 	cursor: pointer;
+}
+
+.priceCont {
+	height: 100%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-end;
 }
 
 .priceCont > p {
