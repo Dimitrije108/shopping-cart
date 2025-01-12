@@ -1,9 +1,18 @@
+import { Link } from "react-router-dom";
 import { useCartContext } from '../../../hooks/useShoppingCart/useShoppingCart';
 import useItemQuantity from '../../../hooks/useItemQuantity/useItemQuantity';
 import ItemQuantity from '../../ItemQuantity/ItemQuantity';
+import formatNumber from '../../../formatNumber/formatNumber';
 import styles from './CartItem.module.css';
 
-export default function CartItem({ id, img, name, price, shipQuantity }) {
+export default function CartItem({ 
+	id, 
+	img, 
+	name, 
+	category, 
+	price, 
+	shipQuantity 
+}) {
 	const { 
 		removeFromCart, 
 		adjustItemQuantity, 
@@ -21,22 +30,26 @@ export default function CartItem({ id, img, name, price, shipQuantity }) {
 		adjustItemQuantity(id, newQuan);
 	};
 
-	// img and name are clickable links that lead to respective ship info pages
+	const linkTo = `/starships/${category}/${id}`;
 
 	return (
 		<div  className={styles.cartItemCont}>
 			<hr />
 			<div className={styles.cartItem}>
-				<div className={styles.imgCont}>
-					<img src={img} alt={`${name} starship`} />
-				</div>
-				<div className={styles.nameCont}>
-					<h2 className={styles.name}>{name}</h2> 
-					<div>
-						<p className={styles.imperial}>{name}</p>
-						<p className={styles.naboo}>{name}</p>
+				<Link to={linkTo}>
+					<div className={styles.imgCont}>
+						<img src={img} alt={`${name} starship`} />
 					</div>
-				</div>
+				</Link>
+				<Link to={linkTo}>
+					<div className={styles.nameCont}>
+						<h2 className={styles.name}>{name}</h2> 
+						<div>
+							<p className={styles.imperial}>{name}</p>
+							<p className={styles.naboo}>{name}</p>
+						</div>
+					</div>
+				</Link>
 				<ItemQuantity
 					quantity={quantity}
 					increase={() => increaseQuantity(handleQuantityChange)}
@@ -53,7 +66,10 @@ export default function CartItem({ id, img, name, price, shipQuantity }) {
 						{price === "Price on Request" 
 						? price
 						: <>
-								<span className={styles.itemQuantity}>{`${quantity}x `}</span>{quantity * price}
+								<span className={styles.itemQuantity}>
+									{`${quantity}x `}
+								</span>
+								{formatNumber(quantity * price)}
 							</>
 						}
 					</p>
