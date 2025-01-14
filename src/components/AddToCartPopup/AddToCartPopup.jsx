@@ -4,13 +4,18 @@ import HoverArrows from "../HoverArrows/HoverArrows";
 import styles from "./AddToCartPopup.module.css";
 
 export default function AddToCartPopup({ 
+	id,
 	quantity, 
 	name,
+	removeTimer,
+	resetTimer,
 }) {
 	return (
 		<Link 
 			to="/shopping-cart" 
 			className={styles.popupCont}
+			onMouseEnter={() => removeTimer(id)}
+			onMouseLeave={() => resetTimer(id)}
 		>
 			<div>
 				<p>

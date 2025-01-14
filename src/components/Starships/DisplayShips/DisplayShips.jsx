@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import useFetchData from '../../../hooks/useFetchData/useFetchData';
 import ShipCard from '../ShipCard/ShipCard';
 import SkeletonCard from '../SkeletonCard/SkeletonCard';
@@ -10,7 +10,8 @@ export default function Capital({ basicDataArr, advDataArr, shipType }) {
 	const [advData, setAdvData] = useState(null);
 	const [error, setError] = useState(null);
 	// Add to cart popup array
-	const [ popups, setPopups ] = useState([]);
+	const [popups, setPopups] = useState([]);
+	const [popupTimers, setPopupTimers] = useState(new Map());
 	// Store popup timers
 	// Fetch initial data with name and image
 	const { data: initShips, error: initError } = useFetchData(basicDataArr);
@@ -29,18 +30,71 @@ export default function Capital({ basicDataArr, advDataArr, shipType }) {
 	]);
 	// Remove a popup
 	const removePopup = (id) => {
-		setPopups((prevPopups) => prevPopups.filter((item) => item.id !== id));
+		if (!popupTimers.has(id)) {
+			setPopups((prevPopups) => prevPopups.filter((item) => item.id !== id));
+		}
+
+		setPopupTimers((prevTimers) => {
+			const newTimers = new Map(prevTimers);
+			if (newTimers.has(id)) {
+				clearTimeout(newTimers.get(id));
+				newTimers.delete(id);
+			}
+			return newTimers;
+		})
 	}
 	// Add a new 'add to cart' popup
 	const addPopup = (quantity, name) => {
 		const id = crypto.randomUUID();
 		const newPopup = { id, quantity, name };
-		setPopups((prevPopups) => [...prevPopups, newPopup]);
 
-		setTimeout(() => {
+		setPopups((prevPopups) => [...prevPopups, newPopup]);
+		// Set an initial 3s timer
+		const timer = setTimeout(() => {
 			removePopup(id);
 		}, 3000);
+
+		setPopupTimers((prevTimers) => {
+			const newTimers = new Map(prevTimers);
+			newTimers.set(id, timer);
+			return newTimers;
+		})
 	};
+
+	const removeTimer = (id) => {
+		setPopupTimers((prevTimers) => {
+			const newTimers = new Map(prevTimers);
+
+			if (newTimers.has(id)) {
+				clearTimeout(newTimers.get(id));
+				newTimers.delete(id);
+			}
+
+			return newTimers;
+		})
+		console.log("timer is removed")
+	};
+
+	const resetTimer = (id) => {
+		// Set a new, halved (1.5s), timer
+		const timer = setTimeout(() => {
+			removePopup(id);
+		}, 1500);
+
+		setPopupTimers((prevTimers) => {
+			const newTimers = new Map(prevTimers);
+
+			if (newTimers.has(id)) {
+				clearTimeout(newTimers.get(id));
+			}
+
+			newTimers.set(id, timer);
+			return newTimers;
+		})
+		console.log("timer is 1,5s")
+	};
+
+	console.log(popupTimers)
 
 	let cards;
 	// Depending on the status, display error, loading skeleton or data
@@ -72,8 +126,11 @@ export default function Capital({ basicDataArr, advDataArr, shipType }) {
 		return (
 			<AddToCartPopup 
 				key={popup.id}
+				id={popup.id}
 				quantity={popup.quantity} 
 				name={popup.name}
+				removeTimer={removeTimer}
+				resetTimer={resetTimer}
 			/>
 		)
 	});
