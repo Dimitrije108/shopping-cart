@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { useCartContext } from "../../../hooks/useShoppingCart/useShoppingCart";
+import { useCartContext } from "../../../hooks/useCartContext/useCartContext";
+import { useCartPopup } from "../../../hooks/useCartPopup/useCartPopup";
 import formatNumber from "../../../formatNumber/formatNumber";
 import HoverArrows from "../../HoverArrows/HoverArrows";
 import styles from "./ShipCard.module.css";
@@ -10,9 +11,9 @@ export default function ShipCard({
 	name, 
 	img, 
 	price,
-	addPopup,
 }) {
 	const { addToCart, limitExceeded } = useCartContext();
+	const { addPopup } = useCartPopup();
 	// Create link to view ship details
 	const linkTo = `/starships/${category}/${id}`;
 	// For instances where price returns "unknown"
@@ -36,7 +37,7 @@ export default function ShipCard({
 		// Check if item was added to the cart
 		// and display the add to cart popup
 		if (!limitExceeded) {
-			addPopup( 1, name );
+			addPopup(1, name);
 		};
 	};
 
