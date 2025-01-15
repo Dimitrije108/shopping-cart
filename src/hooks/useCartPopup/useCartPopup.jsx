@@ -14,11 +14,19 @@ export function useAddToCartPopup() {
 	const [popupTimers, setPopupTimers] = useState(new Map());
 	// Remove a popup and execute a remove popup animation
 	const removePopup = (id) => {
-		// change isExiting to true which should start the exit animation
-		// set a timer for setPopups to execute when animation ends
 		if (!popupTimers.has(id)) {
-			setPopups((prevPopups) => prevPopups.filter((item) => item.id !== id));
-		}
+			// Change isExiting to true which should start the exit animation
+			setPopups((prevPopups) => prevPopups.map((popup) => {
+				if (popup.id === id) {
+					 return { ...popup, isExiting: true };
+				}
+				return popup;
+			}));
+			// Remove the popup after exit animation ends
+			setTimeout(() => {
+				setPopups((prevPopups) => prevPopups.filter((popup) => popup.id !== id));
+			}, 900);
+		};
 
 		setPopupTimers((prevTimers) => {
 			const newTimers = new Map(prevTimers);
@@ -27,12 +35,12 @@ export function useAddToCartPopup() {
 				newTimers.delete(id);
 			};
 			return newTimers;
-		}) 
+		});
 	};
 	// Add a new 'add to cart' popup
 	const addPopup = (quantity, name) => {
 		const id = crypto.randomUUID();
-		const newPopup = { id, quantity, name };
+		const newPopup = { id, quantity, name, isExiting: false };
 
 		setPopups((prevPopups) => [...prevPopups, newPopup]);
 		// Set an initial 3s timer to remove the popup

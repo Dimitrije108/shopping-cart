@@ -7,15 +7,14 @@ export default function AddToCartPopup({
 	id,
 	quantity, 
 	name,
+	isExiting,
 }) {
 	const { removeTimer, resetTimer } = useCartPopup();
 
 	return (
 		<Link 
 			to="/shopping-cart" 
-			className={styles.popupCont}
-			// use onAnimationEnd? to delete the element only 
-			// after the animation finished
+			className={`${styles.popupCont} ${isExiting ? styles.exiting : ''}`}
 			onMouseEnter={() => removeTimer(id)}
 			onMouseLeave={() => resetTimer(id)}
 		>

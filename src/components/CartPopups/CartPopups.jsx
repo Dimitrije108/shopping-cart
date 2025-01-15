@@ -13,6 +13,7 @@ export default function CartPopups() {
 						id={popup.id}
 						quantity={popup.quantity} 
 						name={popup.name}
+						isExiting={popup.isExiting}
 					/>
 				)
 			})}
