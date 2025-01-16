@@ -12,7 +12,7 @@ export default function ShipCard({
 	img, 
 	price,
 }) {
-	const { addToCart, limitExceeded } = useCartContext();
+	const { addToCart } = useCartContext();
 	const { addPopup } = useCartPopup();
 	// Create link to view ship details
 	const linkTo = `/starships/${category}/${id}`;
@@ -33,10 +33,8 @@ export default function ShipCard({
 	const handleAdd = (e) => {
 		e.preventDefault();
 		e.stopPropagation();
-		addToCart(cartItemInfo);
-		// Check if item was added to the cart
-		// and display the add to cart popup
-		if (!limitExceeded) {
+		const added = addToCart(cartItemInfo);
+		if (added) {
 			addPopup(1, name);
 		};
 	};

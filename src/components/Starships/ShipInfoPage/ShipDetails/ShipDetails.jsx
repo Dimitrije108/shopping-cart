@@ -1,58 +1,40 @@
-import { useState } from "react";
-import { useCartContext } from "../../../../hooks/useShoppingCart/useShoppingCart";
+import { useCartContext } from "../../../../hooks/useCartContext/useCartContext";
+import { useCartPopup } from "../../../../hooks/useCartPopup/useCartPopup";
+import useItemQuantity from "../../../../hooks/useItemQuantity/useItemQuantity";
 import formatNumber from "../../../../formatNumber/formatNumber";
 import ItemQuantity from "../../../ItemQuantity/ItemQuantity";
 import styles from "./ShipDetails.module.css";
 
 export default function ShipDetails({ basic, details }) {
-	const [quantity, setQuantity] = useState(1);
+	const { 
+		quantity, 
+		increaseQuantity, 
+		decreaseQuantity, 
+		changeQuantity, 
+		resetQuantity  
+	} = useItemQuantity();
+
 	const { addToCart } = useCartContext();
-	// Convert unknown price into "Price on Request" to better suit the
-	// eCommerce nature of the project
+	const { addPopup } = useCartPopup();
+	// Find which category ship belongs to
+	const path = window.location.pathname;
+	const match = path.match(/(capital|transport|starfighter)/);
+	const category = match ? match[1] : "unknown";
+	// Convert unknown price into "Price on Request"
 	const truePrice = details.cost_in_credits === "unknown" 
 		? "Price on Request" 
 		: details.cost_in_credits;
 
 	const finance = Math.trunc(truePrice / 24).toString();
-
 	// Ship data for the shopping cart
 	const cartItemInfo = {
 		id: basic._id,
 		img: basic.image,
 		name: basic.name,
+		category,
 		price: truePrice,
 		quantity,
 	};
-
-	function increaseQuantity() {
-		if (quantity < 20) {
-			setQuantity(quantity + 1);
-		}
-	}
-
-	function decreaseQuantity() {
-		if (quantity > 1) {
-			setQuantity(quantity - 1);
-		}
-	}
-
-	function changeQuantity(e) {
-		const value = e.target.value;
-		// Set the input to empty if user inputs the value manually
-		if (value === "") {
-			setQuantity("");
-		}
-		// Set the input value
-		if (value > 0 && value <= 20) {
-			setQuantity(Number(value));
-		}
-	}
-	// Reset the value back to 1 if input field has been left empty
-	function resetQuantity() {
-		if (quantity === "") {
-			setQuantity(1);
-		}
-	}
 	// Convert all unknown, empty or n/a values into N/A for consistency
 	const info = Object.fromEntries(
 		Object.entries(details).map(([key, val]) => {
@@ -66,6 +48,15 @@ export default function ShipDetails({ basic, details }) {
 				return [key, val];
 			}
 	}));
+	// Handle adding the ship to the shopping cart
+	const handleAdd = (e) => {
+		e.preventDefault();
+		e.stopPropagation();
+		const added = addToCart(cartItemInfo);
+		if (added) {
+			addPopup(quantity, basic.name);
+		};
+	};
 
   return (
 		<div className={styles.shipDetailsCont} data-testid="shipDetails">
@@ -98,7 +89,7 @@ export default function ShipDetails({ basic, details }) {
 					/>
 					<button 
 						className={styles.addBtn}
-						onClick={() => addToCart(cartItemInfo)}
+						onClick={handleAdd}
 					>ADD</button>
 				</div>
 			</div>
