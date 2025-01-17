@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useCartContext } from '../../../hooks/useShoppingCart/useShoppingCart';
+import { useCartContext } from '../../../hooks/useCartContext/useCartContext';
 import useItemQuantity from '../../../hooks/useItemQuantity/useItemQuantity';
 import ItemQuantity from '../../ItemQuantity/ItemQuantity';
 import formatNumber from '../../../formatNumber/formatNumber';
@@ -61,7 +61,9 @@ export default function CartItem({
 					<button 
 						className={styles.delBtn}
 						onClick={() => removeFromCart(id)}
-					>X</button>
+					>
+						<img src="/src/assets/trash.svg" alt="trashcan remove icon" width={28} height={28} />
+					</button>
 					<p>
 						{price === "Price on Request" 
 						? price

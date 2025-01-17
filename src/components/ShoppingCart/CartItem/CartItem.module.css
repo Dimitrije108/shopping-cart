@@ -80,6 +80,22 @@ hr {
 	align-items: flex-end;
 }
 
+.delBtn {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+.delBtn:hover {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+.delBtn > img {
+	vertical-align: middle;
+}
+
 .priceCont > p {
 	font-size: 1.3rem;
 	text-align: end;
