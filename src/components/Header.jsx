@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useCartContext } from "../hooks/useShoppingCart/useShoppingCart";
+import { useCartContext } from "../hooks/useCartContext/useCartContext";
 
 export default function Header() {
 	const { cart } = useCartContext();
