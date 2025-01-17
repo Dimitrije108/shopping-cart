@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useCartContext } from "../../../../hooks/useCartContext/useCartContext";
 import { useCartPopup } from "../../../../hooks/useCartPopup/useCartPopup";
 import useItemQuantity from "../../../../hooks/useItemQuantity/useItemQuantity";
@@ -6,6 +7,8 @@ import ItemQuantity from "../../../ItemQuantity/ItemQuantity";
 import styles from "./ShipDetails.module.css";
 
 export default function ShipDetails({ basic, details }) {
+	const [tooltip, setTooltip] = useState(false);
+
 	const { 
 		quantity, 
 		increaseQuantity, 
@@ -14,7 +17,7 @@ export default function ShipDetails({ basic, details }) {
 		resetQuantity  
 	} = useItemQuantity();
 
-	const { addToCart } = useCartContext();
+	const { addToCart, limitExceededMsg } = useCartContext();
 	const { addPopup } = useCartPopup();
 	// Find which category ship belongs to
 	const path = window.location.pathname;
@@ -55,6 +58,11 @@ export default function ShipDetails({ basic, details }) {
 		const added = addToCart(cartItemInfo);
 		if (added) {
 			addPopup(quantity, basic.name);
+		} else {
+			setTooltip(true);
+			setTimeout(() => {
+				setTooltip(false);
+			}, 3000);
 		};
 	};
 
@@ -91,6 +99,7 @@ export default function ShipDetails({ basic, details }) {
 						className={styles.addBtn}
 						onClick={handleAdd}
 					>ADD</button>
+					{tooltip && <p className={styles.limitExceeded}>{limitExceededMsg}</p>}
 				</div>
 			</div>
 			<div className={styles.descriptionCont}>

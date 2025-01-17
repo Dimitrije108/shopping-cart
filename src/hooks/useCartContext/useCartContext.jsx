@@ -13,7 +13,7 @@ export function useShoppingCart() {
 	const [cart, setCart] = useState([]);
 	// Warning message for exceeding the ship quantity limit
 	const limitExceededMsg = 
-		"For orders larger than 20 ships per model please contact us directly";
+		"For orders larger than 20 ships per model please contact us directly!";
 	// Add an item or adjust it's quantity
 	const addToCart = (item) => {
 		// check if the provided item is already inside the cart

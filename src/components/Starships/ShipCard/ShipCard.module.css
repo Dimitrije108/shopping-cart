@@ -109,6 +109,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+
+  position: relative;
 }
 
 .priceCont {
@@ -138,4 +140,21 @@
 
 .addBtn:hover {
   border: 1px solid rgb(0, 192, 64);
+}
+
+.limitExceeded {
+  width: 200px;
+  padding: 6px;
+
+  font-family: DINNext;
+  font-size: 0.8rem;
+
+  background-color: rgb(20, 20, 20);
+  border: 1px solid rgb(104, 104, 104);
+  cursor: auto;
+  
+  position: absolute;
+  bottom: -45px;
+
+  z-index: 1;
 }

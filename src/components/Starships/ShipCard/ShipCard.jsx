@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useCartContext } from "../../../hooks/useCartContext/useCartContext";
 import { useCartPopup } from "../../../hooks/useCartPopup/useCartPopup";
@@ -12,7 +13,8 @@ export default function ShipCard({
 	img, 
 	price,
 }) {
-	const { addToCart } = useCartContext();
+	const [tooltip, setTooltip] = useState(false);
+	const { addToCart, limitExceededMsg } = useCartContext();
 	const { addPopup } = useCartPopup();
 	// Create link to view ship details
 	const linkTo = `/starships/${category}/${id}`;
@@ -36,6 +38,11 @@ export default function ShipCard({
 		const added = addToCart(cartItemInfo);
 		if (added) {
 			addPopup(1, name);
+		} else {
+			setTooltip(true);
+			setTimeout(() => {
+				setTooltip(false);
+			}, 3000);
 		};
 	};
 
@@ -73,6 +80,16 @@ export default function ShipCard({
 						>
 						ADD
 						</button>
+						{tooltip && 
+						<p 
+							className={styles.limitExceeded}
+							onClick={(e) => {
+								e.preventDefault();
+								e.stopPropagation();
+							}}
+						>
+								{limitExceededMsg}
+						</p>}
 					</div>
 				</div>
 			</div>
