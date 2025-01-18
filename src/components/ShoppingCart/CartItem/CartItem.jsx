@@ -33,8 +33,8 @@ export default function CartItem({
 	const linkTo = `/starships/${category}/${id}`;
 
 	return (
-		<div  className={styles.cartItemCont}>
-			<hr />
+		<div className={styles.cartItemCont}>
+			<hr className={styles.horizontalLine} />
 			<div className={styles.cartItem}>
 				<Link to={linkTo}>
 					<div className={styles.imgCont}>

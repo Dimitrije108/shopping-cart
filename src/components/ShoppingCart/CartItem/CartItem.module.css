@@ -1,8 +1,4 @@
-.cartItemCont {
-	max-width: 800px;
-}
-
-hr {
+.horizontalLine {
 	margin: 1rem 0;
   border: 0;
   height: 1px;
@@ -10,8 +6,6 @@ hr {
 }
 
 .cartItem {
-	max-width: 800px;
-
 	display: grid;
 	grid-template-columns: 1fr 1.5fr 0.2fr 1fr;
 	align-items: end;
