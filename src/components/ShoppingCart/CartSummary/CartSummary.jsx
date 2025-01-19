@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import formatNumber from "../../../formatNumber/formatNumber";
 import styles from './CartSummary.module.css';
@@ -11,12 +11,14 @@ export default function CartSummary({ cart }) {
 	const toggleTooltip = () => {
 		setFreeShippingTooltip((prev) => !prev);
 	};
-	// Calculate subtotal
-	const subtotal = cart.reduce((total, ship) => {
-		return ship.price !== "Price on Request" 
-			? total + (ship.quantity * Number(ship.price)) 
-			: total;
-	}, 0);
+	// Calculate and memoize subtotal
+	const subtotal = useMemo(() => {
+		return cart.reduce((total, ship) => {
+			return ship.price !== "Price on Request" 
+				? total + (ship.quantity * Number(ship.price)) 
+				: total;
+		}, 0);
+	}, [cart]);
 	// Calculate shipping into total cost
 	const shippingCost = subtotal < 500000 && cart.length > 0
 		? 25000
