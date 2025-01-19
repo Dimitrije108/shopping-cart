@@ -1,4 +1,4 @@
-import { useState, createContext, useContext } from 'react';
+import { useState, useEffect, createContext, useContext } from 'react';
 
 const CartContext = createContext({
   cart: null,
@@ -10,7 +10,17 @@ const CartContext = createContext({
 // Shopping cart functionality passed on to all components 
 // via context provider
 export function useShoppingCart() {
-	const [cart, setCart] = useState([]);
+	// Retrieve cart from storage if available
+	const storedCart = JSON.parse(localStorage.getItem('cart'));
+	const initCart = storedCart ? storedCart : [];
+
+	const [cart, setCart] = useState(initCart);
+
+	useEffect(() => {
+		if (cart.length > 0) {
+			localStorage.setItem('cart', JSON.stringify(cart));
+		}
+	}, [cart]);
 	// Warning message for exceeding the ship quantity limit
 	const limitExceededMsg = 
 		"For orders larger than 20 ships per model please contact us directly!";
