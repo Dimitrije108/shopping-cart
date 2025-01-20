@@ -1,12 +1,14 @@
 import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
+import { useCartContext } from "../../../hooks/useCartContext/useCartContext";
 import formatNumber from "../../../formatNumber/formatNumber";
 import styles from './CartSummary.module.css';
 
 // TODO: make a contact form for "Contact for price" items
 // TODO: introduce discount functionality
-export default function CartSummary({ cart }) {
+export default function CartSummary() {
 	const [freeShippingTooltip, setFreeShippingTooltip] = useState(false);
+	const { cart } = useCartContext();
 
 	const toggleTooltip = () => {
 		setFreeShippingTooltip((prev) => !prev);
