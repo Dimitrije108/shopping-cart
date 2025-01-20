@@ -17,9 +17,7 @@ export function useShoppingCart() {
 	const [cart, setCart] = useState(initCart);
 
 	useEffect(() => {
-		if (cart.length > 0) {
-			localStorage.setItem('cart', JSON.stringify(cart));
-		}
+		localStorage.setItem('cart', JSON.stringify(cart));
 	}, [cart]);
 	// Warning message for exceeding the ship quantity limit
 	const limitExceededMsg = 
