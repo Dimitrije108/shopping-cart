@@ -1,0 +1,29 @@
+.cartWrapper {
+	width: 100%;
+
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: 2rem;
+}
+
+.emptyCartCont {
+	height: 100%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.emptyCartCont > p {
+	padding: 4px 0;
+}
+
+.shopLink {
+	color: rgb(68, 102, 255);
+	transition: 0.3s color ease;
+}
+
+.shopLink:hover {
+	color: rgb(37, 77, 255);
+}
