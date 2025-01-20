@@ -81,15 +81,16 @@ export default function ShipCard({
 						ADD
 						</button>
 						{tooltip && 
-						<p 
-							className={styles.limitExceeded}
-							onClick={(e) => {
-								e.preventDefault();
-								e.stopPropagation();
-							}}
-						>
-								{limitExceededMsg}
-						</p>}
+							<p 
+								className={styles.limitExceeded}
+								onClick={(e) => {
+									e.preventDefault();
+									e.stopPropagation();
+								}}
+							>
+									{limitExceededMsg}
+							</p>
+						}
 					</div>
 				</div>
 			</div>
