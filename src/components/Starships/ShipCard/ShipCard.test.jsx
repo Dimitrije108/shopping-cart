@@ -2,10 +2,10 @@ import { describe, it, expect, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { MemoryRouter, Route, Routes } from "react-router-dom";
-import { useCartContext } from "../../../App";
+import { useCartContext } from "../../../hooks/useCartContext/useCartContext";
 import ShipCard from "./ShipCard";
 
-vi.mock("../../../App", () => ({
+vi.mock("../../../hooks/useCartContext/useCartContext", () => ({
 	useCartContext: vi.fn(() => ({
 		addToCart: vi.fn(),
 	})),
