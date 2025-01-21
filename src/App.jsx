@@ -1,4 +1,3 @@
-import { useMemo } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import CartContext, { useShoppingCart } from "./hooks/useCartContext/useCartContext";
 import PopupContext, { useAddToCartPopup } from "./hooks/useCartPopup/useCartPopup";
@@ -6,7 +5,18 @@ import Header from "./components/Header";
 import Homepage from "./components/Homepage";
 import Footer from "./components/Footer";
 import CartPopups from "./components/CartPopups/CartPopups";
-import styles from "./layout.module.css"
+import styles from "./layout.module.css";
+
+// TODO LIST:
+// - Testing all Shopping cart components
+// 1. Main/home page
+// - testing
+// 2. Contact page
+// - testing
+// 3. Header navbar
+// - testing
+// 4. Footer
+// - testing
 
 export function App() {
   const {pathname} = useLocation();
@@ -14,12 +24,9 @@ export function App() {
   const cartFunctionality = useShoppingCart();
   const popupFunctionality = useAddToCartPopup();
 
-  const cartFunctionalityMemo = useMemo(() => cartFunctionality, [cartFunctionality.cart]);
-  const popupFunctionalityMemo = useMemo(() => popupFunctionality, [popupFunctionality.popups]);
-
   return (
-    <CartContext.Provider value={cartFunctionalityMemo}>
-      <PopupContext.Provider value={popupFunctionalityMemo}>
+    <CartContext.Provider value={cartFunctionality}>
+      <PopupContext.Provider value={popupFunctionality}>
         <div className={styles.layoutWrapper}>
           <Header />
           {pathname === "/" && <Homepage />}
