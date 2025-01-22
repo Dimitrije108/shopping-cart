@@ -29,7 +29,7 @@ describe("useCartContext custom hook", () => {
 		it("add new item to the cart", () => {
 			const { result } = renderHook(() => useShoppingCart());
 	
-			act( () => {
+			act(() => {
 				result.current.addToCart(mockShip);
 			});
 	
