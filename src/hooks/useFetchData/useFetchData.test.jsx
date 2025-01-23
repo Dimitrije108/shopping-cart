@@ -4,6 +4,7 @@ import useFetchData from "./useFetchData";
 
 beforeEach(() => {
 	global.fetch = vi.fn();
+	localStorage.clear();
 })
 
 afterEach(() => {

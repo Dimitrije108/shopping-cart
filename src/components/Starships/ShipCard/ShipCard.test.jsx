@@ -2,10 +2,10 @@ import { describe, it, expect, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { MemoryRouter, Route, Routes } from "react-router-dom";
-import { useCartContext } from "../../../App";
+import { useCartContext } from "../../../hooks/useCartContext/useCartContext";
 import ShipCard from "./ShipCard";
 
-vi.mock("../../../App", () => ({
+vi.mock("../../../hooks/useCartContext/useCartContext", () => ({
 	useCartContext: vi.fn(() => ({
 		addToCart: vi.fn(),
 	})),
@@ -41,7 +41,7 @@ describe("Ship Card component", () => {
 			</MemoryRouter>
 		)
 
-		const bckImg = screen.getByTestId('img-cont');
+		const bckImg = screen.getByTestId('imgCont');
 		const name = screen.getByRole('heading').textContent;
 		const price = screen.getByText('100,000');
 		const btn = screen.getByRole('button');

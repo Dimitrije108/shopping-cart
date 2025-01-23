@@ -5,7 +5,6 @@ const CartContext = createContext({
 	limitExceededMsg: "", 
   addToCart: () => {},
 	removeFromCart: () => {},
-	adjustItemQuantity: () => {},
 });
 // Shopping cart functionality passed on to all components 
 // via context provider

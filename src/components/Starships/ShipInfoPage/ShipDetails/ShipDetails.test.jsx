@@ -2,10 +2,10 @@ import { describe, it, expect, vi } from "vitest";
 import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { MemoryRouter } from "react-router-dom";
-import { useCartContext } from "../../../../App";
+import { useCartContext } from "../../../../hooks/useCartContext/useCartContext";
 import ShipDetails from "./ShipDetails";
 
-vi.mock("../../../../App", () => ({
+vi.mock("../../../../hooks/useCartContext/useCartContext", () => ({
 	useCartContext: vi.fn(() => ({
 		addToCart: vi.fn(),
 	})),
@@ -301,7 +301,11 @@ describe("Ship Details component", () => {
 			await user.click(addBtn);
 	
 			expect(mockAddToCart).toHaveBeenCalledTimes(1);
-			expect(mockAddToCart).toHaveBeenCalledWith(8);
+			expect(mockAddToCart).toHaveBeenCalledWith(
+				expect.objectContaining({
+					quantity: 8,
+				})
+			);
 		});
 	})
 });
