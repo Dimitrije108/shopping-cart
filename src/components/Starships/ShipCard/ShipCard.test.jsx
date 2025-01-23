@@ -41,7 +41,7 @@ describe("Ship Card component", () => {
 			</MemoryRouter>
 		)
 
-		const bckImg = screen.getByTestId('img-cont');
+		const bckImg = screen.getByTestId('imgCont');
 		const name = screen.getByRole('heading').textContent;
 		const price = screen.getByText('100,000');
 		const btn = screen.getByRole('button');

@@ -58,7 +58,7 @@ export default function ShipCard({
 				<div
 					className={styles.imgCont}
 					style={{ backgroundImage: `url(${img})` }}
-					data-testid="img-cont"
+					data-testid="imgCont"
 				>
 				</div>
 				<div className={styles.infoCont}>

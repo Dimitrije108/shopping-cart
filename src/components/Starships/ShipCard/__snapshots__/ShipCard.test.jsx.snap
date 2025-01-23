@@ -37,7 +37,7 @@ exports[`Ship Card component > ship card component snapshot 1`] = `
           </div>
           <div
             class="_imgCont_4857ee"
-            data-testid="img-cont"
+            data-testid="imgCont"
             style="background-image: url(https://lumiere-a.akamaihd.net/v1/images/millennium-falcon-main-tlj-a_7cf89d3a.jpeg);"
           />
           <div
@@ -121,7 +121,7 @@ exports[`Ship Card component > ship card component snapshot 1`] = `
         </div>
         <div
           class="_imgCont_4857ee"
-          data-testid="img-cont"
+          data-testid="imgCont"
           style="background-image: url(https://lumiere-a.akamaihd.net/v1/images/millennium-falcon-main-tlj-a_7cf89d3a.jpeg);"
         />
         <div
