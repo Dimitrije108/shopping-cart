@@ -57,7 +57,9 @@ describe("Shopping Cart component", () => {
 		const ship2Heading = screen.getByRole("heading", { name: "X-wing Starfighter" });
 
 		expect(cartItems.length).toEqual(mockCart.length);
-		expect(ship1Img).toHaveAttribute("src", "https://lumiere-a.akamaihd.net/v1/images/millennium-falcon-main-tlj-a_7cf89d3a.jpeg");
+		expect(ship1Img).toHaveAttribute("src", 
+			"https://lumiere-a.akamaihd.net/v1/images/millennium-falcon-main-tlj-a_7cf89d3a.jpeg"
+		);
 		expect(ship2Heading).toBeInTheDocument();
 	});
 
