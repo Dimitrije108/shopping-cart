@@ -52,12 +52,23 @@ export function useShoppingCart() {
 		const removed = cart.filter((ship) => ship.id !== id);
 		setCart(removed);
 	};
+	// adjust quantity accordingly
+	const adjustItemQuantity = (id, quan) => {
+		const adjusteQuan = cart.map((ship) => {
+			if (ship.id === id) {
+				return { ...ship, quantity: quan };
+			}
+			return ship;
+		});
+		setCart(adjusteQuan);
+	};
 
 	return { 
 		cart, 
 		limitExceededMsg, 
 		addToCart, 
 		removeFromCart,
+		adjustItemQuantity,
 	};
 };
 
