@@ -50,7 +50,7 @@ export default function CartSummary() {
 			<div className={styles.costCalculation}>
 				<div className={styles.wrapper}>
 					<p>Subtotal</p>
-					<div>{formatNumber(subtotal)}</div>
+					<div data-testid="subtotal">{formatNumber(subtotal)}</div>
 				</div>
 				<div className={styles.wrapper}>
 					<div className={styles.shippingCont}>
@@ -67,23 +67,25 @@ export default function CartSummary() {
 							/>
 						</button>
 						{freeShippingTooltip && 
-								<div className={styles.freeShippingTooltip}>
-									Free shipping for orders larger than 500,000 credits!
-								</div>
-							}
+							<div className={styles.freeShippingTooltip}>
+								Free shipping for orders larger than 500,000 credits!
+							</div>
+						}
 					</div>
-					<div>{shipping}</div>
+					<div data-testid="shipping">{shipping}</div>
 				</div>
 				<div className={styles.wrapper}>
 					<p>Discount</p>
-					<div>0</div>
+					<div data-testid="discount">0</div>
 				</div>
 			</div>
 			<div className={styles.totalWrapper}>
 				<div className={styles.totalLayout}>
 					<h3>Total</h3>
-					<div  className={styles.totalPrice}>
-						{formatNumber(total)}
+					<div 
+						className={styles.totalPrice}  
+						data-testid="total">
+							{formatNumber(total)}
 					</div>
 				</div>
 				{total > 0 && <span className={styles.creditsText}>credits</span>}
