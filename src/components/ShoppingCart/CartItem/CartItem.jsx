@@ -33,7 +33,7 @@ export default function CartItem({
 	const linkTo = `/starships/${category}/${id}`;
 
 	return (
-		<div className={styles.cartItemCont}>
+		<div className={styles.cartItemCont} data-testid="cartItem">
 			<hr className={styles.horizontalLine} />
 			<div className={styles.cartItem}>
 				<Link to={linkTo}>
@@ -76,14 +76,7 @@ export default function CartItem({
 						}
 					</p>
 				</div>
-				{/* needs to show up as a warning next to a ship that user tried to add
-				to the cart */}
-				{/* considering quantity inside cart can be changed only via input it doesn't
-				need the warning as it can't exceed the limit of 20, right? It also should 
-				be put only where addToCart is called */}
-				{/* {limitExceeded && limitExceededMsg} */}
 			</div>
 		</div>
 	)
 };
-
