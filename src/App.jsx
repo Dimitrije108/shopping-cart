@@ -1,14 +1,13 @@
 import { Outlet, useLocation } from "react-router-dom";
 import CartContext, { useShoppingCart } from "./hooks/useCartContext/useCartContext";
 import PopupContext, { useAddToCartPopup } from "./hooks/useCartPopup/useCartPopup";
-import Header from "./components/Header";
+import Header from "./components/Header/Header";
 import Homepage from "./components/Homepage";
 import Footer from "./components/Footer";
 import CartPopups from "./components/CartPopups/CartPopups";
 import styles from "./layout.module.css";
 
 // TODO LIST:
-// - Testing all Shopping cart components
 // 1. Main/home page
 // - testing
 // 2. Contact page
@@ -27,13 +26,13 @@ export function App() {
   return (
     <CartContext.Provider value={cartFunctionality}>
       <PopupContext.Provider value={popupFunctionality}>
-        <div className={styles.layoutWrapper}>
-          <Header />
-          {pathname === "/" && <Homepage />}
-          <Outlet />
-          <Footer />
-          <CartPopups />
-        </div>
+        <Header />
+          <div className={styles.layoutWrapper}>
+            {pathname === "/" && <Homepage />}
+            <Outlet />
+          </div>
+        <Footer />
+        <CartPopups />
       </PopupContext.Provider>
     </CartContext.Provider>
   )
