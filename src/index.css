@@ -28,11 +28,6 @@
   src: url(./assets/fonts/Starjedi.ttf);
 }
 
-@font-face {
-  font-family: SupremeSpike;
-  src: url(./assets/fonts/SupremeSpike-KVO8D.otf);
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -95,13 +90,17 @@ a:hover {
   color: inherit;
 }
 
+li {
+  list-style: none;
+}
+
 p {
 	margin: 0;
 	padding: 0;
 }
 
 hr {
-  margin: 2rem 0;
+  margin: 3rem 0 2rem 0;
   border: 0;
   height: 2px;
   background-color: rgb(165, 165, 165);
