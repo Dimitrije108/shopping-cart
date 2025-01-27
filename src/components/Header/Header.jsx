@@ -133,7 +133,7 @@ export default function Header() {
 				<img 
 					src="/src/assets/github-mark-white.svg" 
 					alt="github icon" 
-					width={30}
+					width={28}
 					title="GitHub"
 				/>
 			</Link>

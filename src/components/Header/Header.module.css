@@ -176,8 +176,18 @@
   align-items: center;
 }
 
+.cartIconLink.sticky > .cartQuantity {
+	width: 22px;
+  height: 22px;
+	font-size: 0.9rem;
+}
+
 .quantityWrapper{
 	transform: translateY(1px);
+}
+
+.cartIconLink.sticky > .cartQuantity > .quantityWrapper {
+	transform: translateY(2px);
 }
 
 @keyframes growDropdown {
