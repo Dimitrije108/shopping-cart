@@ -18,7 +18,7 @@ import styles from "./layout.module.css";
 // - testing
 
 export function App() {
-  const {pathname} = useLocation();
+  const { pathname } = useLocation();
 
   const cartFunctionality = useShoppingCart();
   const popupFunctionality = useAddToCartPopup();
