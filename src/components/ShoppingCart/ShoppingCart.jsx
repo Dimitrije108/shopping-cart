@@ -11,8 +11,13 @@ export default function ShoppingCart() {
 	if (cart.length < 1) {
 		cartItems = 
 			<div className={styles.emptyCartCont}>
-				<div>
-					<img src="/src/assets/cart.svg" alt="shopping cart icon" width={150} height={150} />
+				<div className={styles.emptyCartImgCont}>
+					<img 
+						src="https://icons.iconarchive.com/icons/jonathan-rey/star-wars-vehicles/128/Death-Star-2nd-icon.png" 
+						alt="death star icon"
+						width="180" 
+						height="180"
+					/>
 				</div>
 				<p>Seems like you haven't added any items to your cart.</p>
 				<Link 
