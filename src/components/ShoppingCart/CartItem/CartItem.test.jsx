@@ -31,7 +31,7 @@ const mockCartItem2 = {
 };
 
 describe("Cart Item component", () => {
-	it("ship card component snapshot", () => {
+	it("cart item component snapshot", () => {
 		const cartItem = render(
 			<MemoryRouter>
 				<CartItem 
