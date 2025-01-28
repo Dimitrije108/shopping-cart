@@ -73,12 +73,12 @@ describe("Shopping Cart component", () => {
 		)
 
 		const cartItems = screen.queryAllByTestId("cartItem");
-		const cartIcon = screen.getByRole("img", { name: "shopping cart icon" });
+		const cartIcon = screen.getByRole("img", { name: "death star icon" });
 		const para = screen.getByText("Seems like you haven't added any items to your cart.");
 		const link = screen.getByRole("link", { name: "Shop here!" });
 
 		expect(cartItems.length).toBe(0);
-		expect(cartIcon).toHaveAttribute("src", "/src/assets/cart.svg");
+		expect(cartIcon).toHaveAttribute("src", "https://icons.iconarchive.com/icons/jonathan-rey/star-wars-vehicles/128/Death-Star-2nd-icon.png");
 		expect(para).toBeInTheDocument();
 		expect(link).toBeInTheDocument();
 	});
