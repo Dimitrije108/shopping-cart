@@ -51,7 +51,7 @@ export default function Header() {
 						title="GitHub"
 					/>
 				</Link>
-				<h1 className={styles.logoHeading}>
+				<h1 className={styles.logoHeading}  data-testid="headingLogo">
 					<Link to="/" className={styles.logoLink}>
 						<img 
 							src="/src/assets/sw-logo.png"  
@@ -70,6 +70,7 @@ export default function Header() {
 				<Link 
 					to="shopping-cart"
 					className={styles.cartIconLink}
+					data-testid="cartLink"
 				>
 					<img 
 						src="https://icons.iconarchive.com/icons/jonathan-rey/star-wars-vehicles/128/Death-Star-2nd-icon.png" 
@@ -90,6 +91,7 @@ export default function Header() {
 				<ul className={styles.navbar}>
 					<li 
 						className={`${styles.homeNav} ${pathname==="/" ? styles.active : ""} `}
+						data-testid="home"
 					>
 						<Link to="/">Home</Link>
 					</li>
@@ -97,9 +99,13 @@ export default function Header() {
 						className={`${styles.starshipsNav} ${pathname.startsWith("/starships") ? styles.active : ""} `}
 						onMouseEnter={() => handleMouseEnter()}
 						onMouseLeave={() => handleMouseLeave()}
+						data-testid="starships"
 					>
 						<Link to="starships">Starships</Link>
-						<ul className={`${styles.dropdown} ${starshipsDropdown ? styles.visible : ""}`}>
+						<ul 
+							className={`${styles.dropdown} ${starshipsDropdown ? styles.visible : ""}`}
+							data-testid="starshipsDropdown"
+						>
 							<li>
 								<Link to="starships/capital">Capital</Link>
 							</li>
@@ -113,6 +119,7 @@ export default function Header() {
 					</li>
 					<li 
 						className={`${styles.contactNav} ${pathname.startsWith("/contact") ? styles.active : ""} `}
+						data-testid="contact"
 					>
 						<Link to="contact">Contact</Link>
 					</li>
@@ -125,6 +132,7 @@ export default function Header() {
 		<nav 
 			className={`${styles.navbarCont} ${isSticky ? styles.sticky : ""}`}
 			ref={navbarRef}
+			data-testid="stickyNavbar"
 		>
 			<Link 
 				to="https://github.com/Dimitrije108/shopping-cart"
@@ -140,6 +148,7 @@ export default function Header() {
 			<ul className={styles.navbar}>
 				<li 
 					className={`${styles.homeNav} ${pathname==="/" ? styles.active : ""} `}
+					data-testid="home"
 				>
 					<Link to="/">Home</Link>
 				</li>
@@ -147,15 +156,18 @@ export default function Header() {
 					className={`${styles.starshipsNav} ${pathname.startsWith("/starships") ? styles.active : ""} `}
 					onMouseEnter={() => handleMouseEnter()}
 					onMouseLeave={() => handleMouseLeave()}
+					data-testid="starships"
 				>
 					<Link to="starships">Starships</Link>
-					<ul className={
-						`
-						${styles.dropdown} 
-						${isSticky ? styles.sticky : ""} 
-						${starshipsDropdown ? styles.visible : ""}
-						`
-					}>
+					<ul 
+						className=
+							{`
+							${styles.dropdown} 
+							${isSticky ? styles.sticky : ""} 
+							${starshipsDropdown ? styles.visible : ""}
+							`}
+						data-testid="starshipsDropdown"
+					>
 						<li>
 							<Link to="starships/capital">Capital</Link>
 						</li>
@@ -169,6 +181,7 @@ export default function Header() {
 				</li>
 				<li 
 					className={`${styles.contactNav} ${pathname.startsWith("/contact") ? styles.active : ""} `}
+					data-testid="contact"
 				>
 					<Link to="contact">Contact</Link>
 				</li>
@@ -176,6 +189,7 @@ export default function Header() {
 			<Link 
 				to="shopping-cart"
 				className={`${styles.cartIconLink} ${styles.sticky}`}
+				data-testid="cartLink"
 			>
 				<img 
 					src="https://icons.iconarchive.com/icons/jonathan-rey/star-wars-vehicles/128/Death-Star-2nd-icon.png" 
