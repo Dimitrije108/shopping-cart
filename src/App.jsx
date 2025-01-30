@@ -3,7 +3,7 @@ import CartContext, { useShoppingCart } from "./hooks/useCartContext/useCartCont
 import PopupContext, { useAddToCartPopup } from "./hooks/useCartPopup/useCartPopup";
 import Header from "./components/Header/Header";
 import Homepage from "./components/Homepage";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer/Footer";
 import CartPopups from "./components/CartPopups/CartPopups";
 import styles from "./layout.module.css";
 
