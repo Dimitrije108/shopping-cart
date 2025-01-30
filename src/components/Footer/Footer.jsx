@@ -45,6 +45,7 @@ export default function Footer() {
 							<Link 
 								to={"https://starwars.fandom.com/wiki/Corellian_Engineering_Corporation"}
 								className={styles.linkEl}
+								data-testid="cecLink"
 							>
 								<img 
 									src="/src/assets/Corellian_Engineering_Corporation.svg" 
@@ -56,6 +57,7 @@ export default function Footer() {
 							<Link 
 								to={"https://starwars.fandom.com/wiki/Confederation"}
 								className={styles.linkEl}
+								data-testid="cfLink"
 							>
 								<img 
 									src="/src/assets/Corellian_Federation_logo.webp" 
@@ -69,6 +71,7 @@ export default function Footer() {
 							<Link 
 								to={"https://starwars.fandom.com/wiki/Kuat_Drive_Yards"}
 								className={styles.linkEl}
+								data-testid="kdyLink"
 							>
 								<img 
 									src="/src/assets/Kuat-Drive-Yards.svg" 
@@ -80,6 +83,7 @@ export default function Footer() {
 							<Link 
 								to={"https://starwars.fandom.com/wiki/Fondor_Shipyards"}
 								className={styles.linkEl}
+								data-testid="fondorLink"
 							>
 								<img 
 									src="/src/assets/Fondor-Shipyards.jpg" 
@@ -100,6 +104,7 @@ export default function Footer() {
 				<Link 
 					to="https://github.com/Dimitrije108/shopping-cart"
 					className={styles.githubLink}
+					data-testid="githubLink"
 				>
 					<img 
 						src="/src/assets/github-mark-white.svg" 
