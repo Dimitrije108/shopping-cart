@@ -61,6 +61,14 @@ body {
   background-position: center;
 }
 
+#root {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 button {
   padding: 0.4rem 1rem;
 
@@ -83,6 +91,8 @@ button:hover {
 a {
   text-decoration: none;
   color: inherit;
+  display: inline-block; 
+  width: fit-content; 
 }
 
 a:hover {
