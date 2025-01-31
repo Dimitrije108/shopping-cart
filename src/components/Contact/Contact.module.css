@@ -1,0 +1,62 @@
+.backdrop {
+	width: 100%;
+	height: 200px;
+
+	background-image: url("/src/assets/galaxy_map2.jpg");
+	background-size: cover;
+	background-position: 50% 56%;
+	background-repeat: no-repeat;
+}
+
+.locationCont {
+	display: flex;
+}
+
+.galaxyMap,
+.planetMap,
+.cecLogo {
+	padding: 6px;
+	border: 1px solid rgb(104, 104, 104);
+}
+
+.planetAndLogoCont {
+	margin: 0 1rem;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.contactCont {
+	align-self: flex-end;
+}
+
+.locationCont {
+	display: flex;
+}
+
+.location {
+	font-size: 0.9rem;
+}
+
+.address {
+	font-family: 'DINNext bold';
+	font-size: 1rem;
+}
+
+.emailCont {
+	display: flex;
+	align-items: end;
+}
+
+.iconCont {
+	margin-top: 4px;
+	margin-right: 12px;
+	display: flex;
+	flex-direction: column;
+}
+
+.emailCont > p {
+	display: flex;
+	align-items: center;
+}
