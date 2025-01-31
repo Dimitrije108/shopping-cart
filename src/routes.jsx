@@ -1,7 +1,7 @@
 import { App } from "./App";
 import ErrorPage from "./components/ErrorPage/ErrorPage";
 import Starships from "./components/Starships/Starships";
-import Contact from "./components/Contact";
+import Contact from "./components/Contact/Contact";
 import ShoppingCart from "./components/ShoppingCart/ShoppingCart";
 import Capital from "./components/Starships/Capital";
 import Transport from "./components/Starships/Transport";
