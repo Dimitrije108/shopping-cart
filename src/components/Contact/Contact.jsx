@@ -5,7 +5,6 @@ export default function Contact() {
   return (
 		<>
 			<div className={styles.wrapper}>
-				{/* <div  className={styles.backdrop}></div> */}
 				<h1 className={styles.findUsHeading}>
 					Find Us
 				</h1>
@@ -135,12 +134,14 @@ export default function Contact() {
 									required
 								/>
 							</div>
-							<button
-								type="submit"
-								className={styles.submitFormBtn}
-							>
-								Submit
-							</button>
+							<div className={styles.submitBtnCont}>
+								<button
+									type="submit"
+									className={styles.submitFormBtn}
+								>
+									Submit
+								</button>
+							</div>
 						</form>
 					</div>
 					<div className={styles.requestPriceFormCont}>
@@ -207,9 +208,10 @@ export default function Contact() {
 								<select 
 									id="ships"
 									name="ships"
+									className={styles.selectEl}
 									required
 								>
-									<option value="">--Select ship--</option>
+									<option value="">Select ship</option>
 									<option value="hTypeNubianYacht">H-type Nubian yacht</option>
 									<option value="nabooRoyalStarship">Naboo Royal Starship</option>
 									<option value="republicCruiser">Republic Cruiser</option>
@@ -219,17 +221,19 @@ export default function Contact() {
 									<option value="slaveI">Slave I</option>
 								</select>
 							</div>
-							<button
-								type="submit"
-								className={styles.submitFormBtn}
-							>
-								Submit
-							</button>
+							<div className={styles.submitBtnCont}>
+								<button
+									type="submit"
+									className={styles.submitFormBtn}
+								>
+									Submit
+								</button>
+							</div>
 						</form>
 					</div>
 				</div>
 				<h1 className={styles.partnersHeading}>
-					Partners
+					Our Partners
 				</h1>
 				<div className={styles.partnersCont}>
 					<div className={styles.logoWrapper}>
