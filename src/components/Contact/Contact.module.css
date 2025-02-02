@@ -95,14 +95,19 @@
 .largeOrderFormCont,
 .requestPriceFormCont {
 	width: 100%;
-	max-width: 450px;
+	max-width: 550px;
 
 	padding: 1rem;
 	border: 1px solid rgb(104, 104, 104);
+
+	display: flex;
+	flex-direction: column;
 }
 
 .largeOrderForm,
 .requestPriceForm {
+	flex: 1;
+
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -130,6 +135,13 @@
 	border-bottom: 1px solid rgb(192, 192, 192);
 }
 
+.submitBtnCont {
+	flex: 1;
+
+	display: flex;
+	align-items: flex-end;
+}
+
 .submitFormBtn {
 	width: 100%;
 	padding: 1rem 0.5rem;
@@ -139,13 +151,17 @@
 	transition: all 0.5s ease;
 }
 
+.messageTextarea,
+.selectEl {
+	margin-top: 4px;
+}
+
 .messageTextarea {
 	max-width: 100%;
 	min-width: 200px;
 	max-height: 150px;
 	min-height: 80px;
 
-	margin-top: 4px;
 	padding: 4px 6px;
 	border: 1px solid rgb(104, 104, 104);
 }
