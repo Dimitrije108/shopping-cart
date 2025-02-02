@@ -59,6 +59,21 @@ export default function Contact() {
 							</div>
 							<p>sw_shipyard@corellia.cec</p>
 						</div>
+						<div className={styles.webpageCont}>
+							<div className={styles.iconCont}>
+								<img 
+									src="/src/assets/website.svg" 
+									alt="webpage icon" 
+									width={30}
+									title="Webpage"
+								/>
+							</div>
+							<Link 
+								to={"https://starwars.fandom.com/wiki/Corellian_Engineering_Corporation"}
+							>
+								Corellian Engineering Corporation
+							</Link>
+						</div>
 					</div>
 				</div>
 				<h1 className={styles.contactUsHeading}>

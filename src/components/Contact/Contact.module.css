@@ -30,10 +30,6 @@
 	text-align: center;
 }
 
-.locationCont {
-	display: flex;
-}
-
 .galaxyMap,
 .planetMap,
 .cecLogo {
@@ -53,8 +49,16 @@
 	align-self: flex-end;
 }
 
-.locationCont {
+.locationCont,
+.emailCont,
+.webpageCont {
+	margin-top: 1rem;
 	display: flex;
+}
+
+.emailCont,
+.webpageCont {
+	align-items: end;
 }
 
 .location {
@@ -66,9 +70,9 @@
 	font-size: 1.2rem;
 }
 
-.emailCont {
+.emailCont > p {
 	display: flex;
-	align-items: end;
+	align-items: center;
 }
 
 .iconCont {
@@ -76,15 +80,6 @@
 	margin-right: 12px;
 	display: flex;
 	flex-direction: column;
-}
-
-.emailCont {
-	margin-top: 1rem;
-}
-
-.emailCont > p {
-	display: flex;
-	align-items: center;
 }
 
 .contactFormsCont {
