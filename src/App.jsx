@@ -27,7 +27,12 @@ export function App() {
     <CartContext.Provider value={cartFunctionality}>
       <PopupContext.Provider value={popupFunctionality}>
         <Header />
-          {pathname === "/contact" && <div className={styles.backdrop}></div>}
+          {pathname === "/contact" && 
+            <div 
+              className={styles.backdrop}
+              data-testid="contactBackdrop"
+            ></div>
+          }
           <div className={styles.layoutWrapper}>
             {pathname === "/" && <Homepage />}
             <Outlet />
