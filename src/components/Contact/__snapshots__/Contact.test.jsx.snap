@@ -1,0 +1,910 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Footer component > Contact component snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="_wrapper_3e421e"
+      >
+        <h1
+          class="_findUsHeading_3e421e"
+        >
+          Find Us
+        </h1>
+        <div
+          class="_locationCont_3e421e"
+        >
+          <img
+            alt="Galaxy map"
+            class="_galaxyMap_3e421e"
+            src="/src/assets/galaxy_map.jpg"
+            title="Galaxy map"
+            width="500"
+          />
+          <div
+            class="_planetAndLogoCont_3e421e"
+          >
+            <img
+              alt="Corellia planet"
+              class="_planetMap_3e421e"
+              src="/src/assets/corellia_planet.webp"
+              title="Corellia planet"
+              width="250"
+            />
+            <img
+              alt="Corellia Engineering Corporation logo"
+              class="_cecLogo_3e421e"
+              src="/src/assets/Corellian_Engineering_Corporation.svg"
+              title="Corellia Engineering Corporation"
+              width="250"
+            />
+          </div>
+          <div
+            class="_contactCont_3e421e"
+          >
+            <div
+              class="_locationCont_3e421e"
+            >
+              <div
+                class="_iconCont_3e421e"
+              >
+                <img
+                  alt="location icon"
+                  src="/src/assets/location.svg"
+                  title="Location"
+                  width="30"
+                />
+              </div>
+              <div
+                class="_location_3e421e"
+              >
+                <p
+                  class="_address_3e421e"
+                >
+                  Orbital Assembly Facility 7
+                </p>
+                <p>
+                  Corellia, Corellian System
+                </p>
+                <p>
+                  Corellia Sector, Core Worlds
+                </p>
+              </div>
+            </div>
+            <div
+              class="_emailCont_3e421e"
+            >
+              <div
+                class="_iconCont_3e421e"
+              >
+                <img
+                  alt="email icon"
+                  src="/src/assets/email.svg"
+                  title="Email"
+                  width="30"
+                />
+              </div>
+              <p>
+                sw_shipyard@corellia.cec
+              </p>
+            </div>
+            <div
+              class="_webpageCont_3e421e"
+            >
+              <div
+                class="_iconCont_3e421e"
+              >
+                <img
+                  alt="webpage icon"
+                  src="/src/assets/website.svg"
+                  title="Webpage"
+                  width="30"
+                />
+              </div>
+              <a
+                data-testid="webpageLink"
+                href="https://starwars.fandom.com/wiki/Corellian_Engineering_Corporation"
+              >
+                Corellian Engineering Corporation
+              </a>
+            </div>
+          </div>
+        </div>
+        <h1
+          class="_contactUsHeading_3e421e"
+        >
+          Contact Us
+        </h1>
+        <div
+          class="_contactFormsCont_3e421e"
+        >
+          <div
+            class="_largeOrderFormCont_3e421e"
+          >
+            <h2
+              class="_contactFormHeading_3e421e"
+            >
+              Large Order Contact Form
+            </h2>
+            <form
+              action=""
+              class="_largeOrderForm_3e421e"
+            >
+              <div
+                class="_inputCont_3e421e"
+              >
+                <label
+                  for="firstName"
+                >
+                  First name*
+                </label>
+                <input
+                  id="firstName"
+                  maxlength="18"
+                  minlength="2"
+                  name="firstName"
+                  placeholder="Anakin"
+                  required=""
+                />
+              </div>
+              <div
+                class="_inputCont_3e421e"
+              >
+                <label
+                  for="lastName"
+                >
+                  Last name*
+                </label>
+                <input
+                  id="lastName"
+                  maxlength="18"
+                  minlength="2"
+                  name="lastName"
+                  placeholder="Skywalker"
+                  required=""
+                />
+              </div>
+              <div
+                class="_inputCont_3e421e"
+              >
+                <label
+                  for="mail"
+                >
+                  Contact email*
+                </label>
+                <input
+                  id="mail"
+                  maxlength="40"
+                  minlength="2"
+                  name="mail"
+                  placeholder="AniSkywalker@tatooine.galaxy"
+                  required=""
+                  type="email"
+                />
+              </div>
+              <div
+                class="_inputCont_3e421e"
+              >
+                <label
+                  for="company"
+                >
+                  Company
+                </label>
+                <input
+                  id="company"
+                  maxlength="18"
+                  minlength="2"
+                  name="company"
+                  placeholder="Jedi Order"
+                />
+              </div>
+              <div
+                class="_inputCont_3e421e"
+              >
+                <label
+                  for="message"
+                >
+                  Request*
+                </label>
+                <textarea
+                  class="_messageTextarea_3e421e"
+                  id="message"
+                  name="message"
+                  placeholder="Large order request message..."
+                  required=""
+                />
+              </div>
+              <div
+                class="_submitBtnCont_3e421e"
+              >
+                <button
+                  class="_submitFormBtn_3e421e"
+                  type="submit"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+          <div
+            class="_requestPriceFormCont_3e421e"
+          >
+            <h2
+              class="_contactFormHeading_3e421e"
+            >
+              Request Ship Price
+            </h2>
+            <form
+              action=""
+              class="_requestPriceForm_3e421e"
+            >
+              <div
+                class="_inputCont_3e421e"
+              >
+                <label
+                  for="firstName"
+                >
+                  First name*
+                </label>
+                <input
+                  id="firstName"
+                  maxlength="18"
+                  minlength="2"
+                  name="firstName"
+                  placeholder="Anakin"
+                  required=""
+                />
+              </div>
+              <div
+                class="_inputCont_3e421e"
+              >
+                <label
+                  for="lastName"
+                >
+                  Last name*
+                </label>
+                <input
+                  id="lastName"
+                  maxlength="18"
+                  minlength="2"
+                  name="lastName"
+                  placeholder="Skywalker"
+                  required=""
+                />
+              </div>
+              <div
+                class="_inputCont_3e421e"
+              >
+                <label
+                  for="mail"
+                >
+                  Contact email*
+                </label>
+                <input
+                  id="mail"
+                  maxlength="25"
+                  minlength="2"
+                  name="mail"
+                  placeholder="AniSkywalker@tatooine.galaxy"
+                  required=""
+                  type="email"
+                />
+              </div>
+              <div
+                class="_inputCont_3e421e"
+              >
+                <label
+                  for="company"
+                >
+                  Company
+                </label>
+                <input
+                  id="company"
+                  maxlength="18"
+                  minlength="2"
+                  name="company"
+                  placeholder="Jedi Order"
+                />
+              </div>
+              <div
+                class="_inputCont_3e421e"
+              >
+                <label
+                  for="ships"
+                >
+                  Request price*
+                </label>
+                <select
+                  class="_selectEl_3e421e"
+                  id="ships"
+                  name="ships"
+                  required=""
+                >
+                  <option
+                    value=""
+                  >
+                    Select ship
+                  </option>
+                  <option
+                    value="hTypeNubianYacht"
+                  >
+                    H-type Nubian yacht
+                  </option>
+                  <option
+                    value="nabooRoyalStarship"
+                  >
+                    Naboo Royal Starship
+                  </option>
+                  <option
+                    value="republicCruiser"
+                  >
+                    Republic Cruiser
+                  </option>
+                  <option
+                    value="gr75MediumTransport"
+                  >
+                    GR-75 Medium Transport
+                  </option>
+                  <option
+                    value="aa9CoruscantFreighter"
+                  >
+                    AA-9 Coruscant freighter
+                  </option>
+                  <option
+                    value="darthVadersTieFighter"
+                  >
+                    Darth Vader's TIE fighter
+                  </option>
+                  <option
+                    value="slaveI"
+                  >
+                    Slave I
+                  </option>
+                </select>
+              </div>
+              <div
+                class="_submitBtnCont_3e421e"
+              >
+                <button
+                  class="_submitFormBtn_3e421e"
+                  type="submit"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <h1
+          class="_partnersHeading_3e421e"
+        >
+          Our Partners
+        </h1>
+        <div
+          class="_partnersCont_3e421e"
+        >
+          <div
+            class="_logoWrapper_3e421e"
+          >
+            <div
+              class="_logoCont_3e421e"
+            >
+              <a
+                data-testid="cfLink"
+                href="https://starwars.fandom.com/wiki/Confederation"
+              >
+                <img
+                  alt="Corellian Federation icon"
+                  src="/src/assets/Corellian_Federation_logo.webp"
+                  title="Corellian Federation"
+                  width="100"
+                />
+              </a>
+              <a
+                data-testid="kdyLink"
+                href="https://starwars.fandom.com/wiki/Kuat_Drive_Yards"
+              >
+                <img
+                  alt="Kuat Drive Yards icon"
+                  src="/src/assets/Kuat-Drive-Yards.svg"
+                  title="Kuat Drive Yards"
+                  width="100"
+                />
+              </a>
+              <a
+                data-testid="fondorLink"
+                href="https://starwars.fandom.com/wiki/Fondor_Shipyards"
+              >
+                <img
+                  alt="Fondor Shipyards icon"
+                  src="/src/assets/Fondor-Shipyards.jpg"
+                  title="Fondor Shipyards"
+                  width="100"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="_wrapper_3e421e"
+    >
+      <h1
+        class="_findUsHeading_3e421e"
+      >
+        Find Us
+      </h1>
+      <div
+        class="_locationCont_3e421e"
+      >
+        <img
+          alt="Galaxy map"
+          class="_galaxyMap_3e421e"
+          src="/src/assets/galaxy_map.jpg"
+          title="Galaxy map"
+          width="500"
+        />
+        <div
+          class="_planetAndLogoCont_3e421e"
+        >
+          <img
+            alt="Corellia planet"
+            class="_planetMap_3e421e"
+            src="/src/assets/corellia_planet.webp"
+            title="Corellia planet"
+            width="250"
+          />
+          <img
+            alt="Corellia Engineering Corporation logo"
+            class="_cecLogo_3e421e"
+            src="/src/assets/Corellian_Engineering_Corporation.svg"
+            title="Corellia Engineering Corporation"
+            width="250"
+          />
+        </div>
+        <div
+          class="_contactCont_3e421e"
+        >
+          <div
+            class="_locationCont_3e421e"
+          >
+            <div
+              class="_iconCont_3e421e"
+            >
+              <img
+                alt="location icon"
+                src="/src/assets/location.svg"
+                title="Location"
+                width="30"
+              />
+            </div>
+            <div
+              class="_location_3e421e"
+            >
+              <p
+                class="_address_3e421e"
+              >
+                Orbital Assembly Facility 7
+              </p>
+              <p>
+                Corellia, Corellian System
+              </p>
+              <p>
+                Corellia Sector, Core Worlds
+              </p>
+            </div>
+          </div>
+          <div
+            class="_emailCont_3e421e"
+          >
+            <div
+              class="_iconCont_3e421e"
+            >
+              <img
+                alt="email icon"
+                src="/src/assets/email.svg"
+                title="Email"
+                width="30"
+              />
+            </div>
+            <p>
+              sw_shipyard@corellia.cec
+            </p>
+          </div>
+          <div
+            class="_webpageCont_3e421e"
+          >
+            <div
+              class="_iconCont_3e421e"
+            >
+              <img
+                alt="webpage icon"
+                src="/src/assets/website.svg"
+                title="Webpage"
+                width="30"
+              />
+            </div>
+            <a
+              data-testid="webpageLink"
+              href="https://starwars.fandom.com/wiki/Corellian_Engineering_Corporation"
+            >
+              Corellian Engineering Corporation
+            </a>
+          </div>
+        </div>
+      </div>
+      <h1
+        class="_contactUsHeading_3e421e"
+      >
+        Contact Us
+      </h1>
+      <div
+        class="_contactFormsCont_3e421e"
+      >
+        <div
+          class="_largeOrderFormCont_3e421e"
+        >
+          <h2
+            class="_contactFormHeading_3e421e"
+          >
+            Large Order Contact Form
+          </h2>
+          <form
+            action=""
+            class="_largeOrderForm_3e421e"
+          >
+            <div
+              class="_inputCont_3e421e"
+            >
+              <label
+                for="firstName"
+              >
+                First name*
+              </label>
+              <input
+                id="firstName"
+                maxlength="18"
+                minlength="2"
+                name="firstName"
+                placeholder="Anakin"
+                required=""
+              />
+            </div>
+            <div
+              class="_inputCont_3e421e"
+            >
+              <label
+                for="lastName"
+              >
+                Last name*
+              </label>
+              <input
+                id="lastName"
+                maxlength="18"
+                minlength="2"
+                name="lastName"
+                placeholder="Skywalker"
+                required=""
+              />
+            </div>
+            <div
+              class="_inputCont_3e421e"
+            >
+              <label
+                for="mail"
+              >
+                Contact email*
+              </label>
+              <input
+                id="mail"
+                maxlength="40"
+                minlength="2"
+                name="mail"
+                placeholder="AniSkywalker@tatooine.galaxy"
+                required=""
+                type="email"
+              />
+            </div>
+            <div
+              class="_inputCont_3e421e"
+            >
+              <label
+                for="company"
+              >
+                Company
+              </label>
+              <input
+                id="company"
+                maxlength="18"
+                minlength="2"
+                name="company"
+                placeholder="Jedi Order"
+              />
+            </div>
+            <div
+              class="_inputCont_3e421e"
+            >
+              <label
+                for="message"
+              >
+                Request*
+              </label>
+              <textarea
+                class="_messageTextarea_3e421e"
+                id="message"
+                name="message"
+                placeholder="Large order request message..."
+                required=""
+              />
+            </div>
+            <div
+              class="_submitBtnCont_3e421e"
+            >
+              <button
+                class="_submitFormBtn_3e421e"
+                type="submit"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+        <div
+          class="_requestPriceFormCont_3e421e"
+        >
+          <h2
+            class="_contactFormHeading_3e421e"
+          >
+            Request Ship Price
+          </h2>
+          <form
+            action=""
+            class="_requestPriceForm_3e421e"
+          >
+            <div
+              class="_inputCont_3e421e"
+            >
+              <label
+                for="firstName"
+              >
+                First name*
+              </label>
+              <input
+                id="firstName"
+                maxlength="18"
+                minlength="2"
+                name="firstName"
+                placeholder="Anakin"
+                required=""
+              />
+            </div>
+            <div
+              class="_inputCont_3e421e"
+            >
+              <label
+                for="lastName"
+              >
+                Last name*
+              </label>
+              <input
+                id="lastName"
+                maxlength="18"
+                minlength="2"
+                name="lastName"
+                placeholder="Skywalker"
+                required=""
+              />
+            </div>
+            <div
+              class="_inputCont_3e421e"
+            >
+              <label
+                for="mail"
+              >
+                Contact email*
+              </label>
+              <input
+                id="mail"
+                maxlength="25"
+                minlength="2"
+                name="mail"
+                placeholder="AniSkywalker@tatooine.galaxy"
+                required=""
+                type="email"
+              />
+            </div>
+            <div
+              class="_inputCont_3e421e"
+            >
+              <label
+                for="company"
+              >
+                Company
+              </label>
+              <input
+                id="company"
+                maxlength="18"
+                minlength="2"
+                name="company"
+                placeholder="Jedi Order"
+              />
+            </div>
+            <div
+              class="_inputCont_3e421e"
+            >
+              <label
+                for="ships"
+              >
+                Request price*
+              </label>
+              <select
+                class="_selectEl_3e421e"
+                id="ships"
+                name="ships"
+                required=""
+              >
+                <option
+                  value=""
+                >
+                  Select ship
+                </option>
+                <option
+                  value="hTypeNubianYacht"
+                >
+                  H-type Nubian yacht
+                </option>
+                <option
+                  value="nabooRoyalStarship"
+                >
+                  Naboo Royal Starship
+                </option>
+                <option
+                  value="republicCruiser"
+                >
+                  Republic Cruiser
+                </option>
+                <option
+                  value="gr75MediumTransport"
+                >
+                  GR-75 Medium Transport
+                </option>
+                <option
+                  value="aa9CoruscantFreighter"
+                >
+                  AA-9 Coruscant freighter
+                </option>
+                <option
+                  value="darthVadersTieFighter"
+                >
+                  Darth Vader's TIE fighter
+                </option>
+                <option
+                  value="slaveI"
+                >
+                  Slave I
+                </option>
+              </select>
+            </div>
+            <div
+              class="_submitBtnCont_3e421e"
+            >
+              <button
+                class="_submitFormBtn_3e421e"
+                type="submit"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <h1
+        class="_partnersHeading_3e421e"
+      >
+        Our Partners
+      </h1>
+      <div
+        class="_partnersCont_3e421e"
+      >
+        <div
+          class="_logoWrapper_3e421e"
+        >
+          <div
+            class="_logoCont_3e421e"
+          >
+            <a
+              data-testid="cfLink"
+              href="https://starwars.fandom.com/wiki/Confederation"
+            >
+              <img
+                alt="Corellian Federation icon"
+                src="/src/assets/Corellian_Federation_logo.webp"
+                title="Corellian Federation"
+                width="100"
+              />
+            </a>
+            <a
+              data-testid="kdyLink"
+              href="https://starwars.fandom.com/wiki/Kuat_Drive_Yards"
+            >
+              <img
+                alt="Kuat Drive Yards icon"
+                src="/src/assets/Kuat-Drive-Yards.svg"
+                title="Kuat Drive Yards"
+                width="100"
+              />
+            </a>
+            <a
+              data-testid="fondorLink"
+              href="https://starwars.fandom.com/wiki/Fondor_Shipyards"
+            >
+              <img
+                alt="Fondor Shipyards icon"
+                src="/src/assets/Fondor-Shipyards.jpg"
+                title="Fondor Shipyards"
+                width="100"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
