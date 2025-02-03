@@ -1,5 +1,5 @@
 .cardsCont {
-	max-width: 1500px;
+	max-width: 1250px;
   font-family: Trench;
 
 	display: grid;
@@ -12,4 +12,6 @@
 .sectionName {
   margin: 2rem 0;
   font-family: Trench;
+  font-size: 2.2rem;
+  color: white;
 }
