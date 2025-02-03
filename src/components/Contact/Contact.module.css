@@ -6,12 +6,14 @@
 
 .backdrop {
 	width: 100%;
-	height: 200px;
+	height: 300px;
 
-	background-image: url("/src/assets/galaxy_map2.jpg");
+	background-image: url("/src/assets/galaxy_map2.jpg"), 
+										linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 100%);
 	background-size: cover;
-	background-position: 50% 56%;
 	background-repeat: no-repeat;
+	background-position: center;
+  background-blend-mode: overlay;
 }
 
 .findUsHeading,
@@ -93,6 +95,7 @@
 	max-width: 550px;
 
 	padding: 1rem;
+	background-color: rgb(20, 20, 20);
 	border: 1px solid rgb(104, 104, 104);
 
 	display: flex;
@@ -149,6 +152,7 @@
 .messageTextarea,
 .selectEl {
 	margin-top: 4px;
+	background-color: rgb(20, 20, 20);
 }
 
 .messageTextarea {

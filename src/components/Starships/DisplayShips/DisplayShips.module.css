@@ -1,3 +1,8 @@
+.layoutWrapper {
+	max-width: 1250px;
+	align-self: center;
+}
+
 .cardsCont {
 	max-width: 1250px;
   font-family: Trench;

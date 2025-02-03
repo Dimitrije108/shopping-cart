@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
-import { useCartContext } from '../../hooks/useCartContext/useCartContext';
-import CartItem from './CartItem/CartItem';
-import CartSummary from './CartSummary/CartSummary';
-import styles from './ShoppingCart.module.css';
+import { useCartContext } from "../../hooks/useCartContext/useCartContext";
+import CartItem from "./CartItem/CartItem";
+import CartSummary from "./CartSummary/CartSummary";
+import styles from "./ShoppingCart.module.css";
+import layout from "../../layout.module.css";
 
 export default function ShoppingCart() {
 	const { cart } = useCartContext();
@@ -41,12 +42,12 @@ export default function ShoppingCart() {
 	};
 
   return (
-		<>
+		<div className={layout.layoutWrapper}>
 			<h1>Shopping Cart</h1>
 			<div className={styles.cartWrapper}>
 				<div>{cartItems}</div>
 				<CartSummary />
 			</div>
-		</>
+		</div>
 	)
 };

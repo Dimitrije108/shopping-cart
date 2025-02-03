@@ -1,19 +1,4 @@
 .layoutWrapper {
 	max-width: 1250px;
 	align-self: center;
-
-	flex: 1;
-	position: relative;
-}
-
-.backdrop {
-	width: 100%;
-	height: 300px;
-
-	background-image: url("/src/assets/galaxy_map2.jpg"), 
-										linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 100%);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-  background-blend-mode: overlay;
 }

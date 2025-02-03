@@ -91,7 +91,11 @@ export default function CartSummary() {
 				{total > 0 && <span className={styles.creditsText}>credits</span>}
 			</div>
 			<button className={styles.checkoutBtn}>Checkout</button>
-			<Link to="/starships" className={styles.continueLink}>Continue shopping</Link>
+			<div className={styles.continueLink}>
+				<Link to="/starships">
+					Continue shopping
+				</Link>
+			</div>
 		</div>
 	)
 };

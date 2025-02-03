@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useCartContext } from "../../hooks/useCartContext/useCartContext";
 import styles from "./Header.module.css";
+import layout from "../../layout.module.css";
 
 export default function Header() {
 	const [starshipsDropdown, setStarshipsDropdown] = useState(false);
@@ -39,7 +40,7 @@ export default function Header() {
 
 	const header = (
 		<>
-			<div className={styles.logoCont}>
+			<div className={`${styles.logoCont} ${layout.layoutWrapper}`}>
 				<Link 
 					to="https://github.com/Dimitrije108/shopping-cart"
 					className={styles.githubLink}

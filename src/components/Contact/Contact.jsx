@@ -1,10 +1,17 @@
 import { Link } from "react-router-dom";
+import layout from "../../layout.module.css";
 import styles from "./Contact.module.css";
 
 export default function Contact() {
   return (
 		<>
-			<div className={styles.wrapper}>
+			<div
+				className={styles.backdrop}
+				data-testid="contactBackdrop"
+			></div>
+			<div 
+				className={`${layout.layoutWrapper} ${styles.wrapper}`}
+			>
 				<h1 className={styles.findUsHeading}>
 					Find Us
 				</h1>

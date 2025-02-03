@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import styles from "./Footer.module.css";
+import layout from "../../layout.module.css";
 
 export default function Footer() {
   return (
 		<div className={styles.footerCont}>
-			<div className={styles.mainFooterWrapper}>
+			<div className={`${styles.mainFooterWrapper} ${layout.layoutWrapper}`}>
 				<div className={styles.contactCont}>
 					<div className={styles.locationCont}>
 						<div className={styles.iconCont}>

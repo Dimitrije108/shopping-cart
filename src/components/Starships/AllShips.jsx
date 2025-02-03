@@ -6,11 +6,12 @@ import {
 	starfighters,
 	starfighterDetails,
 } from '../../shipUrls';
-import DisplayShips from './DisplayShips/DisplayShips';
+import DisplayShips from "./DisplayShips/DisplayShips";
+import layout from "../../layout.module.css";
 
 export default function AllShips() {
   return (
-		<>
+		<div className={layout.layoutWrapper}>
 			<DisplayShips 
 				basicDataArr={capitalShips}
 				advDataArr={capitalShipDetails}
@@ -28,6 +29,6 @@ export default function AllShips() {
 				advDataArr={starfighterDetails}
 				shipType={"Starfighter"}
 			/>
-		</>
+		</div>
 	)
 };

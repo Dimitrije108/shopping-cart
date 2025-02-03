@@ -4,6 +4,7 @@ import useFetchData from '../../../hooks/useFetchData/useFetchData';
 import { ships } from '../../../shipUrls';
 import ShipDetails from './ShipDetails/ShipDetails';
 import SkeletonDetails from './SkeletonDetails/SkeletonDetails';
+import layout from "../../../layout.module.css";
 
 export default function ShipInfoPage() {
 	const [basicData, setBasicData] = useState(null);
@@ -48,6 +49,8 @@ export default function ShipInfoPage() {
 	}
 
   return (
-		<div>{details}</div>
+		<div className={layout.layoutWrapper}>
+			{details}
+		</div>
 	)
 };

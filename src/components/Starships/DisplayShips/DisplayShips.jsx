@@ -1,10 +1,11 @@
-import { useEffect, useState } from 'react';
-import useFetchData from '../../../hooks/useFetchData/useFetchData';
-import ShipCard from '../ShipCard/ShipCard';
-import SkeletonCard from '../SkeletonCard/SkeletonCard';
-import styles from './DisplayShips.module.css';
+import { useEffect, useState } from "react";
+import useFetchData from "../../../hooks/useFetchData/useFetchData";
+import ShipCard from "../ShipCard/ShipCard";
+import SkeletonCard from "../SkeletonCard/SkeletonCard";
+import styles from "./DisplayShips.module.css";
+import layout from "../../../layout.module.css";
 
-export default function Capital({ basicDataArr, advDataArr, shipType }) {
+export default function DisplayShips({ basicDataArr, advDataArr, shipType }) {
 	const [basicData, setBasicData] = useState(null);
 	const [advData, setAdvData] = useState(null);
 	const [error, setError] = useState(null);
@@ -50,7 +51,7 @@ export default function Capital({ basicDataArr, advDataArr, shipType }) {
 	};
 
   return (
-		<div>
+		<div className={layout.layoutWrapper}>
 			<h1 className={styles.sectionName}>Starships | {shipType} ships</h1>
 			<div className={styles.cardsCont}>{cards}</div>
 		</div>
