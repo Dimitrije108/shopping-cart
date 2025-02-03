@@ -1,6 +1,6 @@
 .footerCont {
 	margin-top: 4rem;
-	padding: 2rem 0 1rem 0;
+	padding: 2rem 0 0.9rem 0;
 
 	background-color: black;
 	border-top: 1px solid rgb(104, 104, 104);
@@ -76,7 +76,6 @@
 	padding: 6px 10px;
 
 	background-color: white;
-	border: 1px solid rgb(104, 104, 104);
 }
 
 .partnersTopRow {
@@ -98,7 +97,7 @@
 }
 
 .copyrightText {
-	margin: 2rem 0 1rem 0;
+	margin: 1.5rem 0 0.8rem 0;
 	padding: 1rem;
 	background-color: rgb(20, 20, 20);
 }
