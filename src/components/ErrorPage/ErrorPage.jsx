@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./ErrorPage.module.css";
 
-const ErrorPage = () => {
+export default function ErrorPage() {
 	return (
 		<div className={styles.errorCont}>
 			<img 
@@ -15,5 +15,3 @@ const ErrorPage = () => {
 		</div>
 	)
 }
-
-export default ErrorPage;
