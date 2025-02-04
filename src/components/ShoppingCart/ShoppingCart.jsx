@@ -42,7 +42,12 @@ export default function ShoppingCart() {
 	};
 
   return (
-		<div className={layout.layoutWrapper}>
+		<div 
+			className={`
+				${layout.layoutWrapper} 
+				${layout.footerMargin}
+			`}
+		>
 			<h1>Shopping Cart</h1>
 			<div className={styles.cartWrapper}>
 				<div>{cartItems}</div>

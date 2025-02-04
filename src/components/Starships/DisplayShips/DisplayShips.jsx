@@ -51,7 +51,7 @@ export default function DisplayShips({ basicDataArr, advDataArr, shipType }) {
 	};
 
   return (
-		<div className={layout.layoutWrapper}>
+		<div className={`${layout.layoutWrapper} ${layout.footerMargin}`}>
 			<h1 className={styles.sectionName}>Starships | {shipType} ships</h1>
 			<div className={styles.cardsCont}>{cards}</div>
 		</div>

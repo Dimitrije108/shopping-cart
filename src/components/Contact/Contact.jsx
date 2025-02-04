@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import layout from "../../layout.module.css";
 import styles from "./Contact.module.css";
+import layout from "../../layout.module.css";
 
 export default function Contact() {
   return (
@@ -10,7 +10,11 @@ export default function Contact() {
 				data-testid="contactBackdrop"
 			></div>
 			<div 
-				className={`${layout.layoutWrapper} ${styles.wrapper}`}
+				className={`
+					${layout.layoutWrapper} 
+					${layout.footerMargin} 
+					${styles.wrapper}
+				`}
 			>
 				<h1 className={styles.findUsHeading}>
 					Find Us
