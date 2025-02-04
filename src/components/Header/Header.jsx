@@ -4,7 +4,7 @@ import { useCartContext } from "../../hooks/useCartContext/useCartContext";
 import styles from "./Header.module.css";
 import layout from "../../layout.module.css";
 
-export default function Header() {
+export default function Header({ isTransparent }) {
 	const [starshipsDropdown, setStarshipsDropdown] = useState(false);
 	const [isSticky, setIsSticky] = useState(false);
 	const { pathname } = useLocation();
@@ -194,8 +194,7 @@ export default function Header() {
 			>
 				<img 
 					src="https://icons.iconarchive.com/icons/jonathan-rey/star-wars-vehicles/128/Death-Star-2nd-icon.png" 
-					width="40" 
-					height="40"
+					width="35" 
 					title="Shopping Cart"
 				/>
 				<div className={styles.cartQuantity}>
@@ -206,7 +205,12 @@ export default function Header() {
 	)
 
   return (
-		<div className={styles.headerCont}>
+		<div 
+			className={`
+				${styles.headerCont} 
+				${isTransparent ? styles.transparentHeader : ""}
+			`}
+		>
 			{isSticky ? stickyHeader : header}
 		</div>
 	)
