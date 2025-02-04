@@ -1,4 +1,27 @@
+.layout {
+	min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
 .layoutWrapper {
 	max-width: 1250px;
 	align-self: center;
+}
+
+.footerMargin {
+	margin-bottom: 4rem;
+}
+
+.heroImage {
+	width: 100%;
+	min-height: 110vh;
+
+	background-image: url("/src/assets/phantom-menace-ferguson.jpeg"), 
+										linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 100%);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+  background-blend-mode: overlay;
 }
