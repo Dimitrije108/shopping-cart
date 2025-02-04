@@ -1,4 +1,5 @@
 import { App } from "./App";
+import Homepage from "./components/Homepage/Homepage";
 import ErrorPage from "./components/ErrorPage/ErrorPage";
 import Starships from "./components/Starships/Starships";
 import Contact from "./components/Contact/Contact";
@@ -7,6 +8,7 @@ import Capital from "./components/Starships/Capital";
 import Transport from "./components/Starships/Transport";
 import Starfighter from "./components/Starships/Starfighter";
 import ShipInfoPage from "./components/Starships/ShipInfoPage/ShipInfoPage";
+import { element } from "prop-types";
 
 const routes = [
 	{
@@ -14,6 +16,10 @@ const routes = [
 		element: <App />,
 		errorElement: <ErrorPage />,
 		children: [
+			{
+				index: true,
+				element: <Homepage />
+			},
 			{
 				path: "starships", 
 				element: <Starships />,
