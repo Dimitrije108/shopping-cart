@@ -1,0 +1,67 @@
+.heroImage {
+	width: 100%;
+	min-height: 110vh;
+	border-bottom: 1px solid rgb(214, 214, 214);
+
+	background-image: url("/src/assets/phantom-menace-ferguson.jpeg"), 
+										linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 100%);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+  background-blend-mode: overlay;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.firstPageCont {
+	min-height: 75vh;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+
+	position: relative;
+}
+
+.headerCont {
+	padding: 1rem;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.headerCont > h1 {
+	font-family: 'DINNext bold';
+	font-size: 3rem;
+}
+
+.shopBtn {
+	margin-top: 1rem;
+	padding: 1rem 2.5rem;
+
+	font-family: 'DINNext bold';
+	font-size: 1.5rem;
+	letter-spacing: 1px;
+	
+  border: 2px solid rgb(179, 179, 179);
+
+	align-self: flex-end;
+
+	transition: all 0.3s ease-in-out;
+}
+
+.shopBtn:hover {
+  border: 2px solid rgb(238, 238, 238);
+	letter-spacing: 2px;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.carouselCont {
+	width: 100%;
+	height: 100vh;
+}
+
+.carouselImg {
+  width: 100%;
+}
+
