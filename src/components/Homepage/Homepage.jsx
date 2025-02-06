@@ -6,39 +6,51 @@ export default function Homepage() {
 
   return (
 		<>
-			<div 
-				className={styles.heroImage}
-			></div>
-			<div className={layout.layoutWrapper}>
-				<div className={styles.firstPageCont}>
-					<div className={styles.headerCont}>
-						<h1>
-							From Naboo to the Outer Rim — Corellian Engineering Excellence — Now in Your Hands!
-						</h1>
-						<Link to="/starships">
-							<button className={styles.shopBtn}>Shop Here!</button>
-						</Link>
-					</div>
-					<div className={styles.arrowContainer}>
-						<Link to="#toscroll">
-							<div className={styles.chevron}></div>
-							<div className={styles.chevron}></div>
-							<div className={styles.chevron}></div>
-							<span className={styles.text}>Scroll down</span>
-						</Link>
-					</div>
+			<div className={styles.heroImage}></div>
+			<div className={styles.firstPageCont}>
+				<div className={styles.headerCont}>
+					<h1>
+						From Naboo to the Outer Rim — Corellian Engineering Excellence — Now in Your Hands!
+					</h1>
+					<Link to="/starships">
+						<button className={styles.shopBtn}>Shop Here!</button>
+					</Link>
 				</div>
-				<div 
-					className="carouselCont"
-					id="toscroll"
-				>
+				<div className={styles.arrowContainer}>
+					<Link to="#toscroll">
+						<div className={styles.chevron}></div>
+						<div className={styles.chevron}></div>
+						<div className={styles.chevron}></div>
+						<span className={styles.text}>Scroll down</span>
+					</Link>
+				</div>
+			</div>
+			<div 
+				className={styles.carouselCont}
+				id="toscroll"
+			>
+				<div className={styles.carouselOne}>
+					<div className={styles.leftArrow}>
+						<img 
+							src="/src/assets/carousel-left-arrow.svg" 
+							alt="left arrow" 
+							width={30}
+						/>
+					</div>
 					<img 
 						src="/src/assets/star-destroyer.jpg" 
 						alt="Star Destroyer Capital ship"
 						className={styles.carouselImg}
 					/>
-					<div>
-						This gon be dat carouuseel!
+					<div className={styles.rightArrow}>
+						<img 
+							src="/src/assets/carousel-right-arrow.svg" 
+							alt="right arrow" 
+							width={30}
+						/>
+					</div>
+					<div className={styles.carouselText}>
+						<p>Only a Sith Deals in Full Retail. Shop Our Discounts!</p>
 					</div>
 				</div>
 			</div>
