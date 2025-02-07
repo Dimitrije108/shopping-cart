@@ -63,56 +63,79 @@
 	margin-bottom: 240px;
 }
 
-.carouselOne {
-	width: 100%;
+.carousel {
+	max-width: calc(100vw - 17px);
 	max-height: calc(100vh - 60px);
 
-  display: flex;
-  overflow: hidden;
+	display: flex;
+	overflow: hidden;
+  align-items: center;
 
 	position: relative;
 }
 
-.carouselImg {
-	max-width: 90%;
-  max-height: 100%;
-  object-fit: cover;
+.carouselCont {
+	min-width: 90vw;
+
+	display: flex;
+	flex: 1;
+  overflow: hidden;
+}
+
+.carouselTrack {
+	width: 270vw;
+	transition: transform 0.5s ease-in-out;
+	display: flex;
+}
+
+.carouselTrack > img {
+	width: 90vw;
+	height: auto;
+	max-height: calc(100vh - 60px);
+	
 	object-position: center;
 }
 
 .leftArrow,
 .rightArrow {
-	width: 100%; 
-  
+	width: 5vw;
+	min-height: 100%;
+
 	background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%);
+	border: none;
 	cursor: pointer;
-	transition: all 0.3s ease-in-out;
+
+	transition: box-shadow 0.5s ease-in-out;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
 	align-self: stretch;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .leftArrow:hover {
-	background: linear-gradient(90deg, rgba(10,10,10,1) 0%, rgba(5,5,5,1) 50%, rgba(0,0,0,1) 100%);
+	background: linear-gradient(90deg, rgba(25,25,25) 0%, rgba(10,10,10,1) 50%, rgba(0,0,0,1) 100%);
+	border: none;
 }
 
 .rightArrow:hover {
-	background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(5,5,5,1) 50%, rgba(10,10,10,1) 100%);
+	background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(10,10,10,1) 50%, rgba(25,25,25,1) 100%);
+	border: none;
 }
 
 .carouselText {
+	max-width: 1250px;
 	width: 100%;
-	margin: 1rem 2rem;
+	padding: 1rem;
 
 	font-size: 3rem;
 	background-color: rgba(0, 0, 0, 0.5);
 
 	position: absolute;
-	bottom: 0;
-	left: 100px;
+	bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .carouselText > p {
