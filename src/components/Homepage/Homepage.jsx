@@ -26,32 +26,41 @@ export default function Homepage() {
 				</div>
 			</div>
 			<div 
-				className={styles.carouselCont}
+				className={styles.carousel}
 				id="toscroll"
 			>
-				<div className={styles.carouselOne}>
-					<div className={styles.leftArrow}>
-						<img 
-							src="/src/assets/carousel-left-arrow.svg" 
-							alt="left arrow" 
-							width={30}
-						/>
-					</div>
+				<button className={styles.leftArrow}>
 					<img 
-						src="/src/assets/star-destroyer.jpg" 
-						alt="Star Destroyer Capital ship"
-						className={styles.carouselImg}
+						src="/src/assets/carousel-left-arrow.svg" 
+						alt="left arrow" 
+						width={30}
 					/>
-					<div className={styles.rightArrow}>
+				</button>
+				<div className={styles.carouselCont}>
+					<div className={styles.carouselTrack}>
 						<img 
-							src="/src/assets/carousel-right-arrow.svg" 
-							alt="right arrow" 
-							width={30}
+							src="/src/assets/star-destroyer.jpg" 
+							alt="Star Destroyer Capital ship"
+						/>
+						<img 
+							src="/src/assets/slave-i.jpg" 
+							alt="Slave I starship"
+						/>
+						<img 
+							src="/src/assets/imperial-shuttle.jpg" 
+							alt="Imperial Shuttle Transport ship"
 						/>
 					</div>
-					<div className={styles.carouselText}>
-						<p>Only a Sith Deals in Full Retail. Shop Our Discounts!</p>
-					</div>
+				</div>
+				<button className={styles.rightArrow}>
+					<img 
+						src="/src/assets/carousel-right-arrow.svg" 
+						alt="right arrow" 
+						width={30}
+					/>
+				</button>
+				<div className={styles.carouselText}>
+					<p>Only a Sith Deals in Full Retail. Shop Our Discounts!</p>
 				</div>
 			</div>
 		</>
