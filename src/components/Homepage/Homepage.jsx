@@ -1,9 +1,36 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Homepage.module.css";
 import layout from "../../layout.module.css";
 
-export default function Homepage() {
+const images = [
+	{
+		src: "/src/assets/star-destroyer.jpg",
+		alt: "Star Destroyer Capital ship",
+	},
+	{
+		src: "/src/assets/slave-i.jpg",
+		alt: "Slave I starship",
+	},
+	{
+		src: "/src/assets/imperial-shuttle.jpg",
+		alt: "Imperial Shuttle Transport ship",
+	},
+];
 
+export default function Homepage() {
+	const [index, setIndex] = useState(0);
+	// Change to the next carousel slide
+	const prevSlide = () => {
+		setIndex((prev) => Math.max(prev - 1, 0));
+	};
+	// Change to the previous carousel slide
+	const nextSlide = () => {
+		setIndex((prev) => Math.min(prev + 1, images.length - 1));
+	};
+	
+	// TODO: Separate secitons into different components like top page, carousel page,
+	// etc. or better readability
   return (
 		<>
 			<div className={styles.heroImage}></div>
@@ -29,38 +56,58 @@ export default function Homepage() {
 				className={styles.carousel}
 				id="toscroll"
 			>
-				<button className={styles.leftArrow}>
+				<div className={styles.carouselCont}>
+					<div className={styles.carouselTrack} style={{ transform: `translateX(-${index * 100}vw)` }}>
+						{images.map((img, i) => (
+							<img key={i} src={img.src} alt={img.alt} />
+						))}
+					</div>
+				</div>
+				<button 
+					className={styles.leftArrow}
+					onClick={prevSlide}
+				>
 					<img 
 						src="/src/assets/carousel-left-arrow.svg" 
 						alt="left arrow" 
 						width={30}
 					/>
 				</button>
-				<div className={styles.carouselCont}>
-					<div className={styles.carouselTrack}>
-						<img 
-							src="/src/assets/star-destroyer.jpg" 
-							alt="Star Destroyer Capital ship"
-						/>
-						<img 
-							src="/src/assets/slave-i.jpg" 
-							alt="Slave I starship"
-						/>
-						<img 
-							src="/src/assets/imperial-shuttle.jpg" 
-							alt="Imperial Shuttle Transport ship"
-						/>
-					</div>
-				</div>
-				<button className={styles.rightArrow}>
+				<button 
+					className={styles.rightArrow}
+					onClick={nextSlide}
+				>
 					<img 
 						src="/src/assets/carousel-right-arrow.svg" 
 						alt="right arrow" 
 						width={30}
 					/>
 				</button>
-				<div className={styles.carouselText}>
-					<p>Only a Sith Deals in Full Retail. Shop Our Discounts!</p>
+				<div className={styles.carouselMarketingText}>
+					<h2 className={styles.standardText}>
+						Only a Sith Deals in Full Retail. Shop Our Discounts!
+					</h2>
+					<div className={styles.marketingPositioningCont}>
+						<div>
+							<p 
+								className={styles.imperial}
+								title="Imperial"
+							>
+								Only a Sith Deals in Full Retail. Shop Our Discounts!
+							</p>
+							<p 
+								className={styles.naboo} 
+								title="Naboo"
+							>
+								Only a Sith Deals in Full Retail. Shop Our Discounts!
+							</p>
+						</div>
+						<Link to="/starships/capital">
+							<button className={styles.shopCapitalBtn}>
+								Best Capital Ships in the Galaxy - Shop Now!
+							</button>
+						</Link>
+					</div>
 				</div>
 			</div>
 		</>

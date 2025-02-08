@@ -40,7 +40,7 @@
 
 .shopBtn {
 	margin-top: 1rem;
-	padding: 1rem 2.5rem;
+	padding: 1rem 4rem;
 
 	font-family: 'DINNext bold';
 	font-size: 1.5rem;
@@ -75,7 +75,7 @@
 }
 
 .carouselCont {
-	min-width: 90vw;
+	min-width: 100vw;
 
 	display: flex;
 	flex: 1;
@@ -83,17 +83,18 @@
 }
 
 .carouselTrack {
-	width: 270vw;
+	width: 300vw;
 	transition: transform 0.5s ease-in-out;
 	display: flex;
 }
 
 .carouselTrack > img {
-	width: 90vw;
+	width: 100vw;
 	height: auto;
 	max-height: calc(100vh - 60px);
 	
-	object-position: center;
+	object-fit: cover;
+	object-position: center center;
 }
 
 .leftArrow,
@@ -101,43 +102,72 @@
 	width: 5vw;
 	min-height: 100%;
 
-	background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%);
+	background: transparent;
 	border: none;
 	cursor: pointer;
 
-	transition: box-shadow 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
 
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	position: absolute;
+}
 
-	align-self: stretch;
+.rightArrow {
+	right: 0;
 }
 
 .leftArrow:hover {
-	background: linear-gradient(90deg, rgba(25,25,25) 0%, rgba(10,10,10,1) 50%, rgba(0,0,0,1) 100%);
+	background: linear-gradient(to left, transparent, rgb(10, 10, 10));
 	border: none;
 }
 
 .rightArrow:hover {
-	background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(10,10,10,1) 50%, rgba(25,25,25,1) 100%);
+	background: linear-gradient(to right, transparent, rgb(10, 10, 10));
 	border: none;
 }
 
-.carouselText {
+.carouselMarketingText {
 	max-width: 1250px;
 	width: 100%;
 	padding: 1rem;
 
-	font-size: 3rem;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.7);
 
 	position: absolute;
-	bottom: 3rem;
+	bottom: 4rem;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.carouselText > p {
+.standardText {
+	font-size: 3rem;
 	font-family: 'DINNext bold';
+}
+
+.imperial {
+	font-family: Imperial;
+	font-size: 1rem;
+}
+
+.naboo {
+	font-family: Naboo;
+	font-size: 1rem;
+}
+
+.shopCapitalBtn {
+	margin-top: 1rem;
+	padding: 1rem 4rem;
+
+	font-family: 'DINNext bold';
+	font-size: 1.5rem;
+	letter-spacing: 1px;
+	
+  border: 2px solid rgb(179, 179, 179);
+
+	transition: all 0.3s ease-in-out;
+}
+
+.shopCapitalBtn:hover {
+  border: 2px solid rgb(238, 238, 238);
+	letter-spacing: 2px;
+	background-color: rgba(0, 0, 0, 0.2);
 }
