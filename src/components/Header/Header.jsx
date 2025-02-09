@@ -4,7 +4,7 @@ import { useCartContext } from "../../hooks/useCartContext/useCartContext";
 import styles from "./Header.module.css";
 import layout from "../../layout.module.css";
 
-export default function Header({ isTransparent }) {
+export default function Header({ isHomepage }) {
 	const [starshipsDropdown, setStarshipsDropdown] = useState(false);
 	const [isSticky, setIsSticky] = useState(false);
 	const { pathname } = useLocation();
@@ -37,6 +37,10 @@ export default function Header({ isTransparent }) {
 	const handleMouseLeave = () => {
 		setStarshipsDropdown(false);
 	};
+	// Scroll to the top when the link is clicked
+	const handleLinkClick = () => {
+    window.scrollTo(0, 0); 
+  };
 
 	const header = (
 		<>
@@ -53,7 +57,11 @@ export default function Header({ isTransparent }) {
 					/>
 				</Link>
 				<h1 className={styles.logoHeading}  data-testid="headingLogo">
-					<Link to="/" className={styles.logoLink}>
+					<Link 
+							to="/" 
+							className={styles.logoLink} 
+							onClick={handleLinkClick}
+						>
 						<img 
 							src="/src/assets/sw-logo.png"  
 							alt="star wars logo" 
@@ -64,6 +72,7 @@ export default function Header({ isTransparent }) {
 						to="/" 
 						className={styles.shipyardLink} 
 						title="Shipyard"
+						onClick={handleLinkClick}
 					>
 						<div className={styles.shipyardLogo}>Shipyard</div>
 					</Link>
@@ -72,6 +81,7 @@ export default function Header({ isTransparent }) {
 					to="shopping-cart"
 					className={styles.cartIconLink}
 					data-testid="cartLink"
+					onClick={handleLinkClick}
 				>
 					<img 
 						src="https://icons.iconarchive.com/icons/jonathan-rey/star-wars-vehicles/128/Death-Star-2nd-icon.png" 
@@ -94,7 +104,7 @@ export default function Header({ isTransparent }) {
 						className={`${styles.homeNav} ${pathname==="/" ? styles.active : ""} `}
 						data-testid="home"
 					>
-						<Link to="/">Home</Link>
+						<Link to="/" onClick={handleLinkClick}>Home</Link>
 					</li>
 					<li 
 						className={`${styles.starshipsNav} ${pathname.startsWith("/starships") ? styles.active : ""} `}
@@ -102,19 +112,34 @@ export default function Header({ isTransparent }) {
 						onMouseLeave={() => handleMouseLeave()}
 						data-testid="starships"
 					>
-						<Link to="starships">Starships</Link>
+						<Link to="starships" onClick={handleLinkClick}>Starships</Link>
 						<ul 
 							className={`${styles.dropdown} ${starshipsDropdown ? styles.visible : ""}`}
 							data-testid="starshipsDropdown"
 						>
 							<li>
-								<Link to="starships/capital">Capital</Link>
+								<Link 
+									to="starships/capital" 
+									onClick={handleLinkClick}
+								>
+									Capital
+								</Link>
 							</li>
 							<li>
-								<Link to="starships/transport">Transport</Link>
+								<Link 
+									to="starships/transport" 
+									onClick={handleLinkClick}
+								>
+									Transport
+								</Link>
 							</li>
 							<li>
-								<Link to="starships/starfighter">Starfighter</Link>
+								<Link 
+									to="starships/starfighter" 
+									onClick={handleLinkClick}
+								>
+									Starfighter
+								</Link>
 							</li>
 						</ul>
 					</li>
@@ -122,7 +147,12 @@ export default function Header({ isTransparent }) {
 						className={`${styles.contactNav} ${pathname.startsWith("/contact") ? styles.active : ""} `}
 						data-testid="contact"
 					>
-						<Link to="contact">Contact</Link>
+						<Link 
+							to="contact" 
+							onClick={handleLinkClick}
+						>
+							Contact
+						</Link>
 					</li>
 				</ul>
 			</nav>
@@ -151,7 +181,7 @@ export default function Header({ isTransparent }) {
 					className={`${styles.homeNav} ${pathname==="/" ? styles.active : ""} `}
 					data-testid="home"
 				>
-					<Link to="/">Home</Link>
+					<Link to="/" onClick={handleLinkClick}>Home</Link>
 				</li>
 				<li 
 					className={`${styles.starshipsNav} ${pathname.startsWith("/starships") ? styles.active : ""} `}
@@ -159,7 +189,7 @@ export default function Header({ isTransparent }) {
 					onMouseLeave={() => handleMouseLeave()}
 					data-testid="starships"
 				>
-					<Link to="starships">Starships</Link>
+					<Link to="starships" onClick={handleLinkClick}>Starships</Link>
 					<ul 
 						className=
 							{`
@@ -170,13 +200,28 @@ export default function Header({ isTransparent }) {
 						data-testid="starshipsDropdown"
 					>
 						<li>
-							<Link to="starships/capital">Capital</Link>
+							<Link 
+								to="starships/capital" 
+								onClick={handleLinkClick}
+							>
+								Capital
+							</Link>
 						</li>
 						<li>
-							<Link to="starships/transport">Transport</Link>
+							<Link 
+								to="starships/transport" 
+								onClick={handleLinkClick}
+							>
+								Transport
+							</Link>
 						</li>
 						<li>
-							<Link to="starships/starfighter">Starfighter</Link>
+							<Link 
+								to="starships/starfighter" 
+								onClick={handleLinkClick}
+							>
+								Starfighter
+							</Link>
 						</li>
 					</ul>
 				</li>
@@ -184,13 +229,19 @@ export default function Header({ isTransparent }) {
 					className={`${styles.contactNav} ${pathname.startsWith("/contact") ? styles.active : ""} `}
 					data-testid="contact"
 				>
-					<Link to="contact">Contact</Link>
+					<Link 
+						to="contact" 
+						onClick={handleLinkClick}
+					>
+						Contact
+					</Link>
 				</li>
 			</ul>
 			<Link 
 				to="shopping-cart"
 				className={`${styles.cartIconLink} ${styles.sticky}`}
 				data-testid="cartLink"
+				onClick={handleLinkClick}
 			>
 				<img 
 					src="https://icons.iconarchive.com/icons/jonathan-rey/star-wars-vehicles/128/Death-Star-2nd-icon.png" 
@@ -208,7 +259,7 @@ export default function Header({ isTransparent }) {
 		<div 
 			className={`
 				${styles.headerCont} 
-				${isTransparent ? styles.transparentHeader : ""}
+				${isHomepage ? styles.transparentHeader : ""}
 			`}
 		>
 			{isSticky ? stickyHeader : header}

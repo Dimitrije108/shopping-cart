@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useCartContext } from "../../../../hooks/useCartContext/useCartContext";
 import { useCartPopup } from "../../../../hooks/useCartPopup/useCartPopup";
 import useItemQuantity from "../../../../hooks/useItemQuantity/useItemQuantity";
@@ -6,8 +6,35 @@ import formatNumber from "../../../../formatNumber/formatNumber";
 import ItemQuantity from "../../../ItemQuantity/ItemQuantity";
 import styles from "./ShipDetails.module.css";
 
+// TODO: add info about financial offer, like:
+// *The Estimated Monthly Payment is based on a 72-month term, a 
+// down payment of $32,140, Annual Percentage Rate(APR) of 9.99%, 
+// estimated taxes and fees in the amount of $289,260, and no trade-in.
+
+// TODO: below that there can be a contact the dealer form. like:
+// Contact the Dealer
+// Call +1(888) 848-1168
+// First Name 
+// Last Name 
+// Email 
+// Phone Number 
+// I am interested in this 2024 Aston Martin DB12
+
+// Free Email Newsletter
+
+// Contact me with an Insurance Quote
+
+// Contact me with a Shipping Quote
+
+// Example: The finest exotic cars & sports cars for sale | duPont REGISTRYCheck Availability
+// By pressing this button I agree to the Terms of Use and Privacy Policy.
+
 export default function ShipDetails({ basic, details }) {
 	const [tooltip, setTooltip] = useState(false);
+
+	useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
 	const { 
 		quantity, 
@@ -166,26 +193,3 @@ export default function ShipDetails({ basic, details }) {
 		</div>
 	)
 };
-
-// TODO: add info about financial offer, like:
-// *The Estimated Monthly Payment is based on a 72-month term, a 
-// down payment of $32,140, Annual Percentage Rate(APR) of 9.99%, 
-// estimated taxes and fees in the amount of $289,260, and no trade-in.
-
-// TODO: below that there can be a contact the dealer form. like:
-// Contact the Dealer
-// Call +1(888) 848-1168
-// First Name 
-// Last Name 
-// Email 
-// Phone Number 
-// I am interested in this 2024 Aston Martin DB12
-
-// Free Email Newsletter
-
-// Contact me with an Insurance Quote
-
-// Contact me with a Shipping Quote
-
-// The finest exotic cars & sports cars for sale | duPont REGISTRYCheck Availability
-// By pressing this button I agree to the Terms of Use and Privacy Policy.

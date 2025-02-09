@@ -18,6 +18,9 @@ const images = [
 	},
 ];
 
+// TODO: Separate secitons into different components like top page, carousel page,
+// etc. or better readability
+
 export default function Homepage() {
 	const [index, setIndex] = useState(0);
 	// Change to the next carousel slide
@@ -28,9 +31,11 @@ export default function Homepage() {
 	const nextSlide = () => {
 		setIndex((prev) => Math.min(prev + 1, images.length - 1));
 	};
+	// Scroll to the top when the link is clicked
+	const handleLinkClick = () => {
+    window.scrollTo(0, 0); 
+  };
 	
-	// TODO: Separate secitons into different components like top page, carousel page,
-	// etc. or better readability
   return (
 		<>
 			<div className={styles.heroImage}></div>
@@ -40,7 +45,12 @@ export default function Homepage() {
 						From Naboo to the Outer Rim — Corellian Engineering Excellence — Now in Your Hands!
 					</h1>
 					<Link to="/starships">
-						<button className={styles.shopBtn}>Shop Here!</button>
+						<button 
+							className={styles.shopBtn} 
+							onClick={handleLinkClick}
+						>
+							Shop Here!
+						</button>
 					</Link>
 				</div>
 				<div className={styles.arrowContainer}>
@@ -103,7 +113,10 @@ export default function Homepage() {
 							</p>
 						</div>
 						<Link to="/starships/capital">
-							<button className={styles.shopCapitalBtn}>
+							<button 
+								className={styles.shopCapitalBtn} 
+								onClick={handleLinkClick}
+							>
 								Best Capital Ships in the Galaxy - Shop Now!
 							</button>
 						</Link>
