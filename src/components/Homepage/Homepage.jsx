@@ -3,18 +3,27 @@ import { Link } from "react-router-dom";
 import styles from "./Homepage.module.css";
 import layout from "../../layout.module.css";
 
-const images = [
+const slides = [
 	{
 		src: "/src/assets/star-destroyer.jpg",
 		alt: "Star Destroyer Capital ship",
+		marketingText: "Only a Sith Deals in Full Retail. Shop Our Discounts!",
+		linkTo: "/starships/capital",
+		buttonText: "Best Capital Ships in the Galaxy - Shop Now!",
 	},
 	{
 		src: "/src/assets/slave-i.jpg",
 		alt: "Slave I starship",
+		marketingText: "To Be Updated",
+		linkTo: "/starships/starfighter",
+		buttonText: "Shop Now!",
 	},
 	{
 		src: "/src/assets/imperial-shuttle.jpg",
 		alt: "Imperial Shuttle Transport ship",
+		marketingText: "To Be Updated",
+		linkTo: "/starships/transport",
+		buttonText: "Shop Now!",
 	},
 ];
 
@@ -29,12 +38,8 @@ export default function Homepage() {
 	};
 	// Change to the previous carousel slide
 	const nextSlide = () => {
-		setIndex((prev) => Math.min(prev + 1, images.length - 1));
+		setIndex((prev) => Math.min(prev + 1, slides.length - 1));
 	};
-	// Scroll to the top when the link is clicked
-	const handleLinkClick = () => {
-    window.scrollTo(0, 0); 
-  };
 	
   return (
 		<>
@@ -45,10 +50,7 @@ export default function Homepage() {
 						From Naboo to the Outer Rim — Corellian Engineering Excellence — Now in Your Hands!
 					</h1>
 					<Link to="/starships">
-						<button 
-							className={styles.shopBtn} 
-							onClick={handleLinkClick}
-						>
+						<button className={styles.shopBtn}>
 							Shop Here!
 						</button>
 					</Link>
@@ -67,9 +69,40 @@ export default function Homepage() {
 				id="toscroll"
 			>
 				<div className={styles.carouselCont}>
-					<div className={styles.carouselTrack} style={{ transform: `translateX(-${index * 100}vw)` }}>
-						{images.map((img, i) => (
-							<img key={i} src={img.src} alt={img.alt} />
+					<div 
+						className={styles.carouselTrack} 
+						style={{ transform: `translateX(-${index * 100}vw)` }}
+					>
+						{slides.map((slide, i) => (
+							<div key={i} className={styles.slideCont}>
+								<img src={slide.src} alt={slide.alt} />
+								<div className={styles.carouselMarketingText}>
+									<h2 className={styles.standardText}>
+										{slide.marketingText}
+									</h2>
+									<div className={styles.marketingPositioningCont}>
+										<div>
+											<p 
+												className={styles.imperial}
+												title="Imperial"
+											>
+												{slide.marketingText}
+											</p>
+											<p 
+												className={styles.naboo} 
+												title="Naboo"
+											>
+												{slide.marketingText}
+											</p>
+										</div>
+										<Link to={slide.linkTo}>
+											<button className={styles.shopCapitalBtn}>
+												{slide.buttonText}
+											</button>
+										</Link>
+									</div>
+								</div>
+							</div>	
 						))}
 					</div>
 				</div>
@@ -93,35 +126,6 @@ export default function Homepage() {
 						width={30}
 					/>
 				</button>
-				<div className={styles.carouselMarketingText}>
-					<h2 className={styles.standardText}>
-						Only a Sith Deals in Full Retail. Shop Our Discounts!
-					</h2>
-					<div className={styles.marketingPositioningCont}>
-						<div>
-							<p 
-								className={styles.imperial}
-								title="Imperial"
-							>
-								Only a Sith Deals in Full Retail. Shop Our Discounts!
-							</p>
-							<p 
-								className={styles.naboo} 
-								title="Naboo"
-							>
-								Only a Sith Deals in Full Retail. Shop Our Discounts!
-							</p>
-						</div>
-						<Link to="/starships/capital">
-							<button 
-								className={styles.shopCapitalBtn} 
-								onClick={handleLinkClick}
-							>
-								Best Capital Ships in the Galaxy - Shop Now!
-							</button>
-						</Link>
-					</div>
-				</div>
 			</div>
 		</>
 	)
