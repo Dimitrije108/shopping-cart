@@ -67,6 +67,8 @@
 	max-width: calc(100vw - 17px);
 	max-height: calc(100vh - 60px);
 
+	border-bottom: 1px solid rgb(214, 214, 214);
+
 	display: flex;
 	overflow: hidden;
   align-items: center;
@@ -203,4 +205,57 @@
 
 .navSquare.active {
 	background-color: rgb(243, 243, 243);
+}
+
+.aboutUs {
+	max-width: calc(100vw - 17px);
+	min-height: calc(100vh - 60px);
+
+	background-image: url("/src/assets/dune-night-sand-death-star.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	display: flex;
+	justify-content: center;
+}
+
+.aboutUsWrapper {
+	margin: 1rem;
+	max-width: 1250px;
+	height: 100%;
+
+	text-align: center;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.aboutUsWrapper > h2 {
+	margin: 1rem;
+	font-family: Trench;
+	font-size: 3rem;
+}
+
+.aboutUsText {
+	max-width: 75ch;
+	padding: 1rem;
+
+	font-size: 1.1rem;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.aboutUsText > p {
+	margin: 1rem 0;
+}
+
+.bold {
+	font-family: 'DINNext bold';
+}
+
+.aboutUsLogo {
+	margin: 1rem;
+	font-family: Imperial;
+	font-size: 3rem;
 }
