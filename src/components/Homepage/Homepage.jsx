@@ -14,16 +14,16 @@ const slides = [
 	{
 		src: "/src/assets/slave-i.jpg",
 		alt: "Slave I starship",
-		marketingText: "To Be Updated",
+		marketingText: "Bounty Hunting Is a Complicated Profession — Get the Right Ship!",
 		linkTo: "/starships/starfighter",
-		buttonText: "Shop Now!",
+		buttonText: "Unleash Your Inner Pilot — Buy a Starfighter!",
 	},
 	{
 		src: "/src/assets/imperial-shuttle.jpg",
 		alt: "Imperial Shuttle Transport ship",
-		marketingText: "To Be Updated",
+		marketingText: "More Than a Ship — A Lifestyle.",
 		linkTo: "/starships/transport",
-		buttonText: "Shop Now!",
+		buttonText: "Shop Elegance — Shop Our Transport Starships!",
 	},
 ];
 
@@ -40,6 +40,10 @@ export default function Homepage() {
 	const nextSlide = () => {
 		setIndex((prev) => Math.min(prev + 1, slides.length - 1));
 	};
+	// Change carousel slide to the cliked one
+	const changeSlide = (index) => {
+		setIndex(index);
+	}
 	
   return (
 		<>
@@ -105,6 +109,41 @@ export default function Homepage() {
 							</div>	
 						))}
 					</div>
+					<div className={styles.carouselQuickNav}>
+						<button 
+							className={styles.carouselQuickNavBtn} 
+							onClick={() => changeSlide(0)}
+						>
+							<div 
+								className={`
+									${styles.navSquare} 
+									${index === 0 ? styles.active : ""}
+								`}
+							></div>
+						</button>
+						<button 
+							className={styles.carouselQuickNavBtn} 
+							onClick={() => changeSlide(1)}
+						>
+							<div
+								className={`
+									${styles.navSquare} 
+									${index === 1 ? styles.active : ""}
+								`}
+							></div>
+						</button>
+						<button 
+							className={styles.carouselQuickNavBtn} 
+							onClick={() => changeSlide(2)}
+						>
+							<div
+								className={`
+									${styles.navSquare} 
+									${index === 2 ? styles.active : ""}
+								`}
+							></div>
+						</button>
+					</div>
 				</div>
 				<button 
 					className={styles.leftArrow}
@@ -147,7 +186,7 @@ export default function Homepage() {
 
 // "Unleash Your Inner Pilot."
 
-//  "Lightspeed Deals on Star Wars Ships!"
+// "Lightspeed Deals on Star Wars Ships!"
 // "From TIE Fighters to X-Wings—Own a Piece of the Galaxy."
 // May the force be with you!
 
