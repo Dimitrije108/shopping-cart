@@ -9,7 +9,7 @@ export default function MainSection() {
 				<h1>
 					From Naboo to the Outer Rim — Corellian Engineering Excellence — Now in Your Hands!
 				</h1>
-				<Link to="/starships">
+				<Link to="/starships" data-testid="starshipsLink">
 					<button className={styles.shopBtn}>
 						Explore the Galaxy — Shop Here!
 					</button>

@@ -1,0 +1,114 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Homepage's Main Section component > Main Section snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <section
+        class="_mainHomepageSection_27eff8"
+      >
+        <div
+          class="_heroImage_27eff8"
+        />
+        <div
+          class="_mainContent_27eff8"
+        >
+          <h1>
+            From Naboo to the Outer Rim — Corellian Engineering Excellence — Now in Your Hands!
+          </h1>
+          <a
+            data-discover="true"
+            data-testid="starshipsLink"
+            href="/starships"
+          >
+            <button
+              class="_shopBtn_27eff8"
+            >
+              Explore the Galaxy — Shop Here!
+            </button>
+          </a>
+        </div>
+      </section>
+    </div>
+  </body>,
+  "container": <div>
+    <section
+      class="_mainHomepageSection_27eff8"
+    >
+      <div
+        class="_heroImage_27eff8"
+      />
+      <div
+        class="_mainContent_27eff8"
+      >
+        <h1>
+          From Naboo to the Outer Rim — Corellian Engineering Excellence — Now in Your Hands!
+        </h1>
+        <a
+          data-discover="true"
+          data-testid="starshipsLink"
+          href="/starships"
+        >
+          <button
+            class="_shopBtn_27eff8"
+          >
+            Explore the Galaxy — Shop Here!
+          </button>
+        </a>
+      </div>
+    </section>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
