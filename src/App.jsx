@@ -6,10 +6,6 @@ import Footer from "./components/Footer/Footer";
 import CartPopups from "./components/CartPopups/CartPopups";
 import layout from "./layout.module.css";
 
-// TODO LIST:
-// 1. Main/home page
-// - testing
-
 export function App() {
   const { pathname } = useLocation();
 
@@ -21,13 +17,8 @@ export function App() {
   return (
     <CartContext.Provider value={cartFunctionality}>
       <PopupContext.Provider value={popupFunctionality}>
-        <div 
-          className={`
-            ${layout.layout} 
-            ${isHomepage ? layout.heroImage : ""}
-          `}
-        >
-          <Header isTransparent={isHomepage} />
+        <Header isHomepage={isHomepage} />
+        <div className={layout.layout}>
           <Outlet />
         </div>
         <Footer />
