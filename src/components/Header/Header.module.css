@@ -94,7 +94,6 @@
 .contactNav.active {
 	color: white;
 	border-bottom: 1px solid white;
-	box-shadow: inset 0px -22px 10px -24px rgba(255,255,255,1);
 }
 
 .dropdown {
