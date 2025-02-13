@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useCartContext } from "../../hooks/useCartContext/useCartContext";
 import CartItem from "./CartItem/CartItem";
@@ -8,6 +9,10 @@ import layout from "../../layout.module.css";
 export default function ShoppingCart() {
 	const { cart } = useCartContext();
 	let cartItems;
+	// Scroll to top on load
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 
 	if (cart.length < 1) {
 		cartItems = 

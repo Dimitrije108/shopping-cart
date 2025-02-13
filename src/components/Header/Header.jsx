@@ -29,7 +29,7 @@ export default function Header({ isHomepage }) {
 			window.removeEventListener("scroll", handleScroll);
 		}
 	}, []);
-
+	// Starships dropdown control
 	const handleMouseEnter = () => {
 		setStarshipsDropdown(true);
 	};
@@ -37,10 +37,6 @@ export default function Header({ isHomepage }) {
 	const handleMouseLeave = () => {
 		setStarshipsDropdown(false);
 	};
-	// Scroll to the top when the link is clicked
-	const handleLinkClick = () => {
-    window.scrollTo(0, 0); 
-  };
 
 	const header = (
 		<>
@@ -60,7 +56,6 @@ export default function Header({ isHomepage }) {
 					<Link 
 							to="/" 
 							className={styles.logoLink} 
-							onClick={handleLinkClick}
 						>
 						<img 
 							src="/src/assets/sw-logo.png"  
@@ -72,7 +67,6 @@ export default function Header({ isHomepage }) {
 						to="/" 
 						className={styles.shipyardLink} 
 						title="Shipyard"
-						onClick={handleLinkClick}
 					>
 						<div className={styles.shipyardLogo}>Shipyard</div>
 					</Link>
@@ -81,7 +75,6 @@ export default function Header({ isHomepage }) {
 					to="shopping-cart"
 					className={styles.cartIconLink}
 					data-testid="cartLink"
-					onClick={handleLinkClick}
 				>
 					<img 
 						src="https://icons.iconarchive.com/icons/jonathan-rey/star-wars-vehicles/128/Death-Star-2nd-icon.png" 
@@ -104,7 +97,7 @@ export default function Header({ isHomepage }) {
 						className={`${styles.homeNav} ${pathname==="/" ? styles.active : ""} `}
 						data-testid="home"
 					>
-						<Link to="/" onClick={handleLinkClick}>Home</Link>
+						<Link to="/">Home</Link>
 					</li>
 					<li 
 						className={`${styles.starshipsNav} ${pathname.startsWith("/starships") ? styles.active : ""} `}
@@ -112,7 +105,7 @@ export default function Header({ isHomepage }) {
 						onMouseLeave={() => handleMouseLeave()}
 						data-testid="starships"
 					>
-						<Link to="starships" onClick={handleLinkClick}>Starships</Link>
+						<Link to="starships">Starships</Link>
 						<ul 
 							className={`${styles.dropdown} ${starshipsDropdown ? styles.visible : ""}`}
 							data-testid="starshipsDropdown"
@@ -120,7 +113,6 @@ export default function Header({ isHomepage }) {
 							<li>
 								<Link 
 									to="starships/capital" 
-									onClick={handleLinkClick}
 								>
 									Capital
 								</Link>
@@ -128,7 +120,6 @@ export default function Header({ isHomepage }) {
 							<li>
 								<Link 
 									to="starships/transport" 
-									onClick={handleLinkClick}
 								>
 									Transport
 								</Link>
@@ -136,7 +127,6 @@ export default function Header({ isHomepage }) {
 							<li>
 								<Link 
 									to="starships/starfighter" 
-									onClick={handleLinkClick}
 								>
 									Starfighter
 								</Link>
@@ -149,7 +139,6 @@ export default function Header({ isHomepage }) {
 					>
 						<Link 
 							to="contact" 
-							onClick={handleLinkClick}
 						>
 							Contact
 						</Link>
@@ -181,7 +170,7 @@ export default function Header({ isHomepage }) {
 					className={`${styles.homeNav} ${pathname==="/" ? styles.active : ""} `}
 					data-testid="home"
 				>
-					<Link to="/" onClick={handleLinkClick}>Home</Link>
+					<Link to="/">Home</Link>
 				</li>
 				<li 
 					className={`${styles.starshipsNav} ${pathname.startsWith("/starships") ? styles.active : ""} `}
@@ -189,7 +178,7 @@ export default function Header({ isHomepage }) {
 					onMouseLeave={() => handleMouseLeave()}
 					data-testid="starships"
 				>
-					<Link to="starships" onClick={handleLinkClick}>Starships</Link>
+					<Link to="starships" >Starships</Link>
 					<ul 
 						className=
 							{`
@@ -202,7 +191,6 @@ export default function Header({ isHomepage }) {
 						<li>
 							<Link 
 								to="starships/capital" 
-								onClick={handleLinkClick}
 							>
 								Capital
 							</Link>
@@ -210,7 +198,6 @@ export default function Header({ isHomepage }) {
 						<li>
 							<Link 
 								to="starships/transport" 
-								onClick={handleLinkClick}
 							>
 								Transport
 							</Link>
@@ -218,7 +205,6 @@ export default function Header({ isHomepage }) {
 						<li>
 							<Link 
 								to="starships/starfighter" 
-								onClick={handleLinkClick}
 							>
 								Starfighter
 							</Link>
@@ -231,7 +217,6 @@ export default function Header({ isHomepage }) {
 				>
 					<Link 
 						to="contact" 
-						onClick={handleLinkClick}
 					>
 						Contact
 					</Link>
@@ -241,7 +226,6 @@ export default function Header({ isHomepage }) {
 				to="shopping-cart"
 				className={`${styles.cartIconLink} ${styles.sticky}`}
 				data-testid="cartLink"
-				onClick={handleLinkClick}
 			>
 				<img 
 					src="https://icons.iconarchive.com/icons/jonathan-rey/star-wars-vehicles/128/Death-Star-2nd-icon.png" 
