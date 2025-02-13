@@ -52,7 +52,12 @@ export default function CarouselSection() {
 					style={{ transform: `translateX(-${index * 100}vw)` }}
 				>
 					{slides.map((slide, i) => (
-						<div key={i} className={styles.slideCont}>
+						<div 
+							key={i} 
+							className={styles.slideCont} 
+							aria-hidden={index !== i}
+							data-testid="carouselSlide"
+						>
 							<img src={slide.src} alt={slide.alt} />
 							<div className={styles.carouselMarketingText}>
 								<h2 className={styles.standardText}>
@@ -73,7 +78,7 @@ export default function CarouselSection() {
 											{slide.marketingText}
 										</p>
 									</div>
-									<Link to={slide.linkTo}>
+									<Link to={slide.linkTo} data-testid="storeLink">
 										<button className={styles.shopCapitalBtn}>
 											{slide.buttonText}
 										</button>
@@ -87,6 +92,7 @@ export default function CarouselSection() {
 					<button 
 						className={styles.carouselQuickNavBtn} 
 						onClick={() => changeSlide(0)}
+						data-testid="quickNavBtn"
 					>
 						<div 
 							className={`
@@ -98,6 +104,7 @@ export default function CarouselSection() {
 					<button 
 						className={styles.carouselQuickNavBtn} 
 						onClick={() => changeSlide(1)}
+						data-testid="quickNavBtn"
 					>
 						<div
 							className={`
@@ -109,6 +116,7 @@ export default function CarouselSection() {
 					<button 
 						className={styles.carouselQuickNavBtn} 
 						onClick={() => changeSlide(2)}
+						data-testid="quickNavBtn"
 					>
 						<div
 							className={`
@@ -122,6 +130,7 @@ export default function CarouselSection() {
 			<button 
 				className={styles.leftArrow}
 				onClick={prevSlide}
+				data-testid="leftBtn"
 			>
 				<img 
 					src="/src/assets/carousel-left-arrow.svg" 
@@ -132,6 +141,7 @@ export default function CarouselSection() {
 			<button 
 				className={styles.rightArrow}
 				onClick={nextSlide}
+				data-testid="rightBtn"
 			>
 				<img 
 					src="/src/assets/carousel-right-arrow.svg" 
