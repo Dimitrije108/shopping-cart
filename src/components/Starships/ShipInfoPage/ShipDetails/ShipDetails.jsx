@@ -24,8 +24,6 @@ import styles from "./ShipDetails.module.css";
 
 // Contact me with an Insurance Quote
 
-// Contact me with a Shipping Quote
-
 // Example: The finest exotic cars & sports cars for sale | duPont REGISTRYCheck Availability
 // By pressing this button I agree to the Terms of Use and Privacy Policy.
 
