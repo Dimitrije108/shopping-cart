@@ -60,6 +60,30 @@ describe("Header component", () => {
 	});
 
 	describe("Non-sticky header renders correctly", () => {
+		it("Transparent header loads when on homepage", () => {
+			render(
+				<MemoryRouter initialEntries={["/"]}>
+					<Header />
+				</MemoryRouter>
+			)
+			
+			const headerContClass = screen.getByTestId("headerCont").className;
+
+			expect(headerContClass).toMatch(/transparentHeader/);
+		});
+
+		it("Contact header loads when on contact page", () => {
+			render(
+				<MemoryRouter initialEntries={["/contact"]}>
+					<Header />
+				</MemoryRouter>
+			)
+			
+			const headerContClass = screen.getByTestId("headerCont").className;
+
+			expect(headerContClass).toMatch(/contactHeader/);
+		});
+
 		it("GitHub icon renders correctly and github link works", () => {
 			render(
 				<MemoryRouter>

@@ -49,6 +49,7 @@ export default function Header() {
 				${isHomepage ? styles.transparentHeader : ""}
 				${isContact ? styles.contactHeader : ""}
 			`}
+			data-testid="headerCont"
 		>
 			<div className={`${styles.logoCont} ${layout.layoutWrapper}`}>
 				<Link 

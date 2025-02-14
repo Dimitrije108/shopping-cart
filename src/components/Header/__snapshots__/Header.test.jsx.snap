@@ -11,6 +11,7 @@ exports[`Header component > Non-sticky header snapshot 1`] = `
 				_transparentHeader_63c2ea
 				
 			"
+        data-testid="headerCont"
       >
         <div
           class="_logoCont_63c2ea _layoutWrapper_aadc39"
@@ -170,6 +171,7 @@ exports[`Header component > Non-sticky header snapshot 1`] = `
 				_transparentHeader_63c2ea
 				
 			"
+      data-testid="headerCont"
     >
       <div
         class="_logoCont_63c2ea _layoutWrapper_aadc39"
@@ -381,11 +383,7 @@ exports[`Header component > Sticky header snapshot 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="
-				_headerCont_63c2ea 
-				_transparentHeader_63c2ea
-				
-			"
+        class="_stickyHeaderCont_63c2ea"
       >
         <nav
           class="_navbarCont_63c2ea _sticky_63c2ea"
@@ -407,9 +405,9 @@ exports[`Header component > Sticky header snapshot 1`] = `
           >
             <li
               class="
-						_homeNav_63c2ea 
-						_active_63c2ea 
-					"
+							_homeNav_63c2ea 
+							_active_63c2ea 
+						"
               data-testid="home"
             >
               <a
@@ -421,9 +419,9 @@ exports[`Header component > Sticky header snapshot 1`] = `
             </li>
             <li
               class="
-						_starshipsNav_63c2ea 
-						 
-					"
+							_starshipsNav_63c2ea 
+							 
+						"
               data-testid="starships"
             >
               <a
@@ -434,10 +432,10 @@ exports[`Header component > Sticky header snapshot 1`] = `
               </a>
               <ul
                 class="
-							_dropdown_63c2ea 
-							_sticky_63c2ea 
-							
-							"
+								_dropdown_63c2ea 
+								_sticky_63c2ea 
+								
+								"
                 data-testid="starshipsDropdown"
               >
                 <li>
@@ -468,9 +466,9 @@ exports[`Header component > Sticky header snapshot 1`] = `
             </li>
             <li
               class="
-						_contactNav_63c2ea 
-						 
-					"
+							_contactNav_63c2ea 
+							 
+						"
               data-testid="contact"
             >
               <a
@@ -508,11 +506,7 @@ exports[`Header component > Sticky header snapshot 1`] = `
   </body>,
   "container": <div>
     <div
-      class="
-				_headerCont_63c2ea 
-				_transparentHeader_63c2ea
-				
-			"
+      class="_stickyHeaderCont_63c2ea"
     >
       <nav
         class="_navbarCont_63c2ea _sticky_63c2ea"
@@ -534,9 +528,9 @@ exports[`Header component > Sticky header snapshot 1`] = `
         >
           <li
             class="
-						_homeNav_63c2ea 
-						_active_63c2ea 
-					"
+							_homeNav_63c2ea 
+							_active_63c2ea 
+						"
             data-testid="home"
           >
             <a
@@ -548,9 +542,9 @@ exports[`Header component > Sticky header snapshot 1`] = `
           </li>
           <li
             class="
-						_starshipsNav_63c2ea 
-						 
-					"
+							_starshipsNav_63c2ea 
+							 
+						"
             data-testid="starships"
           >
             <a
@@ -561,10 +555,10 @@ exports[`Header component > Sticky header snapshot 1`] = `
             </a>
             <ul
               class="
-							_dropdown_63c2ea 
-							_sticky_63c2ea 
-							
-							"
+								_dropdown_63c2ea 
+								_sticky_63c2ea 
+								
+								"
               data-testid="starshipsDropdown"
             >
               <li>
@@ -595,9 +589,9 @@ exports[`Header component > Sticky header snapshot 1`] = `
           </li>
           <li
             class="
-						_contactNav_63c2ea 
-						 
-					"
+							_contactNav_63c2ea 
+							 
+						"
             data-testid="contact"
           >
             <a
