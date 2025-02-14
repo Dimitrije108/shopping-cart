@@ -1,13 +1,7 @@
-.layout {
-	min-height: 100vh;
-
-  display: flex;
-  flex-direction: column;
-}
-
 .layoutWrapper {
+	width: 100%;
 	max-width: 1250px;
-	align-self: center;
+	margin: 0 auto;
 }
 
 .footerMargin {
