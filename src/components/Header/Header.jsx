@@ -43,7 +43,13 @@ export default function Header() {
 	};
 
 	const header = (
-		<>
+		<div 
+			className={`
+				${styles.headerCont} 
+				${isHomepage ? styles.transparentHeader : ""}
+				${isContact ? styles.contactHeader : ""}
+			`}
+		>
 			<div className={`${styles.logoCont} ${layout.layoutWrapper}`}>
 				<Link 
 					to="https://github.com/Dimitrije108/shopping-cart"
@@ -161,118 +167,112 @@ export default function Header() {
 					</li>
 				</ul>
 			</nav>
-		</>
+		</div>
 	);
 
 	const stickyHeader = (
-		<nav 
-			className={`${styles.navbarCont} ${isSticky ? styles.sticky : ""}`}
-			ref={navbarRef}
-			data-testid="stickyNavbar"
-		>
-			<Link 
-				to="https://github.com/Dimitrije108/shopping-cart"
-				className={`${styles.githubLink} ${styles.sticky}`}
+		<div className={styles.stickyHeaderCont}>
+			<nav 
+				className={`${styles.navbarCont} ${isSticky ? styles.sticky : ""}`}
+				ref={navbarRef}
+				data-testid="stickyNavbar"
 			>
-				<img 
-					src="/src/assets/github-mark-white.svg" 
-					alt="github icon" 
-					width={28}
-					title="GitHub"
-				/>
-			</Link>
-			<ul className={styles.navbar}>
-				<li 
-					className={`
-						${styles.homeNav} 
-						${pathname==="/" ? styles.active : ""} 
-					`}
-					data-testid="home"
+				<Link 
+					to="https://github.com/Dimitrije108/shopping-cart"
+					className={`${styles.githubLink} ${styles.sticky}`}
 				>
-					<Link to="/">Home</Link>
-				</li>
-				<li 
-					className={`
-						${styles.starshipsNav} 
-						${pathname.startsWith("/starships") ? styles.active : ""} 
-					`}
-					onMouseEnter={() => handleMouseEnter()}
-					onMouseLeave={() => handleMouseLeave()}
-					data-testid="starships"
-				>
-					<Link to="starships" >Starships</Link>
-					<ul 
-						className=
-							{`
-							${styles.dropdown} 
-							${isSticky ? styles.sticky : ""} 
-							${starshipsDropdown ? styles.visible : ""}
-							`}
-						data-testid="starshipsDropdown"
+					<img 
+						src="/src/assets/github-mark-white.svg" 
+						alt="github icon" 
+						width={28}
+						title="GitHub"
+					/>
+				</Link>
+				<ul className={styles.navbar}>
+					<li 
+						className={`
+							${styles.homeNav} 
+							${pathname==="/" ? styles.active : ""} 
+						`}
+						data-testid="home"
 					>
-						<li>
-							<Link 
-								to="starships/capital" 
-							>
-								Capital
-							</Link>
-						</li>
-						<li>
-							<Link 
-								to="starships/transport" 
-							>
-								Transport
-							</Link>
-						</li>
-						<li>
-							<Link 
-								to="starships/starfighter" 
-							>
-								Starfighter
-							</Link>
-						</li>
-					</ul>
-				</li>
-				<li 
-					className={`
-						${styles.contactNav} 
-						${pathname.startsWith("/contact") ? styles.active : ""} 
-					`}
-					data-testid="contact"
-				>
-					<Link 
-						to="contact" 
+						<Link to="/">Home</Link>
+					</li>
+					<li 
+						className={`
+							${styles.starshipsNav} 
+							${pathname.startsWith("/starships") ? styles.active : ""} 
+						`}
+						onMouseEnter={() => handleMouseEnter()}
+						onMouseLeave={() => handleMouseLeave()}
+						data-testid="starships"
 					>
-						Contact
-					</Link>
-				</li>
-			</ul>
-			<Link 
-				to="shopping-cart"
-				className={`${styles.cartIconLink} ${styles.sticky}`}
-				data-testid="cartLink"
-			>
-				<img 
-					src="https://icons.iconarchive.com/icons/jonathan-rey/star-wars-vehicles/128/Death-Star-2nd-icon.png" 
-					width="35" 
-					title="Shopping Cart"
-				/>
-				<div className={styles.cartQuantity}>
-					<div className={styles.quantityWrapper}>{`${cart.length}`}</div>
-				</div>
-			</Link>
-		</nav>
+						<Link to="starships" >Starships</Link>
+						<ul 
+							className=
+								{`
+								${styles.dropdown} 
+								${isSticky ? styles.sticky : ""} 
+								${starshipsDropdown ? styles.visible : ""}
+								`}
+							data-testid="starshipsDropdown"
+						>
+							<li>
+								<Link 
+									to="starships/capital" 
+								>
+									Capital
+								</Link>
+							</li>
+							<li>
+								<Link 
+									to="starships/transport" 
+								>
+									Transport
+								</Link>
+							</li>
+							<li>
+								<Link 
+									to="starships/starfighter" 
+								>
+									Starfighter
+								</Link>
+							</li>
+						</ul>
+					</li>
+					<li 
+						className={`
+							${styles.contactNav} 
+							${pathname.startsWith("/contact") ? styles.active : ""} 
+						`}
+						data-testid="contact"
+					>
+						<Link 
+							to="contact" 
+						>
+							Contact
+						</Link>
+					</li>
+				</ul>
+				<Link 
+					to="shopping-cart"
+					className={`${styles.cartIconLink} ${styles.sticky}`}
+					data-testid="cartLink"
+				>
+					<img 
+						src="https://icons.iconarchive.com/icons/jonathan-rey/star-wars-vehicles/128/Death-Star-2nd-icon.png" 
+						width="35" 
+						title="Shopping Cart"
+					/>
+					<div className={styles.cartQuantity}>
+						<div className={styles.quantityWrapper}>{`${cart.length}`}</div>
+					</div>
+				</Link>
+			</nav>
+		</div>
 	)
 
   return (
-		<div 
-			className={`
-				${styles.headerCont} 
-				${isHomepage ? styles.transparentHeader : ""}
-				${isContact ? styles.contactHeader : ""}
-			`}
-		>
-			{isSticky ? stickyHeader : header}
-		</div>
+		<>{isSticky ? stickyHeader : header}</>
 	)
 };

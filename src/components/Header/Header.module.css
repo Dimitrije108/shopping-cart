@@ -1,5 +1,9 @@
 .headerCont {
 	background-color: rgb(0, 0, 0);
+}
+
+.stickyHeaderCont {
+	background-color: rgba(0, 0, 0, 0.5);
 
 	position: sticky;
 	top: 0px;
@@ -9,6 +13,9 @@
 
 .headerCont.transparentHeader {
 	background-color: rgba(0, 0, 0, 0.5);
+
+	position: relative;
+  z-index: 1;
 }
 
 .headerCont.contactHeader {
@@ -22,7 +29,6 @@
 }
 
 .logoCont{
-	margin: 0 auto;
 	padding-top: 1.5rem;
 
 	display: grid;
