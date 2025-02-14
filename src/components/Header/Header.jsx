@@ -4,12 +4,16 @@ import { useCartContext } from "../../hooks/useCartContext/useCartContext";
 import styles from "./Header.module.css";
 import layout from "../../layout.module.css";
 
-export default function Header({ isHomepage }) {
+export default function Header() {
 	const [starshipsDropdown, setStarshipsDropdown] = useState(false);
 	const [isSticky, setIsSticky] = useState(false);
 	const { pathname } = useLocation();
 	const { cart } = useCartContext();
 	const navbarRef = useRef(null);
+
+	// Check active path so custom backdrop image can be applied
+  const isHomepage = pathname === "/";
+  const isContact = pathname === "/contact";
 	// Set navbar's isSticky for sticky customization
 	useEffect(() => {
 		const handleScroll = () => {
@@ -94,20 +98,29 @@ export default function Header({ isHomepage }) {
 				<div></div>
 				<ul className={styles.navbar}>
 					<li 
-						className={`${styles.homeNav} ${pathname==="/" ? styles.active : ""} `}
+						className={`
+							${styles.homeNav} 
+							${pathname==="/" ? styles.active : ""} 
+						`}
 						data-testid="home"
 					>
 						<Link to="/">Home</Link>
 					</li>
 					<li 
-						className={`${styles.starshipsNav} ${pathname.startsWith("/starships") ? styles.active : ""} `}
+						className={`
+							${styles.starshipsNav} 
+							${pathname.startsWith("/starships") ? styles.active : ""} 
+						`}
 						onMouseEnter={() => handleMouseEnter()}
 						onMouseLeave={() => handleMouseLeave()}
 						data-testid="starships"
 					>
 						<Link to="starships">Starships</Link>
 						<ul 
-							className={`${styles.dropdown} ${starshipsDropdown ? styles.visible : ""}`}
+							className={`
+								${styles.dropdown} 
+								${starshipsDropdown ? styles.visible : ""}
+							`}
 							data-testid="starshipsDropdown"
 						>
 							<li>
@@ -134,7 +147,10 @@ export default function Header({ isHomepage }) {
 						</ul>
 					</li>
 					<li 
-						className={`${styles.contactNav} ${pathname.startsWith("/contact") ? styles.active : ""} `}
+						className={`
+							${styles.contactNav} 
+							${pathname.startsWith("/contact") ? styles.active : ""} 
+						`}
 						data-testid="contact"
 					>
 						<Link 
@@ -167,13 +183,19 @@ export default function Header({ isHomepage }) {
 			</Link>
 			<ul className={styles.navbar}>
 				<li 
-					className={`${styles.homeNav} ${pathname==="/" ? styles.active : ""} `}
+					className={`
+						${styles.homeNav} 
+						${pathname==="/" ? styles.active : ""} 
+					`}
 					data-testid="home"
 				>
 					<Link to="/">Home</Link>
 				</li>
 				<li 
-					className={`${styles.starshipsNav} ${pathname.startsWith("/starships") ? styles.active : ""} `}
+					className={`
+						${styles.starshipsNav} 
+						${pathname.startsWith("/starships") ? styles.active : ""} 
+					`}
 					onMouseEnter={() => handleMouseEnter()}
 					onMouseLeave={() => handleMouseLeave()}
 					data-testid="starships"
@@ -212,7 +234,10 @@ export default function Header({ isHomepage }) {
 					</ul>
 				</li>
 				<li 
-					className={`${styles.contactNav} ${pathname.startsWith("/contact") ? styles.active : ""} `}
+					className={`
+						${styles.contactNav} 
+						${pathname.startsWith("/contact") ? styles.active : ""} 
+					`}
 					data-testid="contact"
 				>
 					<Link 
@@ -244,6 +269,7 @@ export default function Header({ isHomepage }) {
 			className={`
 				${styles.headerCont} 
 				${isHomepage ? styles.transparentHeader : ""}
+				${isContact ? styles.contactHeader : ""}
 			`}
 		>
 			{isSticky ? stickyHeader : header}

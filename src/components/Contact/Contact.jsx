@@ -11,10 +11,6 @@ export default function Contact() {
 
   return (
 		<>
-			<div
-				className={styles.backdrop}
-				data-testid="contactBackdrop"
-			></div>
 			<div 
 				className={`
 					${layout.layoutWrapper} 
