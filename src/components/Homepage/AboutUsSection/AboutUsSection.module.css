@@ -1,5 +1,4 @@
 .aboutUsSection {
-	max-width: calc(100vw - 17px);
 	min-height: calc(100vh - 60px);
 
 	background-image: url("/src/assets/dune-night-sand-death-star.jpg");
