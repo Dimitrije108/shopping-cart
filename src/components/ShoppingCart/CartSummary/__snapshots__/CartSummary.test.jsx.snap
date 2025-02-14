@@ -116,13 +116,16 @@ exports[`Cart Summary component > cart summary snapshot test 1`] = `
         >
           Checkout
         </button>
-        <a
+        <div
           class="_continueLink_00018c"
-          data-discover="true"
-          href="/starships"
         >
-          Continue shopping
-        </a>
+          <a
+            data-discover="true"
+            href="/starships"
+          >
+            Continue shopping
+          </a>
+        </div>
       </div>
     </div>
   </body>,
@@ -238,13 +241,16 @@ exports[`Cart Summary component > cart summary snapshot test 1`] = `
       >
         Checkout
       </button>
-      <a
+      <div
         class="_continueLink_00018c"
-        data-discover="true"
-        href="/starships"
       >
-        Continue shopping
-      </a>
+        <a
+          data-discover="true"
+          href="/starships"
+        >
+          Continue shopping
+        </a>
+      </div>
     </div>
   </div>,
   "debug": [Function],

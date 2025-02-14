@@ -1,12 +1,16 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Footer component > Contact component snapshot 1`] = `
+exports[`Contact component > Contact component snapshot 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <div
-        class="_wrapper_3e421e"
+        class="
+					_layoutWrapper_aadc39 
+					_footerMargin_aadc39 
+					_wrapper_3e421e
+				"
       >
         <h1
           class="_findUsHeading_3e421e"
@@ -432,7 +436,11 @@ exports[`Footer component > Contact component snapshot 1`] = `
   </body>,
   "container": <div>
     <div
-      class="_wrapper_3e421e"
+      class="
+					_layoutWrapper_aadc39 
+					_footerMargin_aadc39 
+					_wrapper_3e421e
+				"
     >
       <h1
         class="_findUsHeading_3e421e"

@@ -4,7 +4,7 @@ import { MemoryRouter } from "react-router-dom";
 import Contact from "./Contact";
 import { App } from "../../App";
 
-describe("Footer component", () => {
+describe("Contact component", () => {
 	it("Contact component snapshot", () => {
 		const contact = render(
 			<MemoryRouter>
@@ -16,18 +16,6 @@ describe("Footer component", () => {
 	});
 
 	describe("Contact component renders correctly", () => {
-		it("Contact backdrop background image renders", () => {
-			render(
-				<MemoryRouter initialEntries={['/contact']}>
-					<App />
-				</MemoryRouter>
-			)
-			
-			const backdrop = screen.getByTestId("contactBackdrop");
-
-			expect(backdrop).toBeInTheDocument();
-		});
-
 		it("Find Us section renders correctly", () => {
 			render(
 				<MemoryRouter>

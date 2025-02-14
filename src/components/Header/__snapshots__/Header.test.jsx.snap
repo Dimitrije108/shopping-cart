@@ -6,10 +6,14 @@ exports[`Header component > Non-sticky header snapshot 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="_headerCont_63c2ea"
+        class="
+				_headerCont_63c2ea 
+				_transparentHeader_63c2ea
+				
+			"
       >
         <div
-          class="_logoCont_63c2ea"
+          class="_logoCont_63c2ea _layoutWrapper_aadc39"
         >
           <a
             class="_githubLink_63c2ea"
@@ -81,7 +85,10 @@ exports[`Header component > Non-sticky header snapshot 1`] = `
             class="_navbar_63c2ea"
           >
             <li
-              class="_homeNav_63c2ea _active_63c2ea "
+              class="
+							_homeNav_63c2ea 
+							_active_63c2ea 
+						"
               data-testid="home"
             >
               <a
@@ -92,7 +99,10 @@ exports[`Header component > Non-sticky header snapshot 1`] = `
               </a>
             </li>
             <li
-              class="_starshipsNav_63c2ea  "
+              class="
+							_starshipsNav_63c2ea 
+							 
+						"
               data-testid="starships"
             >
               <a
@@ -102,7 +112,10 @@ exports[`Header component > Non-sticky header snapshot 1`] = `
                 Starships
               </a>
               <ul
-                class="_dropdown_63c2ea "
+                class="
+								_dropdown_63c2ea 
+								
+							"
                 data-testid="starshipsDropdown"
               >
                 <li>
@@ -132,7 +145,10 @@ exports[`Header component > Non-sticky header snapshot 1`] = `
               </ul>
             </li>
             <li
-              class="_contactNav_63c2ea  "
+              class="
+							_contactNav_63c2ea 
+							 
+						"
               data-testid="contact"
             >
               <a
@@ -149,10 +165,14 @@ exports[`Header component > Non-sticky header snapshot 1`] = `
   </body>,
   "container": <div>
     <div
-      class="_headerCont_63c2ea"
+      class="
+				_headerCont_63c2ea 
+				_transparentHeader_63c2ea
+				
+			"
     >
       <div
-        class="_logoCont_63c2ea"
+        class="_logoCont_63c2ea _layoutWrapper_aadc39"
       >
         <a
           class="_githubLink_63c2ea"
@@ -224,7 +244,10 @@ exports[`Header component > Non-sticky header snapshot 1`] = `
           class="_navbar_63c2ea"
         >
           <li
-            class="_homeNav_63c2ea _active_63c2ea "
+            class="
+							_homeNav_63c2ea 
+							_active_63c2ea 
+						"
             data-testid="home"
           >
             <a
@@ -235,7 +258,10 @@ exports[`Header component > Non-sticky header snapshot 1`] = `
             </a>
           </li>
           <li
-            class="_starshipsNav_63c2ea  "
+            class="
+							_starshipsNav_63c2ea 
+							 
+						"
             data-testid="starships"
           >
             <a
@@ -245,7 +271,10 @@ exports[`Header component > Non-sticky header snapshot 1`] = `
               Starships
             </a>
             <ul
-              class="_dropdown_63c2ea "
+              class="
+								_dropdown_63c2ea 
+								
+							"
               data-testid="starshipsDropdown"
             >
               <li>
@@ -275,7 +304,10 @@ exports[`Header component > Non-sticky header snapshot 1`] = `
             </ul>
           </li>
           <li
-            class="_contactNav_63c2ea  "
+            class="
+							_contactNav_63c2ea 
+							 
+						"
             data-testid="contact"
           >
             <a
@@ -349,7 +381,11 @@ exports[`Header component > Sticky header snapshot 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="_headerCont_63c2ea"
+        class="
+				_headerCont_63c2ea 
+				_transparentHeader_63c2ea
+				
+			"
       >
         <nav
           class="_navbarCont_63c2ea _sticky_63c2ea"
@@ -370,7 +406,10 @@ exports[`Header component > Sticky header snapshot 1`] = `
             class="_navbar_63c2ea"
           >
             <li
-              class="_homeNav_63c2ea _active_63c2ea "
+              class="
+						_homeNav_63c2ea 
+						_active_63c2ea 
+					"
               data-testid="home"
             >
               <a
@@ -381,7 +420,10 @@ exports[`Header component > Sticky header snapshot 1`] = `
               </a>
             </li>
             <li
-              class="_starshipsNav_63c2ea  "
+              class="
+						_starshipsNav_63c2ea 
+						 
+					"
               data-testid="starships"
             >
               <a
@@ -425,7 +467,10 @@ exports[`Header component > Sticky header snapshot 1`] = `
               </ul>
             </li>
             <li
-              class="_contactNav_63c2ea  "
+              class="
+						_contactNav_63c2ea 
+						 
+					"
               data-testid="contact"
             >
               <a
@@ -443,10 +488,9 @@ exports[`Header component > Sticky header snapshot 1`] = `
             href="/shopping-cart"
           >
             <img
-              height="40"
               src="https://icons.iconarchive.com/icons/jonathan-rey/star-wars-vehicles/128/Death-Star-2nd-icon.png"
               title="Shopping Cart"
-              width="40"
+              width="35"
             />
             <div
               class="_cartQuantity_63c2ea"
@@ -464,7 +508,11 @@ exports[`Header component > Sticky header snapshot 1`] = `
   </body>,
   "container": <div>
     <div
-      class="_headerCont_63c2ea"
+      class="
+				_headerCont_63c2ea 
+				_transparentHeader_63c2ea
+				
+			"
     >
       <nav
         class="_navbarCont_63c2ea _sticky_63c2ea"
@@ -485,7 +533,10 @@ exports[`Header component > Sticky header snapshot 1`] = `
           class="_navbar_63c2ea"
         >
           <li
-            class="_homeNav_63c2ea _active_63c2ea "
+            class="
+						_homeNav_63c2ea 
+						_active_63c2ea 
+					"
             data-testid="home"
           >
             <a
@@ -496,7 +547,10 @@ exports[`Header component > Sticky header snapshot 1`] = `
             </a>
           </li>
           <li
-            class="_starshipsNav_63c2ea  "
+            class="
+						_starshipsNav_63c2ea 
+						 
+					"
             data-testid="starships"
           >
             <a
@@ -540,7 +594,10 @@ exports[`Header component > Sticky header snapshot 1`] = `
             </ul>
           </li>
           <li
-            class="_contactNav_63c2ea  "
+            class="
+						_contactNav_63c2ea 
+						 
+					"
             data-testid="contact"
           >
             <a
@@ -558,10 +615,9 @@ exports[`Header component > Sticky header snapshot 1`] = `
           href="/shopping-cart"
         >
           <img
-            height="40"
             src="https://icons.iconarchive.com/icons/jonathan-rey/star-wars-vehicles/128/Death-Star-2nd-icon.png"
             title="Shopping Cart"
-            width="40"
+            width="35"
           />
           <div
             class="_cartQuantity_63c2ea"
