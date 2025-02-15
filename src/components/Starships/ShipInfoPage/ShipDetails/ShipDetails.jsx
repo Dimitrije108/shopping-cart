@@ -12,21 +12,9 @@ import styles from "./ShipDetails.module.css";
 // down payment of $32,140, Annual Percentage Rate(APR) of 9.99%, 
 // estimated taxes and fees in the amount of $289,260, and no trade-in.
 
-// TODO: below that there can be a contact the dealer form. like:
-// Contact the Dealer
-// Call +1(888) 848-1168
-// First Name 
-// Last Name 
-// Email 
-// Phone Number 
-// I am interested in this 2024 Aston Martin DB12
+// TODO: Link "Contact for Price" ships with contact form inside contact component
 
-// Free Email Newsletter
-
-// Contact me with an Insurance Quote
-
-// Example: The finest exotic cars & sports cars for sale | duPont REGISTRYCheck Availability
-// By pressing this button I agree to the Terms of Use and Privacy Policy.
+// TODO: Contact me with an Insurance Quote section for insurance
 
 export default function ShipDetails({ basic, details }) {
 	const [tooltip, setTooltip] = useState(false);

@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import styles from "./Contact.module.css";
 import layout from "../../layout.module.css";
 
+// TODO: Free Email Newsletter subscription form/field
+// Stay up to date with all things Shipyard...
+
 export default function Contact() {
 	// Scroll to top on load
 	useEffect(() => {

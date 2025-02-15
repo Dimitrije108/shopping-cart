@@ -6,6 +6,8 @@ import ItemQuantity from '../../ItemQuantity/ItemQuantity';
 import formatNumber from '../../../formatNumber/formatNumber';
 import styles from './CartItem.module.css';
 
+// TODO: Link "Contact for Price" ships with contact form inside contact component
+
 export default function CartItem({ 
 	id, 
 	img, 
