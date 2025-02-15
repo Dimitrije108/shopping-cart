@@ -93,103 +93,105 @@ export default function ShipDetails({ basic, details }) {
 	};
 
   return (
-		<div className={styles.shipDetailsCont} data-testid="shipDetails">
-			<div className={styles.imgCont}>
-				<img src={basic.image} alt={`${basic.name} starship`} />
-			</div>
-			<div className={styles.addCol}>
-				<div  className={styles.addWrapper}>
-					<div className={styles.priceCont}>
-						<div>{formatNumber(truePrice)}</div>
-						{truePrice !== "Price on Request" && <p>credits</p>}
-					</div>
-					<div className={styles.financeCont}>
-						<div className={styles.financeOffer}>
-							<p>Finance Offer</p>
-							{truePrice !== "Price on Request" && 
-								<p className={styles.offerPrice} data-testid="financeOffer">
-									{`${formatNumber(finance)}/month`}
-								</p>
-							}
+		<div className={styles.shipDetailsWrapper}>
+			<div className={styles.shipDetailsCont}>
+				<div className={styles.imgCont}>
+					<img src={basic.image} alt={`${basic.name} starship`} />
+				</div>
+				<div className={styles.addCol}>
+					<div  className={styles.addWrapper}>
+						<div className={styles.priceCont}>
+							<div>{formatNumber(truePrice)}</div>
+							{truePrice !== "Price on Request" && <p>credits</p>}
 						</div>
-						<button>Get Pre-Qualified</button>
+						<div className={styles.financeCont}>
+							<div className={styles.financeOffer}>
+								<p>Finance Offer</p>
+								{truePrice !== "Price on Request" && 
+									<p className={styles.offerPrice} data-testid="financeOffer">
+										{`${formatNumber(finance)}/month`}
+									</p>
+								}
+							</div>
+							<button>Get Pre-Qualified</button>
+						</div>
+						<ItemQuantity 
+							quantity={quantity}
+							increase={increaseQuantity}
+							decrease={decreaseQuantity}
+							change={changeQuantity}
+							reset={resetQuantity}
+						/>
+						<button 
+							className={styles.addBtn}
+							onClick={handleAdd}
+						>Add</button>
+						{tooltip && 
+						<p className={styles.limitExceeded}>{limitExceededMsg}</p>}
 					</div>
-					<ItemQuantity 
-						quantity={quantity}
-						increase={increaseQuantity}
-						decrease={decreaseQuantity}
-						change={changeQuantity}
-						reset={resetQuantity}
-					/>
-					<button 
-						className={styles.addBtn}
-						onClick={handleAdd}
-					>Add</button>
-					{tooltip && 
-					<p className={styles.limitExceeded}>{limitExceededMsg}</p>}
 				</div>
-			</div>
-			<div className={styles.descriptionCont}>
-				<h1>{basic.name}</h1>
-				<p>{basic.description}</p>
-			</div>
-			<section className={styles.tableSection}>
-				<h2>Specification</h2>
-				<div  className={styles.tableCont}>
-					<table className={styles.infoTable}>
-						<tbody>
-							<tr>
-								<th>Model</th>
-								<td>{info.model}</td>
-							</tr>
-							<tr>
-								<th>Starship class</th>
-								<td>{info.starship_class}</td>
-							</tr>
-							<tr>
-								<th>Manufacturer</th>
-								<td>{info.manufacturer}</td>
-							</tr>
-							<tr>
-								<th>Length</th>
-								<td>{info.length}</td>
-							</tr>
-							<tr>
-								<th>Crew</th>
-								<td>{info.crew}</td>
-							</tr>
-						</tbody>
-					</table>
-					<table className={styles.infoTable}>
-						<tbody>
-							<tr>
-								<th>Passengers</th>
-								<td>{info.passengers}</td>
-							</tr>
-							<tr>
-								<th>Max athmospheric speed</th>
-								<td>{info.max_atmosphering_speed}</td>
-							</tr>
-							<tr>
-								<th>Hyperdrive rating</th>
-								<td>{info.hyperdrive_rating}</td>
-							</tr>
-							<tr>
-								<th>MGLT</th>
-								<td>{info.MGLT}</td>
-							</tr>
-							<tr>
-								<th>Cargo capacity</th>
-								<td>{info.cargo_capacity}</td>
-							</tr>
-							<tr>
-								<th>Consumables</th>
-								<td>{info.consumables}</td>
-							</tr>
-						</tbody>
-					</table>
+				<div className={styles.descriptionCont}>
+					<h1>{basic.name}</h1>
+					<p>{basic.description}</p>
 				</div>
-			</section>
+				<section className={styles.tableSection}>
+					<h2>Specification</h2>
+					<div  className={styles.tableCont}>
+						<table className={styles.infoTable}>
+							<tbody>
+								<tr>
+									<th>Model</th>
+									<td>{info.model}</td>
+								</tr>
+								<tr>
+									<th>Starship class</th>
+									<td>{info.starship_class}</td>
+								</tr>
+								<tr>
+									<th>Manufacturer</th>
+									<td>{info.manufacturer}</td>
+								</tr>
+								<tr>
+									<th>Length</th>
+									<td>{info.length}</td>
+								</tr>
+								<tr>
+									<th>Crew</th>
+									<td>{info.crew}</td>
+								</tr>
+							</tbody>
+						</table>
+						<table className={styles.infoTable}>
+							<tbody>
+								<tr>
+									<th>Passengers</th>
+									<td>{info.passengers}</td>
+								</tr>
+								<tr>
+									<th>Max athmospheric speed</th>
+									<td>{info.max_atmosphering_speed}</td>
+								</tr>
+								<tr>
+									<th>Hyperdrive rating</th>
+									<td>{info.hyperdrive_rating}</td>
+								</tr>
+								<tr>
+									<th>MGLT</th>
+									<td>{info.MGLT}</td>
+								</tr>
+								<tr>
+									<th>Cargo capacity</th>
+									<td>{info.cargo_capacity}</td>
+								</tr>
+								<tr>
+									<th>Consumables</th>
+									<td>{info.consumables}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
+			</div>
 		</div>
 	)
 };

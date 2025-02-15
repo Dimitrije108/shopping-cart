@@ -1,5 +1,11 @@
+.skelWrapper {
+	width: 100%;
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
 .skelPage {
-	width: 1100px;
+	margin: 2rem 1rem;
 	padding: 0.5rem;
 
 	display: grid;
