@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 import { useCartContext } from "../../../hooks/useCartContext/useCartContext";
 import { useCartPopup } from "../../../hooks/useCartPopup/useCartPopup";
 import formatNumber from "../../../formatNumber/formatNumber";
@@ -8,10 +9,10 @@ import styles from "./ShipCard.module.css";
 // Create a ship card component
 export default function ShipCard({ 
 	id, 
-	category, 
-	name, 
+	category = "default", 
+	name = "Default", 
 	img, 
-	price,
+	price = "100000",
 }) {
 	const [tooltip, setTooltip] = useState(false);
 	const { addToCart, limitExceededMsg } = useCartContext();
@@ -96,4 +97,12 @@ export default function ShipCard({
 			</div>
 		</Link>
 	)
+};
+
+ShipCard.propTypes = {
+	id: PropTypes.string.isRequired,
+	category: PropTypes.string,
+	name: PropTypes.string,
+	img: PropTypes.string.isRequired,
+	price: PropTypes.string,
 };

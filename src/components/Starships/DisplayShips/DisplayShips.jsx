@@ -1,11 +1,16 @@
 import { useEffect, useState } from "react";
+import PropTypes from 'prop-types';
 import useFetchData from "../../../hooks/useFetchData/useFetchData";
 import ShipCard from "../ShipCard/ShipCard";
 import SkeletonCard from "../SkeletonCard/SkeletonCard";
 import styles from "./DisplayShips.module.css";
 import layout from "../../../layout.module.css";
 
-export default function DisplayShips({ basicDataArr, advDataArr, shipType }) {
+export default function DisplayShips({ 
+	basicDataArr, 
+	advDataArr, 
+	shipType = "default",
+}) {
 	const [basicData, setBasicData] = useState(null);
 	const [advData, setAdvData] = useState(null);
 	const [error, setError] = useState(null);
@@ -56,4 +61,10 @@ export default function DisplayShips({ basicDataArr, advDataArr, shipType }) {
 			<div className={styles.cardsCont}>{cards}</div>
 		</div>
 	)
+};
+
+DisplayShips.propTypes = {
+	basicDataArr: PropTypes.arrayOf(PropTypes.string).isRequired,
+	advDataArr: PropTypes.arrayOf(PropTypes.string).isRequired,
+	shipType: PropTypes.string,
 };

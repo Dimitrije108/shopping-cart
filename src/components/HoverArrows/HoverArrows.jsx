@@ -1,4 +1,11 @@
-export default function HoverArrows({ showDetails, arrow, width, height }) {
+import PropTypes from 'prop-types';
+
+export default function HoverArrows({ 
+	showDetails, 
+	arrow, 
+	width = 15, 
+	height = 15, 
+}) {
 	return (
 		<div className={showDetails}>
 			<img 
@@ -21,4 +28,11 @@ export default function HoverArrows({ showDetails, arrow, width, height }) {
 			/>
 		</div>
 	)
+};
+
+HoverArrows.propTypes = {
+	showDetails: PropTypes.string.isRequired,
+	arrow: PropTypes.string.isRequired,
+	width: PropTypes.number,
+	height: PropTypes.number,
 };

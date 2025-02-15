@@ -1,16 +1,17 @@
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 import { useCartPopup } from "../../../hooks/useCartPopup/useCartPopup";
 import HoverArrows from "../../HoverArrows/HoverArrows";
 import styles from "./AddToCartPopup.module.css";
 
 export default function AddToCartPopup({ 
 	id,
-	quantity, 
-	name,
-	isExiting,
+	quantity = 1, 
+	name = "Default",
+	isExiting = false,
 }) {
 	const { removeTimer, resetTimer } = useCartPopup();
-
+	
 	return (
 		<Link 
 			to="/shopping-cart" 
@@ -34,4 +35,11 @@ export default function AddToCartPopup({
 			</div>
 		</Link>
 	)
+};
+
+AddToCartPopup.propTypes = {
+	id: PropTypes.string.isRequired,
+	quantity: PropTypes.number,
+	name: PropTypes.string,
+	isExiting: PropTypes.bool,
 };

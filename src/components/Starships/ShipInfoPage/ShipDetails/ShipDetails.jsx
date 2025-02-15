@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import PropTypes from 'prop-types';
 import { useCartContext } from "../../../../hooks/useCartContext/useCartContext";
 import { useCartPopup } from "../../../../hooks/useCartPopup/useCartPopup";
 import useItemQuantity from "../../../../hooks/useItemQuantity/useItemQuantity";
@@ -123,8 +124,9 @@ export default function ShipDetails({ basic, details }) {
 					<button 
 						className={styles.addBtn}
 						onClick={handleAdd}
-					>ADD</button>
-					{tooltip && <p className={styles.limitExceeded}>{limitExceededMsg}</p>}
+					>Add</button>
+					{tooltip && 
+					<p className={styles.limitExceeded}>{limitExceededMsg}</p>}
 				</div>
 			</div>
 			<div className={styles.descriptionCont}>
@@ -190,4 +192,28 @@ export default function ShipDetails({ basic, details }) {
 			</section>
 		</div>
 	)
+};
+
+ShipDetails.propTypes = {
+	basic: PropTypes.shape({
+		_id: PropTypes.string,
+		image: PropTypes.string,
+		name: PropTypes.string,
+		description: PropTypes.string,
+	}).isRequired,
+
+	details: PropTypes.shape({
+		cost_in_credits: PropTypes.string,
+		model: PropTypes.string,
+		starship_class: PropTypes.string,
+		manufacturer: PropTypes.string,
+		length: PropTypes.string,
+		crew: PropTypes.string,
+		passengers: PropTypes.string,
+		max_atmosphering_speed: PropTypes.string,
+		hyperdrive_rating: PropTypes.string,
+		MGLT: PropTypes.string,
+		cargo_capacity: PropTypes.string,
+		consumables: PropTypes.string,
+	}).isRequired,
 };

@@ -1,11 +1,12 @@
+import PropTypes from 'prop-types';
 import styles from "./ItemQuantity.module.css";
 
 export default function ItemQuantity({ 
-	quantity, 
+	quantity = 1, 
 	increase, 
 	decrease, 
 	change, 
-	reset 
+	reset, 
 }) {
 	return (
 		<div className={styles.cont}>
@@ -30,3 +31,11 @@ export default function ItemQuantity({
 		</div>
 	)
 }
+
+ItemQuantity.propTypes = {
+	quantity: PropTypes.number,
+	increase: PropTypes.func.isRequired,
+	decrease: PropTypes.func.isRequired,
+	change: PropTypes.func.isRequired,
+	reset: PropTypes.func.isRequired,
+};

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 import { useCartContext } from '../../../hooks/useCartContext/useCartContext';
 import useItemQuantity from '../../../hooks/useItemQuantity/useItemQuantity';
 import ItemQuantity from '../../ItemQuantity/ItemQuantity';
@@ -8,10 +9,10 @@ import styles from './CartItem.module.css';
 export default function CartItem({ 
 	id, 
 	img, 
-	name, 
-	category, 
-	price, 
-	shipQuantity 
+	name = "Default", 
+	category = "default", 
+	price = "100000", 
+	shipQuantity = 1,
 }) {
 	const { 
 		removeFromCart, 
@@ -79,4 +80,13 @@ export default function CartItem({
 			</div>
 		</div>
 	)
+};
+
+CartItem.propTypes = {
+	id: PropTypes.string.isRequired,
+	img: PropTypes.string.isRequired,
+	name: PropTypes.string,
+	category: PropTypes.string,
+	price: PropTypes.string,
+	shipQuantity: PropTypes.number,
 };
