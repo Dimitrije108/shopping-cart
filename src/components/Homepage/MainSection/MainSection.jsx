@@ -7,7 +7,7 @@ export default function MainSection() {
 			<div className={styles.heroImage}></div>
 			<div className={styles.mainContent}>
 				<h1>
-					From Naboo to the Outer Rim — Corellian Engineering Excellence — Now in Your Hands!
+					From Naboo to the Outer Rim — Corellian Engineering Excellence Now in Your Hands!
 				</h1>
 				<Link to="/starships" data-testid="starshipsLink">
 					<button className={styles.shopBtn}>
