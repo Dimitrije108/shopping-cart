@@ -1,21 +1,23 @@
 .headerCont {
 	background-color: rgb(0, 0, 0);
+	border-bottom: 1px solid rgb(214, 214, 214);
 }
 
 .stickyHeaderCont {
 	background-color: rgba(0, 0, 0, 0.5);
+	border-bottom: 1px solid rgb(214, 214, 214);
 
 	position: sticky;
 	top: 0px;
 
-	z-index: 2;
+	z-index: 3;
 }
 
 .headerCont.transparentHeader {
 	background-color: rgba(0, 0, 0, 0.5);
 
 	position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .headerCont.contactHeader {
@@ -71,7 +73,6 @@
 
 .navbarCont {
 	margin: 0 auto;
-	border-bottom: 1px solid rgb(214, 214, 214);
 }
 
 .navbarCont.sticky {
@@ -103,6 +104,7 @@
 
 .starshipsNav {
 	position: relative;
+	z-index: 3;
 }
 
 .homeNav.active,
@@ -137,7 +139,7 @@
 }
 
 .dropdown.sticky {
-	top: 44px;
+	top: 43.5px;
 }
 
 .dropdown.visible {
@@ -147,6 +149,9 @@
   animation: growDropdown 1s ease-in-out;
 }
 
+.cart {
+	top: 36px;
+}
 
 .dropdown > li {
 	padding: 6px 0;

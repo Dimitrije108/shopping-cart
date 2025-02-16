@@ -14,6 +14,7 @@ export default function Header() {
 	// Check active path so custom backdrop image can be applied
   const isHomepage = pathname === "/";
   const isContact = pathname === "/contact";
+	const isCart = pathname === "/shopping-cart";
 	// Set navbar's isSticky for sticky customization
 	useEffect(() => {
 		const handleScroll = () => {
@@ -127,6 +128,7 @@ export default function Header() {
 							className={`
 								${styles.dropdown} 
 								${starshipsDropdown ? styles.visible : ""}
+								${isCart ? styles.cart : ""}
 							`}
 							data-testid="starshipsDropdown"
 						>
@@ -210,12 +212,11 @@ export default function Header() {
 					>
 						<Link to="starships" >Starships</Link>
 						<ul 
-							className=
-								{`
+							className={`
 								${styles.dropdown} 
 								${isSticky ? styles.sticky : ""} 
 								${starshipsDropdown ? styles.visible : ""}
-								`}
+							`}
 							data-testid="starshipsDropdown"
 						>
 							<li>
