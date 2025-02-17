@@ -61,3 +61,30 @@
 	letter-spacing: 2px;
 	background-color: rgba(0, 0, 0, 0.2);
 }
+
+@media (max-width: 900px) {
+  .mainContent > h1 {
+		font-size: 2rem;
+	}
+
+	.shopBtn {
+		padding: 0.8rem 3rem;
+		font-size: 1.3rem;
+		letter-spacing: 1px;
+	}
+}
+
+@media (max-width: 660px) {
+	.mainContent > h1 {
+		font-size: 1.8rem;
+	}
+
+	.shopBtn {
+		font-size: 1rem;
+		letter-spacing: 0.5px;
+	}
+
+	.shopBtn:hover {
+		letter-spacing: 1px;
+	}
+}
