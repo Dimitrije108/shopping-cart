@@ -60,7 +60,6 @@ export default function Header() {
 					<img 
 						src="/src/assets/github-mark-white.svg" 
 						alt="github icon" 
-						width={30}
 						title="GitHub"
 					/>
 				</Link>
@@ -72,7 +71,6 @@ export default function Header() {
 						<img 
 							src="/src/assets/sw-logo.png"  
 							alt="star wars logo" 
-							width={150}
 						/>
 					</Link>
 					<Link 
@@ -90,8 +88,6 @@ export default function Header() {
 				>
 					<img 
 						src="https://icons.iconarchive.com/icons/jonathan-rey/star-wars-vehicles/128/Death-Star-2nd-icon.png" 
-						width="55" 
-						height="55"
 						title="Shopping Cart"
 					/>
 					<div className={styles.cartQuantity}>
@@ -187,11 +183,10 @@ export default function Header() {
 					<img 
 						src="/src/assets/github-mark-white.svg" 
 						alt="github icon" 
-						width={28}
 						title="GitHub"
 					/>
 				</Link>
-				<ul className={styles.navbar}>
+				<ul className={`${styles.navbar} ${styles.sticky}`}>
 					<li 
 						className={`
 							${styles.homeNav} 
@@ -263,7 +258,6 @@ export default function Header() {
 				>
 					<img 
 						src="https://icons.iconarchive.com/icons/jonathan-rey/star-wars-vehicles/128/Death-Star-2nd-icon.png" 
-						width="35" 
 						title="Shopping Cart"
 					/>
 					<div className={styles.cartQuantity}>

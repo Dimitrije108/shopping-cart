@@ -47,6 +47,14 @@
 	margin: 0 1rem 0 3rem;
 }
 
+.githubLink.sticky > img  {
+	width: 28px;
+}
+
+.githubLink > img {
+	width: 30px;
+}
+
 .logoHeading {
 	display: flex;
 	flex-direction: column;
@@ -58,6 +66,10 @@
 
 .logoLink {
 	padding-bottom: 3.3rem;
+}
+
+.logoLink > img {
+	width: 150px;
 }
 
 .shipyardLink {
@@ -100,6 +112,10 @@
 
 .navbar > li:hover {
 	color: white;
+}
+
+.navbar.sticky > li {
+	padding: 0 2rem 0 2rem;
 }
 
 .starshipsNav {
@@ -170,6 +186,14 @@
 	margin: 0 3rem 0 1rem;
 }
 
+.cartIconLink.sticky > img {
+	width: 35px;
+}
+
+.cartIconLink > img {
+	width: 55px;
+}
+
 .cartQuantity {
 	width: 26px;
   height: 26px;
@@ -212,4 +236,91 @@
   100% {
     max-height: 500px;
   }
+}
+
+@media (max-width: 900px) {
+  .cartIconLink > img {
+		width: 45px;
+	}
+
+	.logoLink > img {
+		width: 130px;
+	}
+
+	.shipyardLogo {
+		font-size: 2.8rem;
+	}
+
+	.githubLink.sticky {
+		margin: 0 1rem;
+	}
+
+	.cartIconLink.sticky {
+		margin: 0 1rem;
+	}
+
+	.navbar.sticky > li {
+		margin: 0 1rem;
+	}
+}
+
+@media (max-width: 660px) {
+	.logoCont{
+		padding: 1rem 1rem 0 1rem;
+	}
+
+	.logoLink {
+		padding-bottom: 2.5rem;
+	}
+
+	.logoLink > img {
+		width: 100px;
+	}
+
+	.shipyardLink {
+		position: absolute;
+		top: 34px;
+	}
+
+	.shipyardLogo {
+		font-size: 2.5rem;
+	}
+
+	.githubLink > img {
+		width: 25px;
+	}
+
+	.cartIconLink > img {
+		width: 35px;
+	}
+
+	.cartIconLink > .cartQuantity {
+		width: 20px;
+		height: 20px;
+		font-size: 0.8rem;
+	}
+
+	.navbar > li {
+		margin: 0 0.5rem;
+		padding: 0 1.7rem 6px 1.7rem;
+	}
+
+	.navbar.sticky > li {
+		margin: 0;
+		padding: 0 1rem;
+	}
+
+	.dropdown {
+		padding: 1rem 21px 1rem 21px;
+		top: 37px;
+	}
+
+	.dropdown.sticky {
+		padding: 1rem 15px 1rem 14px;
+		top: 43.5px;
+	}
+
+	.cart {
+		top: 36px;
+	}
 }
