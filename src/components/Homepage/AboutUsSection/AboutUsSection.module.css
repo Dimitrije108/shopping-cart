@@ -49,3 +49,12 @@
 	font-family: Imperial;
 	font-size: 3rem;
 }
+
+@media (max-width: 720px) {
+	.aboutUsSection {
+		background-image: url("/src/assets/dune-night-sand-death-star-cropped.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}
