@@ -57,4 +57,8 @@
 		background-repeat: no-repeat;
 		background-position: center;
 	}
+
+	.aboutUsText {
+		font-size: 1rem;
+	}
 }

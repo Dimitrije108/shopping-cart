@@ -5,6 +5,9 @@ import styles from "./CarouselSection.module.css";
 const slides = [
 	{
 		src: "/src/assets/star-destroyer.jpg",
+		srcMedium: "/src/assets/star-destroyer-medium.jpg",
+		srcSmall: "/src/assets/star-destroyer-small.jpg",
+		srcExtraSmall: "/src/assets/star-destroyer-extra-small.jpg",
 		alt: "Star Destroyer Capital ship",
 		marketingText: "Only a Sith Deals in Full Retail. Shop Our Discounts!",
 		linkTo: "/starships/capital",
@@ -12,6 +15,9 @@ const slides = [
 	},
 	{
 		src: "/src/assets/slave-i.jpg",
+		srcMedium: "/src/assets/slave-i-medium.jpg",
+		srcSmall: "/src/assets/slave-i-small.jpg",
+		srcExtraSmall: "/src/assets/slave-i-extra-small.jpg",
 		alt: "Slave I starship",
 		marketingText: "Bounty Hunting Is a Complicated Profession — Get the Right Ship!",
 		linkTo: "/starships/starfighter",
@@ -19,6 +25,9 @@ const slides = [
 	},
 	{
 		src: "/src/assets/imperial-shuttle.jpg",
+		srcMedium: "/src/assets/imperial-shuttle-medium.jpg",
+		srcSmall: "/src/assets/imperial-shuttle-small.jpg",
+		srcExtraSmall: "/src/assets/imperial-shuttle-extra-small.jpg",
 		alt: "Imperial Shuttle Transport ship",
 		marketingText: "More Than a Ship — A Lifestyle.",
 		linkTo: "/starships/transport",
@@ -58,7 +67,24 @@ export default function CarouselSection() {
 							aria-hidden={index !== i}
 							data-testid="carouselSlide"
 						>
-							<img src={slide.src} alt={slide.alt} />
+							<picture>
+								<source 
+									srcset={slide.srcExtraSmall}
+									media="(max-width: 700px)"
+								/>
+								<source 
+									srcset={slide.srcSmall}
+									media="(max-width: 900px)"
+								/>
+								<source 
+									srcset={slide.srcMedium}
+									media="(max-width: 1250px)"
+								/>
+								<img 
+									src={slide.src}
+									alt={slide.alt}
+								/>
+							</picture>
 							<div className={styles.carouselMarketingText}>
 								<h2 className={styles.standardText}>
 									{slide.marketingText}
@@ -135,7 +161,6 @@ export default function CarouselSection() {
 				<img 
 					src="/src/assets/carousel-left-arrow.svg" 
 					alt="left arrow" 
-					width={30}
 				/>
 			</button>
 			<button 
@@ -146,7 +171,6 @@ export default function CarouselSection() {
 				<img 
 					src="/src/assets/carousel-right-arrow.svg" 
 					alt="right arrow" 
-					width={30}
 				/>
 			</button>
 		</section>
