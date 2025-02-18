@@ -239,6 +239,7 @@
 }
 
 @media (max-width: 900px) {
+	/* Header strandard */
   .cartIconLink > img {
 		width: 45px;
 	}
@@ -250,7 +251,7 @@
 	.shipyardLogo {
 		font-size: 2.8rem;
 	}
-
+	/* Header sticky */
 	.githubLink.sticky {
 		margin: 0 1rem;
 	}
@@ -265,7 +266,8 @@
 }
 
 @media (max-width: 660px) {
-	.logoCont{
+	/* Header strandard */
+	.logoCont {
 		padding: 1rem 1rem 0 1rem;
 	}
 
@@ -305,22 +307,77 @@
 		padding: 0 1.7rem 6px 1.7rem;
 	}
 
-	.navbar.sticky > li {
-		margin: 0;
-		padding: 0 1rem;
-	}
-
 	.dropdown {
 		padding: 1rem 21px 1rem 21px;
 		top: 37px;
 	}
 
+	.cart {
+		top: 36px;
+	}
+	/* Header sticky */
+	.githubLink.sticky > img {
+		width: 25px;
+	}
+
+	.cartIconLink.sticky > img {
+		width: 30px;
+	}
+
+	.navbar.sticky > li {
+		margin: 0;
+		padding: 0 1rem;
+	}
+
 	.dropdown.sticky {
-		padding: 1rem 15px 1rem 14px;
+		padding: 1rem 10px 1rem 9px;
 		top: 43.5px;
+	}
+}
+
+@media (max-width: 500px) {
+	/* Header strandard */
+	.cartIconLink {
+		align-self: start;
+	}
+
+	.navbar > li {
+		padding: 0 1rem 6px 1rem;
+	}
+
+	.dropdown {
+		padding: 1rem 13px 1rem 13px;
+		font-size: 1.1rem;
+		top: 37px;
 	}
 
 	.cart {
 		top: 36px;
+	}
+	/* Header sticky */
+	.githubLink.sticky > img {
+		width: 22px;
+	}
+
+	.cartIconLink.sticky > img {
+		width: 27px;
+	}
+
+	.cartIconLink.sticky > .cartQuantity {
+		width: 18px;
+		height: 18px;
+		font-size: 0.8rem;
+	}
+
+	.navbar.sticky > li {
+		margin: 0;
+		padding: 0 0.5rem;
+		font-size: 1.2rem;
+	}
+
+	.dropdown.sticky {
+		padding: 1rem 10px 1rem 9px;
+		font-size: 1rem;
+		top: 35.5px;
 	}
 }
