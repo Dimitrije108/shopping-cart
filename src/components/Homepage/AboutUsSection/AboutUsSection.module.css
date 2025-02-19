@@ -1,7 +1,7 @@
 .aboutUsSection {
 	min-height: calc(100vh - 60px);
 
-	background-image: url("/src/assets/dune-night-sand-death-star.jpg");
+	background-image: url("/src/assets/images/dune-night-sand-death-star.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -46,6 +46,9 @@
 
 .aboutUsLogo {
 	margin: 1rem;
+}
+
+.aboutUsLogo > h3 {
 	font-family: Imperial;
 	font-size: 3rem;
 }

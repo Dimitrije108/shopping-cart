@@ -1,33 +1,51 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./CarouselSection.module.css";
+// assets
+import leftArrow from "/src/assets/icons/carousel-left-arrow.svg";
+import rightArrow from "/src/assets/icons/carousel-right-arrow.svg";
+
+import firstSlideSrc from "/src/assets/images/carousel/star-destroyer.jpg";
+import firstSlideSrcMedium from "/src/assets/images/carousel/star-destroyer-medium.jpg";
+import firstSlideSrcSmall from "/src/assets/images/carousel/star-destroyer-small.jpg";
+import firstSlideSrcExtraSmall from "/src/assets/images/carousel/star-destroyer-extra-small.jpg";
+
+import secondSlideSrc from "/src/assets/images/carousel/slave-i.jpg";
+import secondSlideSrcMedium from "/src/assets/images/carousel/slave-i-medium.jpg";
+import secondSlideSrcSmall from "/src/assets/images/carousel/slave-i-small.jpg";
+import secondSlideSrcExtraSmall from "/src/assets/images/carousel/slave-i-extra-small.jpg";
+
+import thirdSlideSrc from "/src/assets/images/carousel/imperial-shuttle.jpg";
+import thirdSlideSrcMedium from "/src/assets/images/carousel/imperial-shuttle-medium.jpg";
+import thirdSlideSrcSmall from "/src/assets/images/carousel/imperial-shuttle-small.jpg";
+import thirdSlideSrcExtraSmall from "/src/assets/images/carousel/imperial-shuttle-extra-small.jpg";
 
 const slides = [
 	{
-		src: "/src/assets/star-destroyer.jpg",
-		srcMedium: "/src/assets/star-destroyer-medium.jpg",
-		srcSmall: "/src/assets/star-destroyer-small.jpg",
-		srcExtraSmall: "/src/assets/star-destroyer-extra-small.jpg",
+		src: firstSlideSrc,
+		srcMedium: firstSlideSrcMedium,
+		srcSmall: firstSlideSrcSmall,
+		srcExtraSmall: firstSlideSrcExtraSmall,
 		alt: "Star Destroyer Capital ship",
 		marketingText: "Only a Sith Deals in Full Retail. Shop Our Discounts!",
 		linkTo: "/starships/capital",
 		buttonText: "Best Capital Ships in the Galaxy - Shop Now!",
 	},
 	{
-		src: "/src/assets/slave-i.jpg",
-		srcMedium: "/src/assets/slave-i-medium.jpg",
-		srcSmall: "/src/assets/slave-i-small.jpg",
-		srcExtraSmall: "/src/assets/slave-i-extra-small.jpg",
+		src: secondSlideSrc,
+		srcMedium: secondSlideSrcMedium,
+		srcSmall: secondSlideSrcSmall,
+		srcExtraSmall: secondSlideSrcExtraSmall,
 		alt: "Slave I starship",
 		marketingText: "Bounty Hunting Is a Complicated Profession — Get the Right Ship!",
 		linkTo: "/starships/starfighter",
 		buttonText: "Unleash Your Inner Pilot — Buy a Starfighter!",
 	},
 	{
-		src: "/src/assets/imperial-shuttle.jpg",
-		srcMedium: "/src/assets/imperial-shuttle-medium.jpg",
-		srcSmall: "/src/assets/imperial-shuttle-small.jpg",
-		srcExtraSmall: "/src/assets/imperial-shuttle-extra-small.jpg",
+		src: thirdSlideSrc,
+		srcMedium: thirdSlideSrcMedium,
+		srcSmall: thirdSlideSrcSmall,
+		srcExtraSmall: thirdSlideSrcExtraSmall,
 		alt: "Imperial Shuttle Transport ship",
 		marketingText: "More Than a Ship — A Lifestyle.",
 		linkTo: "/starships/transport",
@@ -69,15 +87,15 @@ export default function CarouselSection() {
 						>
 							<picture>
 								<source 
-									srcset={slide.srcExtraSmall}
+									srcSet={slide.srcExtraSmall}
 									media="(max-width: 700px)"
 								/>
 								<source 
-									srcset={slide.srcSmall}
+									srcSet={slide.srcSmall}
 									media="(max-width: 900px)"
 								/>
 								<source 
-									srcset={slide.srcMedium}
+									srcSet={slide.srcMedium}
 									media="(max-width: 1250px)"
 								/>
 								<img 
@@ -159,7 +177,7 @@ export default function CarouselSection() {
 				data-testid="leftBtn"
 			>
 				<img 
-					src="/src/assets/carousel-left-arrow.svg" 
+					src={leftArrow}
 					alt="left arrow" 
 				/>
 			</button>
@@ -169,7 +187,7 @@ export default function CarouselSection() {
 				data-testid="rightBtn"
 			>
 				<img 
-					src="/src/assets/carousel-right-arrow.svg" 
+					src={rightArrow}
 					alt="right arrow" 
 				/>
 			</button>

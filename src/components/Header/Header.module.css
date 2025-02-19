@@ -23,7 +23,7 @@
 .headerCont.contactHeader {
 	background-color: rgba(0, 0, 0, 0.5);
 
-	background-image: url("/src/assets/galaxy_map2.jpg");
+	background-image: url("/src/assets/images/galaxy_map2.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: 50% 40%;
@@ -331,7 +331,7 @@
 
 	.dropdown.sticky {
 		padding: 1rem 10px 1rem 9px;
-		top: 43.5px;
+		top: 38.5px;
 	}
 }
 

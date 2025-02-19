@@ -1,6 +1,15 @@
 import { Link } from "react-router-dom";
 import styles from "./Footer.module.css";
 import layout from "../../layout.module.css";
+// assets
+import locationIcon from "/src/assets/icons/location.svg";
+import emailIcon from "/src/assets/icons/email.svg";
+// import websiteIcon from "/src/assets/icons/website.svg";
+import CEC from "/src/assets/icons/Corellian_Engineering_Corporation.svg";
+import federationLogo from "/src/assets/icons/Corellian_Federation_logo.webp";
+import kuatDriveYardsLogo from "/src/assets/icons/Kuat-Drive-Yards.svg";
+import fondorShipyardsLogo from "/src/assets/icons/Fondor-Shipyards.jpg";
+import githubIcon from "/src/assets/icons/github-mark-white.svg";
 
 export default function Footer() {
   return (
@@ -10,7 +19,7 @@ export default function Footer() {
 					<div className={styles.locationCont}>
 						<div className={styles.iconCont}>
 							<img 
-								src="/src/assets/location.svg" 
+								src={locationIcon}
 								alt="location icon" 
 								width={30}
 								title="Location"
@@ -25,7 +34,7 @@ export default function Footer() {
 					<div className={styles.emailCont}>
 						<div className={styles.iconCont}>
 							<img 
-								src="/src/assets/email.svg" 
+								src={emailIcon} 
 								alt="email icon" 
 								width={30}
 								title="Email"
@@ -49,7 +58,7 @@ export default function Footer() {
 								data-testid="cecLink"
 							>
 								<img 
-									src="/src/assets/Corellian_Engineering_Corporation.svg" 
+									src={CEC}
 									alt="Corellian Engineering Corporation icon" 
 									width={55}
 									title="Corellian Engineering Corporation"
@@ -61,7 +70,7 @@ export default function Footer() {
 								data-testid="cfLink"
 							>
 								<img 
-									src="/src/assets/Corellian_Federation_logo.webp" 
+									src={federationLogo}
 									alt="Corellian Federation icon" 
 									width={55}
 									title="Corellian Federation"
@@ -75,7 +84,7 @@ export default function Footer() {
 								data-testid="kdyLink"
 							>
 								<img 
-									src="/src/assets/Kuat-Drive-Yards.svg" 
+									src={kuatDriveYardsLogo}
 									alt="Kuat Drive Yards icon" 
 									width={55}
 									title="Kuat Drive Yards"
@@ -87,7 +96,7 @@ export default function Footer() {
 								data-testid="fondorLink"
 							>
 								<img 
-									src="/src/assets/Fondor-Shipyards.jpg" 
+									src={fondorShipyardsLogo}
 									alt="Fondor Shipyards icon" 
 									width={55}
 									title="Fondor Shipyards"
@@ -108,9 +117,8 @@ export default function Footer() {
 					data-testid="githubLink"
 				>
 					<img 
-						src="/src/assets/github-mark-white.svg" 
+						src={githubIcon}
 						alt="github icon" 
-						width={35}
 						title="GitHub"
 					/>
 				</Link>

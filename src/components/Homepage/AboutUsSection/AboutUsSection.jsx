@@ -1,4 +1,5 @@
 import styles from "./AboutUsSection.module.css";
+import CEC from "/src/assets/icons/Corellian_Engineering_Corporation.svg";
 
 export default function AboutUsSection() {
 	return (
@@ -14,7 +15,7 @@ export default function AboutUsSection() {
 				<div className={styles.aboutUsLogo}>
 					<h3 title="Shipyard">Shipyard</h3>
 					<img 
-						src="/src/assets/Corellian_Engineering_Corporation.svg" 
+						src={CEC}
 						alt="Corellia Engineering Corporation logo" 
 						width={120}
 						title="Corellia Engineering Corporation"

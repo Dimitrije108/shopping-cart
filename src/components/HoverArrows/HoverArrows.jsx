@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import rightArrow from "/src/assets/icons/right-arrow.svg";
 
 export default function HoverArrows({ 
 	showDetails, 
@@ -10,19 +11,19 @@ export default function HoverArrows({
 		<div className={showDetails}>
 			<img 
 				className={arrow} 
-				src="/src/assets/right-arrow.svg" 
+				src={rightArrow}
 				width={width} 
 				height={height} 
 			/>
 			<img 
 				className={arrow} 
-				src="/src/assets/right-arrow.svg" 
+				src={rightArrow}
 				width={width} 
 				height={height} 
 			/>
 			<img 
 				className={arrow} 
-				src="/src/assets/right-arrow.svg" 
+				src={rightArrow}
 				width={width} 
 				height={height} 
 			/>

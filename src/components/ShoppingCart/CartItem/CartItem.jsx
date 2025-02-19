@@ -5,6 +5,7 @@ import useItemQuantity from '../../../hooks/useItemQuantity/useItemQuantity';
 import ItemQuantity from '../../ItemQuantity/ItemQuantity';
 import formatNumber from '../../../formatNumber/formatNumber';
 import styles from './CartItem.module.css';
+import trashIcon from "/src/assets/icons/trash.svg" ;
 
 // TODO: Link "Contact for Price" ships with contact form inside contact component
 
@@ -65,7 +66,11 @@ export default function CartItem({
 						className={styles.delBtn}
 						onClick={() => removeFromCart(id)}
 					>
-						<img src="/src/assets/trash.svg" alt="trashcan remove icon" width={28} height={28} />
+						<img 
+							src={trashIcon}
+							alt="trashcan remove icon" 
+							width={28} 
+						/>
 					</button>
 					<p>
 						{price === "Price on Request" 

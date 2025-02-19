@@ -3,6 +3,9 @@ import { Link, useLocation } from "react-router-dom";
 import { useCartContext } from "../../hooks/useCartContext/useCartContext";
 import styles from "./Header.module.css";
 import layout from "../../layout.module.css";
+// assets
+import githubIcon from "/src/assets/icons/github-mark-white.svg";
+import swLogo from "/src/assets/icons/sw-logo.png";
 
 export default function Header() {
 	const [starshipsDropdown, setStarshipsDropdown] = useState(false);
@@ -58,7 +61,7 @@ export default function Header() {
 					className={styles.githubLink}
 				>
 					<img 
-						src="/src/assets/github-mark-white.svg" 
+						src={githubIcon}
 						alt="github icon" 
 						title="GitHub"
 					/>
@@ -69,7 +72,7 @@ export default function Header() {
 							className={styles.logoLink} 
 						>
 						<img 
-							src="/src/assets/sw-logo.png"  
+							src={swLogo}
 							alt="star wars logo" 
 						/>
 					</Link>
@@ -181,7 +184,7 @@ export default function Header() {
 					className={`${styles.githubLink} ${styles.sticky}`}
 				>
 					<img 
-						src="/src/assets/github-mark-white.svg" 
+						src={githubIcon}
 						alt="github icon" 
 						title="GitHub"
 					/>

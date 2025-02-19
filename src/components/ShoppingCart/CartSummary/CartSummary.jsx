@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useCartContext } from "../../../hooks/useCartContext/useCartContext";
 import formatNumber from "../../../formatNumber/formatNumber";
 import styles from './CartSummary.module.css';
+import infoCircle from "/src/assets/icons/info-circle.svg";
 
 // TODO: introduce discount functionality
 
@@ -60,7 +61,7 @@ export default function CartSummary() {
 							onClick={toggleTooltip}
 						>
 							<img 
-								src="/src/assets/info-circle.svg" 
+								src={infoCircle}
 								alt="free shipping tooltip" 
 								width={17} 
 								height={17} 

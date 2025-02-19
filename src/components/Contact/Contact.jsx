@@ -2,6 +2,16 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Contact.module.css";
 import layout from "../../layout.module.css";
+// assets
+import galaxyMap from "/src/assets/images/galaxy_map.jpg";
+import corelliaPlanet from "/src/assets/images/corellia_planet.webp";
+import CEC from "/src/assets/icons/Corellian_Engineering_Corporation.svg";
+import locationIcon from "/src/assets/icons/location.svg";
+import emailIcon from "/src/assets/icons/email.svg";
+import websiteIcon from "/src/assets/icons/website.svg";
+import federationLogo from "/src/assets/icons/Corellian_Federation_logo.webp";
+import kuatDriveYardsLogo from "/src/assets/icons/Kuat-Drive-Yards.svg";
+import fondorShipyardsLogo from "/src/assets/icons/Fondor-Shipyards.jpg";
 
 // TODO: Free Email Newsletter subscription form/field
 // Stay up to date with all things Shipyard...
@@ -26,7 +36,7 @@ export default function Contact() {
 				</h1>
 				<div className={styles.locationCont}>
 					<img 
-						src="/src/assets/galaxy_map.jpg" 
+						src={galaxyMap} 
 						alt="Galaxy map" 
 						width={500}
 						title="Galaxy map"
@@ -34,14 +44,14 @@ export default function Contact() {
 					/>
 					<div className={styles.planetAndLogoCont}>
 						<img 
-							src="/src/assets/corellia_planet.webp" 
+							src={corelliaPlanet}
 							alt="Corellia planet" 
 							width={250}
 							title="Corellia planet"
 							className={styles.planetMap}
 						/>
 						<img 
-							src="/src/assets/Corellian_Engineering_Corporation.svg" 
+							src={CEC} 
 							alt="Corellia Engineering Corporation logo" 
 							width={250}
 							title="Corellia Engineering Corporation"
@@ -52,7 +62,7 @@ export default function Contact() {
 						<div className={styles.locationCont}>
 							<div className={styles.iconCont}>
 								<img 
-									src="/src/assets/location.svg" 
+									src={locationIcon} 
 									alt="location icon" 
 									width={30}
 									title="Location"
@@ -67,7 +77,7 @@ export default function Contact() {
 						<div className={styles.emailCont}>
 							<div className={styles.iconCont}>
 								<img 
-									src="/src/assets/email.svg" 
+									src={emailIcon}
 									alt="email icon" 
 									width={30}
 									title="Email"
@@ -78,7 +88,7 @@ export default function Contact() {
 						<div className={styles.webpageCont}>
 							<div className={styles.iconCont}>
 								<img 
-									src="/src/assets/website.svg" 
+									src={websiteIcon}
 									alt="webpage icon" 
 									width={30}
 									title="Webpage"
@@ -275,7 +285,7 @@ export default function Contact() {
 								data-testid="cfLink"
 							>
 								<img 
-									src="/src/assets/Corellian_Federation_logo.webp" 
+									src={federationLogo}
 									alt="Corellian Federation icon" 
 									width={100}
 									title="Corellian Federation"
@@ -286,7 +296,7 @@ export default function Contact() {
 								data-testid="kdyLink"
 							>
 								<img 
-									src="/src/assets/Kuat-Drive-Yards.svg" 
+									src={kuatDriveYardsLogo}
 									alt="Kuat Drive Yards icon" 
 									width={100}
 									title="Kuat Drive Yards"
@@ -297,7 +307,7 @@ export default function Contact() {
 								data-testid="fondorLink"
 							>
 								<img 
-									src="/src/assets/Fondor-Shipyards.jpg" 
+									src={fondorShipyardsLogo}
 									alt="Fondor Shipyards icon" 
 									width={100}
 									title="Fondor Shipyards"

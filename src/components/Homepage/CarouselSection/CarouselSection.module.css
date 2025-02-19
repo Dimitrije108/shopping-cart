@@ -1,6 +1,7 @@
 .carouselSection {
 	max-height: calc(100vh - 60px);
 
+	border-top: 1px solid rgb(214, 214, 214);
 	border-bottom: 1px solid rgb(214, 214, 214);
 
 	display: flex;
