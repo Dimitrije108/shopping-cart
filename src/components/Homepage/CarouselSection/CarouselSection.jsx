@@ -76,7 +76,7 @@ export default function CarouselSection() {
 			<div className={styles.carouselCont}>
 				<div 
 					className={styles.carouselTrack} 
-					style={{ transform: `translateX(-${index * 100}vw)` }}
+					style={{ transform: `translateX(calc(-${index} * (100vw - 14px)))` }}
 				>
 					{slides.map((slide, i) => (
 						<div 
