@@ -20,13 +20,13 @@
 }
 
 .carouselTrack {
-	width: calc(300vw - 42px);
+	width: 300vw;
 	transition: transform 0.5s ease-in-out;
 	display: flex;
 }
 
 .slideCont {
-	flex: 0 0 calc(100vw - 14px);
+	flex: 0 0 calc(100vw);
 	height: auto;
 	max-height: calc(100vh - 60px);
 	position: relative;
