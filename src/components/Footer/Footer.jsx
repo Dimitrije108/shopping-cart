@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import styles from "./Footer.module.css";
 import layout from "../../layout.module.css";
 // assets
 import locationIcon from "/src/assets/icons/location.svg";
 import emailIcon from "/src/assets/icons/email.svg";
-// import websiteIcon from "/src/assets/icons/website.svg";
+import websiteIcon from "/src/assets/icons/website.svg";
 import CEC from "/src/assets/icons/Corellian_Engineering_Corporation.svg";
 import federationLogo from "/src/assets/icons/Corellian_Federation_logo.webp";
 import kuatDriveYardsLogo from "/src/assets/icons/Kuat-Drive-Yards.svg";
@@ -42,12 +43,36 @@ export default function Footer() {
 						</div>
 						<p>sw_shipyard@corellia.cec</p>
 					</div>
+					<div className={styles.webpageCont}>
+						<div className={styles.iconCont}>
+							<img 
+								src={websiteIcon}
+								alt="webpage icon" 
+								width={30}
+								title="Webpage"
+							/>
+						</div>
+						<Link 
+							to={"https://starwars.fandom.com/wiki/Corellian_Engineering_Corporation"}
+							data-testid="webpageLink"
+						>
+							Corellian Engineering Corporation
+						</Link>
+					</div>
 				</div>
 				<div className={styles.companyCont}>
-					<button>About Us</button>
+					<button>
+						<HashLink to="/#aboutUsSection" smooth>
+							About Us
+						</HashLink>
+					</button>
 					<button>Our Services</button>
 					<button>Privacy Policy</button>
-					<button>Contact</button>
+					<button>
+						<Link to="contact">
+							Contact
+						</Link>
+					</button>
 				</div>
 				<div className={styles.partnersCont}>
 					<div className={styles.iconWrapper}>

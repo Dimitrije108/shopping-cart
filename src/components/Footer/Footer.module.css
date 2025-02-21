@@ -32,21 +32,34 @@
 	font-size: 1rem;
 }
 
-.emailCont {
+.emailCont,
+.webpageCont {
+	margin-top: 0.5rem;
 	display: flex;
-	align-items: end;
+	align-items: flex-end;
 }
 
 .iconCont {
 	margin-top: 4px;
 	margin-right: 12px;
+
 	display: flex;
-	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
 }
 
 .emailCont > p {
 	display: flex;
 	align-items: center;
+}
+
+.webpageCont > a {
+	color: rgb(68, 102, 255);
+	transition: 0.3s color ease;
+}
+
+.webpageCont > a:hover {
+	color: rgb(37, 77, 255);
 }
 
 .companyCont {
@@ -63,7 +76,7 @@
 	margin: 0;
 	padding: 8px 0;
 
-	font-size: 1.2rem;
+	font-size: 1.5rem;
 	text-align: start;
 	border: none;
 }
@@ -126,7 +139,7 @@
 	line-height: 0;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 750px) {
 	.mainFooterWrapper {
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
