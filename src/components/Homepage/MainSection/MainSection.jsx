@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import styles from "./MainSection.module.css";
 
 export default function MainSection() {
@@ -9,11 +9,15 @@ export default function MainSection() {
 				<h1>
 					From Naboo to the Outer Rim — Corellian Engineering Excellence Now in Your Hands!
 				</h1>
-				<Link to="/starships" data-testid="starshipsLink">
+				<HashLink 
+					to="/starships#starshipsSection"
+					data-testid="starshipsLink" 
+					smooth
+				>
 					<button className={styles.shopBtn}>
 						Explore the Galaxy — Shop Here!
 					</button>
-				</Link>
+				</HashLink>
 			</div>
 		</section>
 	)

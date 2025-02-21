@@ -12,6 +12,7 @@ export default function Transport() {
 			basicDataArr={transportShips}
 			advDataArr={transportShipDetails}
 			shipType={"Transport"}
+			section={"transportSection"}
 		/>
 	)
 };

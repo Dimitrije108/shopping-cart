@@ -3,7 +3,7 @@ import CEC from "/src/assets/icons/Corellian_Engineering_Corporation.svg";
 
 export default function AboutUsSection() {
 	return (
-		<section className={styles.aboutUsSection}>
+		<section className={styles.aboutUsSection} id="aboutUsSection">
 			<div className={styles.aboutUsWrapper}>
 				<h2>About Us</h2>
 				<div className={styles.aboutUsText}>

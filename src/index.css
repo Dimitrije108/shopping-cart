@@ -48,6 +48,7 @@ body {
   background-color: transparent;
 
   box-sizing: border-box;
+  scroll-padding-top: 60px; 
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

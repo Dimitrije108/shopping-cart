@@ -316,6 +316,10 @@
 		top: 36px;
 	}
 	/* Header sticky */
+	html {
+		scroll-padding-top: 54px; 
+	}
+
 	.githubLink.sticky > img {
 		width: 25px;
 	}
@@ -355,6 +359,10 @@
 		top: 36px;
 	}
 	/* Header sticky */
+	html {
+		scroll-padding-top: 51px; 
+	}
+
 	.githubLink.sticky > img {
 		width: 22px;
 	}

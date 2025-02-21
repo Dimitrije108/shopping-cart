@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { 
 	capitalShips, 
 	capitalShipDetails,
@@ -10,8 +11,12 @@ import DisplayShips from "./DisplayShips/DisplayShips";
 import layout from "../../layout.module.css";
 
 export default function AllShips() {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+
   return (
-		<div className={layout.layoutWrapper}>
+		<div className={layout.layoutWrapper} id="starshipsSection">
 			<DisplayShips 
 				basicDataArr={capitalShips}
 				advDataArr={capitalShipDetails}

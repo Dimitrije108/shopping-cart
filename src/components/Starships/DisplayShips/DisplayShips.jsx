@@ -10,6 +10,7 @@ export default function DisplayShips({
 	basicDataArr, 
 	advDataArr, 
 	shipType = "default",
+	section,
 }) {
 	const [basicData, setBasicData] = useState(null);
 	const [advData, setAdvData] = useState(null);
@@ -37,7 +38,9 @@ export default function DisplayShips({
 		cards = <h1>Oops! Something went wrong. Server failed to load data.</h1>;
 	} else if (basicData && advData) {
 		cards = basicData.map((ship, index) => {
-			const price = advData[index].result.properties.cost_in_credits || "undefined";
+			const price = 
+				advData[index].result.properties.cost_in_credits ||
+				"undefined";
 			return (
 				<ShipCard 
 					key={ship._id}
@@ -56,8 +59,19 @@ export default function DisplayShips({
 	};
 
   return (
-		<div className={`${layout.layoutWrapper} ${layout.footerMargin}`}>
-			<h1 className={styles.sectionName}>Starships | {shipType} ships</h1>
+		<div 
+			className={`
+				${layout.layoutWrapper} 
+				${layout.footerMargin}
+			`}
+			
+		>
+			<h1 
+				className={styles.sectionName} 
+				id={section}
+			>
+				Starships | {shipType} ships
+			</h1>
 			<div className={styles.cardsCont}>{cards}</div>
 		</div>
 	)
@@ -67,4 +81,5 @@ DisplayShips.propTypes = {
 	basicDataArr: PropTypes.arrayOf(PropTypes.string).isRequired,
 	advDataArr: PropTypes.arrayOf(PropTypes.string).isRequired,
 	shipType: PropTypes.string,
+	section: PropTypes.string,
 };

@@ -12,6 +12,7 @@ export default function Starfighter() {
 			basicDataArr={starfighters}
 			advDataArr={starfighterDetails}
 			shipType={"Starfighter"}
+			section={"starfighterSection"}
 		/>
 	)
 };

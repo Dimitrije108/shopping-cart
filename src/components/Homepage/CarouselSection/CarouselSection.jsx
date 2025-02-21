@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import styles from "./CarouselSection.module.css";
 // assets
 import leftArrow from "/src/assets/icons/carousel-left-arrow.svg";
@@ -28,7 +28,7 @@ const slides = [
 		srcExtraSmall: firstSlideSrcExtraSmall,
 		alt: "Star Destroyer Capital ship",
 		marketingText: "Only a Sith Deals in Full Retail. Shop Our Discounts!",
-		linkTo: "/starships/capital",
+		linkTo: "/starships/capital#capitalSection",
 		buttonText: "Best Capital Ships in the Galaxy - Shop Now!",
 	},
 	{
@@ -38,7 +38,7 @@ const slides = [
 		srcExtraSmall: secondSlideSrcExtraSmall,
 		alt: "Slave I starship",
 		marketingText: "Bounty Hunting Is a Complicated Profession — Get the Right Ship!",
-		linkTo: "/starships/starfighter",
+		linkTo: "/starships/starfighter#starfighterSection",
 		buttonText: "Unleash Your Inner Pilot — Buy a Starfighter!",
 	},
 	{
@@ -48,7 +48,7 @@ const slides = [
 		srcExtraSmall: thirdSlideSrcExtraSmall,
 		alt: "Imperial Shuttle Transport ship",
 		marketingText: "More Than a Ship — A Lifestyle.",
-		linkTo: "/starships/transport",
+		linkTo: "/starships/transport#transportSection",
 		buttonText: "Shop Elegance — Shop Our Transport Starships!",
 	},
 ];
@@ -122,11 +122,15 @@ export default function CarouselSection() {
 											{slide.marketingText}
 										</p>
 									</div>
-									<Link to={slide.linkTo} data-testid="storeLink">
-										<button className={styles.shopCapitalBtn}>
+									<HashLink 
+										to={slide.linkTo}
+										data-testid="starshipsLink" 
+										smooth
+									>
+										<button className={styles.shopBtn}>
 											{slide.buttonText}
 										</button>
-									</Link>
+									</HashLink>
 								</div>
 							</div>
 						</div>	
