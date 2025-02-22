@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useCartContext } from "../../hooks/useCartContext/useCartContext";
+import Navbar from "./Navbar/Navbar";
 import styles from "./Header.module.css";
 import layout from "../../layout.module.css";
 // assets
@@ -8,42 +9,16 @@ import githubIcon from "/src/assets/icons/github-mark-white.svg";
 import swLogo from "/src/assets/icons/sw-logo.png";
 
 export default function Header() {
-	const [starshipsDropdown, setStarshipsDropdown] = useState(false);
 	const [isSticky, setIsSticky] = useState(false);
 	const { pathname } = useLocation();
 	const { cart } = useCartContext();
-	const navbarRef = useRef(null);
 
 	// Check active path so custom backdrop image can be applied
   const isHomepage = pathname === "/";
   const isContact = pathname === "/contact";
-	const isCart = pathname === "/shopping-cart";
-	// Set navbar's isSticky for sticky customization
-	useEffect(() => {
-		const handleScroll = () => {
-			// Selects the navbar by reference
-			const navbar = navbarRef.current;
-			// Gets the navbar's offset top value
-			const offset = navbar.offsetTop;
-			// Check if page has scrolled past navbar
-			window.scrollY > offset 
-			? setIsSticky(true)
-			: setIsSticky(false);
-		}
-		// Scroll event added
-		window.addEventListener("scroll", handleScroll);
-		// Scroll event cleanup
-		return () => {
-			window.removeEventListener("scroll", handleScroll);
-		}
-	}, []);
-	// Starships dropdown control
-	const handleMouseEnter = () => {
-		setStarshipsDropdown(true);
-	};
 
-	const handleMouseLeave = () => {
-		setStarshipsDropdown(false);
+	const handleSticky = (bool) => {
+		setIsSticky(bool);
 	};
 
 	const header = (
@@ -68,9 +43,9 @@ export default function Header() {
 				</Link>
 				<h1 className={styles.logoHeading}  data-testid="headingLogo">
 					<Link 
-							to="/" 
-							className={styles.logoLink} 
-						>
+						to="/" 
+						className={styles.logoLink} 
+					>
 						<img 
 							src={swLogo}
 							alt="star wars logo" 
@@ -98,87 +73,17 @@ export default function Header() {
 					</div>
 				</Link>
 			</div>
-			<nav 
-				className={styles.navbarCont}
-				ref={navbarRef}
-			>
-				<div></div>
-				<ul className={styles.navbar}>
-					<li 
-						className={`
-							${styles.homeNav} 
-							${pathname==="/" ? styles.active : ""} 
-						`}
-						data-testid="home"
-					>
-						<Link to="/">Home</Link>
-					</li>
-					<li 
-						className={`
-							${styles.starshipsNav} 
-							${pathname.startsWith("/starships") ? styles.active : ""} 
-						`}
-						onMouseEnter={() => handleMouseEnter()}
-						onMouseLeave={() => handleMouseLeave()}
-						data-testid="starships"
-					>
-						<Link to="starships">Starships</Link>
-						<ul 
-							className={`
-								${styles.dropdown} 
-								${starshipsDropdown ? styles.visible : ""}
-								${isCart ? styles.cart : ""}
-							`}
-							data-testid="starshipsDropdown"
-						>
-							<li>
-								<Link 
-									to="starships/capital" 
-								>
-									Capital
-								</Link>
-							</li>
-							<li>
-								<Link 
-									to="starships/transport" 
-								>
-									Transport
-								</Link>
-							</li>
-							<li>
-								<Link 
-									to="starships/starfighter" 
-								>
-									Starfighter
-								</Link>
-							</li>
-						</ul>
-					</li>
-					<li 
-						className={`
-							${styles.contactNav} 
-							${pathname.startsWith("/contact") ? styles.active : ""} 
-						`}
-						data-testid="contact"
-					>
-						<Link 
-							to="contact" 
-						>
-							Contact
-						</Link>
-					</li>
-				</ul>
-			</nav>
+			<Navbar
+				handleSticky={handleSticky}
+				isSticky={isSticky}
+				isMobile={false}
+			/>
 		</div>
 	);
 
 	const stickyHeader = (
 		<div className={styles.stickyHeaderCont}>
-			<nav 
-				className={`${styles.navbarCont} ${isSticky ? styles.sticky : ""}`}
-				ref={navbarRef}
-				data-testid="stickyNavbar"
-			>
+			<div className={styles.stickyHeaderWrapper}>
 				<Link 
 					to="https://github.com/Dimitrije108/shopping-cart"
 					className={`${styles.githubLink} ${styles.sticky}`}
@@ -189,71 +94,11 @@ export default function Header() {
 						title="GitHub"
 					/>
 				</Link>
-				<ul className={`${styles.navbar} ${styles.sticky}`}>
-					<li 
-						className={`
-							${styles.homeNav} 
-							${pathname==="/" ? styles.active : ""} 
-						`}
-						data-testid="home"
-					>
-						<Link to="/">Home</Link>
-					</li>
-					<li 
-						className={`
-							${styles.starshipsNav} 
-							${pathname.startsWith("/starships") ? styles.active : ""} 
-						`}
-						onMouseEnter={() => handleMouseEnter()}
-						onMouseLeave={() => handleMouseLeave()}
-						data-testid="starships"
-					>
-						<Link to="starships" >Starships</Link>
-						<ul 
-							className={`
-								${styles.dropdown} 
-								${isSticky ? styles.sticky : ""} 
-								${starshipsDropdown ? styles.visible : ""}
-							`}
-							data-testid="starshipsDropdown"
-						>
-							<li>
-								<Link 
-									to="starships/capital" 
-								>
-									Capital
-								</Link>
-							</li>
-							<li>
-								<Link 
-									to="starships/transport" 
-								>
-									Transport
-								</Link>
-							</li>
-							<li>
-								<Link 
-									to="starships/starfighter" 
-								>
-									Starfighter
-								</Link>
-							</li>
-						</ul>
-					</li>
-					<li 
-						className={`
-							${styles.contactNav} 
-							${pathname.startsWith("/contact") ? styles.active : ""} 
-						`}
-						data-testid="contact"
-					>
-						<Link 
-							to="contact" 
-						>
-							Contact
-						</Link>
-					</li>
-				</ul>
+				<Navbar 
+					handleSticky={handleSticky}
+					isSticky={isSticky}
+					isMobile={false}
+				/>
 				<Link 
 					to="shopping-cart"
 					className={`${styles.cartIconLink} ${styles.sticky}`}
@@ -267,7 +112,7 @@ export default function Header() {
 						<div className={styles.quantityWrapper}>{`${cart.length}`}</div>
 					</div>
 				</Link>
-			</nav>
+			</div>
 		</div>
 	)
 

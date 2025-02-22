@@ -1,0 +1,153 @@
+.navbar {
+	font-size: 1.2rem;
+
+	display: flex;
+	justify-content: center;
+}
+
+.navbar > li {
+	margin: 0 2rem;
+	padding: 0 2rem 6px 2rem;
+
+	transition: all 0.3s ease;
+}
+
+.navbar > li:hover {
+	color: white;
+}
+
+.navbar.sticky > li {
+	padding: 0 2rem 0.5rem 2rem;
+}
+
+.starshipsNav {
+	position: relative;
+	z-index: 3;
+}
+
+.homeNav.active,
+.starshipsNav.active, 
+.contactNav.active {
+	color: white;
+	border-bottom: 1px solid white;
+}
+
+.dropdown {
+	padding: 1rem 25px 1rem 26px;
+
+	color: rgb(221, 221, 221);
+	background-color: rgba(0, 0, 0, 0.7);
+	border-left: 1px solid rgb(214, 214, 214);
+	border-right: 1px solid rgb(214, 214, 214);
+	border-bottom: 1px solid rgb(214, 214, 214);
+
+	position: absolute;
+	top: 37px;
+	left: 0;
+
+	z-index: 2;
+
+	visibility: hidden;
+
+	animation: none;
+
+	opacity: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.dropdown.visible {
+	visibility: visible;
+
+  opacity: 1;
+  animation: growDropdown 1s ease-in-out;
+}
+
+.dropdown.sticky {
+	top: 38.5px;
+}
+
+.cart {
+	top: 36px;
+}
+
+.dropdown.sticky.cart {
+	top: 37.5px;
+}
+
+.dropdown > li {
+	padding: 6px 0;
+}
+
+.dropdown > li:hover {
+	color: white;
+}
+
+@keyframes growDropdown {
+  0% {
+    max-height: 0;
+  }
+  100% {
+    max-height: 500px;
+  }
+}
+
+@media (max-width: 900px) {
+	.navbar.sticky > li {
+		margin: 0 1rem;
+	}
+}
+
+@media (max-width: 660px) {
+	.navbar > li {
+		margin: 0 0.5rem;
+		padding: 0 1.7rem 6px 1.7rem;
+	}
+
+	.dropdown {
+		padding: 1rem 21px 1rem 21px;
+		top: 37px;
+	}
+
+	.cart {
+		top: 36px;
+	}
+
+	.navbar.sticky > li {
+		margin: 0;
+		padding: 0 1rem;
+	}
+
+	.dropdown.sticky {
+		padding: 1rem 10px 1rem 9px;
+		top: 38.5px;
+	}
+}
+
+@media (max-width: 500px) {
+	.navbar > li {
+		padding: 0 1rem 6px 1rem;
+	}
+
+	.dropdown {
+		padding: 1rem 13px 1rem 13px;
+		font-size: 1.1rem;
+		top: 37px;
+	}
+
+	.cart {
+		top: 36px;
+	}
+
+	.navbar.sticky > li {
+		margin: 0;
+		padding: 0 0.5rem;
+		font-size: 1.2rem;
+	}
+
+	.dropdown.sticky {
+		padding: 1rem 10px 1rem 9px;
+		font-size: 1rem;
+		top: 35.5px;
+	}
+}

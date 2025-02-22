@@ -4,13 +4,25 @@
 }
 
 .stickyHeaderCont {
-	background-color: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	padding-top: 1rem;
+	
+	background-color: rgba(0, 0, 0, 0.7);
 	border-bottom: 1px solid rgb(214, 214, 214);
-
+	
 	position: sticky;
 	top: 0px;
 
 	z-index: 3;
+}
+
+.stickyHeaderWrapper {
+	max-width: 1800px;
+	margin: 0 auto;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	align-items: end;
 }
 
 .headerCont.transparentHeader {
@@ -40,7 +52,7 @@
 }
 
 .githubLink {
-	align-self: start;
+	align-self: center;
 }
 
 .githubLink.sticky {
@@ -48,7 +60,7 @@
 }
 
 .githubLink.sticky > img  {
-	width: 28px;
+	width: 27px;
 }
 
 .githubLink > img {
@@ -83,100 +95,6 @@
 	color: white;
 }
 
-.navbarCont {
-	margin: 0 auto;
-}
-
-.navbarCont.sticky {
-	padding-top: 1rem;
-
-	background-color: rgba(0, 0, 0, 0.5);
-
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-}
-
-.navbar {
-	font-size: 1.2rem;
-
-	display: flex;
-	justify-content: center;
-}
-
-.navbar > li {
-	margin: 0 2rem;
-	padding: 0 2rem 6px 2rem;
-
-	transition: all 0.3s ease;
-}
-
-.navbar > li:hover {
-	color: white;
-}
-
-.navbar.sticky > li {
-	padding: 0 2rem 0 2rem;
-}
-
-.starshipsNav {
-	position: relative;
-	z-index: 3;
-}
-
-.homeNav.active,
-.starshipsNav.active, 
-.contactNav.active {
-	color: white;
-	border-bottom: 1px solid white;
-}
-
-.dropdown {
-	padding: 1rem 25px 1rem 26px;
-
-	color: rgb(221, 221, 221);
-	background-color: rgba(0, 0, 0, 0.7);
-	border-left: 1px solid rgb(214, 214, 214);
-	border-right: 1px solid rgb(214, 214, 214);
-	border-bottom: 1px solid rgb(214, 214, 214);
-
-	position: absolute;
-	top: 37px;
-	left: 0;
-
-	z-index: 2;
-
-	visibility: hidden;
-
-	animation: none;
-
-	opacity: 0;
-  overflow: hidden;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.dropdown.sticky {
-	top: 43.5px;
-}
-
-.dropdown.visible {
-	visibility: visible;
-
-  opacity: 1;
-  animation: growDropdown 1s ease-in-out;
-}
-
-.cart {
-	top: 36px;
-}
-
-.dropdown > li {
-	padding: 6px 0;
-}
-
-.dropdown > li:hover {
-	color: white;
-}
-
 .cartIconLink {
 	justify-self: end;
 	position: relative;
@@ -187,7 +105,7 @@
 }
 
 .cartIconLink.sticky > img {
-	width: 35px;
+	width: 30px;
 }
 
 .cartIconLink > img {
@@ -216,26 +134,17 @@
 }
 
 .cartIconLink.sticky > .cartQuantity {
-	width: 22px;
-  height: 22px;
-	font-size: 0.9rem;
+	width: 20px;
+  height: 20px;
+	font-size: 0.8rem;
 }
 
-.quantityWrapper{
-	transform: translateY(1px);
+.quantityWrapper {
+	transform: translate(-1px, 1px);
 }
 
 .cartIconLink.sticky > .cartQuantity > .quantityWrapper {
-	transform: translateY(2px);
-}
-
-@keyframes growDropdown {
-  0% {
-    max-height: 0;
-  }
-  100% {
-    max-height: 500px;
-  }
+	transform: translate(-1px, 2px);
 }
 
 @media (max-width: 900px) {
@@ -257,10 +166,6 @@
 	}
 
 	.cartIconLink.sticky {
-		margin: 0 1rem;
-	}
-
-	.navbar.sticky > li {
 		margin: 0 1rem;
 	}
 }
@@ -301,20 +206,6 @@
 		height: 20px;
 		font-size: 0.8rem;
 	}
-
-	.navbar > li {
-		margin: 0 0.5rem;
-		padding: 0 1.7rem 6px 1.7rem;
-	}
-
-	.dropdown {
-		padding: 1rem 21px 1rem 21px;
-		top: 37px;
-	}
-
-	.cart {
-		top: 36px;
-	}
 	/* Header sticky */
 	html {
 		scroll-padding-top: 54px; 
@@ -327,16 +218,6 @@
 	.cartIconLink.sticky > img {
 		width: 30px;
 	}
-
-	.navbar.sticky > li {
-		margin: 0;
-		padding: 0 1rem;
-	}
-
-	.dropdown.sticky {
-		padding: 1rem 10px 1rem 9px;
-		top: 38.5px;
-	}
 }
 
 @media (max-width: 500px) {
@@ -345,19 +226,6 @@
 		align-self: start;
 	}
 
-	.navbar > li {
-		padding: 0 1rem 6px 1rem;
-	}
-
-	.dropdown {
-		padding: 1rem 13px 1rem 13px;
-		font-size: 1.1rem;
-		top: 37px;
-	}
-
-	.cart {
-		top: 36px;
-	}
 	/* Header sticky */
 	html {
 		scroll-padding-top: 51px; 
@@ -375,17 +243,5 @@
 		width: 18px;
 		height: 18px;
 		font-size: 0.8rem;
-	}
-
-	.navbar.sticky > li {
-		margin: 0;
-		padding: 0 0.5rem;
-		font-size: 1.2rem;
-	}
-
-	.dropdown.sticky {
-		padding: 1rem 10px 1rem 9px;
-		font-size: 1rem;
-		top: 35.5px;
 	}
 }
