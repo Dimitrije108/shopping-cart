@@ -65,6 +65,15 @@
 	align-items: center;
 }
 
+.webpageCont > a {
+	color: rgb(68, 102, 255);
+	transition: 0.3s color ease;
+}
+
+.webpageCont > a:hover {
+	color: rgb(37, 77, 255);
+}
+
 .iconCont {
 	margin-top: 4px;
 	margin-right: 12px;
