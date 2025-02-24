@@ -1,6 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import styles from "./Navbar.module.css";
+// assets
+import hamburgerIcon from "/src/assets/icons/hamburger.svg";
+import arrowDown from "/src/assets/icons/arrow-down.svg";
+import closeIcon from "/src/assets/icons/close.svg";
 
 export default function Navbar({
 	handleSticky,
@@ -8,6 +12,7 @@ export default function Navbar({
 	isMobile = false,
 }) {
 	const [starshipsDropdown, setStarshipsDropdown] = useState(false);
+	const [isOpen, setIsOpen] = useState(false);
 	const { pathname } = useLocation();
 	const navbarRef = useRef(null);
 
@@ -42,9 +47,22 @@ export default function Navbar({
 	const handleMouseLeave = () => {
 		setStarshipsDropdown(false);
 	};
+	// Navbar hamburger control open/close
+	const openSideMenu = () => {
+		setIsOpen(true);
+	};
+
+	const closeSideMenu = () => {
+		setIsOpen(false);
+	};
+
+	const toggleStarshipsDropdown = () => {
+		setStarshipsDropdown(prev => !prev);
+	}
 
 	const widescreen = (
 		<nav
+			className={styles.navbarCont}
 			ref={navbarRef}
 			data-testid="stickyNavbar"
 		>
@@ -123,7 +141,153 @@ export default function Navbar({
 	);
 
 	const mobile = (
-		<div>This is mobile... (not really)</div>
+		<div>
+			<button 
+				className={styles.menuBtn}
+				onClick={openSideMenu}
+			>
+				<img 
+					src={hamburgerIcon}
+					alt="open menu" 
+					title="Open menu"
+					width={40}
+				/>
+			</button>
+			<div 
+				className={`
+					${styles.sideMenu} 
+					${isOpen ? styles.open : ""}
+				`}
+			>
+				<div className={styles.sideMenuWrapper}>
+					<h2 
+						className={styles.sideMenuLogo}
+						title="Shipyard"
+					>
+						Shipyard
+					</h2>
+					<button 
+						className={styles.closeBtn}
+						onClick={closeSideMenu}
+					>
+						<img 
+							src={closeIcon}
+							alt="close menu" 
+							title="Close menu"
+							width={25}
+						/>
+					</button>
+				</div>
+				<nav
+					className={styles.navbarCont}
+					ref={navbarRef}
+					data-testid="stickyNavbar"
+				>
+					<ul 
+						className={`
+							${styles.navbar} 
+							${isSticky ? styles.sticky : ""}
+						`}
+					>
+						<li 
+							className={`
+								${styles.homeNav} 
+								${pathname==="/" ? styles.active : ""} 
+							`}
+							onClick={closeSideMenu}
+							data-testid="home"
+						>
+							<Link to="/">Home</Link>
+						</li>
+						<li 
+							className={`
+								${styles.starshipsNav} 
+								${pathname.startsWith("/starships") ? styles.active : ""} 
+							`}
+							onClick={toggleStarshipsDropdown}
+							data-testid="starships"
+						>
+							<div className={styles.starshipsWrapper}>
+								<div>Starships</div>
+								<button 
+									className={styles.toggleDropdownBtn}
+								>
+									<img 
+										src={arrowDown}
+										alt="open dropdown"
+										width={20}
+									/>
+								</button>
+							</div>
+							<ul 
+								className={`
+									${styles.mobileDropdown} 
+									${starshipsDropdown ? styles.show : ""}
+								`}
+								data-testid="starshipsDropdown"
+							>
+								<li
+									className={
+										pathname.startsWith("/starships/capital") 
+										? styles.active 
+										: ""
+									}
+									onClick={closeSideMenu}
+								>
+									<Link 
+										to="starships/capital" 
+									>
+										Capital
+									</Link>
+								</li>
+								<li
+									className={
+										pathname.startsWith("/starships/transport") 
+										? styles.active 
+										: ""
+									}
+									onClick={closeSideMenu}
+								>
+									<Link 
+										to="starships/transport" 
+									>
+										Transport
+									</Link>
+								</li>
+								<li 
+									className={
+										pathname.startsWith("/starships/starfighter") 
+										? styles.active 
+										: ""
+									}
+									onClick={closeSideMenu}
+								>
+									<Link 
+										to="starships/starfighter" 
+									>
+										Starfighter
+									</Link>
+								</li>
+							</ul>
+						</li>
+						<li 
+							className={`
+								${styles.contactNav} 
+								${pathname.startsWith("/contact") ? styles.active : ""} 
+							`}
+							onClick={closeSideMenu}
+							data-testid="contact"
+						>
+							<Link 
+								to="contact" 
+							>
+								Contact
+							</Link>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
 	)
 
 	return (
