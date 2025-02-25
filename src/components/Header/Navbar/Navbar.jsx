@@ -9,10 +9,10 @@ import closeIcon from "/src/assets/icons/close.svg";
 export default function Navbar({
 	handleSticky,
 	isSticky = false, 
-	isMobile = false,
+	isMobile = false, 
 }) {
 	const [starshipsDropdown, setStarshipsDropdown] = useState(false);
-	const [isOpen, setIsOpen] = useState(false);
+	const [sideMenuOpen, setSideMenuOpen] = useState(false);
 	const { pathname } = useLocation();
 	const navbarRef = useRef(null);
 
@@ -49,11 +49,12 @@ export default function Navbar({
 	};
 	// Navbar hamburger control open/close
 	const openSideMenu = () => {
-		setIsOpen(true);
+		setSideMenuOpen(true);
 	};
 
 	const closeSideMenu = () => {
-		setIsOpen(false);
+		setSideMenuOpen(false);
+		setStarshipsDropdown(false);
 	};
 
 	const toggleStarshipsDropdown = () => {
@@ -141,7 +142,7 @@ export default function Navbar({
 	);
 
 	const mobile = (
-		<div>
+		<div className={styles.mobileNavbarCont}>
 			<button 
 				className={styles.menuBtn}
 				onClick={openSideMenu}
@@ -156,7 +157,7 @@ export default function Navbar({
 			<div 
 				className={`
 					${styles.sideMenu} 
-					${isOpen ? styles.open : ""}
+					${sideMenuOpen ? styles.open : ""}
 				`}
 			>
 				<div className={styles.sideMenuWrapper}>
@@ -183,12 +184,7 @@ export default function Navbar({
 					ref={navbarRef}
 					data-testid="stickyNavbar"
 				>
-					<ul 
-						className={`
-							${styles.navbar} 
-							${isSticky ? styles.sticky : ""}
-						`}
-					>
+					<ul className={styles.navbar}>
 						<li 
 							className={`
 								${styles.homeNav} 
@@ -210,7 +206,10 @@ export default function Navbar({
 							<div className={styles.starshipsWrapper}>
 								<div>Starships</div>
 								<button 
-									className={styles.toggleDropdownBtn}
+									className={`
+										${styles.toggleDropdownBtn}
+										${starshipsDropdown ? styles.rotate : ""}
+									`}
 								>
 									<img 
 										src={arrowDown}
@@ -226,6 +225,20 @@ export default function Navbar({
 								`}
 								data-testid="starshipsDropdown"
 							>
+								<li
+									className={
+										pathname === "/starships"
+										? styles.active 
+										: ""
+									}
+									onClick={closeSideMenu}
+								>
+									<Link 
+										to="starships" 
+									>
+										All
+									</Link>
+								</li>
 								<li
 									className={
 										pathname.startsWith("/starships/capital") 

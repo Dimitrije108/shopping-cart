@@ -85,13 +85,12 @@
 	color: white;
 }
 
-@media (max-width: 900px) {
-	.navbar.sticky > li {
-		margin: 0 1rem;
-	}
-}
 /* Switch to touchscreen/mobile view with hamburger type menu */
 @media (max-width: 768px) {
+	.mobileNavbarCont {
+		grid-area: mobileNavbar;
+	}
+
 	.sideMenu {
 		width: 50vw;
 		height: 100vh;
@@ -113,14 +112,16 @@
 	.sideMenuLogo {
 		margin: 0.5rem 2rem;
 		font-family: Imperial;
-		font-size: 2.5rem;
+		font-size: 2rem;
 		color: white;
 	}
 
 	.sideMenuWrapper {
+		border-bottom: 1px solid rgb(214, 214, 214);
+
 		display: flex;
 		justify-content: space-between;
-		align-items: flex-start;
+		align-items: center;
 	}
 
 	.menuBtn,
@@ -173,6 +174,10 @@
 	.toggleDropdownBtn {
 		margin-left: 1rem;
 	}
+
+	.toggleDropdownBtn.rotate {
+		transform: rotate(0.5turn);
+	}
 	
 	.active {
 		color: white;
@@ -208,6 +213,12 @@
 
 	.closeBtn {
 		margin: 1rem;
+	}
+}
+
+@media (max-width: 540px) {
+	.sideMenu {
+		width: 100vw;
 	}
 }
 
