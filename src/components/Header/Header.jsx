@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
 import { useCartContext } from "../../hooks/useCartContext/useCartContext";
 import Navbar from "./Navbar/Navbar";
 import styles from "./Header.module.css";
@@ -12,6 +13,7 @@ export default function Header() {
 	const [isSticky, setIsSticky] = useState(false);
 	const { pathname } = useLocation();
 	const { cart } = useCartContext();
+	const isMobile = useMediaQuery({ maxWidth: 768 });
 
 	// Check active path so custom backdrop image can be applied
   const isHomepage = pathname === "/";
@@ -21,19 +23,29 @@ export default function Header() {
 		setIsSticky(bool);
 	};
 
-	const header = (
+  return (
 		<div 
 			className={`
-				${styles.headerCont} 
-				${isHomepage ? styles.transparentHeader : ""}
-				${isContact ? styles.contactHeader : ""}
+				${isSticky ? styles.stickyHeaderCont : styles.headerCont} 
+				${isHomepage && !isSticky ? styles.transparentHeader : ""}
+				${isContact && !isSticky ? styles.contactHeader : ""}
 			`}
 			data-testid="headerCont"
 		>
-			<div className={`${styles.logoCont} ${layout.layoutWrapper}`}>
+			<div 
+				className={`
+					${isSticky 
+					? `${styles.stickyHeaderWrapper} ${layout.layoutWrapper}`
+					: `${styles.headerWrapper} ${layout.layoutWrapper}`}
+					${isMobile ? styles.mobile : ""} 
+				`}
+			>
 				<Link 
 					to="https://github.com/Dimitrije108/shopping-cart"
-					className={styles.githubLink}
+					className={`
+						${styles.githubLink}
+						${isSticky ? styles.sticky : ""}
+					`}
 				>
 					<img 
 						src={githubIcon}
@@ -56,12 +68,17 @@ export default function Header() {
 						className={styles.shipyardLink} 
 						title="Shipyard"
 					>
-						<div className={styles.shipyardLogo}>Shipyard</div>
+						<div className={styles.shipyardLogo}>
+							Shipyard
+						</div>
 					</Link>
 				</h1>
 				<Link 
 					to="shopping-cart"
-					className={styles.cartIconLink}
+					className={`
+						${styles.cartIconLink}
+						${isSticky ? styles.sticky : ""}
+					`}
 					data-testid="cartLink"
 				>
 					<img 
@@ -69,54 +86,17 @@ export default function Header() {
 						title="Shopping Cart"
 					/>
 					<div className={styles.cartQuantity}>
-						<div className={styles.quantityWrapper}>{`${cart.length}`}</div>
+						<div className={styles.quantityWrapper}>
+							{`${cart.length}`}
+						</div>
 					</div>
 				</Link>
-			</div>
-			<Navbar
-				handleSticky={handleSticky}
-				isSticky={isSticky}
-				isMobile={false}
-			/>
-		</div>
-	);
-
-	const stickyHeader = (
-		<div className={styles.stickyHeaderCont}>
-			<div className={styles.stickyHeaderWrapper}>
-				<Link 
-					to="https://github.com/Dimitrije108/shopping-cart"
-					className={`${styles.githubLink} ${styles.sticky}`}
-				>
-					<img 
-						src={githubIcon}
-						alt="github icon" 
-						title="GitHub"
-					/>
-				</Link>
-				<Navbar 
+				<Navbar
 					handleSticky={handleSticky}
 					isSticky={isSticky}
-					isMobile={false}
+					isMobile={isMobile}
 				/>
-				<Link 
-					to="shopping-cart"
-					className={`${styles.cartIconLink} ${styles.sticky}`}
-					data-testid="cartLink"
-				>
-					<img 
-						src="https://icons.iconarchive.com/icons/jonathan-rey/star-wars-vehicles/128/Death-Star-2nd-icon.png" 
-						title="Shopping Cart"
-					/>
-					<div className={styles.cartQuantity}>
-						<div className={styles.quantityWrapper}>{`${cart.length}`}</div>
-					</div>
-				</Link>
 			</div>
 		</div>
-	)
-
-  return (
-		<>{isSticky ? stickyHeader : header}</>
 	)
 };
