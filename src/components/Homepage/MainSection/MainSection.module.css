@@ -75,15 +75,15 @@
 
 @media (max-width: 768px) {
 	.mainContent {
-		margin-bottom: 15rem;
+		margin-bottom: 13rem;
+	}
+
+	.mainContent > h1 {
+		font-size: 1.7rem;
 	}
 }
 
 @media (max-width: 660px) {
-	.mainContent > h1 {
-		font-size: 1.8rem;
-	}
-
 	.shopBtn {
 		letter-spacing: 0.5px;
 	}

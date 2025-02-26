@@ -235,6 +235,7 @@
 @media (max-width: 550px) {
 	.sideMenu {
 		width: 100vw;
+		border-right: none;
 	}
 }
 

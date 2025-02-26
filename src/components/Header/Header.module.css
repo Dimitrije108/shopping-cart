@@ -260,6 +260,10 @@
 		height: 20px;
 		font-size: 0.8rem;
 	}
+
+	.quantityWrapper {
+		transform: translate(-0.5px, 1.5px);
+	}
 	/* for scrollToView functionality */
 	html {
 		scroll-padding-top: 51px; 
