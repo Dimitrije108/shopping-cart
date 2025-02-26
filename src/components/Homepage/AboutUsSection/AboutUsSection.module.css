@@ -34,6 +34,7 @@
 
 	font-size: 1.1rem;
 	background-color: rgba(0, 0, 0, 0.4);
+	text-align: start;
 }
 
 .aboutUsText > p {

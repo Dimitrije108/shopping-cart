@@ -49,6 +49,7 @@
 .leftArrow,
 .rightArrow {
 	min-height: 100%;
+	padding: 0.4rem 1rem;
 
 	background: transparent;
 	border: none;
@@ -165,7 +166,7 @@
 	}
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
 	.standardText {
 		font-size: 1.8rem;
 	}
@@ -186,6 +187,14 @@
 	.shopBtn:hover {
 		letter-spacing: 0.5px;
 	}
+
+	.leftArrow {
+		background: linear-gradient(to left, transparent 30%, rgba(10, 10, 10, 0.8) 100%);
+	}
+	
+	.rightArrow {
+		background: linear-gradient(to right, transparent 30%, rgba(10, 10, 10, 0.8) 100%);
+	}
 }
 
 @media (max-width: 600px) {
@@ -202,6 +211,11 @@
 		font-size: 1.3rem;
 	}
 
+	.leftArrow,
+	.rightArrow {
+		padding: 0.4rem 0.5rem;
+	}
+
 	.leftArrow > img,
 	.rightArrow > img {
 		width: 25px;
@@ -209,22 +223,21 @@
 }
 
 @media (max-width: 500px) {
-
 	.standardText {
-		font-size: 1.4rem;
+		font-size: 1.5rem;
 	}
 
 	.imperial {
-		font-size: 8px;
+		font-size: 10px;
 	}
 	
 	.naboo {
-		font-size: 8px;
+		font-size: 10px;
 	}
 
 	.shopBtn {
 		padding: 0.5rem;
-		font-size: 1.1rem;
+		font-size: 1.2rem;
 		letter-spacing: 0;
 	}
 	
