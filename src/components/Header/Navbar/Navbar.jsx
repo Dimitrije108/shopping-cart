@@ -144,14 +144,16 @@ export default function Navbar({
 	const mobile = (
 		<div className={styles.mobileNavbarCont}>
 			<button 
-				className={styles.menuBtn}
+				className={`
+					${styles.menuBtn}
+					${isSticky ? styles.sticky : ""}
+				`}
 				onClick={openSideMenu}
 			>
 				<img 
 					src={hamburgerIcon}
 					alt="open menu" 
 					title="Open menu"
-					width={40}
 				/>
 			</button>
 			<div 
@@ -175,7 +177,6 @@ export default function Navbar({
 							src={closeIcon}
 							alt="close menu" 
 							title="Close menu"
-							width={25}
 						/>
 					</button>
 				</div>
@@ -214,7 +215,6 @@ export default function Navbar({
 									<img 
 										src={arrowDown}
 										alt="open dropdown"
-										width={20}
 									/>
 								</button>
 							</div>

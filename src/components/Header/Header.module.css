@@ -6,7 +6,6 @@
 
 .stickyHeaderCont {
 	width: 100%;
-	padding-top: 1rem;
 	
 	background-color: rgba(0, 0, 0, 0.7);
 	border-bottom: 1px solid rgb(214, 214, 214);
@@ -28,6 +27,7 @@
 
 .stickyHeaderWrapper {
 	margin: 0 auto;
+	padding-top: 1rem;
 
 	display: grid;
 	grid-template-areas:
@@ -36,7 +36,7 @@
 }
 
 .headerWrapper.mobile {
-	padding: 1rem 1rem 0.5rem 1rem;
+	padding: 0.2rem 1rem 0.5rem 0.5rem;
 
 	grid-template-areas:
 		"logo logo logo"
@@ -47,7 +47,7 @@
 }
 
 .stickyHeaderWrapper.mobile {
-	padding: 0 1rem 0.5rem 1rem;
+	padding: 0.3rem 1rem 0.5rem 1rem;
 
 	grid-template-areas:
 		"mobileNavbar github cart";
@@ -184,6 +184,10 @@
 }
 
 @media (max-width: 768px) {
+	.stickyHeaderCont {
+		padding-top: 0.5rem;
+	}
+
 	.logoHeading {
 		grid-area: logo;
 	
@@ -211,59 +215,6 @@
 	}
 	
 	.shipyardLogo {
-		font-size: 2.8rem;
-	}
-
-	.githubLink {
-		margin-right: 1.5rem;
-		align-self: center;
-	}
-
-	.githubLink.sticky {
-		margin: 0;
-		margin-right: 1.5rem;
-	}
-	
-	.githubLink.sticky > img  {
-		width: 30px;
-	}
-
-	.cartIconLink > img {
-		width: 40px;
-	}
-
-	.cartIconLink > .cartQuantity {
-		width: 25px;
-		height: 25px;
-		font-size: 0.9rem;
-	}
-
-	.cartIconLink.sticky {
-		margin: 0;
-		align-self: center;
-	}
-	
-	.cartIconLink.sticky > img {
-		width: 37px;
-	}
-
-	.cartIconLink.sticky > .cartQuantity {
-		width: 23px;
-		height: 23px;
-		font-size: 0.9rem;
-	}
-	/* adjust ???? */
-	html {
-		scroll-padding-top: 54px; 
-	}
-}
-
-@media (max-width: 450px) {
-	.logoLink > img {
-		width: 80px;
-	}
-	
-	.shipyardLogo {
 		font-size: 2.5rem;
 	}
 
@@ -273,20 +224,68 @@
 	}
 
 	.githubLink > img {
-		width: 30px;
+		width: 27px;
+	}
+
+	.githubLink.sticky {
+		margin: 0;
+		margin-right: 1.5rem;
+	}
+	
+	.githubLink.sticky > img  {
+		width: 25px;
 	}
 
 	.cartIconLink > img {
-		width: 37px;
+		width: 35px;
 	}
 
 	.cartIconLink > .cartQuantity {
 		width: 22px;
 		height: 22px;
-		font-size: 0.8rem;
+		font-size: 0.9rem;
 	}
 
+	.cartIconLink.sticky {
+		margin: 0;
+		align-self: center;
+	}
+	
+	.cartIconLink.sticky > img {
+		width: 30px;
+	}
+
+	.cartIconLink.sticky > .cartQuantity {
+		width: 20px;
+		height: 20px;
+		font-size: 0.8rem;
+	}
+	/* for scrollToView functionality */
 	html {
 		scroll-padding-top: 51px; 
+	}
+}
+
+@media (max-width: 500px) {
+	.logoLink > img {
+		width: 80px;
+	}
+	
+	.shipyardLogo {
+		font-size: 2.2rem;
+	}
+
+	.githubLink > img {
+		width: 25px;
+	}
+
+	.cartIconLink > img {
+		width: 30px;
+	}
+
+	.cartIconLink > .cartQuantity {
+		width: 19px;
+		height: 19px;
+		font-size: 0.8rem;
 	}
 }
