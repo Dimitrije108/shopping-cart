@@ -1,17 +1,43 @@
+.shipTypeSection {
+  padding: 3rem 1rem 4rem 1rem;
+}
+
 .cardsCont {
-	max-width: 1250px;
+  width: 100%;
   font-family: Trench;
 
 	display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-  grid-auto-rows: 1fr;
-  justify-items: center;
-  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 2rem;
 }
 
 .sectionName {
-  margin: 2rem 0;
+  margin-bottom: 2rem;
   font-family: Trench;
   font-size: 2.2rem;
   color: white;
+}
+
+@media (max-width: 768px) {
+  .shipTypeSection {
+    padding: 2rem 1rem 3rem 1rem;
+  }
+
+  .sectionName {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .cardsCont {
+    grid-template-columns: 
+      repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 450px) {
+  .sectionName {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+  }
 }

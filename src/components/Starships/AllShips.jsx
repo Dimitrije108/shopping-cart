@@ -22,13 +22,13 @@ export default function AllShips() {
 				advDataArr={capitalShipDetails}
 				shipType={"Capital"}
 			/>
-			<hr />
+			<hr className={layout.hrSeparator} />
 			<DisplayShips 
 				basicDataArr={transportShips}
 				advDataArr={transportShipDetails}
 				shipType={"Transport"}
 			/>
-			<hr />
+			<hr className={layout.hrSeparator} />
 			<DisplayShips 
 				basicDataArr={starfighters}
 				advDataArr={starfighterDetails}

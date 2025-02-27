@@ -61,10 +61,9 @@ export default function DisplayShips({
   return (
 		<div 
 			className={`
-				${layout.layoutWrapper} 
-				${layout.footerMargin}
+				${layout.layoutWrapper}
+				${styles.shipTypeSection}
 			`}
-			
 		>
 			<h1 
 				className={styles.sectionName} 

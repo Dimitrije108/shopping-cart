@@ -48,7 +48,7 @@ export default function ShipCard({
 	};
 
 	return (
-		<Link to={linkTo}>
+		<Link to={linkTo} className={styles.linkWrapper}>
 			<div className={styles.shipCard} data-testid="shipCard">
 				<HoverArrows 
 					showDetails={styles.showDetails}
@@ -56,30 +56,30 @@ export default function ShipCard({
 					width={15} 
 					height={15}
 				/>
-				<div
+				<div 
 					className={styles.imgCont}
-					style={{ backgroundImage: `url(${img})` }}
 					data-testid="imgCont"
 				>
+					<img src={img} alt="starship" />
 				</div>
 				<div className={styles.infoCont}>
 					<div className={styles.nameCont}>
 						<h2 className={styles.name}>{name}</h2> 
 						<div>
-							<p className={styles.imperial}>{name}</p>
-							<p className={styles.naboo}>{name}</p>
+							<p className={styles.imperial} title="Imperial">{name}</p>
+							<p className={styles.naboo} title="Naboo">{name}</p>
 						</div>
 					</div>
-					<div className={styles.buyCont}>
-						<div className={styles.priceCont}>
-							<div>{formatNumber(truePrice)}</div>
-							{truePrice !== "Price on Request" && <p>credits</p>}
-						</div>
+					<div className={styles.priceCont}>
+						<div>{formatNumber(truePrice)}</div>
+						{truePrice !== "Price on Request" && <p>credits</p>}
+					</div>
+					<div className={styles.addToCartCont}>
 						<button 
 							className={styles.addBtn}
 							onClick={handleAdd}
 						>
-						ADD
+							Add
 						</button>
 						{tooltip && 
 							<p 
