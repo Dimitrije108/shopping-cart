@@ -188,12 +188,18 @@
 		letter-spacing: 0.5px;
 	}
 
-	.leftArrow {
+	.leftArrow,
+	.leftArrow:active {
 		background: linear-gradient(to left, transparent 30%, rgba(10, 10, 10, 0.8) 100%);
 	}
 	
-	.rightArrow {
+	.rightArrow,
+	.rightArrow:active {
 		background: linear-gradient(to right, transparent 30%, rgba(10, 10, 10, 0.8) 100%);
+	}
+
+	.carouselMarketingText {
+		bottom: 3rem;
 	}
 }
 
@@ -248,6 +254,10 @@
 	.leftArrow > img,
 	.rightArrow > img {
 		width: 20px;
+	}
+
+	.carouselMarketingText {
+		bottom: 2.3rem;
 	}
 
 	.carouselQuickNavBtn {
