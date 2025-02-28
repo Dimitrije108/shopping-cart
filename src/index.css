@@ -47,7 +47,6 @@ body {
   line-height: 1.5;
   color: rgb(221, 221, 221);
   background-color: black;
-  background-color: transparent;
 
   box-sizing: border-box;
   /* space between the top of the scroll container and the top of the viewport for stuff like scrollIntoView */
