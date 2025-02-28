@@ -27,36 +27,38 @@ export default function Contact() {
 			<div 
 				className={`
 					${layout.layoutWrapper} 
-					${layout.footerMargin} 
 					${styles.wrapper}
 				`}
 			>
-				<h1 className={styles.findUsHeading}>
-					Find Us
-				</h1>
-				<div className={styles.locationCont}>
-					<img 
-						src={galaxyMap} 
-						alt="Galaxy map" 
-						width={500}
-						title="Galaxy map"
-						className={styles.galaxyMap}
-					/>
+				<div className={styles.locationWrapper}>
+					<h1 className={styles.findUsHeading}>
+						Find Us
+					</h1>
+					<div className={styles.galaxyMapCont}>
+						<img 
+							className={styles.galaxyMap}
+							src={galaxyMap} 
+							alt="Galaxy map"
+							title="Galaxy map"
+						/>
+					</div>
 					<div className={styles.planetAndLogoCont}>
-						<img 
-							src={corelliaPlanet}
-							alt="Corellia planet" 
-							width={250}
-							title="Corellia planet"
-							className={styles.planetMap}
-						/>
-						<img 
-							src={CEC} 
-							alt="Corellia Engineering Corporation logo" 
-							width={250}
-							title="Corellia Engineering Corporation"
-							className={styles.cecLogo}
-						/>
+						<div className={styles.planetMapCont}> 
+							<img 
+								className={styles.planetMap}
+								src={corelliaPlanet}
+								alt="Corellia planet" 
+								title="Corellia planet"
+							/>
+						</div>
+						<div className={styles.cecLogoCont}>
+							<img 
+								className={styles.cecLogo}
+								src={CEC} 
+								alt="Corellia Engineering Corporation logo" 
+								title="Corellia Engineering Corporation"
+							/>
+						</div>
 					</div>
 					<div className={styles.contactCont}>
 						<div className={styles.locationCont}>

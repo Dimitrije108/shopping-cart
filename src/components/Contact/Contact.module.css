@@ -1,7 +1,22 @@
 .wrapper {
+	padding: 3rem 1rem 4rem 1rem;
+
 	display: flex;
 	flex-direction: column;
-	gap: 2rem;
+	gap: 1rem;
+}
+
+.locationWrapper {
+	display: grid;
+	grid-template-areas: 
+		"heading heading heading"
+		"map planet contact";
+	grid-template-columns: 2fr 1fr 1fr;
+	gap: 1rem;
+}
+
+.findUsHeading {
+	grid-area: heading;
 }
 
 .findUsHeading,
@@ -12,38 +27,86 @@
 	color: white;
 }
 
-.findUsHeading {
-	margin-top: 2rem;
-}
-
 .partnersHeading {
 	text-align: center;
+}
+
+.galaxyMapCont {
+	grid-area: map;
+
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	aspect-ratio: 16 / 9;
+	display: flex;
+	justify-content: center;
+}
+
+.galaxyMapCont,
+.planetMapCont,
+.cecLogoCont {
+	width: 100%;
+	height: 100%;
 }
 
 .galaxyMap,
 .planetMap,
 .cecLogo {
+	width: 100%;
+	height: 100%;
 	padding: 6px;
 	border: 1px solid rgb(104, 104, 104);
+
+	object-fit: cover;
+	object-position: center;
 }
 
 .planetAndLogoCont {
-	margin: 0 1rem;
+	grid-area: planet;
 
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: flex-end;
+	gap: 1rem;
 }
 
 .contactCont {
+	grid-area: contact;
+
+	padding: 1rem 0.5rem;
+	background-color: rgb(20, 20, 20);
+	border: 1px solid rgb(104, 104, 104);
+
 	align-self: flex-end;
+
+	display: grid;
+	grid-template-areas: 
+		"location"
+		"email"
+		"webpage";
+}
+
+.locationCont {
+	grid-area: location;
+}
+
+.emailCont {
+	grid-area: email;
+}
+
+.webpageCont {
+	grid-area: webpage;
 }
 
 .locationCont,
 .emailCont,
 .webpageCont {
-	margin-top: 1rem;
 	display: flex;
+}
+
+.emailCont,
+.webpageCont {
+	margin-top: 1rem;
 }
 
 .emailCont,
@@ -89,7 +152,7 @@
 .largeOrderFormCont,
 .requestPriceFormCont {
 	width: 100%;
-	max-width: 550px;
+	max-width: 700px;
 
 	padding: 1rem;
 	background-color: rgb(20, 20, 20);
@@ -188,4 +251,104 @@
 
 .logoCont > a {
 	padding: 1rem 2rem;
+}
+
+@media (max-width: 1200px) {
+	.locationWrapper {
+		grid-template-areas: 
+			"heading heading"
+			"map planet"
+			"contact contact";
+		grid-template-columns: 2fr 1fr;
+		justify-content: center;
+	}
+
+	.contactCont {
+		padding: 1rem;
+
+		grid-template-areas: 
+		"location email webpage";
+		align-items: flex-start;
+		gap: 1rem;
+	}
+
+	.emailCont,
+	.webpageCont {
+		margin-top: 0;
+	}
+}
+
+@media (max-width: 880px) {
+	.location {
+		font-size: 0.9rem;
+	}
+	
+	.address {
+		font-size: 1rem;
+	}
+	
+	.emailCont > p {
+		font-size: 0.9rem;
+	}
+
+	.webpageCont > .iconCont {
+		align-self: flex-start;
+	}
+	
+	.webpageCont > a {
+		font-size: 0.9rem;
+	}
+	
+	.iconCont {
+		margin-right: 8px;
+	}
+}
+
+@media (max-width: 768px) {
+	.wrapper {
+		padding: 2rem 1rem 3rem 1rem;
+	}
+
+	.locationWrapper {
+		grid-template-areas: 
+			"heading"
+			"map"
+			"planet"
+			"contact";
+		grid-template-columns: 1fr;
+		justify-content: center;
+	}
+
+	.planetAndLogoCont {
+		flex-direction: row;
+	}
+
+	.contactCont {
+		grid-template-areas: 
+		"location email"
+		"webpage webpage";
+		justify-items: center;
+	}
+
+	.contactFormsCont {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+}
+
+@media (max-width: 550px) {
+	.logoCont {
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 500px) {
+	.contactCont {
+		grid-template-areas: 
+			"location"
+			"email"
+			"webpage";
+		justify-items: start;
+	}
 }
