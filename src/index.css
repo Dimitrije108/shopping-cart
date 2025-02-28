@@ -45,6 +45,7 @@ body {
   font-size: 1rem;
   line-height: 1.5;
   color: rgb(221, 221, 221);
+  background-color: black;
   background-color: transparent;
 
   box-sizing: border-box;
