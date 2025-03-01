@@ -142,7 +142,10 @@ export default function Navbar({
 	);
 
 	const mobile = (
-		<div className={styles.mobileNavbarCont}>
+		<div 
+			className={styles.mobileNavbarCont} 
+			ref={navbarRef}
+		>
 			<button 
 				className={`
 					${styles.menuBtn}
@@ -182,7 +185,6 @@ export default function Navbar({
 				</div>
 				<nav
 					className={styles.navbarCont}
-					ref={navbarRef}
 					data-testid="stickyNavbar"
 				>
 					<ul className={styles.navbar}>
