@@ -52,7 +52,6 @@ body {
   /* space between the top of the scroll container and the top of the viewport for stuff like scrollIntoView */
   scroll-padding-top: 54px; 
   overscroll-behavior: none;
-  overflow-x: hidden;
   -webkit-overflow-scrolling: auto;
 
   font-synthesis: none;
