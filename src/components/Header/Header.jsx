@@ -26,7 +26,8 @@ export default function Header() {
   return (
 		<div 
 			className={`
-				${isSticky ? styles.stickyHeaderCont : styles.headerCont} 
+				${styles.headerCont}
+				${isSticky ? styles.sticky : ""} 
 				${isHomepage && !isSticky ? styles.transparentHeader : ""}
 				${isContact && !isSticky ? styles.contactHeader : ""}
 			`}
@@ -34,9 +35,9 @@ export default function Header() {
 		>
 			<div 
 				className={`
-					${isSticky 
-					? `${styles.stickyHeaderWrapper} ${layout.layoutWrapper}`
-					: `${styles.headerWrapper} ${layout.layoutWrapper}`}
+					${styles.headerWrapper}
+					${layout.layoutWrapper}
+					${isSticky ? styles.sticky : ""}
 					${isMobile ? styles.mobile : ""} 
 				`}
 			>
