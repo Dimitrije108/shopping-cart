@@ -49,12 +49,7 @@ export default function ShipInfoPage() {
 	}
 
   return (
-		<div 
-			className={`
-				${layout.layoutWrapper} 
-				${layout.footerMargin}
-			`}
-		>
+		<div className={layout.layoutWrapper}>
 			{details}
 		</div>
 	)

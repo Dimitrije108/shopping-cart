@@ -47,12 +47,7 @@ export default function ShoppingCart() {
 	};
 
   return (
-		<div 
-			className={`
-				${layout.layoutWrapper} 
-				${layout.footerMargin}
-			`}
-		>
+		<div className={layout.layoutWrapper}>
 			<h1>Shopping Cart</h1>
 			<div className={styles.cartWrapper}>
 				<div>{cartItems}</div>
