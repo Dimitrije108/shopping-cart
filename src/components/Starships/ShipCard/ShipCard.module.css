@@ -19,7 +19,9 @@
   flex-direction: column;
 }
 
-.shipCard:hover {
+.shipCard:hover,
+.shipCard:active,
+.shipCard:focus {
 	outline: 1px solid rgb(221, 221, 221);
 }
 /* 3 arrow animation indicating additional information is available */
@@ -35,7 +37,9 @@
   transition: opacity 0.5s ease-in-out;
 }
 
-.shipCard:hover > .showDetails {
+.shipCard:hover > .showDetails,
+.shipCard:active > .showDetails,
+.shipCard:focus > .showDetails {
 	visibility: visible;
   opacity: 1;
   transition-delay: 0s;
@@ -95,7 +99,9 @@
   transition: all 0.2s ease-in-out;
 }
 
-.name:hover {
+.name:hover,
+.name:active,
+.name:focus {
   text-decoration: underline rgb(221, 221, 221);
 }
 
@@ -164,9 +170,14 @@
   border: 1px solid rgb(104, 104, 104);
 }
 
-.addBtn:hover {
+.addBtn:hover,
+.addBtn:active {
   color: rgb(255, 255, 255);
   border: 1px solid rgb(0, 192, 64);
+}
+
+.addBtn:focus{
+  color: rgb(255, 255, 255);
 }
 
 .limitExceeded {
@@ -185,6 +196,12 @@
   bottom: -45px;
 
   z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .shipCard {
+    outline: 1px solid rgb(167, 167, 167);
+  }
 }
 
 @media (max-width: 550px) {
@@ -226,5 +243,19 @@
     text-align: left;
   
     position: static;
+  }
+}
+
+@media (hover: none) {
+  .shipCard:hover {
+    outline: none;
+  }
+
+  .name:hover {
+    text-decoration: none;
+  }
+
+	.shipCard:hover > .showDetails {
+    visibility: hidden;
   }
 }
