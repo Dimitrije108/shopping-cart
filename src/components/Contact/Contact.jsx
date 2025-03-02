@@ -66,7 +66,6 @@ export default function Contact() {
 								<img 
 									src={locationIcon} 
 									alt="location icon" 
-									width={30}
 									title="Location"
 								/>
 							</div>
@@ -81,7 +80,6 @@ export default function Contact() {
 								<img 
 									src={emailIcon}
 									alt="email icon" 
-									width={30}
 									title="Email"
 								/>
 							</div>
@@ -92,7 +90,6 @@ export default function Contact() {
 								<img 
 									src={websiteIcon}
 									alt="webpage icon" 
-									width={30}
 									title="Webpage"
 								/>
 							</div>
@@ -287,9 +284,9 @@ export default function Contact() {
 								data-testid="cfLink"
 							>
 								<img 
+									className={styles.partnerLogo}
 									src={federationLogo}
 									alt="Corellian Federation icon" 
-									width={100}
 									title="Corellian Federation"
 								/>
 							</Link>
@@ -298,9 +295,9 @@ export default function Contact() {
 								data-testid="kdyLink"
 							>
 								<img 
+									className={styles.partnerLogo}
 									src={kuatDriveYardsLogo}
 									alt="Kuat Drive Yards icon" 
-									width={100}
 									title="Kuat Drive Yards"
 								/>
 							</Link>
@@ -309,9 +306,9 @@ export default function Contact() {
 								data-testid="fondorLink"
 							>
 								<img 
+									className={styles.partnerLogo}
 									src={fondorShipyardsLogo}
 									alt="Fondor Shipyards icon" 
-									width={100}
 									title="Fondor Shipyards"
 								/>
 							</Link>

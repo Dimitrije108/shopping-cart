@@ -144,6 +144,10 @@
 	flex-direction: column;
 }
 
+.iconCont > img{
+	width: 30px;
+}
+
 .contactFormsCont {
 	display: flex;
 	gap: 2rem;
@@ -253,6 +257,10 @@
 	padding: 1rem 2rem;
 }
 
+.partnerLogo {
+	width: 100px;
+}
+
 @media (max-width: 1200px) {
 	.locationWrapper {
 		grid-template-areas: 
@@ -316,6 +324,7 @@
 			"planet"
 			"contact";
 		grid-template-columns: 1fr;
+		grid-template-rows: min-content 2fr 1fr 1fr;
 		justify-content: center;
 	}
 
@@ -340,6 +349,14 @@
 @media (max-width: 550px) {
 	.logoCont {
 		flex-direction: column;
+	}
+
+	.logoCont > a {
+		padding: 1rem;
+	}
+
+	.partnerLogo {
+		width: 70px;
 	}
 }
 
