@@ -324,7 +324,7 @@
 			"planet"
 			"contact";
 		grid-template-columns: 1fr;
-		grid-template-rows: min-content 2fr 1fr min-content;
+		grid-template-rows: min-content min-content min-content min-content;
 		justify-content: center;
 	}
 
@@ -347,6 +347,10 @@
 }
 
 @media (max-width: 550px) {
+	.locationWrapper {
+		grid-template-rows: min-content 2fr 1fr min-content;
+	}
+
 	.logoCont {
 		flex-direction: column;
 	}
