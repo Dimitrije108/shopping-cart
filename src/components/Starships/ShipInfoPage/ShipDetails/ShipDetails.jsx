@@ -86,30 +86,32 @@ export default function ShipDetails({ basic, details }) {
 				<div className={styles.imgCont}>
 					<img src={basic.image} alt={`${basic.name} starship`} />
 				</div>
-				<div className={styles.addCol}>
-					<div  className={styles.addWrapper}>
-						<div className={styles.priceCont}>
-							<div>{formatNumber(truePrice)}</div>
-							{truePrice !== "Price on Request" && <p>credits</p>}
+				<div  className={styles.addWrapper}>
+					<div className={styles.priceCont}>
+						<div>{formatNumber(truePrice)}</div>
+						{truePrice !== "Price on Request" && <p>credits</p>}
+					</div>
+					<div className={styles.financeCont}>
+						<div className={styles.financeOffer}>
+							<p>Finance Offer</p>
+							{truePrice !== "Price on Request" && 
+								<p className={styles.offerPrice} data-testid="financeOffer">
+									{`${formatNumber(finance)}/month`}
+								</p>
+							}
 						</div>
-						<div className={styles.financeCont}>
-							<div className={styles.financeOffer}>
-								<p>Finance Offer</p>
-								{truePrice !== "Price on Request" && 
-									<p className={styles.offerPrice} data-testid="financeOffer">
-										{`${formatNumber(finance)}/month`}
-									</p>
-								}
-							</div>
-							<button>Get Pre-Qualified</button>
+						<button>Get Pre-Qualified</button>
+					</div>
+					<div className={styles.addCont}>
+						<div className={styles.itemQuantityCont}>
+							<ItemQuantity 
+								quantity={quantity}
+								increase={increaseQuantity}
+								decrease={decreaseQuantity}
+								change={changeQuantity}
+								reset={resetQuantity}
+							/>
 						</div>
-						<ItemQuantity 
-							quantity={quantity}
-							increase={increaseQuantity}
-							decrease={decreaseQuantity}
-							change={changeQuantity}
-							reset={resetQuantity}
-						/>
 						<button 
 							className={styles.addBtn}
 							onClick={handleAdd}

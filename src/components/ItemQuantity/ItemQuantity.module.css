@@ -1,6 +1,4 @@
 .cont {
-	margin-top: 1rem;
-
 	display: flex;
 	justify-content: center;
 }
@@ -45,7 +43,6 @@
 
 .quantityInput {
 	all: unset;
-	max-width: 1rem;
 
 	background-color: transparent;
   border-top: 1px solid rgb(104, 104, 104);

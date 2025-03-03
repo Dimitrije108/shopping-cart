@@ -36,18 +36,14 @@
 	display: block;
 }
 
-.addCol {
-	grid-area: price;
-	display: grid;
-  grid-template-rows: auto;
-  align-content: start;
-}
-
 .addWrapper {
+	height: min-content;
 	padding: 0.5rem;
 
 	background-color: rgb(20, 20, 20);
 	outline: 1px solid rgb(145, 145, 145);
+
+	grid-area: price;
 
 	display: flex;
 	flex-direction: column;
@@ -96,6 +92,14 @@
 	padding: 0.6rem 1.2rem;
 }
 
+.addCont {
+	width: 100%;
+}
+
+.itemQuantityCont {
+	margin-top: 1rem;
+}
+
 .addBtn {
 	width: 100%;
 	margin-top: 1rem;
@@ -106,7 +110,7 @@
 	letter-spacing: 1px;
 	color: rgb(218, 218, 218);
   background-color: transparent;
-  border: 1px solid rgb(104, 104, 104);
+  border: 1px solid rgb(145, 145, 145);
 }
 
 .addBtn:hover {
@@ -200,7 +204,176 @@
   cursor: auto;
   
   position: absolute;
-  bottom: -45px;
+  bottom: -55px;
+	left: 10%;
 
   z-index: 1;
+}
+
+@media (max-width: 1050px) {
+	.shipDetailsCont {
+		padding: 0;
+
+		grid-template-columns: 1fr;
+		grid-template-areas: 
+			"img"
+			"price"
+			"description"
+			"table";
+	}
+
+	.addWrapper {
+		padding: 1rem;
+		
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	.priceCont {
+		padding-right: 1rem;
+	}
+	
+	.financeCont {
+		width: 100%;
+		padding: 1rem;
+		
+		border-top: none;
+		border-bottom: none;
+		border-left: 1px solid rgb(104, 104, 104);
+		border-right: 1px solid rgb(104, 104, 104);
+	}
+	
+	.financeCont > button {
+		width: 100%;
+		margin-top: 1rem;
+		padding: 0.6rem 1.2rem;
+	}
+
+	.addCont {
+		width: 100%;
+		padding-left: 1rem;
+		padding-bottom: 1rem;
+
+		align-self: flex-end;
+
+		display: flex;
+		flex-direction: column;
+	}
+
+	.itemQuantityCont {
+		margin-top: 0;
+	}
+	
+	.addBtn {
+		width: auto;
+		margin-top: 1rem;
+		padding: 0.9rem 2rem;
+	
+		font-family: 'DINNext bold';
+		font-size: 1rem;
+		letter-spacing: 1px;
+		color: rgb(218, 218, 218);
+		background-color: transparent;
+	}
+
+	.limitExceeded {
+		position: absolute;
+		bottom: -25px;
+		left: 70%;
+	}
+}
+
+@media (max-width: 680px) {
+	.addWrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.imgCont > img {
+		padding: 0.3rem;
+	}
+
+	.priceCont {
+		padding: 0 1rem 0.5rem 1rem;
+	}
+	
+	.financeCont {
+		padding: 1rem;
+		
+		border-top: 1px solid rgb(104, 104, 104);
+		border-bottom: 1px solid rgb(104, 104, 104);
+		border-left: none;
+		border-right: none;
+	}
+	
+	.financeCont > button {
+		width: auto;
+		margin-top: 0.5rem;
+		padding: 0.6rem 1.2rem;
+	}
+
+	.addCont {
+		width: 100%;
+		padding: 1rem 0 0 0;
+
+		align-self: flex-end;
+
+		display: flex;
+		flex-direction: column;
+	}
+
+	.itemQuantityCont {
+		margin-top: 0;
+	}
+	
+	.addBtn {
+		width: auto;
+		margin-top: 1rem;
+		padding: 0.9rem 2rem;
+	
+		font-family: 'DINNext bold';
+		font-size: 1rem;
+		letter-spacing: 1px;
+		color: rgb(218, 218, 218);
+		background-color: transparent;
+	}
+
+	.limitExceeded {
+		position: absolute;
+		bottom: -28px;
+		left: 40%;
+	}
+
+	.tableCont {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.infoTable > tbody > tr > th,
+	.infoTable > tbody > tr > td {
+		width: 50%;
+	}
+}
+
+@media (max-width: 500px) {
+	.imgCont > img {
+		min-height: 400px;
+		padding: 0;
+
+		object-fit: cover;
+		object-position: center;
+	}
+
+	.priceCont > div {
+		font-size: 2rem;
+	}
+
+	.offerPrice {
+		font-size: 1.3rem;
+	}
+
+	.descriptionCont > h1 {
+		font-size: 2rem;
+	}
 }
