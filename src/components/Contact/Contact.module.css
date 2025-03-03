@@ -324,7 +324,7 @@
 			"planet"
 			"contact";
 		grid-template-columns: 1fr;
-		grid-template-rows: min-content 2fr 1fr 1fr;
+		grid-template-rows: min-content 2fr 1fr min-content;
 		justify-content: center;
 	}
 
