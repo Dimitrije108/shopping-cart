@@ -10,7 +10,6 @@ export default function useFetchData(arr) {
   useEffect(() => {
 		// Turn param into an array if it isn't already
 		const urls = Array.isArray(arr) ? arr : [arr];
-		const controller = new AbortController();
 
 		const fetchData = async () => {
 			// Fetch all urls from the array simultaneously
@@ -26,6 +25,8 @@ export default function useFetchData(arr) {
 								return data;
 							}
 						};
+
+						const controller = new AbortController();
 						// If it is not cached fetch and store in localStorage
 						return fetch(url, { signal: controller.signal })
 							.then((resp) => {
@@ -67,7 +68,7 @@ export default function useFetchData(arr) {
 
 		fetchData();
 
-		return () => controller.abort();
+		return () => {};
   }, [JSON.stringify(arr)]);
 
   return { data, error, loading };
