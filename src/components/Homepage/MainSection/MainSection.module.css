@@ -1,6 +1,7 @@
 .mainHomepageSection {
 	min-width: 100%;
-	min-height: 103.4vh;
+	height: 103.4vh;
+	min-height: 500px;
 
 	display: flex;
 	flex-direction: column;
@@ -9,7 +10,8 @@
 
 .heroImage {
 	width: 100%;
-	min-height: 110vh;
+	height: 110vh;
+	min-height: 600px;
 
 	background-image: url("/src/assets/images/phantom-menace-ferguson.jpeg"), 
 										linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 100%);
@@ -24,9 +26,10 @@
 }
 
 .mainContent {
+	max-width: 1250px;
+
 	margin-bottom: 15rem;
 	padding: 1rem;
-	max-width: 1250px;
 
 	background-color: rgba(0, 0, 0, 0.3);
 	align-self: center;
