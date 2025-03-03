@@ -183,7 +183,10 @@
 	transform: translate(-1px, 2px);
 }
 
-@media (max-width: 768px) and (orientation: landscape) {
+@media 
+	(max-width: 768px), 
+	(orientation: landscape) and (max-width: 1024px) 
+{
 	.headerCont.sticky {
 		padding-top: 0.5rem;
 	}
