@@ -26,7 +26,8 @@
 	animation: popupExit 1s cubic-bezier(0.4, 0.2, 0.6, 1);
 }
 
-.popupCont:hover {
+.popupCont:hover,
+.popupCont:active {
 	color: rgb(221, 221, 221);
 	outline: 1px solid rgb(221, 221, 221);
 
@@ -53,7 +54,8 @@
   transition: opacity 0.5s ease-in-out;
 }
 
-.popupCont:hover .showDetails {
+.popupCont:hover .showDetails,
+.popupCont:active .showDetails {
 	visibility: visible;
   opacity: 1;
   transition-delay: 0s;
@@ -97,4 +99,14 @@
     bottom: -300px;
 		opacity: 0.1;
   }
+}
+
+@media (hover: none) {
+  .popupCont:hover {
+		visibility: hidden;
+	}
+
+	.popupCont:hover .showDetails {
+		visibility: hidden;
+	}
 }
