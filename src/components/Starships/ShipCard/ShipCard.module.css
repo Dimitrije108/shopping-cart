@@ -198,12 +198,6 @@
   z-index: 1;
 }
 
-@media (max-width: 768px) {
-  .shipCard {
-    outline: 1px solid rgb(167, 167, 167);
-  }
-}
-
 @media (max-width: 550px) {
   .shipCard {
     min-width: 310px;
@@ -243,6 +237,10 @@
     text-align: left;
   
     position: static;
+  }
+
+  .limitExceeded {
+    right: 0;
   }
 }
 
