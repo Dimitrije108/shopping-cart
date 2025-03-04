@@ -13,7 +13,9 @@ export default function Header() {
 	const [isSticky, setIsSticky] = useState(false);
 	const { pathname } = useLocation();
 	const { cart } = useCartContext();
-	const isMobile = useMediaQuery({ maxWidth: 768 });
+	const isMobile = useMediaQuery({
+		query: '(max-width: 768px), (pointer: coarse)',
+	});
 
 	// Check active path so custom backdrop image can be applied
   const isHomepage = pathname === "/";

@@ -86,7 +86,10 @@
 }
 
 /* Switch to touchscreen/mobile view with hamburger type menu */
-@media (max-width: 768px) {
+@media 
+	(max-width: 768px),
+	(pointer: coarse) 
+{
 	.mobileNavbarCont {
 		grid-area: mobileNavbar;
 	}
