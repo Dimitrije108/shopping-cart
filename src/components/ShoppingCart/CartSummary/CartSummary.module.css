@@ -9,7 +9,7 @@
 	align-self: start;
 
 	position: sticky;
-	top: 2rem;
+	top: 4.5rem;
 }
 
 .summaryHeader {
@@ -36,6 +36,7 @@
 }
 
 .discount {
+	margin-right: 0.5rem;
 	flex: 1;
 }
 
@@ -144,4 +145,19 @@
 	color: rgb(221, 221, 221);
 }
 
+@media (max-width: 1150px) {
+	.cartSummaryCont {
+		padding-left: 1rem;
+	}
+}
 
+@media (max-width: 620px) {
+	.cartSummaryCont {
+		padding-left: 0;
+		border-left: none;
+
+		padding-top: 1rem;
+
+		position: static;
+	}
+}

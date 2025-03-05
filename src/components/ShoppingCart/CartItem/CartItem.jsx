@@ -40,49 +40,51 @@ export default function CartItem({
 		<div className={styles.cartItemCont} data-testid="cartItem">
 			<hr className={styles.horizontalLine} />
 			<div className={styles.cartItem}>
-				<Link to={linkTo}>
-					<div className={styles.imgCont}>
+				<div className={styles.imgCont}>
+					<Link to={linkTo}>
 						<img src={img} alt={`${name} starship`} />
-					</div>
-				</Link>
-				<Link to={linkTo}>
-					<div className={styles.nameCont}>
+					</Link>
+				</div>
+				<div className={styles.nameCont}>
+					<Link to={linkTo}>
 						<h2 className={styles.name}>{name}</h2> 
 						<div>
 							<p className={styles.imperial}>{name}</p>
 							<p className={styles.naboo}>{name}</p>
 						</div>
-					</div>
-				</Link>
-				<ItemQuantity
-					quantity={quantity}
-					increase={() => increaseQuantity(handleQuantityChange)}
-					decrease={() => decreaseQuantity(handleQuantityChange)}
-					change={(e) => changeQuantity(e, handleQuantityChange)}
-					reset={() => resetQuantity(handleQuantityChange)}
-				/>
+					</Link>
+				</div>
+				<div className={styles.quantityCont}>
+					<ItemQuantity
+						quantity={quantity}
+						increase={() => increaseQuantity(handleQuantityChange)}
+						decrease={() => decreaseQuantity(handleQuantityChange)}
+						change={(e) => changeQuantity(e, handleQuantityChange)}
+						reset={() => resetQuantity(handleQuantityChange)}
+					/>
+				</div>
+				<button 
+					className={styles.delBtn}
+					onClick={() => removeFromCart(id)}
+				>
+					<img 
+						src={trashIcon}
+						alt="trashcan remove icon" 
+						width={28} 
+					/>
+				</button>
 				<div className={styles.priceCont}>
-					<button 
-						className={styles.delBtn}
-						onClick={() => removeFromCart(id)}
-					>
-						<img 
-							src={trashIcon}
-							alt="trashcan remove icon" 
-							width={28} 
-						/>
-					</button>
-					<p>
-						{price === "Price on Request" 
-						? price
-						: <>
-								<span className={styles.itemQuantity}>
-									{`${quantity}x `}
-								</span>
+					{price === "Price on Request"
+					? <div className={styles.price}>{price}</div>
+					: <>
+							<span className={styles.itemQuantity}>
+								{`${quantity}x `}
+							</span>
+							<div className={styles.price}>
 								{formatNumber(quantity * price)}
-							</>
-						}
-					</p>
+							</div>
+						</>
+					}
 				</div>
 			</div>
 		</div>
