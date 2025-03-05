@@ -1,5 +1,5 @@
 .cartLayout {
-	padding: 2rem 1rem;
+	padding: 3rem 1rem 4rem 1rem;
 }
 
 .cartWrapper {
@@ -55,6 +55,10 @@
 }
 
 @media (max-width: 620px) {
+	.cartLayout {
+		padding: 2rem 1rem 4rem 1rem;
+	}
+
 	.cartWrapper {
 		grid-template-columns: 1fr;
 		gap: 2rem;
