@@ -22,7 +22,7 @@ exports[`Footer component > Footer component snapshot 1`] = `
               >
                 <img
                   alt="location icon"
-                  src="/src/assets/location.svg"
+                  src="/src/assets/icons/location.svg"
                   title="Location"
                   width="30"
                 />
@@ -51,7 +51,7 @@ exports[`Footer component > Footer component snapshot 1`] = `
               >
                 <img
                   alt="email icon"
-                  src="/src/assets/email.svg"
+                  src="/src/assets/icons/email.svg"
                   title="Email"
                   width="30"
                 />
@@ -60,12 +60,37 @@ exports[`Footer component > Footer component snapshot 1`] = `
                 sw_shipyard@corellia.cec
               </p>
             </div>
+            <div
+              class="_webpageCont_eb428f"
+            >
+              <div
+                class="_iconCont_eb428f"
+              >
+                <img
+                  alt="webpage icon"
+                  src="/src/assets/icons/website.svg"
+                  title="Webpage"
+                  width="30"
+                />
+              </div>
+              <a
+                data-testid="webpageLink"
+                href="https://starwars.fandom.com/wiki/Corellian_Engineering_Corporation"
+              >
+                Corellian Engineering Corporation
+              </a>
+            </div>
           </div>
           <div
             class="_companyCont_eb428f"
           >
             <button>
-              About Us
+              <a
+                data-discover="true"
+                href="/#aboutUsSection"
+              >
+                About Us
+              </a>
             </button>
             <button>
               Our Services
@@ -74,7 +99,12 @@ exports[`Footer component > Footer component snapshot 1`] = `
               Privacy Policy
             </button>
             <button>
-              Contact
+              <a
+                data-discover="true"
+                href="/contact"
+              >
+                Contact
+              </a>
             </button>
           </div>
           <div
@@ -93,7 +123,7 @@ exports[`Footer component > Footer component snapshot 1`] = `
                 >
                   <img
                     alt="Corellian Engineering Corporation icon"
-                    src="/src/assets/Corellian_Engineering_Corporation.svg"
+                    src="/src/assets/icons/Corellian_Engineering_Corporation.svg"
                     title="Corellian Engineering Corporation"
                     width="55"
                   />
@@ -105,7 +135,7 @@ exports[`Footer component > Footer component snapshot 1`] = `
                 >
                   <img
                     alt="Corellian Federation icon"
-                    src="/src/assets/Corellian_Federation_logo.webp"
+                    src="/src/assets/icons/Corellian_Federation_logo.webp"
                     title="Corellian Federation"
                     width="55"
                   />
@@ -121,7 +151,7 @@ exports[`Footer component > Footer component snapshot 1`] = `
                 >
                   <img
                     alt="Kuat Drive Yards icon"
-                    src="/src/assets/Kuat-Drive-Yards.svg"
+                    src="/src/assets/icons/Kuat-Drive-Yards.svg"
                     title="Kuat Drive Yards"
                     width="55"
                   />
@@ -133,7 +163,7 @@ exports[`Footer component > Footer component snapshot 1`] = `
                 >
                   <img
                     alt="Fondor Shipyards icon"
-                    src="/src/assets/Fondor-Shipyards.jpg"
+                    src="/src/assets/icons/Fondor-Shipyards.jpg"
                     title="Fondor Shipyards"
                     width="55"
                   />
@@ -164,9 +194,8 @@ exports[`Footer component > Footer component snapshot 1`] = `
           >
             <img
               alt="github icon"
-              src="/src/assets/github-mark-white.svg"
+              src="/src/assets/icons/github-mark-white.svg"
               title="GitHub"
-              width="35"
             />
           </a>
         </div>
@@ -191,7 +220,7 @@ exports[`Footer component > Footer component snapshot 1`] = `
             >
               <img
                 alt="location icon"
-                src="/src/assets/location.svg"
+                src="/src/assets/icons/location.svg"
                 title="Location"
                 width="30"
               />
@@ -220,7 +249,7 @@ exports[`Footer component > Footer component snapshot 1`] = `
             >
               <img
                 alt="email icon"
-                src="/src/assets/email.svg"
+                src="/src/assets/icons/email.svg"
                 title="Email"
                 width="30"
               />
@@ -229,12 +258,37 @@ exports[`Footer component > Footer component snapshot 1`] = `
               sw_shipyard@corellia.cec
             </p>
           </div>
+          <div
+            class="_webpageCont_eb428f"
+          >
+            <div
+              class="_iconCont_eb428f"
+            >
+              <img
+                alt="webpage icon"
+                src="/src/assets/icons/website.svg"
+                title="Webpage"
+                width="30"
+              />
+            </div>
+            <a
+              data-testid="webpageLink"
+              href="https://starwars.fandom.com/wiki/Corellian_Engineering_Corporation"
+            >
+              Corellian Engineering Corporation
+            </a>
+          </div>
         </div>
         <div
           class="_companyCont_eb428f"
         >
           <button>
-            About Us
+            <a
+              data-discover="true"
+              href="/#aboutUsSection"
+            >
+              About Us
+            </a>
           </button>
           <button>
             Our Services
@@ -243,7 +297,12 @@ exports[`Footer component > Footer component snapshot 1`] = `
             Privacy Policy
           </button>
           <button>
-            Contact
+            <a
+              data-discover="true"
+              href="/contact"
+            >
+              Contact
+            </a>
           </button>
         </div>
         <div
@@ -262,7 +321,7 @@ exports[`Footer component > Footer component snapshot 1`] = `
               >
                 <img
                   alt="Corellian Engineering Corporation icon"
-                  src="/src/assets/Corellian_Engineering_Corporation.svg"
+                  src="/src/assets/icons/Corellian_Engineering_Corporation.svg"
                   title="Corellian Engineering Corporation"
                   width="55"
                 />
@@ -274,7 +333,7 @@ exports[`Footer component > Footer component snapshot 1`] = `
               >
                 <img
                   alt="Corellian Federation icon"
-                  src="/src/assets/Corellian_Federation_logo.webp"
+                  src="/src/assets/icons/Corellian_Federation_logo.webp"
                   title="Corellian Federation"
                   width="55"
                 />
@@ -290,7 +349,7 @@ exports[`Footer component > Footer component snapshot 1`] = `
               >
                 <img
                   alt="Kuat Drive Yards icon"
-                  src="/src/assets/Kuat-Drive-Yards.svg"
+                  src="/src/assets/icons/Kuat-Drive-Yards.svg"
                   title="Kuat Drive Yards"
                   width="55"
                 />
@@ -302,7 +361,7 @@ exports[`Footer component > Footer component snapshot 1`] = `
               >
                 <img
                   alt="Fondor Shipyards icon"
-                  src="/src/assets/Fondor-Shipyards.jpg"
+                  src="/src/assets/icons/Fondor-Shipyards.jpg"
                   title="Fondor Shipyards"
                   width="55"
                 />
@@ -333,9 +392,8 @@ exports[`Footer component > Footer component snapshot 1`] = `
         >
           <img
             alt="github icon"
-            src="/src/assets/github-mark-white.svg"
+            src="/src/assets/icons/github-mark-white.svg"
             title="GitHub"
-            width="35"
           />
         </a>
       </div>

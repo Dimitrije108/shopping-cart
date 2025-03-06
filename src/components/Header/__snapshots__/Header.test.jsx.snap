@@ -7,24 +7,32 @@ exports[`Header component > Non-sticky header snapshot 1`] = `
     <div>
       <div
         class="
-				_headerCont_63c2ea 
+				_headerCont_63c2ea
+				 
 				_transparentHeader_63c2ea
 				
 			"
         data-testid="headerCont"
       >
         <div
-          class="_logoCont_63c2ea _layoutWrapper_aadc39"
+          class="
+					_headerWrapper_63c2ea
+					_layoutWrapper_aadc39
+					
+					 
+				"
         >
           <a
-            class="_githubLink_63c2ea"
+            class="
+						_githubLink_63c2ea
+						
+					"
             href="https://github.com/Dimitrije108/shopping-cart"
           >
             <img
               alt="github icon"
-              src="/src/assets/github-mark-white.svg"
+              src="/src/assets/icons/github-mark-white.svg"
               title="GitHub"
-              width="30"
             />
           </a>
           <h1
@@ -38,8 +46,7 @@ exports[`Header component > Non-sticky header snapshot 1`] = `
             >
               <img
                 alt="star wars logo"
-                src="/src/assets/sw-logo.png"
-                width="150"
+                src="/src/assets/icons/sw-logo.png"
               />
             </a>
             <a
@@ -56,16 +63,17 @@ exports[`Header component > Non-sticky header snapshot 1`] = `
             </a>
           </h1>
           <a
-            class="_cartIconLink_63c2ea"
+            class="
+						_cartIconLink_63c2ea
+						
+					"
             data-discover="true"
             data-testid="cartLink"
             href="/shopping-cart"
           >
             <img
-              height="55"
               src="https://icons.iconarchive.com/icons/jonathan-rey/star-wars-vehicles/128/Death-Star-2nd-icon.png"
               title="Shopping Cart"
-              width="55"
             />
             <div
               class="_cartQuantity_63c2ea"
@@ -77,19 +85,194 @@ exports[`Header component > Non-sticky header snapshot 1`] = `
               </div>
             </div>
           </a>
+          <nav
+            class="_navbarCont_ec1191"
+            data-testid="stickyNavbar"
+          >
+            <ul
+              class="
+					_navbar_ec1191 
+					
+				"
+            >
+              <li
+                class="
+						_homeNav_ec1191 
+						_active_ec1191 
+					"
+                data-testid="home"
+              >
+                <a
+                  data-discover="true"
+                  href="/"
+                >
+                  Home
+                </a>
+              </li>
+              <li
+                class="
+						_starshipsNav_ec1191 
+						 
+					"
+                data-testid="starships"
+              >
+                <a
+                  data-discover="true"
+                  href="/starships"
+                >
+                  Starships
+                </a>
+                <ul
+                  class="
+							_dropdown_ec1191 
+							
+							 
+							
+						"
+                  data-testid="starshipsDropdown"
+                >
+                  <li>
+                    <a
+                      data-discover="true"
+                      href="/starships/capital"
+                    >
+                      Capital
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      data-discover="true"
+                      href="/starships/transport"
+                    >
+                      Transport
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      data-discover="true"
+                      href="/starships/starfighter"
+                    >
+                      Starfighter
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li
+                class="
+						_contactNav_ec1191 
+						 
+					"
+                data-testid="contact"
+              >
+                <a
+                  data-discover="true"
+                  href="/contact"
+                >
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <nav
-          class="_navbarCont_63c2ea"
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="
+				_headerCont_63c2ea
+				 
+				_transparentHeader_63c2ea
+				
+			"
+      data-testid="headerCont"
+    >
+      <div
+        class="
+					_headerWrapper_63c2ea
+					_layoutWrapper_aadc39
+					
+					 
+				"
+      >
+        <a
+          class="
+						_githubLink_63c2ea
+						
+					"
+          href="https://github.com/Dimitrije108/shopping-cart"
         >
-          <div />
+          <img
+            alt="github icon"
+            src="/src/assets/icons/github-mark-white.svg"
+            title="GitHub"
+          />
+        </a>
+        <h1
+          class="_logoHeading_63c2ea"
+          data-testid="headingLogo"
+        >
+          <a
+            class="_logoLink_63c2ea"
+            data-discover="true"
+            href="/"
+          >
+            <img
+              alt="star wars logo"
+              src="/src/assets/icons/sw-logo.png"
+            />
+          </a>
+          <a
+            class="_shipyardLink_63c2ea"
+            data-discover="true"
+            href="/"
+            title="Shipyard"
+          >
+            <div
+              class="_shipyardLogo_63c2ea"
+            >
+              Shipyard
+            </div>
+          </a>
+        </h1>
+        <a
+          class="
+						_cartIconLink_63c2ea
+						
+					"
+          data-discover="true"
+          data-testid="cartLink"
+          href="/shopping-cart"
+        >
+          <img
+            src="https://icons.iconarchive.com/icons/jonathan-rey/star-wars-vehicles/128/Death-Star-2nd-icon.png"
+            title="Shopping Cart"
+          />
+          <div
+            class="_cartQuantity_63c2ea"
+          >
+            <div
+              class="_quantityWrapper_63c2ea"
+            >
+              2
+            </div>
+          </div>
+        </a>
+        <nav
+          class="_navbarCont_ec1191"
+          data-testid="stickyNavbar"
+        >
           <ul
-            class="_navbar_63c2ea"
+            class="
+					_navbar_ec1191 
+					
+				"
           >
             <li
               class="
-							_homeNav_63c2ea 
-							_active_63c2ea 
-						"
+						_homeNav_ec1191 
+						_active_ec1191 
+					"
               data-testid="home"
             >
               <a
@@ -101,9 +284,9 @@ exports[`Header component > Non-sticky header snapshot 1`] = `
             </li>
             <li
               class="
-							_starshipsNav_63c2ea 
-							 
-						"
+						_starshipsNav_ec1191 
+						 
+					"
               data-testid="starships"
             >
               <a
@@ -114,9 +297,11 @@ exports[`Header component > Non-sticky header snapshot 1`] = `
               </a>
               <ul
                 class="
-								_dropdown_63c2ea 
-								
-							"
+							_dropdown_ec1191 
+							
+							 
+							
+						"
                 data-testid="starshipsDropdown"
               >
                 <li>
@@ -147,9 +332,9 @@ exports[`Header component > Non-sticky header snapshot 1`] = `
             </li>
             <li
               class="
-							_contactNav_63c2ea 
-							 
-						"
+						_contactNav_ec1191 
+						 
+					"
               data-testid="contact"
             >
               <a
@@ -162,165 +347,6 @@ exports[`Header component > Non-sticky header snapshot 1`] = `
           </ul>
         </nav>
       </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      class="
-				_headerCont_63c2ea 
-				_transparentHeader_63c2ea
-				
-			"
-      data-testid="headerCont"
-    >
-      <div
-        class="_logoCont_63c2ea _layoutWrapper_aadc39"
-      >
-        <a
-          class="_githubLink_63c2ea"
-          href="https://github.com/Dimitrije108/shopping-cart"
-        >
-          <img
-            alt="github icon"
-            src="/src/assets/github-mark-white.svg"
-            title="GitHub"
-            width="30"
-          />
-        </a>
-        <h1
-          class="_logoHeading_63c2ea"
-          data-testid="headingLogo"
-        >
-          <a
-            class="_logoLink_63c2ea"
-            data-discover="true"
-            href="/"
-          >
-            <img
-              alt="star wars logo"
-              src="/src/assets/sw-logo.png"
-              width="150"
-            />
-          </a>
-          <a
-            class="_shipyardLink_63c2ea"
-            data-discover="true"
-            href="/"
-            title="Shipyard"
-          >
-            <div
-              class="_shipyardLogo_63c2ea"
-            >
-              Shipyard
-            </div>
-          </a>
-        </h1>
-        <a
-          class="_cartIconLink_63c2ea"
-          data-discover="true"
-          data-testid="cartLink"
-          href="/shopping-cart"
-        >
-          <img
-            height="55"
-            src="https://icons.iconarchive.com/icons/jonathan-rey/star-wars-vehicles/128/Death-Star-2nd-icon.png"
-            title="Shopping Cart"
-            width="55"
-          />
-          <div
-            class="_cartQuantity_63c2ea"
-          >
-            <div
-              class="_quantityWrapper_63c2ea"
-            >
-              2
-            </div>
-          </div>
-        </a>
-      </div>
-      <nav
-        class="_navbarCont_63c2ea"
-      >
-        <div />
-        <ul
-          class="_navbar_63c2ea"
-        >
-          <li
-            class="
-							_homeNav_63c2ea 
-							_active_63c2ea 
-						"
-            data-testid="home"
-          >
-            <a
-              data-discover="true"
-              href="/"
-            >
-              Home
-            </a>
-          </li>
-          <li
-            class="
-							_starshipsNav_63c2ea 
-							 
-						"
-            data-testid="starships"
-          >
-            <a
-              data-discover="true"
-              href="/starships"
-            >
-              Starships
-            </a>
-            <ul
-              class="
-								_dropdown_63c2ea 
-								
-							"
-              data-testid="starshipsDropdown"
-            >
-              <li>
-                <a
-                  data-discover="true"
-                  href="/starships/capital"
-                >
-                  Capital
-                </a>
-              </li>
-              <li>
-                <a
-                  data-discover="true"
-                  href="/starships/transport"
-                >
-                  Transport
-                </a>
-              </li>
-              <li>
-                <a
-                  data-discover="true"
-                  href="/starships/starfighter"
-                >
-                  Starfighter
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li
-            class="
-							_contactNav_63c2ea 
-							 
-						"
-            data-testid="contact"
-          >
-            <a
-              data-discover="true"
-              href="/contact"
-            >
-              Contact
-            </a>
-          </li>
-        </ul>
-      </nav>
     </div>
   </div>,
   "debug": [Function],
@@ -383,31 +409,273 @@ exports[`Header component > Sticky header snapshot 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="_stickyHeaderCont_63c2ea"
+        class="
+				_headerCont_63c2ea
+				_sticky_63c2ea 
+				
+				
+			"
+        data-testid="headerCont"
       >
-        <nav
-          class="_navbarCont_63c2ea _sticky_63c2ea"
-          data-testid="stickyNavbar"
+        <div
+          class="
+					_headerWrapper_63c2ea
+					_layoutWrapper_aadc39
+					_sticky_63c2ea
+					 
+				"
         >
           <a
-            class="_githubLink_63c2ea _sticky_63c2ea"
+            class="
+						_githubLink_63c2ea
+						_sticky_63c2ea
+					"
             href="https://github.com/Dimitrije108/shopping-cart"
           >
             <img
               alt="github icon"
-              src="/src/assets/github-mark-white.svg"
+              src="/src/assets/icons/github-mark-white.svg"
               title="GitHub"
-              width="28"
             />
           </a>
+          <h1
+            class="_logoHeading_63c2ea"
+            data-testid="headingLogo"
+          >
+            <a
+              class="_logoLink_63c2ea"
+              data-discover="true"
+              href="/"
+            >
+              <img
+                alt="star wars logo"
+                src="/src/assets/icons/sw-logo.png"
+              />
+            </a>
+            <a
+              class="_shipyardLink_63c2ea"
+              data-discover="true"
+              href="/"
+              title="Shipyard"
+            >
+              <div
+                class="_shipyardLogo_63c2ea"
+              >
+                Shipyard
+              </div>
+            </a>
+          </h1>
+          <a
+            class="
+						_cartIconLink_63c2ea
+						_sticky_63c2ea
+					"
+            data-discover="true"
+            data-testid="cartLink"
+            href="/shopping-cart"
+          >
+            <img
+              src="https://icons.iconarchive.com/icons/jonathan-rey/star-wars-vehicles/128/Death-Star-2nd-icon.png"
+              title="Shopping Cart"
+            />
+            <div
+              class="_cartQuantity_63c2ea"
+            >
+              <div
+                class="_quantityWrapper_63c2ea"
+              >
+                2
+              </div>
+            </div>
+          </a>
+          <nav
+            class="_navbarCont_ec1191"
+            data-testid="stickyNavbar"
+          >
+            <ul
+              class="
+					_navbar_ec1191 
+					_sticky_ec1191
+				"
+            >
+              <li
+                class="
+						_homeNav_ec1191 
+						_active_ec1191 
+					"
+                data-testid="home"
+              >
+                <a
+                  data-discover="true"
+                  href="/"
+                >
+                  Home
+                </a>
+              </li>
+              <li
+                class="
+						_starshipsNav_ec1191 
+						 
+					"
+                data-testid="starships"
+              >
+                <a
+                  data-discover="true"
+                  href="/starships"
+                >
+                  Starships
+                </a>
+                <ul
+                  class="
+							_dropdown_ec1191 
+							
+							_sticky_ec1191 
+							
+						"
+                  data-testid="starshipsDropdown"
+                >
+                  <li>
+                    <a
+                      data-discover="true"
+                      href="/starships/capital"
+                    >
+                      Capital
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      data-discover="true"
+                      href="/starships/transport"
+                    >
+                      Transport
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      data-discover="true"
+                      href="/starships/starfighter"
+                    >
+                      Starfighter
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li
+                class="
+						_contactNav_ec1191 
+						 
+					"
+                data-testid="contact"
+              >
+                <a
+                  data-discover="true"
+                  href="/contact"
+                >
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="
+				_headerCont_63c2ea
+				_sticky_63c2ea 
+				
+				
+			"
+      data-testid="headerCont"
+    >
+      <div
+        class="
+					_headerWrapper_63c2ea
+					_layoutWrapper_aadc39
+					_sticky_63c2ea
+					 
+				"
+      >
+        <a
+          class="
+						_githubLink_63c2ea
+						_sticky_63c2ea
+					"
+          href="https://github.com/Dimitrije108/shopping-cart"
+        >
+          <img
+            alt="github icon"
+            src="/src/assets/icons/github-mark-white.svg"
+            title="GitHub"
+          />
+        </a>
+        <h1
+          class="_logoHeading_63c2ea"
+          data-testid="headingLogo"
+        >
+          <a
+            class="_logoLink_63c2ea"
+            data-discover="true"
+            href="/"
+          >
+            <img
+              alt="star wars logo"
+              src="/src/assets/icons/sw-logo.png"
+            />
+          </a>
+          <a
+            class="_shipyardLink_63c2ea"
+            data-discover="true"
+            href="/"
+            title="Shipyard"
+          >
+            <div
+              class="_shipyardLogo_63c2ea"
+            >
+              Shipyard
+            </div>
+          </a>
+        </h1>
+        <a
+          class="
+						_cartIconLink_63c2ea
+						_sticky_63c2ea
+					"
+          data-discover="true"
+          data-testid="cartLink"
+          href="/shopping-cart"
+        >
+          <img
+            src="https://icons.iconarchive.com/icons/jonathan-rey/star-wars-vehicles/128/Death-Star-2nd-icon.png"
+            title="Shopping Cart"
+          />
+          <div
+            class="_cartQuantity_63c2ea"
+          >
+            <div
+              class="_quantityWrapper_63c2ea"
+            >
+              2
+            </div>
+          </div>
+        </a>
+        <nav
+          class="_navbarCont_ec1191"
+          data-testid="stickyNavbar"
+        >
           <ul
-            class="_navbar_63c2ea"
+            class="
+					_navbar_ec1191 
+					_sticky_ec1191
+				"
           >
             <li
               class="
-							_homeNav_63c2ea 
-							_active_63c2ea 
-						"
+						_homeNav_ec1191 
+						_active_ec1191 
+					"
               data-testid="home"
             >
               <a
@@ -419,9 +687,9 @@ exports[`Header component > Sticky header snapshot 1`] = `
             </li>
             <li
               class="
-							_starshipsNav_63c2ea 
-							 
-						"
+						_starshipsNav_ec1191 
+						 
+					"
               data-testid="starships"
             >
               <a
@@ -432,10 +700,11 @@ exports[`Header component > Sticky header snapshot 1`] = `
               </a>
               <ul
                 class="
-								_dropdown_63c2ea 
-								_sticky_63c2ea 
-								
-								"
+							_dropdown_ec1191 
+							
+							_sticky_ec1191 
+							
+						"
                 data-testid="starshipsDropdown"
               >
                 <li>
@@ -466,9 +735,9 @@ exports[`Header component > Sticky header snapshot 1`] = `
             </li>
             <li
               class="
-							_contactNav_63c2ea 
-							 
-						"
+						_contactNav_ec1191 
+						 
+					"
               data-testid="contact"
             >
               <a
@@ -479,151 +748,8 @@ exports[`Header component > Sticky header snapshot 1`] = `
               </a>
             </li>
           </ul>
-          <a
-            class="_cartIconLink_63c2ea _sticky_63c2ea"
-            data-discover="true"
-            data-testid="cartLink"
-            href="/shopping-cart"
-          >
-            <img
-              src="https://icons.iconarchive.com/icons/jonathan-rey/star-wars-vehicles/128/Death-Star-2nd-icon.png"
-              title="Shopping Cart"
-              width="35"
-            />
-            <div
-              class="_cartQuantity_63c2ea"
-            >
-              <div
-                class="_quantityWrapper_63c2ea"
-              >
-                2
-              </div>
-            </div>
-          </a>
         </nav>
       </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      class="_stickyHeaderCont_63c2ea"
-    >
-      <nav
-        class="_navbarCont_63c2ea _sticky_63c2ea"
-        data-testid="stickyNavbar"
-      >
-        <a
-          class="_githubLink_63c2ea _sticky_63c2ea"
-          href="https://github.com/Dimitrije108/shopping-cart"
-        >
-          <img
-            alt="github icon"
-            src="/src/assets/github-mark-white.svg"
-            title="GitHub"
-            width="28"
-          />
-        </a>
-        <ul
-          class="_navbar_63c2ea"
-        >
-          <li
-            class="
-							_homeNav_63c2ea 
-							_active_63c2ea 
-						"
-            data-testid="home"
-          >
-            <a
-              data-discover="true"
-              href="/"
-            >
-              Home
-            </a>
-          </li>
-          <li
-            class="
-							_starshipsNav_63c2ea 
-							 
-						"
-            data-testid="starships"
-          >
-            <a
-              data-discover="true"
-              href="/starships"
-            >
-              Starships
-            </a>
-            <ul
-              class="
-								_dropdown_63c2ea 
-								_sticky_63c2ea 
-								
-								"
-              data-testid="starshipsDropdown"
-            >
-              <li>
-                <a
-                  data-discover="true"
-                  href="/starships/capital"
-                >
-                  Capital
-                </a>
-              </li>
-              <li>
-                <a
-                  data-discover="true"
-                  href="/starships/transport"
-                >
-                  Transport
-                </a>
-              </li>
-              <li>
-                <a
-                  data-discover="true"
-                  href="/starships/starfighter"
-                >
-                  Starfighter
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li
-            class="
-							_contactNav_63c2ea 
-							 
-						"
-            data-testid="contact"
-          >
-            <a
-              data-discover="true"
-              href="/contact"
-            >
-              Contact
-            </a>
-          </li>
-        </ul>
-        <a
-          class="_cartIconLink_63c2ea _sticky_63c2ea"
-          data-discover="true"
-          data-testid="cartLink"
-          href="/shopping-cart"
-        >
-          <img
-            src="https://icons.iconarchive.com/icons/jonathan-rey/star-wars-vehicles/128/Death-Star-2nd-icon.png"
-            title="Shopping Cart"
-            width="35"
-          />
-          <div
-            class="_cartQuantity_63c2ea"
-          >
-            <div
-              class="_quantityWrapper_63c2ea"
-            >
-              2
-            </div>
-          </div>
-        </a>
-      </nav>
     </div>
   </div>,
   "debug": [Function],

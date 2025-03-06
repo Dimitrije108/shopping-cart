@@ -6,6 +6,7 @@ exports[`Ship Card component > ship card component snapshot 1`] = `
   "baseElement": <body>
     <div>
       <a
+        class="_linkWrapper_4857ee"
         data-discover="true"
         href="/starships/starfighter/1234567890"
       >
@@ -19,27 +20,31 @@ exports[`Ship Card component > ship card component snapshot 1`] = `
             <img
               class="_arrow_4857ee"
               height="15"
-              src="/src/assets/right-arrow.svg"
+              src="/src/assets/icons/right-arrow.svg"
               width="15"
             />
             <img
               class="_arrow_4857ee"
               height="15"
-              src="/src/assets/right-arrow.svg"
+              src="/src/assets/icons/right-arrow.svg"
               width="15"
             />
             <img
               class="_arrow_4857ee"
               height="15"
-              src="/src/assets/right-arrow.svg"
+              src="/src/assets/icons/right-arrow.svg"
               width="15"
             />
           </div>
           <div
             class="_imgCont_4857ee"
             data-testid="imgCont"
-            style="background-image: url(https://lumiere-a.akamaihd.net/v1/images/millennium-falcon-main-tlj-a_7cf89d3a.jpeg);"
-          />
+          >
+            <img
+              alt="starship"
+              src="https://lumiere-a.akamaihd.net/v1/images/millennium-falcon-main-tlj-a_7cf89d3a.jpeg"
+            />
+          </div>
           <div
             class="_infoCont_4857ee"
           >
@@ -54,33 +59,35 @@ exports[`Ship Card component > ship card component snapshot 1`] = `
               <div>
                 <p
                   class="_imperial_4857ee"
+                  title="Imperial"
                 >
                   Millennium Falcon
                 </p>
                 <p
                   class="_naboo_4857ee"
+                  title="Naboo"
                 >
                   Millennium Falcon
                 </p>
               </div>
             </div>
             <div
-              class="_buyCont_4857ee"
+              class="_priceCont_4857ee"
             >
-              <div
-                class="_priceCont_4857ee"
-              >
-                <div>
-                  100,000
-                </div>
-                <p>
-                  credits
-                </p>
+              <div>
+                100,000
               </div>
+              <p>
+                credits
+              </p>
+            </div>
+            <div
+              class="_addToCartCont_4857ee"
+            >
               <button
                 class="_addBtn_4857ee"
               >
-                ADD
+                Add
               </button>
             </div>
           </div>
@@ -90,6 +97,7 @@ exports[`Ship Card component > ship card component snapshot 1`] = `
   </body>,
   "container": <div>
     <a
+      class="_linkWrapper_4857ee"
       data-discover="true"
       href="/starships/starfighter/1234567890"
     >
@@ -103,27 +111,31 @@ exports[`Ship Card component > ship card component snapshot 1`] = `
           <img
             class="_arrow_4857ee"
             height="15"
-            src="/src/assets/right-arrow.svg"
+            src="/src/assets/icons/right-arrow.svg"
             width="15"
           />
           <img
             class="_arrow_4857ee"
             height="15"
-            src="/src/assets/right-arrow.svg"
+            src="/src/assets/icons/right-arrow.svg"
             width="15"
           />
           <img
             class="_arrow_4857ee"
             height="15"
-            src="/src/assets/right-arrow.svg"
+            src="/src/assets/icons/right-arrow.svg"
             width="15"
           />
         </div>
         <div
           class="_imgCont_4857ee"
           data-testid="imgCont"
-          style="background-image: url(https://lumiere-a.akamaihd.net/v1/images/millennium-falcon-main-tlj-a_7cf89d3a.jpeg);"
-        />
+        >
+          <img
+            alt="starship"
+            src="https://lumiere-a.akamaihd.net/v1/images/millennium-falcon-main-tlj-a_7cf89d3a.jpeg"
+          />
+        </div>
         <div
           class="_infoCont_4857ee"
         >
@@ -138,33 +150,35 @@ exports[`Ship Card component > ship card component snapshot 1`] = `
             <div>
               <p
                 class="_imperial_4857ee"
+                title="Imperial"
               >
                 Millennium Falcon
               </p>
               <p
                 class="_naboo_4857ee"
+                title="Naboo"
               >
                 Millennium Falcon
               </p>
             </div>
           </div>
           <div
-            class="_buyCont_4857ee"
+            class="_priceCont_4857ee"
           >
-            <div
-              class="_priceCont_4857ee"
-            >
-              <div>
-                100,000
-              </div>
-              <p>
-                credits
-              </p>
+            <div>
+              100,000
             </div>
+            <p>
+              credits
+            </p>
+          </div>
+          <div
+            class="_addToCartCont_4857ee"
+          >
             <button
               class="_addBtn_4857ee"
             >
-              ADD
+              Add
             </button>
           </div>
         </div>

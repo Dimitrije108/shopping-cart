@@ -6,20 +6,20 @@ exports[`Ship Details component > Snapshot test > ship details component snapsho
   "baseElement": <body>
     <div>
       <div
-        class="_shipDetailsCont_28124d"
+        class="_shipDetailsWrapper_28124d"
         data-testid="shipDetails"
       >
         <div
-          class="_imgCont_28124d"
+          class="_shipDetailsCont_28124d"
         >
-          <img
-            alt="Imperial Star Destroyer starship"
-            src="star-destroyer.jpg"
-          />
-        </div>
-        <div
-          class="_addCol_28124d"
-        >
+          <div
+            class="_imgCont_28124d"
+          >
+            <img
+              alt="Imperial Star Destroyer starship"
+              src="star-destroyer.jpg"
+            />
+          </div>
           <div
             class="_addWrapper_28124d"
           >
@@ -54,30 +54,246 @@ exports[`Ship Details component > Snapshot test > ship details component snapsho
               </button>
             </div>
             <div
-              class="_cont_3c2471"
+              class="_addCont_28124d"
             >
-              <button
-                class="_leftBtn_3c2471"
+              <div
+                class="_itemQuantityCont_28124d"
               >
-                -
-              </button>
-              <input
-                class="_quantityInput_3c2471"
-                max="20"
-                min="1"
-                type="number"
-                value="1"
-              />
+                <div
+                  class="_cont_3c2471"
+                >
+                  <button
+                    class="_leftBtn_3c2471"
+                  >
+                    -
+                  </button>
+                  <input
+                    class="_quantityInput_3c2471"
+                    max="20"
+                    min="1"
+                    type="number"
+                    value="1"
+                  />
+                  <button
+                    class="_rightBtn_3c2471"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
               <button
-                class="_rightBtn_3c2471"
+                class="_addBtn_28124d"
               >
-                +
+                Add
               </button>
+            </div>
+          </div>
+          <div
+            class="_descriptionCont_28124d"
+          >
+            <h1>
+              Imperial Star Destroyer
+            </h1>
+            <p>
+              Imperial capital ship description
+            </p>
+          </div>
+          <section
+            class="_tableSection_28124d"
+          >
+            <h2>
+              Specification
+            </h2>
+            <div
+              class="_tableCont_28124d"
+            >
+              <table
+                class="_infoTable_28124d"
+              >
+                <tbody>
+                  <tr>
+                    <th>
+                      Model
+                    </th>
+                    <td>
+                      	Imperial I-class Star Destroyer
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      Starship class
+                    </th>
+                    <td>
+                      Star Destroyer
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      Manufacturer
+                    </th>
+                    <td>
+                      Kuat Drive Yards
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      Length
+                    </th>
+                    <td>
+                      1,600
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      Crew
+                    </th>
+                    <td>
+                      47,060
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table
+                class="_infoTable_28124d"
+              >
+                <tbody>
+                  <tr>
+                    <th>
+                      Passengers
+                    </th>
+                    <td>
+                      N/A
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      Max athmospheric speed
+                    </th>
+                    <td>
+                      975
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      Hyperdrive rating
+                    </th>
+                    <td>
+                      	2.0
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      MGLT
+                    </th>
+                    <td>
+                      60
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      Cargo capacity
+                    </th>
+                    <td>
+                      36000000
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      Consumables
+                    </th>
+                    <td>
+                      2 years
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="_shipDetailsWrapper_28124d"
+      data-testid="shipDetails"
+    >
+      <div
+        class="_shipDetailsCont_28124d"
+      >
+        <div
+          class="_imgCont_28124d"
+        >
+          <img
+            alt="Imperial Star Destroyer starship"
+            src="star-destroyer.jpg"
+          />
+        </div>
+        <div
+          class="_addWrapper_28124d"
+        >
+          <div
+            class="_priceCont_28124d"
+          >
+            <div>
+              150,000,000
+            </div>
+            <p>
+              credits
+            </p>
+          </div>
+          <div
+            class="_financeCont_28124d"
+          >
+            <div
+              class="_financeOffer_28124d"
+            >
+              <p>
+                Finance Offer
+              </p>
+              <p
+                class="_offerPrice_28124d"
+                data-testid="financeOffer"
+              >
+                6,250,000/month
+              </p>
+            </div>
+            <button>
+              Get Pre-Qualified
+            </button>
+          </div>
+          <div
+            class="_addCont_28124d"
+          >
+            <div
+              class="_itemQuantityCont_28124d"
+            >
+              <div
+                class="_cont_3c2471"
+              >
+                <button
+                  class="_leftBtn_3c2471"
+                >
+                  -
+                </button>
+                <input
+                  class="_quantityInput_3c2471"
+                  max="20"
+                  min="1"
+                  type="number"
+                  value="1"
+                />
+                <button
+                  class="_rightBtn_3c2471"
+                >
+                  +
+                </button>
+              </div>
             </div>
             <button
               class="_addBtn_28124d"
             >
-              ADD
+              Add
             </button>
           </div>
         </div>
@@ -203,206 +419,6 @@ exports[`Ship Details component > Snapshot test > ship details component snapsho
           </div>
         </section>
       </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      class="_shipDetailsCont_28124d"
-      data-testid="shipDetails"
-    >
-      <div
-        class="_imgCont_28124d"
-      >
-        <img
-          alt="Imperial Star Destroyer starship"
-          src="star-destroyer.jpg"
-        />
-      </div>
-      <div
-        class="_addCol_28124d"
-      >
-        <div
-          class="_addWrapper_28124d"
-        >
-          <div
-            class="_priceCont_28124d"
-          >
-            <div>
-              150,000,000
-            </div>
-            <p>
-              credits
-            </p>
-          </div>
-          <div
-            class="_financeCont_28124d"
-          >
-            <div
-              class="_financeOffer_28124d"
-            >
-              <p>
-                Finance Offer
-              </p>
-              <p
-                class="_offerPrice_28124d"
-                data-testid="financeOffer"
-              >
-                6,250,000/month
-              </p>
-            </div>
-            <button>
-              Get Pre-Qualified
-            </button>
-          </div>
-          <div
-            class="_cont_3c2471"
-          >
-            <button
-              class="_leftBtn_3c2471"
-            >
-              -
-            </button>
-            <input
-              class="_quantityInput_3c2471"
-              max="20"
-              min="1"
-              type="number"
-              value="1"
-            />
-            <button
-              class="_rightBtn_3c2471"
-            >
-              +
-            </button>
-          </div>
-          <button
-            class="_addBtn_28124d"
-          >
-            ADD
-          </button>
-        </div>
-      </div>
-      <div
-        class="_descriptionCont_28124d"
-      >
-        <h1>
-          Imperial Star Destroyer
-        </h1>
-        <p>
-          Imperial capital ship description
-        </p>
-      </div>
-      <section
-        class="_tableSection_28124d"
-      >
-        <h2>
-          Specification
-        </h2>
-        <div
-          class="_tableCont_28124d"
-        >
-          <table
-            class="_infoTable_28124d"
-          >
-            <tbody>
-              <tr>
-                <th>
-                  Model
-                </th>
-                <td>
-                  	Imperial I-class Star Destroyer
-                </td>
-              </tr>
-              <tr>
-                <th>
-                  Starship class
-                </th>
-                <td>
-                  Star Destroyer
-                </td>
-              </tr>
-              <tr>
-                <th>
-                  Manufacturer
-                </th>
-                <td>
-                  Kuat Drive Yards
-                </td>
-              </tr>
-              <tr>
-                <th>
-                  Length
-                </th>
-                <td>
-                  1,600
-                </td>
-              </tr>
-              <tr>
-                <th>
-                  Crew
-                </th>
-                <td>
-                  47,060
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <table
-            class="_infoTable_28124d"
-          >
-            <tbody>
-              <tr>
-                <th>
-                  Passengers
-                </th>
-                <td>
-                  N/A
-                </td>
-              </tr>
-              <tr>
-                <th>
-                  Max athmospheric speed
-                </th>
-                <td>
-                  975
-                </td>
-              </tr>
-              <tr>
-                <th>
-                  Hyperdrive rating
-                </th>
-                <td>
-                  	2.0
-                </td>
-              </tr>
-              <tr>
-                <th>
-                  MGLT
-                </th>
-                <td>
-                  60
-                </td>
-              </tr>
-              <tr>
-                <th>
-                  Cargo capacity
-                </th>
-                <td>
-                  36000000
-                </td>
-              </tr>
-              <tr>
-                <th>
-                  Consumables
-                </th>
-                <td>
-                  2 years
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
     </div>
   </div>,
   "debug": [Function],

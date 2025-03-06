@@ -27,14 +27,14 @@ describe("Homepage's Carousel Section component", () => {
 			const firstSlideHeading = screen.getByRole("heading", { name: "Only a Sith Deals in Full Retail. Shop Our Discounts!" });
 			const firstSlideBtn = screen.getByRole("button", { name: "Best Capital Ships in the Galaxy - Shop Now!" });
 
-			const buttonLinks = screen.getAllByTestId("storeLink");
+			const buttonLinks = screen.getAllByTestId("starshipsLink");
 			const paragraphs = screen.getAllByTitle("Imperial");
 			
-			expect(firstSlideImg).toHaveAttribute("src", "/src/assets/star-destroyer.jpg");
+			expect(firstSlideImg).toHaveAttribute("src", "/src/assets/images/carousel/star-destroyer.jpg");
 			expect(firstSlideHeading).toBeInTheDocument();
 			expect(firstSlideBtn).toBeInTheDocument();
 
-			expect(buttonLinks[0]).toHaveAttribute("href", "/starships/capital");
+			expect(buttonLinks[0]).toHaveAttribute("href", "/starships/capital#capitalSection");
 			expect(paragraphs[0]).toHaveTextContent("Only a Sith Deals in Full Retail. Shop Our Discounts!");
 		});
 
@@ -65,8 +65,8 @@ describe("Homepage's Carousel Section component", () => {
 
 			expect(leftBtn).toBeInTheDocument();
 			expect(rightBtn).toBeInTheDocument();
-			expect(leftIcon).toHaveAttribute("src", "/src/assets/carousel-left-arrow.svg");
-			expect(rightIcon).toHaveAttribute("src", "/src/assets/carousel-right-arrow.svg");
+			expect(leftIcon).toHaveAttribute("src", "/src/assets/icons/carousel-left-arrow.svg");
+			expect(rightIcon).toHaveAttribute("src", "/src/assets/icons/carousel-right-arrow.svg");
 		});
 	});
 

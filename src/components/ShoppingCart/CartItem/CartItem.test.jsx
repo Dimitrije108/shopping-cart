@@ -76,7 +76,7 @@ describe("Cart Item component", () => {
 		expect(itemLink2).toBeInTheDocument();
 		expect(quantityInput).toBeInTheDocument();
 		expect(removeBtn).toBeInTheDocument();
-		expect(removeBtnIcon).toHaveAttribute("src", "/src/assets/trash.svg");
+		expect(removeBtnIcon).toHaveAttribute("src", "/src/assets/icons/trash.svg");
 	});
 
 	it("render 'Price on Request' when price is unavailable", () => {
@@ -164,4 +164,4 @@ describe("Cart Item component", () => {
 		expect(mockRemoveFromCart).toHaveBeenCalledOnce();
 		expect(mockRemoveFromCart).toHaveBeenCalledWith(mockCartItem2.id);
 	});
-})
+});

@@ -65,7 +65,7 @@ exports[`Cart Summary component > cart summary snapshot test 1`] = `
                 <img
                   alt="free shipping tooltip"
                   height="17"
-                  src="/src/assets/info-circle.svg"
+                  src="/src/assets/icons/info-circle.svg"
                   width="17"
                 />
               </button>
@@ -190,7 +190,7 @@ exports[`Cart Summary component > cart summary snapshot test 1`] = `
               <img
                 alt="free shipping tooltip"
                 height="17"
-                src="/src/assets/info-circle.svg"
+                src="/src/assets/icons/info-circle.svg"
                 width="17"
               />
             </button>

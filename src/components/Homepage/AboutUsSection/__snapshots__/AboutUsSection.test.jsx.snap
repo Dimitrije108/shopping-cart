@@ -7,6 +7,7 @@ exports[`Homepage's About Us Section component > About Us Section snapshot 1`] =
     <div>
       <section
         class="_aboutUsSection_bf1662"
+        id="aboutUsSection"
       >
         <div
           class="_aboutUsWrapper_bf1662"
@@ -74,7 +75,7 @@ exports[`Homepage's About Us Section component > About Us Section snapshot 1`] =
             <img
               alt="Corellia Engineering Corporation logo"
               class="_cecLogo_bf1662"
-              src="/src/assets/Corellian_Engineering_Corporation.svg"
+              src="/src/assets/icons/Corellian_Engineering_Corporation.svg"
               title="Corellia Engineering Corporation"
               width="120"
             />
@@ -86,6 +87,7 @@ exports[`Homepage's About Us Section component > About Us Section snapshot 1`] =
   "container": <div>
     <section
       class="_aboutUsSection_bf1662"
+      id="aboutUsSection"
     >
       <div
         class="_aboutUsWrapper_bf1662"
@@ -153,7 +155,7 @@ exports[`Homepage's About Us Section component > About Us Section snapshot 1`] =
           <img
             alt="Corellia Engineering Corporation logo"
             class="_cecLogo_bf1662"
-            src="/src/assets/Corellian_Engineering_Corporation.svg"
+            src="/src/assets/icons/Corellian_Engineering_Corporation.svg"
             title="Corellia Engineering Corporation"
             width="120"
           />

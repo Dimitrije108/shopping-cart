@@ -81,7 +81,10 @@ export default function ShipDetails({ basic, details }) {
 	};
 
   return (
-		<div className={styles.shipDetailsWrapper}>
+		<div 
+			className={styles.shipDetailsWrapper}
+			data-testid="shipDetails"
+		>
 			<div className={styles.shipDetailsCont}>
 				<div className={styles.imgCont}>
 					<img src={basic.image} alt={`${basic.name} starship`} />

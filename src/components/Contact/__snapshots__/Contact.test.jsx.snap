@@ -8,42 +8,50 @@ exports[`Contact component > Contact component snapshot 1`] = `
       <div
         class="
 					_layoutWrapper_aadc39 
-					_footerMargin_aadc39 
 					_wrapper_3e421e
 				"
       >
-        <h1
-          class="_findUsHeading_3e421e"
-        >
-          Find Us
-        </h1>
         <div
-          class="_locationCont_3e421e"
+          class="_locationWrapper_3e421e"
         >
-          <img
-            alt="Galaxy map"
-            class="_galaxyMap_3e421e"
-            src="/src/assets/galaxy_map.jpg"
-            title="Galaxy map"
-            width="500"
-          />
+          <h1
+            class="_findUsHeading_3e421e"
+          >
+            Find Us
+          </h1>
+          <div
+            class="_galaxyMapCont_3e421e"
+          >
+            <img
+              alt="Galaxy map"
+              class="_galaxyMap_3e421e"
+              src="/src/assets/images/galaxy_map.jpg"
+              title="Galaxy map"
+            />
+          </div>
           <div
             class="_planetAndLogoCont_3e421e"
           >
-            <img
-              alt="Corellia planet"
-              class="_planetMap_3e421e"
-              src="/src/assets/corellia_planet.webp"
-              title="Corellia planet"
-              width="250"
-            />
-            <img
-              alt="Corellia Engineering Corporation logo"
-              class="_cecLogo_3e421e"
-              src="/src/assets/Corellian_Engineering_Corporation.svg"
-              title="Corellia Engineering Corporation"
-              width="250"
-            />
+            <div
+              class="_planetMapCont_3e421e"
+            >
+              <img
+                alt="Corellia planet"
+                class="_planetMap_3e421e"
+                src="/src/assets/images/corellia_planet.webp"
+                title="Corellia planet"
+              />
+            </div>
+            <div
+              class="_cecLogoCont_3e421e"
+            >
+              <img
+                alt="Corellia Engineering Corporation logo"
+                class="_cecLogo_3e421e"
+                src="/src/assets/icons/Corellian_Engineering_Corporation.svg"
+                title="Corellia Engineering Corporation"
+              />
+            </div>
           </div>
           <div
             class="_contactCont_3e421e"
@@ -56,9 +64,8 @@ exports[`Contact component > Contact component snapshot 1`] = `
               >
                 <img
                   alt="location icon"
-                  src="/src/assets/location.svg"
+                  src="/src/assets/icons/location.svg"
                   title="Location"
-                  width="30"
                 />
               </div>
               <div
@@ -85,9 +92,8 @@ exports[`Contact component > Contact component snapshot 1`] = `
               >
                 <img
                   alt="email icon"
-                  src="/src/assets/email.svg"
+                  src="/src/assets/icons/email.svg"
                   title="Email"
-                  width="30"
                 />
               </div>
               <p>
@@ -102,9 +108,8 @@ exports[`Contact component > Contact component snapshot 1`] = `
               >
                 <img
                   alt="webpage icon"
-                  src="/src/assets/website.svg"
+                  src="/src/assets/icons/website.svg"
                   title="Webpage"
-                  width="30"
                 />
               </div>
               <a
@@ -401,9 +406,9 @@ exports[`Contact component > Contact component snapshot 1`] = `
               >
                 <img
                   alt="Corellian Federation icon"
-                  src="/src/assets/Corellian_Federation_logo.webp"
+                  class="_partnerLogo_3e421e"
+                  src="/src/assets/icons/Corellian_Federation_logo.webp"
                   title="Corellian Federation"
-                  width="100"
                 />
               </a>
               <a
@@ -412,9 +417,9 @@ exports[`Contact component > Contact component snapshot 1`] = `
               >
                 <img
                   alt="Kuat Drive Yards icon"
-                  src="/src/assets/Kuat-Drive-Yards.svg"
+                  class="_partnerLogo_3e421e"
+                  src="/src/assets/icons/Kuat-Drive-Yards.svg"
                   title="Kuat Drive Yards"
-                  width="100"
                 />
               </a>
               <a
@@ -423,9 +428,9 @@ exports[`Contact component > Contact component snapshot 1`] = `
               >
                 <img
                   alt="Fondor Shipyards icon"
-                  src="/src/assets/Fondor-Shipyards.jpg"
+                  class="_partnerLogo_3e421e"
+                  src="/src/assets/icons/Fondor-Shipyards.jpg"
                   title="Fondor Shipyards"
-                  width="100"
                 />
               </a>
             </div>
@@ -438,42 +443,50 @@ exports[`Contact component > Contact component snapshot 1`] = `
     <div
       class="
 					_layoutWrapper_aadc39 
-					_footerMargin_aadc39 
 					_wrapper_3e421e
 				"
     >
-      <h1
-        class="_findUsHeading_3e421e"
-      >
-        Find Us
-      </h1>
       <div
-        class="_locationCont_3e421e"
+        class="_locationWrapper_3e421e"
       >
-        <img
-          alt="Galaxy map"
-          class="_galaxyMap_3e421e"
-          src="/src/assets/galaxy_map.jpg"
-          title="Galaxy map"
-          width="500"
-        />
+        <h1
+          class="_findUsHeading_3e421e"
+        >
+          Find Us
+        </h1>
+        <div
+          class="_galaxyMapCont_3e421e"
+        >
+          <img
+            alt="Galaxy map"
+            class="_galaxyMap_3e421e"
+            src="/src/assets/images/galaxy_map.jpg"
+            title="Galaxy map"
+          />
+        </div>
         <div
           class="_planetAndLogoCont_3e421e"
         >
-          <img
-            alt="Corellia planet"
-            class="_planetMap_3e421e"
-            src="/src/assets/corellia_planet.webp"
-            title="Corellia planet"
-            width="250"
-          />
-          <img
-            alt="Corellia Engineering Corporation logo"
-            class="_cecLogo_3e421e"
-            src="/src/assets/Corellian_Engineering_Corporation.svg"
-            title="Corellia Engineering Corporation"
-            width="250"
-          />
+          <div
+            class="_planetMapCont_3e421e"
+          >
+            <img
+              alt="Corellia planet"
+              class="_planetMap_3e421e"
+              src="/src/assets/images/corellia_planet.webp"
+              title="Corellia planet"
+            />
+          </div>
+          <div
+            class="_cecLogoCont_3e421e"
+          >
+            <img
+              alt="Corellia Engineering Corporation logo"
+              class="_cecLogo_3e421e"
+              src="/src/assets/icons/Corellian_Engineering_Corporation.svg"
+              title="Corellia Engineering Corporation"
+            />
+          </div>
         </div>
         <div
           class="_contactCont_3e421e"
@@ -486,9 +499,8 @@ exports[`Contact component > Contact component snapshot 1`] = `
             >
               <img
                 alt="location icon"
-                src="/src/assets/location.svg"
+                src="/src/assets/icons/location.svg"
                 title="Location"
-                width="30"
               />
             </div>
             <div
@@ -515,9 +527,8 @@ exports[`Contact component > Contact component snapshot 1`] = `
             >
               <img
                 alt="email icon"
-                src="/src/assets/email.svg"
+                src="/src/assets/icons/email.svg"
                 title="Email"
-                width="30"
               />
             </div>
             <p>
@@ -532,9 +543,8 @@ exports[`Contact component > Contact component snapshot 1`] = `
             >
               <img
                 alt="webpage icon"
-                src="/src/assets/website.svg"
+                src="/src/assets/icons/website.svg"
                 title="Webpage"
-                width="30"
               />
             </div>
             <a
@@ -831,9 +841,9 @@ exports[`Contact component > Contact component snapshot 1`] = `
             >
               <img
                 alt="Corellian Federation icon"
-                src="/src/assets/Corellian_Federation_logo.webp"
+                class="_partnerLogo_3e421e"
+                src="/src/assets/icons/Corellian_Federation_logo.webp"
                 title="Corellian Federation"
-                width="100"
               />
             </a>
             <a
@@ -842,9 +852,9 @@ exports[`Contact component > Contact component snapshot 1`] = `
             >
               <img
                 alt="Kuat Drive Yards icon"
-                src="/src/assets/Kuat-Drive-Yards.svg"
+                class="_partnerLogo_3e421e"
+                src="/src/assets/icons/Kuat-Drive-Yards.svg"
                 title="Kuat Drive Yards"
-                width="100"
               />
             </a>
             <a
@@ -853,9 +863,9 @@ exports[`Contact component > Contact component snapshot 1`] = `
             >
               <img
                 alt="Fondor Shipyards icon"
-                src="/src/assets/Fondor-Shipyards.jpg"
+                class="_partnerLogo_3e421e"
+                src="/src/assets/icons/Fondor-Shipyards.jpg"
                 title="Fondor Shipyards"
-                width="100"
               />
             </a>
           </div>

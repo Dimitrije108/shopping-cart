@@ -28,10 +28,10 @@ describe("Footer component", () => {
 			const email = screen.getByText("sw_shipyard@corellia.cec");
 
 			expect(locationIcon).toBeInTheDocument();
-			expect(locationIcon).toHaveAttribute("src", "/src/assets/location.svg");
+			expect(locationIcon).toHaveAttribute("src", "/src/assets/icons/location.svg");
 			expect(locationText).toBeInTheDocument();
 			expect(emailIcon).toBeInTheDocument();
-			expect(emailIcon).toHaveAttribute("src", "/src/assets/email.svg");
+			expect(emailIcon).toHaveAttribute("src", "/src/assets/icons/email.svg");
 			expect(email).toBeInTheDocument();
 		});
 
@@ -70,13 +70,13 @@ describe("Footer component", () => {
 			const fondorLogo = screen.getByTitle("Fondor Shipyards");
 
 			expect(cecLink).toHaveAttribute("href", "https://starwars.fandom.com/wiki/Corellian_Engineering_Corporation");
-			expect(cecLogo).toHaveAttribute("src", "/src/assets/Corellian_Engineering_Corporation.svg");
+			expect(cecLogo).toHaveAttribute("src", "/src/assets/icons/Corellian_Engineering_Corporation.svg");
 			expect(cfLink).toHaveAttribute("href", "https://starwars.fandom.com/wiki/Confederation");
-			expect(cfLogo).toHaveAttribute("src", "/src/assets/Corellian_Federation_logo.webp");
+			expect(cfLogo).toHaveAttribute("src", "/src/assets/icons/Corellian_Federation_logo.webp");
 			expect(kdyLink).toHaveAttribute("href", "https://starwars.fandom.com/wiki/Kuat_Drive_Yards");
-			expect(kdyLogo).toHaveAttribute("src", "/src/assets/Kuat-Drive-Yards.svg");
+			expect(kdyLogo).toHaveAttribute("src", "/src/assets/icons/Kuat-Drive-Yards.svg");
 			expect(fondorLink).toHaveAttribute("href", "https://starwars.fandom.com/wiki/Fondor_Shipyards");
-			expect(fondorLogo).toHaveAttribute("src", "/src/assets/Fondor-Shipyards.jpg");
+			expect(fondorLogo).toHaveAttribute("src", "/src/assets/icons/Fondor-Shipyards.jpg");
 		});
 
 		it("Copyright section renders correctly", () => {
@@ -94,7 +94,7 @@ describe("Footer component", () => {
 			expect(copyrightText).toBeInTheDocument();
 			expect(disclaimerText).toBeInTheDocument();
 			expect(githubLink).toHaveAttribute("href", "https://github.com/Dimitrije108/shopping-cart");
-			expect(githubIcon).toHaveAttribute("src", "/src/assets/github-mark-white.svg");
+			expect(githubIcon).toHaveAttribute("src", "/src/assets/icons/github-mark-white.svg");
 		});
 	});
 });

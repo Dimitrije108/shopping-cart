@@ -36,14 +36,14 @@ describe("Contact component", () => {
 			const webpage = screen.getByText("Corellian Engineering Corporation");
 
 			expect(heading).toBeInTheDocument();
-			expect(galaxyMap).toHaveAttribute("src", "/src/assets/galaxy_map.jpg");
-			expect(corelliaPlanetImg).toHaveAttribute("src", "/src/assets/corellia_planet.webp");
-			expect(cecLogo).toHaveAttribute("src", "/src/assets/Corellian_Engineering_Corporation.svg");
-			expect(locationIcon).toHaveAttribute("src", "/src/assets/location.svg");
+			expect(galaxyMap).toHaveAttribute("src", "/src/assets/images/galaxy_map.jpg");
+			expect(corelliaPlanetImg).toHaveAttribute("src", "/src/assets/images/corellia_planet.webp");
+			expect(cecLogo).toHaveAttribute("src", "/src/assets/icons/Corellian_Engineering_Corporation.svg");
+			expect(locationIcon).toHaveAttribute("src", "/src/assets/icons/location.svg");
 			expect(location).toBeInTheDocument();
-			expect(emailIcon).toHaveAttribute("src", "/src/assets/email.svg");
+			expect(emailIcon).toHaveAttribute("src", "/src/assets/icons/email.svg");
 			expect(email).toBeInTheDocument();
-			expect(webpageIcon).toHaveAttribute("src", "/src/assets/website.svg");
+			expect(webpageIcon).toHaveAttribute("src", "/src/assets/icons/website.svg");
 			expect(webpageLink).toHaveAttribute("href", "https://starwars.fandom.com/wiki/Corellian_Engineering_Corporation");
 			expect(webpage).toBeInTheDocument();
 		});
@@ -96,11 +96,11 @@ describe("Contact component", () => {
 
 			expect(heading).toBeInTheDocument();
 			expect(cfLink).toHaveAttribute("href", "https://starwars.fandom.com/wiki/Confederation");
-			expect(cfLogo).toHaveAttribute("src", "/src/assets/Corellian_Federation_logo.webp");
+			expect(cfLogo).toHaveAttribute("src", "/src/assets/icons/Corellian_Federation_logo.webp");
 			expect(kdyLink).toHaveAttribute("href", "https://starwars.fandom.com/wiki/Kuat_Drive_Yards");
-			expect(kdyLogo).toHaveAttribute("src", "/src/assets/Kuat-Drive-Yards.svg");
+			expect(kdyLogo).toHaveAttribute("src", "/src/assets/icons/Kuat-Drive-Yards.svg");
 			expect(fondorLink).toHaveAttribute("href", "https://starwars.fandom.com/wiki/Fondor_Shipyards");
-			expect(fondorLogo).toHaveAttribute("src", "/src/assets/Fondor-Shipyards.jpg");
+			expect(fondorLogo).toHaveAttribute("src", "/src/assets/icons/Fondor-Shipyards.jpg");
 		});
 	});
 });

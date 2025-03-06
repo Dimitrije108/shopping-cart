@@ -103,7 +103,7 @@ describe("Cart Summary component", () => {
 	
 			expect(para).toBeInTheDocument();
 			expect(infoBtn).toBeInTheDocument();
-			expect(infoBtnIcon).toHaveAttribute("src", "/src/assets/info-circle.svg");
+			expect(infoBtnIcon).toHaveAttribute("src", "/src/assets/icons/info-circle.svg");
 			expect(shippingPrice).toHaveTextContent("25,000");
 		});
 

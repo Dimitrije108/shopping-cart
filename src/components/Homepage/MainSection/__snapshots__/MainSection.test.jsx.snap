@@ -15,12 +15,12 @@ exports[`Homepage's Main Section component > Main Section snapshot 1`] = `
           class="_mainContent_27eff8"
         >
           <h1>
-            From Naboo to the Outer Rim — Corellian Engineering Excellence — Now in Your Hands!
+            From Naboo to the Outer Rim — Corellian Engineering Excellence Now in Your Hands!
           </h1>
           <a
             data-discover="true"
             data-testid="starshipsLink"
-            href="/starships"
+            href="/starships#starshipsSection"
           >
             <button
               class="_shopBtn_27eff8"
@@ -43,12 +43,12 @@ exports[`Homepage's Main Section component > Main Section snapshot 1`] = `
         class="_mainContent_27eff8"
       >
         <h1>
-          From Naboo to the Outer Rim — Corellian Engineering Excellence — Now in Your Hands!
+          From Naboo to the Outer Rim — Corellian Engineering Excellence Now in Your Hands!
         </h1>
         <a
           data-discover="true"
           data-testid="starshipsLink"
-          href="/starships"
+          href="/starships#starshipsSection"
         >
           <button
             class="_shopBtn_27eff8"

@@ -80,10 +80,10 @@ describe("Ship Details component", () => {
 				</MemoryRouter>
 			)
 	
-			const addBtn = screen.getByRole('button', { name: 'ADD' });
+			const addBtn = screen.getByRole('button', { name: 'Add' });
 	
 			expect(addBtn).toBeInTheDocument();
-			expect(addBtn.textContent).toMatch('ADD');
+			expect(addBtn.textContent).toMatch('Add');
 		});
 	
 		it("render 'Get Pre-Qualified' button correctly", () => {
@@ -297,7 +297,7 @@ describe("Ship Details component", () => {
 			const input = screen.getByRole('spinbutton');
 			await user.clear(input);
 			await user.type(input, '8');
-			const addBtn = screen.getByRole('button', { name: "ADD" });
+			const addBtn = screen.getByRole('button', { name: "Add" });
 			await user.click(addBtn);
 	
 			expect(mockAddToCart).toHaveBeenCalledTimes(1);

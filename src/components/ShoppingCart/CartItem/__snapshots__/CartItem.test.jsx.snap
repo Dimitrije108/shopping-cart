@@ -15,25 +15,25 @@ exports[`Cart Item component > cart item component snapshot 1`] = `
         <div
           class="_cartItem_6dc023"
         >
-          <a
-            data-discover="true"
-            href="/starships/starfighter/6429291f021f17e13fbc1db9"
+          <div
+            class="_imgCont_6dc023"
           >
-            <div
-              class="_imgCont_6dc023"
+            <a
+              data-discover="true"
+              href="/starships/starfighter/6429291f021f17e13fbc1db9"
             >
               <img
                 alt="Millennium Falcon starship"
                 src="https://lumiere-a.akamaihd.net/v1/images/millennium-falcon-main-tlj-a_7cf89d3a.jpeg"
               />
-            </div>
-          </a>
-          <a
-            data-discover="true"
-            href="/starships/starfighter/6429291f021f17e13fbc1db9"
+            </a>
+          </div>
+          <div
+            class="_nameCont_6dc023"
           >
-            <div
-              class="_nameCont_6dc023"
+            <a
+              data-discover="true"
+              href="/starships/starfighter/6429291f021f17e13fbc1db9"
             >
               <h2
                 class="_name_6dc023"
@@ -52,8 +52,113 @@ exports[`Cart Item component > cart item component snapshot 1`] = `
                   Millennium Falcon
                 </p>
               </div>
+            </a>
+          </div>
+          <div
+            class="_quantityCont_6dc023"
+          >
+            <div
+              class="_cont_3c2471"
+            >
+              <button
+                class="_leftBtn_3c2471"
+              >
+                -
+              </button>
+              <input
+                class="_quantityInput_3c2471"
+                max="20"
+                min="1"
+                type="number"
+                value="1"
+              />
+              <button
+                class="_rightBtn_3c2471"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <button
+            class="_delBtn_6dc023"
+          >
+            <img
+              alt="trashcan remove icon"
+              src="/src/assets/icons/trash.svg"
+              width="28"
+            />
+          </button>
+          <div
+            class="_priceCont_6dc023"
+          >
+            <span
+              class="_itemQuantity_6dc023"
+            >
+              1x 
+            </span>
+            <div
+              class="_price_6dc023"
+            >
+              100,000
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="_cartItemCont_6dc023"
+      data-testid="cartItem"
+    >
+      <hr
+        class="_horizontalLine_6dc023"
+      />
+      <div
+        class="_cartItem_6dc023"
+      >
+        <div
+          class="_imgCont_6dc023"
+        >
+          <a
+            data-discover="true"
+            href="/starships/starfighter/6429291f021f17e13fbc1db9"
+          >
+            <img
+              alt="Millennium Falcon starship"
+              src="https://lumiere-a.akamaihd.net/v1/images/millennium-falcon-main-tlj-a_7cf89d3a.jpeg"
+            />
+          </a>
+        </div>
+        <div
+          class="_nameCont_6dc023"
+        >
+          <a
+            data-discover="true"
+            href="/starships/starfighter/6429291f021f17e13fbc1db9"
+          >
+            <h2
+              class="_name_6dc023"
+            >
+              Millennium Falcon
+            </h2>
+            <div>
+              <p
+                class="_imperial_6dc023"
+              >
+                Millennium Falcon
+              </p>
+              <p
+                class="_naboo_6dc023"
+              >
+                Millennium Falcon
+              </p>
             </div>
           </a>
+        </div>
+        <div
+          class="_quantityCont_6dc023"
+        >
           <div
             class="_cont_3c2471"
           >
@@ -75,124 +180,29 @@ exports[`Cart Item component > cart item component snapshot 1`] = `
               +
             </button>
           </div>
-          <div
-            class="_priceCont_6dc023"
-          >
-            <button
-              class="_delBtn_6dc023"
-            >
-              <img
-                alt="trashcan remove icon"
-                height="28"
-                src="/src/assets/trash.svg"
-                width="28"
-              />
-            </button>
-            <p>
-              <span
-                class="_itemQuantity_6dc023"
-              >
-                1x 
-              </span>
-              100,000
-            </p>
-          </div>
         </div>
-      </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      class="_cartItemCont_6dc023"
-      data-testid="cartItem"
-    >
-      <hr
-        class="_horizontalLine_6dc023"
-      />
-      <div
-        class="_cartItem_6dc023"
-      >
-        <a
-          data-discover="true"
-          href="/starships/starfighter/6429291f021f17e13fbc1db9"
+        <button
+          class="_delBtn_6dc023"
         >
-          <div
-            class="_imgCont_6dc023"
-          >
-            <img
-              alt="Millennium Falcon starship"
-              src="https://lumiere-a.akamaihd.net/v1/images/millennium-falcon-main-tlj-a_7cf89d3a.jpeg"
-            />
-          </div>
-        </a>
-        <a
-          data-discover="true"
-          href="/starships/starfighter/6429291f021f17e13fbc1db9"
-        >
-          <div
-            class="_nameCont_6dc023"
-          >
-            <h2
-              class="_name_6dc023"
-            >
-              Millennium Falcon
-            </h2>
-            <div>
-              <p
-                class="_imperial_6dc023"
-              >
-                Millennium Falcon
-              </p>
-              <p
-                class="_naboo_6dc023"
-              >
-                Millennium Falcon
-              </p>
-            </div>
-          </div>
-        </a>
-        <div
-          class="_cont_3c2471"
-        >
-          <button
-            class="_leftBtn_3c2471"
-          >
-            -
-          </button>
-          <input
-            class="_quantityInput_3c2471"
-            max="20"
-            min="1"
-            type="number"
-            value="1"
+          <img
+            alt="trashcan remove icon"
+            src="/src/assets/icons/trash.svg"
+            width="28"
           />
-          <button
-            class="_rightBtn_3c2471"
-          >
-            +
-          </button>
-        </div>
+        </button>
         <div
           class="_priceCont_6dc023"
         >
-          <button
-            class="_delBtn_6dc023"
+          <span
+            class="_itemQuantity_6dc023"
           >
-            <img
-              alt="trashcan remove icon"
-              height="28"
-              src="/src/assets/trash.svg"
-              width="28"
-            />
-          </button>
-          <p>
-            <span
-              class="_itemQuantity_6dc023"
-            >
-              1x 
-            </span>
+            1x 
+          </span>
+          <div
+            class="_price_6dc023"
+          >
             100,000
-          </p>
+          </div>
         </div>
       </div>
     </div>

@@ -16,6 +16,58 @@ exports[`Skeleton Card component > skeleton card component snapshot 1`] = `
           class="_infoCont_5bb178"
         >
           <div
+            class="_infoWrapper_5bb178"
+          >
+            <div
+              class="_skelName_5bb178"
+            >
+              <div
+                class="_name_5bb178"
+              />
+              <div
+                class="_imperial_5bb178"
+              />
+              <div
+                class="_naboo_5bb178"
+              />
+            </div>
+            <div
+              class="_buyCont_5bb178"
+            >
+              <div
+                class="_price_5bb178"
+              />
+              <div
+                class="_credits_5bb178"
+              />
+            </div>
+          </div>
+          <div
+            class="_addToCartCont_5bb178"
+          >
+            <div
+              class="_addBtn_5bb178"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="_skelCard_5bb178"
+      data-testid="skelCard"
+    >
+      <div
+        class="_skelImg_5bb178"
+      />
+      <div
+        class="_infoCont_5bb178"
+      >
+        <div
+          class="_infoWrapper_5bb178"
+        >
+          <div
             class="_skelName_5bb178"
           >
             <div
@@ -37,47 +89,11 @@ exports[`Skeleton Card component > skeleton card component snapshot 1`] = `
             <div
               class="_credits_5bb178"
             />
-            <div
-              class="_addBtn_5bb178"
-            />
           </div>
         </div>
-      </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      class="_skelCard_5bb178"
-      data-testid="skelCard"
-    >
-      <div
-        class="_skelImg_5bb178"
-      />
-      <div
-        class="_infoCont_5bb178"
-      >
         <div
-          class="_skelName_5bb178"
+          class="_addToCartCont_5bb178"
         >
-          <div
-            class="_name_5bb178"
-          />
-          <div
-            class="_imperial_5bb178"
-          />
-          <div
-            class="_naboo_5bb178"
-          />
-        </div>
-        <div
-          class="_buyCont_5bb178"
-        >
-          <div
-            class="_price_5bb178"
-          />
-          <div
-            class="_credits_5bb178"
-          />
           <div
             class="_addBtn_5bb178"
           />

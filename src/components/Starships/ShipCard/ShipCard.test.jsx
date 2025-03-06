@@ -100,7 +100,7 @@ describe("Ship Card component", () => {
 			</MemoryRouter>
 		)
 
-		const addBtn = screen.getByRole('button', { name: "ADD" });
+		const addBtn = screen.getByRole('button', { name: "Add" });
 		await user.click(addBtn);
 
 		expect(mockAddToCart).toHaveBeenCalledTimes(1);

@@ -6,8 +6,56 @@ exports[`Skeleton Details component > skeleton details component snapshot 1`] = 
   "baseElement": <body>
     <div>
       <div
-        class="_skelPage_56ff8f"
+        class="_skelWrapper_56ff8f"
         data-testid="skelDetails"
+      >
+        <div
+          class="_skelPage_56ff8f"
+        >
+          <div
+            class="_skelImg_56ff8f"
+          />
+          <div
+            class="_descCont_56ff8f"
+          >
+            <div
+              class="_name_56ff8f"
+            />
+            <div
+              class="_description_56ff8f"
+            />
+          </div>
+          <div
+            class="_price_56ff8f"
+          />
+          <div
+            class="_tableCont_56ff8f"
+          >
+            <div
+              class="_spec_56ff8f"
+            />
+            <div
+              class="_skelTable_56ff8f"
+            >
+              <div
+                class="_table_56ff8f"
+              />
+              <div
+                class="_table_56ff8f"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="_skelWrapper_56ff8f"
+      data-testid="skelDetails"
+    >
+      <div
+        class="_skelPage_56ff8f"
       >
         <div
           class="_skelImg_56ff8f"
@@ -41,46 +89,6 @@ exports[`Skeleton Details component > skeleton details component snapshot 1`] = 
               class="_table_56ff8f"
             />
           </div>
-        </div>
-      </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      class="_skelPage_56ff8f"
-      data-testid="skelDetails"
-    >
-      <div
-        class="_skelImg_56ff8f"
-      />
-      <div
-        class="_descCont_56ff8f"
-      >
-        <div
-          class="_name_56ff8f"
-        />
-        <div
-          class="_description_56ff8f"
-        />
-      </div>
-      <div
-        class="_price_56ff8f"
-      />
-      <div
-        class="_tableCont_56ff8f"
-      >
-        <div
-          class="_spec_56ff8f"
-        />
-        <div
-          class="_skelTable_56ff8f"
-        >
-          <div
-            class="_table_56ff8f"
-          />
-          <div
-            class="_table_56ff8f"
-          />
         </div>
       </div>
     </div>

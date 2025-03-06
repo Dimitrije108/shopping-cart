@@ -30,6 +30,6 @@ describe("Homepage's About Us Section component", () => {
 		expect(paragraphs).toHaveLength(3);
 		expect(companyName).toHaveTextContent("Shipyard");
 		expect(cecLogo).toBeInTheDocument();
-		expect(cecLogo).toHaveAttribute("src", "/src/assets/Corellian_Engineering_Corporation.svg");
+		expect(cecLogo).toHaveAttribute("src", "/src/assets/icons/Corellian_Engineering_Corporation.svg");
 	});
 });

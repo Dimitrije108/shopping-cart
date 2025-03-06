@@ -21,12 +21,12 @@ describe("Homepage's Main Section component", () => {
 			</MemoryRouter>
 		)
 
-		const heading = screen.getByRole("heading", { name: "From Naboo to the Outer Rim — Corellian Engineering Excellence — Now in Your Hands!" });
+		const heading = screen.getByRole("heading", { name: "From Naboo to the Outer Rim — Corellian Engineering Excellence Now in Your Hands!" });
 		const link = screen.getByTestId("starshipsLink");
 		const button = screen.getByRole("button", { name: "Explore the Galaxy — Shop Here!" })
 
 		expect(heading).toBeInTheDocument();
-		expect(link).toHaveAttribute("href", "/starships");
+		expect(link).toHaveAttribute("href", "/starships#starshipsSection");
 		expect(button).toBeInTheDocument();
 	});
 });

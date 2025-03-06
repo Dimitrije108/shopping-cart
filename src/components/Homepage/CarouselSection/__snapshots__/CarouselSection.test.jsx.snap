@@ -21,10 +21,24 @@ exports[`Homepage's Carousel Section component > Carousel Section snapshot 1`] =
               class="_slideCont_d6bb1e"
               data-testid="carouselSlide"
             >
-              <img
-                alt="Star Destroyer Capital ship"
-                src="/src/assets/star-destroyer.jpg"
-              />
+              <picture>
+                <source
+                  media="(max-width: 700px)"
+                  srcset="/src/assets/images/carousel/star-destroyer-extra-small.jpg"
+                />
+                <source
+                  media="(max-width: 900px)"
+                  srcset="/src/assets/images/carousel/star-destroyer-small.jpg"
+                />
+                <source
+                  media="(max-width: 1250px)"
+                  srcset="/src/assets/images/carousel/star-destroyer-medium.jpg"
+                />
+                <img
+                  alt="Star Destroyer Capital ship"
+                  src="/src/assets/images/carousel/star-destroyer.jpg"
+                />
+              </picture>
               <div
                 class="_carouselMarketingText_d6bb1e"
               >
@@ -52,11 +66,11 @@ exports[`Homepage's Carousel Section component > Carousel Section snapshot 1`] =
                   </div>
                   <a
                     data-discover="true"
-                    data-testid="storeLink"
-                    href="/starships/capital"
+                    data-testid="starshipsLink"
+                    href="/starships/capital#capitalSection"
                   >
                     <button
-                      class="_shopCapitalBtn_d6bb1e"
+                      class="_shopBtn_d6bb1e"
                     >
                       Best Capital Ships in the Galaxy - Shop Now!
                     </button>
@@ -69,10 +83,24 @@ exports[`Homepage's Carousel Section component > Carousel Section snapshot 1`] =
               class="_slideCont_d6bb1e"
               data-testid="carouselSlide"
             >
-              <img
-                alt="Slave I starship"
-                src="/src/assets/slave-i.jpg"
-              />
+              <picture>
+                <source
+                  media="(max-width: 700px)"
+                  srcset="/src/assets/images/carousel/slave-i-extra-small.jpg"
+                />
+                <source
+                  media="(max-width: 900px)"
+                  srcset="/src/assets/images/carousel/slave-i-small.jpg"
+                />
+                <source
+                  media="(max-width: 1250px)"
+                  srcset="/src/assets/images/carousel/slave-i-medium.jpg"
+                />
+                <img
+                  alt="Slave I starship"
+                  src="/src/assets/images/carousel/slave-i.jpg"
+                />
+              </picture>
               <div
                 class="_carouselMarketingText_d6bb1e"
               >
@@ -100,11 +128,11 @@ exports[`Homepage's Carousel Section component > Carousel Section snapshot 1`] =
                   </div>
                   <a
                     data-discover="true"
-                    data-testid="storeLink"
-                    href="/starships/starfighter"
+                    data-testid="starshipsLink"
+                    href="/starships/starfighter#starfighterSection"
                   >
                     <button
-                      class="_shopCapitalBtn_d6bb1e"
+                      class="_shopBtn_d6bb1e"
                     >
                       Unleash Your Inner Pilot — Buy a Starfighter!
                     </button>
@@ -117,10 +145,24 @@ exports[`Homepage's Carousel Section component > Carousel Section snapshot 1`] =
               class="_slideCont_d6bb1e"
               data-testid="carouselSlide"
             >
-              <img
-                alt="Imperial Shuttle Transport ship"
-                src="/src/assets/imperial-shuttle.jpg"
-              />
+              <picture>
+                <source
+                  media="(max-width: 700px)"
+                  srcset="/src/assets/images/carousel/imperial-shuttle-extra-small.jpg"
+                />
+                <source
+                  media="(max-width: 900px)"
+                  srcset="/src/assets/images/carousel/imperial-shuttle-small.jpg"
+                />
+                <source
+                  media="(max-width: 1250px)"
+                  srcset="/src/assets/images/carousel/imperial-shuttle-medium.jpg"
+                />
+                <img
+                  alt="Imperial Shuttle Transport ship"
+                  src="/src/assets/images/carousel/imperial-shuttle.jpg"
+                />
+              </picture>
               <div
                 class="_carouselMarketingText_d6bb1e"
               >
@@ -148,11 +190,11 @@ exports[`Homepage's Carousel Section component > Carousel Section snapshot 1`] =
                   </div>
                   <a
                     data-discover="true"
-                    data-testid="storeLink"
-                    href="/starships/transport"
+                    data-testid="starshipsLink"
+                    href="/starships/transport#transportSection"
                   >
                     <button
-                      class="_shopCapitalBtn_d6bb1e"
+                      class="_shopBtn_d6bb1e"
                     >
                       Shop Elegance — Shop Our Transport Starships!
                     </button>
@@ -205,8 +247,7 @@ exports[`Homepage's Carousel Section component > Carousel Section snapshot 1`] =
         >
           <img
             alt="left arrow"
-            src="/src/assets/carousel-left-arrow.svg"
-            width="30"
+            src="/src/assets/icons/carousel-left-arrow.svg"
           />
         </button>
         <button
@@ -215,8 +256,7 @@ exports[`Homepage's Carousel Section component > Carousel Section snapshot 1`] =
         >
           <img
             alt="right arrow"
-            src="/src/assets/carousel-right-arrow.svg"
-            width="30"
+            src="/src/assets/icons/carousel-right-arrow.svg"
           />
         </button>
       </section>
@@ -239,10 +279,24 @@ exports[`Homepage's Carousel Section component > Carousel Section snapshot 1`] =
             class="_slideCont_d6bb1e"
             data-testid="carouselSlide"
           >
-            <img
-              alt="Star Destroyer Capital ship"
-              src="/src/assets/star-destroyer.jpg"
-            />
+            <picture>
+              <source
+                media="(max-width: 700px)"
+                srcset="/src/assets/images/carousel/star-destroyer-extra-small.jpg"
+              />
+              <source
+                media="(max-width: 900px)"
+                srcset="/src/assets/images/carousel/star-destroyer-small.jpg"
+              />
+              <source
+                media="(max-width: 1250px)"
+                srcset="/src/assets/images/carousel/star-destroyer-medium.jpg"
+              />
+              <img
+                alt="Star Destroyer Capital ship"
+                src="/src/assets/images/carousel/star-destroyer.jpg"
+              />
+            </picture>
             <div
               class="_carouselMarketingText_d6bb1e"
             >
@@ -270,11 +324,11 @@ exports[`Homepage's Carousel Section component > Carousel Section snapshot 1`] =
                 </div>
                 <a
                   data-discover="true"
-                  data-testid="storeLink"
-                  href="/starships/capital"
+                  data-testid="starshipsLink"
+                  href="/starships/capital#capitalSection"
                 >
                   <button
-                    class="_shopCapitalBtn_d6bb1e"
+                    class="_shopBtn_d6bb1e"
                   >
                     Best Capital Ships in the Galaxy - Shop Now!
                   </button>
@@ -287,10 +341,24 @@ exports[`Homepage's Carousel Section component > Carousel Section snapshot 1`] =
             class="_slideCont_d6bb1e"
             data-testid="carouselSlide"
           >
-            <img
-              alt="Slave I starship"
-              src="/src/assets/slave-i.jpg"
-            />
+            <picture>
+              <source
+                media="(max-width: 700px)"
+                srcset="/src/assets/images/carousel/slave-i-extra-small.jpg"
+              />
+              <source
+                media="(max-width: 900px)"
+                srcset="/src/assets/images/carousel/slave-i-small.jpg"
+              />
+              <source
+                media="(max-width: 1250px)"
+                srcset="/src/assets/images/carousel/slave-i-medium.jpg"
+              />
+              <img
+                alt="Slave I starship"
+                src="/src/assets/images/carousel/slave-i.jpg"
+              />
+            </picture>
             <div
               class="_carouselMarketingText_d6bb1e"
             >
@@ -318,11 +386,11 @@ exports[`Homepage's Carousel Section component > Carousel Section snapshot 1`] =
                 </div>
                 <a
                   data-discover="true"
-                  data-testid="storeLink"
-                  href="/starships/starfighter"
+                  data-testid="starshipsLink"
+                  href="/starships/starfighter#starfighterSection"
                 >
                   <button
-                    class="_shopCapitalBtn_d6bb1e"
+                    class="_shopBtn_d6bb1e"
                   >
                     Unleash Your Inner Pilot — Buy a Starfighter!
                   </button>
@@ -335,10 +403,24 @@ exports[`Homepage's Carousel Section component > Carousel Section snapshot 1`] =
             class="_slideCont_d6bb1e"
             data-testid="carouselSlide"
           >
-            <img
-              alt="Imperial Shuttle Transport ship"
-              src="/src/assets/imperial-shuttle.jpg"
-            />
+            <picture>
+              <source
+                media="(max-width: 700px)"
+                srcset="/src/assets/images/carousel/imperial-shuttle-extra-small.jpg"
+              />
+              <source
+                media="(max-width: 900px)"
+                srcset="/src/assets/images/carousel/imperial-shuttle-small.jpg"
+              />
+              <source
+                media="(max-width: 1250px)"
+                srcset="/src/assets/images/carousel/imperial-shuttle-medium.jpg"
+              />
+              <img
+                alt="Imperial Shuttle Transport ship"
+                src="/src/assets/images/carousel/imperial-shuttle.jpg"
+              />
+            </picture>
             <div
               class="_carouselMarketingText_d6bb1e"
             >
@@ -366,11 +448,11 @@ exports[`Homepage's Carousel Section component > Carousel Section snapshot 1`] =
                 </div>
                 <a
                   data-discover="true"
-                  data-testid="storeLink"
-                  href="/starships/transport"
+                  data-testid="starshipsLink"
+                  href="/starships/transport#transportSection"
                 >
                   <button
-                    class="_shopCapitalBtn_d6bb1e"
+                    class="_shopBtn_d6bb1e"
                   >
                     Shop Elegance — Shop Our Transport Starships!
                   </button>
@@ -423,8 +505,7 @@ exports[`Homepage's Carousel Section component > Carousel Section snapshot 1`] =
       >
         <img
           alt="left arrow"
-          src="/src/assets/carousel-left-arrow.svg"
-          width="30"
+          src="/src/assets/icons/carousel-left-arrow.svg"
         />
       </button>
       <button
@@ -433,8 +514,7 @@ exports[`Homepage's Carousel Section component > Carousel Section snapshot 1`] =
       >
         <img
           alt="right arrow"
-          src="/src/assets/carousel-right-arrow.svg"
-          width="30"
+          src="/src/assets/icons/carousel-right-arrow.svg"
         />
       </button>
     </section>

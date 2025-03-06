@@ -32,19 +32,19 @@ exports[`Add To Cart Popup component > add to cart popup component snapshot 1`] 
               <img
                 class="_arrow_32ea7d"
                 height="12"
-                src="/src/assets/right-arrow.svg"
+                src="/src/assets/icons/right-arrow.svg"
                 width="12"
               />
               <img
                 class="_arrow_32ea7d"
                 height="12"
-                src="/src/assets/right-arrow.svg"
+                src="/src/assets/icons/right-arrow.svg"
                 width="12"
               />
               <img
                 class="_arrow_32ea7d"
                 height="12"
-                src="/src/assets/right-arrow.svg"
+                src="/src/assets/icons/right-arrow.svg"
                 width="12"
               />
             </div>
@@ -81,19 +81,19 @@ exports[`Add To Cart Popup component > add to cart popup component snapshot 1`] 
             <img
               class="_arrow_32ea7d"
               height="12"
-              src="/src/assets/right-arrow.svg"
+              src="/src/assets/icons/right-arrow.svg"
               width="12"
             />
             <img
               class="_arrow_32ea7d"
               height="12"
-              src="/src/assets/right-arrow.svg"
+              src="/src/assets/icons/right-arrow.svg"
               width="12"
             />
             <img
               class="_arrow_32ea7d"
               height="12"
-              src="/src/assets/right-arrow.svg"
+              src="/src/assets/icons/right-arrow.svg"
               width="12"
             />
           </div>

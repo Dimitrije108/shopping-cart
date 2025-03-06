@@ -2,7 +2,7 @@ import styles from "./SkeletonDetails.module.css"
 // Create a ship card component
 export default function SkeletonDetails() {
 	return (
-		<div className={styles.skelWrapper}>
+		<div className={styles.skelWrapper} data-testid="skelDetails">
 			<div className={styles.skelPage}>
 				<div className={styles.skelImg}></div>
 				<div  className={styles.descCont}>
