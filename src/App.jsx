@@ -4,7 +4,6 @@ import PopupContext, { useAddToCartPopup } from "./hooks/useCartPopup/useCartPop
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import CartPopups from "./components/CartPopups/CartPopups";
-import layout from "./layout.module.css";
 
 export function App() {
   const cartFunctionality = useShoppingCart();
