@@ -39,7 +39,7 @@ export default function Navbar({
 	// Check active path for cart due to different dropdown positioning
 	const isCart = pathname === "/shopping-cart";
 
-	// Starships dropdown control
+	// Starships dropdown on hover control
 	const handleMouseEnter = () => {
 		setStarshipsDropdown(true);
 	};
@@ -47,7 +47,7 @@ export default function Navbar({
 	const handleMouseLeave = () => {
 		setStarshipsDropdown(false);
 	};
-	// Navbar hamburger control open/close
+	// Mobile navbar hamburger control open/close
 	const openSideMenu = () => {
 		setSideMenuOpen(true);
 	};
@@ -56,16 +56,15 @@ export default function Navbar({
 		setSideMenuOpen(false);
 		setStarshipsDropdown(false);
 	};
-
+	// Mobile navbar dropdown open/close
 	const toggleStarshipsDropdown = () => {
 		setStarshipsDropdown(prev => !prev);
 	}
 
-	const widescreen = (
+	const desktop = (
 		<nav
 			className={styles.navbarCont}
 			ref={navbarRef}
-			data-testid="stickyNavbar"
 		>
 			<ul 
 				className={`
@@ -164,6 +163,7 @@ export default function Navbar({
 					${styles.sideMenu} 
 					${sideMenuOpen ? styles.open : ""}
 				`}
+				data-testid="sideMenu"
 			>
 				<div className={styles.sideMenuWrapper}>
 					<h2 
@@ -183,10 +183,7 @@ export default function Navbar({
 						/>
 					</button>
 				</div>
-				<nav
-					className={styles.navbarCont}
-					data-testid="stickyNavbar"
-				>
+				<nav className={styles.navbarCont}>
 					<ul className={styles.navbar}>
 						<li 
 							className={`
@@ -306,6 +303,6 @@ export default function Navbar({
 	)
 
 	return (
-		<>{isMobile ? mobile : widescreen}</>
+		<>{isMobile ? mobile : desktop}</>
 	)
 };

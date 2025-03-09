@@ -87,7 +87,6 @@ exports[`Header component > Non-sticky header snapshot 1`] = `
           </a>
           <nav
             class="_navbarCont_ec1191"
-            data-testid="stickyNavbar"
           >
             <ul
               class="
@@ -260,7 +259,6 @@ exports[`Header component > Non-sticky header snapshot 1`] = `
         </a>
         <nav
           class="_navbarCont_ec1191"
-          data-testid="stickyNavbar"
         >
           <ul
             class="
@@ -490,7 +488,6 @@ exports[`Header component > Sticky header snapshot 1`] = `
           </a>
           <nav
             class="_navbarCont_ec1191"
-            data-testid="stickyNavbar"
           >
             <ul
               class="
@@ -663,7 +660,6 @@ exports[`Header component > Sticky header snapshot 1`] = `
         </a>
         <nav
           class="_navbarCont_ec1191"
-          data-testid="stickyNavbar"
         >
           <ul
             class="
