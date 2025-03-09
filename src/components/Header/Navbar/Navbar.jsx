@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
+import PropTypes from 'prop-types';
 import styles from "./Navbar.module.css";
 // assets
 import hamburgerIcon from "/src/assets/icons/hamburger.svg";
@@ -305,4 +306,10 @@ export default function Navbar({
 	return (
 		<>{isMobile ? mobile : desktop}</>
 	)
+};
+
+Navbar.propTypes = {
+	handleSticky: PropTypes.func.isRequired,
+	isSticky: PropTypes.bool, 
+	isMobile: PropTypes.bool.isRequired,
 };
